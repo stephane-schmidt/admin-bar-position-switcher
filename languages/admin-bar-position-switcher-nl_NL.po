@@ -147,3 +147,12 @@ msgstr "Trakteer me op een kop koffie"
 
 msgid "Available for freelance work"
 msgstr "Beschikbaar voor freelanceopdrachten"
+
+msgid "Auto-hide the button"
+msgstr "Knop automatisch verbergen"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Laat de knop na enkele seconden zonder gebruik wegvagen en breng hem terug wanneer de aanwijzer over de werkbalk beweegt."
+
+msgid "Off by default: the button stays visible."
+msgstr "Standaard uit: de knop blijft zichtbaar."

@@ -147,3 +147,12 @@ msgstr "Hívj meg egy kávéra"
 
 msgid "Available for freelance work"
 msgstr "Szabadúszó munkát vállalok"
+
+msgid "Auto-hide the button"
+msgstr "A gomb automatikus elrejtése"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Néhány másodpercnyi tétlenség után a gomb halványan eltűnik, és újra megjelenik, amikor a mutatót az eszköztár fölé viszed."
+
+msgid "Off by default: the button stays visible."
+msgstr "Alapértelmezetten kikapcsolva: a gomb végig látható marad."

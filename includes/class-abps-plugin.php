@@ -94,6 +94,7 @@ class ABPS_Plugin {
 				'defaultPosition' => ( 'top' === $this->options['default_position'] ) ? 'top' : 'bottom',
 				'remember'        => ! empty( $this->options['remember_choice'] ),
 				'autoColor'       => ! empty( $this->options['auto_color'] ),
+				'autoHide'        => ! empty( $this->options['auto_hide'] ),
 				'storageKey'      => 'abpsPosition',
 			)
 		);

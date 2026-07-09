@@ -147,3 +147,12 @@ msgstr "Traktir saya kopi"
 
 msgid "Available for freelance work"
 msgstr "Tersedia untuk pekerjaan lepas"
+
+msgid "Auto-hide the button"
+msgstr "Sembunyikan tombol secara otomatis"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Biarkan tombol menghilang setelah beberapa detik tidak digunakan, dan tampilkan kembali saat penunjuk digerakkan ke atas bilah alat."
+
+msgid "Off by default: the button stays visible."
+msgstr "Nonaktif secara bawaan: tombol tetap terlihat."

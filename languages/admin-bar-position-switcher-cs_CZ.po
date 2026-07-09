@@ -147,3 +147,12 @@ msgstr "Kupte mi kávu"
 
 msgid "Available for freelance work"
 msgstr "K dispozici pro práci na volné noze"
+
+msgid "Auto-hide the button"
+msgstr "Automaticky skrývat tlačítko"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Necháte tlačítko po několika sekundách nečinnosti zmizet a znovu se objeví, jakmile ukazatel najedete na panel nástrojů."
+
+msgid "Off by default: the button stays visible."
+msgstr "Ve výchozím nastavení vypnuto: tlačítko zůstává viditelné."

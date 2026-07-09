@@ -147,3 +147,12 @@ msgstr "Пригостіть мене кавою"
 
 msgid "Available for freelance work"
 msgstr "Відкритий до фрилансу"
+
+msgid "Auto-hide the button"
+msgstr "Автоматично приховувати кнопку"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Дозволяє кнопці зникати за кілька секунд без використання й повертатися, коли вказівник наближається до панелі інструментів."
+
+msgid "Off by default: the button stays visible."
+msgstr "Вимкнено за замовчуванням: кнопка залишається видимою."

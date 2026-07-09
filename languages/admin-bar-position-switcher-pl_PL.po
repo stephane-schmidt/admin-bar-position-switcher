@@ -147,3 +147,12 @@ msgstr "Postaw mi kawę"
 
 msgid "Available for freelance work"
 msgstr "Dostępny do współpracy jako freelancer"
+
+msgid "Auto-hide the button"
+msgstr "Automatycznie ukrywaj przycisk"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Pozwól, aby przycisk zniknął po kilku sekundach bezczynności, i przywróć go, gdy kursor znajdzie się nad paskiem narzędzi."
+
+msgid "Off by default: the button stays visible."
+msgstr "Domyślnie wyłączone: przycisk pozostaje widoczny."

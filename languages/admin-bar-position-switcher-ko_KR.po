@@ -147,3 +147,12 @@ msgstr "커피 한 잔 사주기"
 
 msgid "Available for freelance work"
 msgstr "프리랜서 작업 의뢰 받습니다"
+
+msgid "Auto-hide the button"
+msgstr "버튼 자동 숨김"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "일정 시간 사용하지 않으면 버튼이 사라지고, 포인터를 도구 모음 위로 옮기면 다시 나타납니다."
+
+msgid "Off by default: the button stays visible."
+msgstr "기본값은 꺼짐: 버튼이 계속 표시됩니다."

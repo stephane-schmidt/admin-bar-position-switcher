@@ -147,3 +147,12 @@ msgstr "Tarjoa minulle kahvit"
 
 msgid "Available for freelance work"
 msgstr "Käytettävissä freelance-työhön"
+
+msgid "Auto-hide the button"
+msgstr "Piilota painike automaattisesti"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Anna painikkeen liukua pois muutaman käyttämättömän sekunnin jälkeen ja tuo se takaisin, kun osoitin siirtyy työkalupalkin päälle."
+
+msgid "Off by default: the button stays visible."
+msgstr "Oletuksena pois päältä: painike pysyy näkyvissä."

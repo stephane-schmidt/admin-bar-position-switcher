@@ -147,3 +147,12 @@ msgstr "コーヒーを一杯おごる"
 
 msgid "Available for freelance work"
 msgstr "フリーランスのお仕事、承ります"
+
+msgid "Auto-hide the button"
+msgstr "ボタンを自動的に隠す"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "数秒間操作がないとボタンをそっと隠し、ポインターをツールバーに近づけると再表示します。"
+
+msgid "Off by default: the button stays visible."
+msgstr "初期設定ではオフです。ボタンは常に表示されます。"

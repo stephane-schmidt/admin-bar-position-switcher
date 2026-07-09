@@ -2,8 +2,9 @@
  * Admin Bar Position Switcher — front-end toggle.
  *
  * The <html> class is already set by the inline head script (no flash). This
- * file keeps it in sync, wires the floating button, and (optionally) tints the
- * button to match the main color of the page being viewed.
+ * file keeps it in sync, wires the floating button, optionally tints the button
+ * to match the main color of the page, and — when enabled in the settings —
+ * lets the button drift away when idle and float back near the toolbar.
  */
 ( function () {
 	'use strict';
@@ -13,7 +14,7 @@
 	var DEFAULT = cfg.defaultPosition === 'top' ? 'top' : 'bottom';
 	var REMEMBER = cfg.remember !== false;
 	var AUTO_COLOR = cfg.autoColor === true;
-	var AUTO_HIDE = cfg.autoHide !== false;
+	var AUTO_HIDE = cfg.autoHide === true; // opt-in; the button stays visible by default
 	var HIDE_DELAY = typeof cfg.hideDelay === 'number' ? cfg.hideDelay : 10000;
 	var REVEAL_AT = typeof cfg.revealDistance === 'number' ? cfg.revealDistance : 50;
 	var root = document.documentElement;
@@ -64,40 +65,17 @@
 	}
 
 	/* ------------------------------------------------------------------ *
-	 * Auto-hide: after a spell with the pointer away from the toolbar the
-	 * button slides off the right edge and fades out; it slips back the
-	 * moment the pointer comes within REVEAL_AT pixels (or it gains focus,
-	 * or the toolbar is hovered). Keyboard- and touch-friendly.
+	 * Auto-hide (opt-in): after a spell of inactivity the button drifts
+	 * away like a falling leaf; it floats back the moment the pointer moves
+	 * over the toolbar (its full width) or within REVEAL_AT pixels of it, or
+	 * the button gains keyboard focus. Touch: a tap brings it back.
 	 * ------------------------------------------------------------------ */
 	function setupAutoHide( btn ) {
 		var HIDDEN = 'abps-switch--hidden';
+		var RISING = 'abps-switch--rising';
 		var bar = document.getElementById( 'wpadminbar' );
 		var timer = null;
-		var home = null;
-
-		// The button's resting rectangle, read from CSS so it is correct even
-		// while the element is translated off-screen (transform ignores offset*).
-		function measure() {
-			var cs = window.getComputedStyle( btn );
-			var w = btn.offsetWidth;
-			var h = btn.offsetHeight;
-			var right = parseFloat( cs.right );
-			if ( isNaN( right ) ) {
-				right = 12;
-			}
-			var left = window.innerWidth - right - w;
-			var top;
-			if ( cs.top !== 'auto' ) {
-				top = parseFloat( cs.top );
-			} else {
-				var bottom = parseFloat( cs.bottom );
-				if ( isNaN( bottom ) ) {
-					bottom = 0;
-				}
-				top = window.innerHeight - bottom - h;
-			}
-			home = { left: left, top: top, right: left + w, bottom: top + h };
-		}
+		var riseTimer = null;
 
 		function stop() {
 			if ( timer ) {
@@ -105,27 +83,49 @@
 				timer = null;
 			}
 		}
+		function doHide() {
+			if ( riseTimer ) {
+				window.clearTimeout( riseTimer );
+				riseTimer = null;
+			}
+			btn.classList.remove( RISING );
+			btn.classList.add( HIDDEN );
+		}
+		function show() {
+			if ( ! btn.classList.contains( HIDDEN ) ) {
+				return;
+			}
+			btn.classList.remove( HIDDEN );
+			btn.classList.add( RISING );
+			if ( riseTimer ) {
+				window.clearTimeout( riseTimer );
+			}
+			riseTimer = window.setTimeout( function () {
+				btn.classList.remove( RISING );
+				riseTimer = null;
+			}, 640 );
+		}
 		function arm() {
 			stop();
-			timer = window.setTimeout( function () {
-				btn.classList.add( HIDDEN );
-			}, HIDE_DELAY );
+			timer = window.setTimeout( doHide, HIDE_DELAY );
 		}
-		function reveal() {   // show, then restart the countdown
-			btn.classList.remove( HIDDEN );
+		function reveal() { // show, then restart the countdown
+			show();
 			arm();
 		}
-		function pin() {      // show and hold (hovering / focused)
-			btn.classList.remove( HIDDEN );
+		function pin() {    // show and hold (hovering / focused)
+			show();
 			stop();
 		}
 
-		function near( x, y ) {
-			if ( ! home ) {
-				measure();
+		// Reveal zone: the whole admin bar (full width) grown by REVEAL_AT px.
+		function inZone( x, y ) {
+			var r = bar ? bar.getBoundingClientRect() : null;
+			if ( ! r || ( 0 === r.width && 0 === r.height ) ) {
+				return false;
 			}
-			var dx = Math.max( home.left - x, 0, x - home.right );
-			var dy = Math.max( home.top - y, 0, y - home.bottom );
+			var dx = Math.max( r.left - x, 0, x - r.right );
+			var dy = Math.max( r.top - y, 0, y - r.bottom );
 			return ( dx * dx + dy * dy ) <= ( REVEAL_AT * REVEAL_AT );
 		}
 
@@ -141,27 +141,22 @@
 			queued = true;
 			window.requestAnimationFrame( function () {
 				queued = false;
-				if ( near( mx, my ) ) {
+				if ( inZone( mx, my ) ) {
 					reveal();
 				}
 			} );
 		}
 
-		measure();
-		arm(); // visible on load, fades once the delay elapses
+		arm(); // visible on load, drifts away once the delay elapses
 
 		document.addEventListener( 'mousemove', onMove, { passive: true } );
 		document.addEventListener( 'touchstart', reveal, { passive: true } );
-		window.addEventListener( 'resize', measure );
 
 		btn.addEventListener( 'mouseenter', pin );
 		btn.addEventListener( 'mouseleave', arm );
 		btn.addEventListener( 'focus', pin );
 		btn.addEventListener( 'blur', arm );
-		btn.addEventListener( 'click', function () {
-			pin();
-			window.setTimeout( measure, 0 ); // the toggle may move the anchor
-		} );
+		btn.addEventListener( 'click', pin );
 
 		if ( bar ) {
 			bar.addEventListener( 'mouseenter', pin );

@@ -147,3 +147,12 @@ msgstr "Κέρασέ με έναν καφέ"
 
 msgid "Available for freelance work"
 msgstr "Διαθέσιμος για συνεργασίες ως freelancer"
+
+msgid "Auto-hide the button"
+msgstr "Αυτόματη απόκρυψη του κουμπιού"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Αφήστε το κουμπί να απομακρυνθεί μετά από λίγα δευτερόλεπτα αδράνειας και επαναφέρετέ το όταν ο δείκτης περνά πάνω από τη γραμμή εργαλείων."
+
+msgid "Off by default: the button stays visible."
+msgstr "Ανενεργό από προεπιλογή: το κουμπί παραμένει ορατό."

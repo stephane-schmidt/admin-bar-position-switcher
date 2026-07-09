@@ -147,3 +147,12 @@ msgstr "Spendier mir einen Kaffee"
 
 msgid "Available for freelance work"
 msgstr "Verfügbar für freiberufliche Projekte"
+
+msgid "Auto-hide the button"
+msgstr "Schaltfläche automatisch ausblenden"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Blendet die Schaltfläche nach einigen Sekunden ohne Nutzung aus und zeigt sie wieder an, sobald der Zeiger über die Werkzeugleiste bewegt wird."
+
+msgid "Off by default: the button stays visible."
+msgstr "Standardmäßig deaktiviert: Die Schaltfläche bleibt sichtbar."

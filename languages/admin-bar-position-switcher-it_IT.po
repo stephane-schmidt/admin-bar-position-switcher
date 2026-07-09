@@ -147,3 +147,12 @@ msgstr "Offrimi un caffè"
 
 msgid "Available for freelance work"
 msgstr "Disponibile per collaborazioni freelance"
+
+msgid "Auto-hide the button"
+msgstr "Nascondi automaticamente il pulsante"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Fa scomparire il pulsante dopo alcuni secondi di inattività e lo ripristina quando il puntatore passa sopra la barra degli strumenti."
+
+msgid "Off by default: the button stays visible."
+msgstr "Disattivato per impostazione predefinita: il pulsante resta sempre visibile."

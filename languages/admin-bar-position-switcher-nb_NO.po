@@ -147,3 +147,12 @@ msgstr "Spander en kaffe på meg"
 
 msgid "Available for freelance work"
 msgstr "Ledig for frilansoppdrag"
+
+msgid "Auto-hide the button"
+msgstr "Skjul knappen automatisk"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "La knappen gli bort etter noen sekunder uten bruk, og hent den tilbake når pekeren beveger seg over verktøylinjen."
+
+msgid "Off by default: the button stays visible."
+msgstr "Av som standard: knappen forblir synlig."

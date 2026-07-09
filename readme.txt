@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 
 * Places the WordPress toolbar at the bottom of the screen on the front end (default position is configurable).
 * Adds a floating "↕" button to switch the toolbar between top and bottom, on the fly.
-* The switch button gently fades and slides out of the way after a few seconds of inactivity, and slips back the moment your pointer comes near (or it receives keyboard focus).
+* Optional auto-hide: the switch button drifts away like a falling leaf after a few seconds of inactivity, and floats back the moment your pointer moves anywhere over the toolbar (off by default; enable it in the settings).
 * Remembers each browser's choice (can be turned off).
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
 * Hide individual toolbar items you don't want (WordPress logo, Comments, + New, Updates, and more).
@@ -87,6 +87,10 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.0.4 =
+* Changed: auto-hiding the switch button is now an opt-in setting, off by default — the button stays visible unless you enable it under Settings → Admin Bar Position.
+* New: when enabled, the button drifts away like a falling leaf and floats back as soon as the pointer moves anywhere over the toolbar (its full width), not just near the button. The new option is translated into every bundled language.
+
 = 1.0.3 =
 * New: a small "Support the author" card on the settings screen — the author's links and a one-tap way to buy him a coffee. Translated into every bundled language.
 
@@ -101,6 +105,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Auto-hide is now opt-in (off by default). When enabled, the button drifts away like a falling leaf and returns when you move over the toolbar.
 
 = 1.0.3 =
 Adds a small "Support the author" card to the settings screen.

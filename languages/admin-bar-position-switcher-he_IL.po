@@ -147,3 +147,12 @@ msgstr "קנו לי קפה"
 
 msgid "Available for freelance work"
 msgstr "פנוי לעבודות פרילנס"
+
+msgid "Auto-hide the button"
+msgstr "הסתרה אוטומטית של הכפתור"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "גורם לכפתור להיעלם בהדרגה לאחר כמה שניות ללא שימוש, ומחזיר אותו כשהסמן עובר מעל סרגל הכלים."
+
+msgid "Off by default: the button stays visible."
+msgstr "כבוי כברירת מחדל: הכפתור נשאר גלוי."

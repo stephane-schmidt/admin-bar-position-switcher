@@ -147,3 +147,12 @@ msgstr "請我喝杯咖啡"
 
 msgid "Available for freelance work"
 msgstr "接受接案合作"
+
+msgid "Auto-hide the button"
+msgstr "自動隱藏按鈕"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "按鈕在數秒未使用後會自動淡出隱藏，當指標移到工具列附近時再重新顯示。"
+
+msgid "Off by default: the button stays visible."
+msgstr "預設為關閉：按鈕會一直顯示。"

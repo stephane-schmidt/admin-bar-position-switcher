@@ -147,3 +147,12 @@ msgstr "اشترِ لي فنجان قهوة"
 
 msgid "Available for freelance work"
 msgstr "متاح للعمل الحر"
+
+msgid "Auto-hide the button"
+msgstr "إخفاء الزر تلقائياً"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "دع الزر يختفي تدريجياً بعد بضع ثوانٍ من عدم الاستخدام، ويعود عند تحريك المؤشر فوق شريط الأدوات."
+
+msgid "Off by default: the button stays visible."
+msgstr "معطّل افتراضياً: يبقى الزر ظاهراً."

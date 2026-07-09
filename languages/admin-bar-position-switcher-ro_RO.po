@@ -147,3 +147,12 @@ msgstr "Fă-mi cinste cu o cafea"
 
 msgid "Available for freelance work"
 msgstr "Disponibil pentru proiecte freelance"
+
+msgid "Auto-hide the button"
+msgstr "Ascunde automat butonul"
+
+msgid "Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar."
+msgstr "Lasă butonul să dispară treptat după câteva secunde de inactivitate și readu-l când indicatorul trece peste bara de instrumente."
+
+msgid "Off by default: the button stays visible."
+msgstr "Dezactivat implicit: butonul rămâne vizibil."

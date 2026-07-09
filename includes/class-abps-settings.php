@@ -43,6 +43,7 @@ class ABPS_Settings {
 		return array(
 			'default_position' => 'bottom',
 			'show_toggle'      => 1,
+			'auto_hide'        => 0,
 			'remember_choice'  => 1,
 			'auto_color'       => 1,
 			'elementor_compat' => 1,
@@ -195,6 +196,14 @@ class ABPS_Settings {
 		);
 
 		add_settings_field(
+			'auto_hide',
+			__( 'Auto-hide the button', 'admin-bar-position-switcher' ),
+			array( $this, 'field_auto_hide' ),
+			self::SLUG,
+			'abps_main'
+		);
+
+		add_settings_field(
 			'remember_choice',
 			__( 'Remember the choice', 'admin-bar-position-switcher' ),
 			array( $this, 'field_remember_choice' ),
@@ -263,6 +272,7 @@ class ABPS_Settings {
 		$out                     = array();
 		$out['default_position'] = ( isset( $input['default_position'] ) && 'top' === $input['default_position'] ) ? 'top' : 'bottom';
 		$out['show_toggle']      = empty( $input['show_toggle'] ) ? 0 : 1;
+		$out['auto_hide']        = empty( $input['auto_hide'] ) ? 0 : 1;
 		$out['remember_choice']  = empty( $input['remember_choice'] ) ? 0 : 1;
 		$out['auto_color']       = empty( $input['auto_color'] ) ? 0 : 1;
 		$out['elementor_compat'] = empty( $input['elementor_compat'] ) ? 0 : 1;
@@ -380,6 +390,20 @@ class ABPS_Settings {
 		?>
 		<input type="text" class="regular-text" name="<?php echo esc_attr( self::OPTION ); ?>[button_label]" value="<?php echo esc_attr( $value ); ?>" placeholder="<?php esc_attr_e( 'Bar', 'admin-bar-position-switcher' ); ?>" />
 		<p class="description"><?php esc_html_e( 'Text shown next to the ↕ arrow on the button. Leave empty for the default.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Field: auto-hide the button when idle.
+	 */
+	public function field_auto_hide() {
+		$value = self::get_options()['auto_hide'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[auto_hide]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Let the button drift away after a few seconds without use, and bring it back when the pointer moves over the toolbar.', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Off by default: the button stays visible.', 'admin-bar-position-switcher' ); ?></p>
 		<?php
 	}
 
