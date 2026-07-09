@@ -72,7 +72,7 @@ Ships translated into **26 languages** (full UI): French, Spanish, German, Itali
 
 Built and maintained by **Stéphane Schmidt** — a web designer and developer based in Switzerland 🇨🇭.
 
-Stéphane crafts clean, human‑friendly WordPress sites, often for cultural and non‑profit projects, and develops hand in hand with **Claude Code** with a lot of enthusiasm. **Available for freelance work** — reach him at **stephane@alveo.design**, on [alveo.design](https://alveo.design), on [Facebook](https://www.facebook.com/free.stephane), or on [Instagram](https://www.instagram.com/free.stephane/).
+Stéphane crafts clean, human‑friendly WordPress sites, often for cultural and non‑profit projects, and develops hand in hand with **Claude Code** with a lot of enthusiasm. **Available for freelance work** — reach him at **stephane@alveo.design**, on [alveo.design](https://alveo.design), on [Facebook](https://www.facebook.com/free.stephane), on [Instagram](https://www.instagram.com/free.stephane/), or on [TikTok](https://www.tiktok.com/@freestephane).
 
 ## License
 
