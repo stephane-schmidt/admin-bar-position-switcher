@@ -6,6 +6,22 @@ A small, focused WordPress plugin. **GPL‑2.0‑or‑later.**
 
 ---
 
+## Screenshots
+
+![The WordPress toolbar at the bottom, with the switch button](docs/img/screenshot-1.png)
+<p align="center"><em>The WordPress toolbar moved to the bottom, with the “↕ Bar” switch button.</em></p>
+
+![Colorize the toolbar background](docs/img/screenshot-2.png)
+<p align="center"><em>Colorize the toolbar — the text color stays readable automatically.</em></p>
+
+![Hide toolbar items](docs/img/screenshot-3.png)
+<p align="center"><em>Hide the individual toolbar items you don’t need.</em></p>
+
+![Settings screen](docs/img/screenshot-4.png)
+<p align="center"><em>All options on one simple settings screen.</em></p>
+
+---
+
 ## Why
 
 By default WordPress pins its toolbar to the **top** of every front‑end page for logged‑in users. That top bar pushes the whole layout down, hides the first pixels of the design, and often collides with sticky headers, hero sections, and full‑screen builders like Elementor.
@@ -56,7 +72,7 @@ Ships translated into **26 languages** (full UI): French, Spanish, German, Itali
 
 Built and maintained by **Stéphane Schmidt** — a web designer and developer based in Switzerland 🇨🇭.
 
-Stéphane crafts clean, human‑friendly WordPress sites, often for cultural and non‑profit projects, and develops hand in hand with **Claude Code** with a lot of enthusiasm. **Available for freelance work** — reach him at **stephane@alveo.design**, on [alveo.design](https://alveo.design), or on [Facebook](https://www.facebook.com/free.stephane).
+Stéphane crafts clean, human‑friendly WordPress sites, often for cultural and non‑profit projects, and develops hand in hand with **Claude Code** with a lot of enthusiasm. **Available for freelance work** — reach him at **stephane@alveo.design**, on [alveo.design](https://alveo.design), on [Facebook](https://www.facebook.com/free.stephane), or on [Instagram](https://www.instagram.com/free.stephane/).
 
 ## License
 

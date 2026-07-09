@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,8 +69,10 @@ In **Settings → Admin Bar Position**, turn off "Switch button". The toolbar st
 
 == Screenshots ==
 
-1. The toolbar moved to the bottom of the front end, with the "↕ Bar" switch button.
-2. The settings screen under Settings → Admin Bar Position.
+1. The WordPress toolbar moved to the bottom of the front end, with the "↕ Bar" switch button.
+2. Colorize the toolbar background — the text color stays readable automatically.
+3. Hide the individual toolbar items you don't need.
+4. All options on one simple settings screen (Settings → Admin Bar Position).
 
 == About the author ==
 
@@ -80,14 +82,21 @@ Stéphane crafts clean, human-friendly WordPress sites — often for cultural an
 
 He builds with a lot of curiosity and enthusiasm, and these days he develops hand in hand with **Claude Code**, Anthropic's AI coding agent — something he's genuinely excited about. It's a field that never sits still: the tools evolve almost week to week, and Stéphane loves riding that wave, experimenting, learning, and shipping faster and better than ever.
 
-He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on.
+He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane) and [Instagram](https://www.instagram.com/free.stephane/). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on.
 
 == Changelog ==
+
+= 1.0.1 =
+* New: hide individual toolbar items from the front-end toolbar.
+* New: colorize the toolbar background, with an automatically readable text color.
 
 = 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Adds options to hide toolbar items and to colorize the toolbar background.
 
 = 1.0.0 =
 Initial release.
