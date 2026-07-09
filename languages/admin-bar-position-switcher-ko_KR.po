@@ -1,0 +1,92 @@
+# Korean translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "프런트엔드에서 WordPress 툴바를 화면 아래쪽으로 이동하며, 원클릭 버튼으로 위쪽과 아래쪽을 전환할 수 있습니다. 선택은 브라우저별로 기억됩니다."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "툴바"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "툴바를 위쪽 또는 아래쪽으로 이동"
+
+msgid "Admin Bar Position"
+msgstr "관리 툴바 위치"
+
+msgid "Settings"
+msgstr "설정"
+
+msgid "Default position"
+msgstr "기본 위치"
+
+msgid "Switch button"
+msgstr "전환 버튼"
+
+msgid "Button label"
+msgstr "버튼 라벨"
+
+msgid "Remember the choice"
+msgstr "선택 기억"
+
+msgid "Match the page color"
+msgstr "페이지 색상에 맞추기"
+
+msgid "Elementor compatibility"
+msgstr "Elementor 호환성"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "관리 툴바 위치"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "WordPress 툴바가 프런트엔드에서 표시될 위치를 선택하세요. 로그인하지 않은 방문자에게는 표시되지 않습니다."
+
+msgid "Bottom"
+msgstr "아래쪽"
+
+msgid "Top (WordPress default)"
+msgstr "위쪽 (WordPress 기본값)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "방문자가 전환하기 전에 툴바가 표시되는 위치입니다."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "툴바를 위/아래로 이동하는 플로팅 버튼을 표시합니다."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "버튼의 ↕ 화살표 옆에 표시되는 텍스트입니다. 기본값을 사용하려면 비워 두세요."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "각 브라우저의 선택을 기억합니다 (브라우저에 로컬로 저장됨)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "각 페이지의 주요 색상으로 버튼에 색조를 입힙니다 (색상을 찾을 수 없으면 기본 어두운 버튼으로 대체됩니다)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Elementor 고정 헤더가 툴바와 정렬되도록 조정합니다."

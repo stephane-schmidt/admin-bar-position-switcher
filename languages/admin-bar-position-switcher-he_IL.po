@@ -1,0 +1,92 @@
+# Hebrew translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Hebrew\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "מעביר את סרגל הכלים של WordPress לתחתית המסך בממשק הקדמי, עם כפתור בלחיצה אחת להעברתו בין למעלה ללמטה. הבחירה נשמרת עבור כל דפדפן."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "סרגל"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "העברת סרגל הכלים למעלה או למטה"
+
+msgid "Admin Bar Position"
+msgstr "מיקום סרגל הניהול"
+
+msgid "Settings"
+msgstr "הגדרות"
+
+msgid "Default position"
+msgstr "מיקום ברירת מחדל"
+
+msgid "Switch button"
+msgstr "כפתור מעבר"
+
+msgid "Button label"
+msgstr "תווית הכפתור"
+
+msgid "Remember the choice"
+msgstr "זכירת הבחירה"
+
+msgid "Match the page color"
+msgstr "התאמה לצבע העמוד"
+
+msgid "Elementor compatibility"
+msgstr "תאימות ל-Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "מיקום סרגל הניהול"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "בחרו היכן ימוקם סרגל הכלים של WordPress בממשק הקדמי. מבקרים שאינם מחוברים לעולם לא יראו אותו."
+
+msgid "Bottom"
+msgstr "למטה"
+
+msgid "Top (WordPress default)"
+msgstr "למעלה (ברירת המחדל של WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "היכן מופיע סרגל הכלים לפני שהמבקר מעביר אותו."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "הצגת הכפתור הצף להעברת סרגל הכלים למעלה/למטה."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "הטקסט המוצג לצד החץ ↕ על הכפתור. השאירו ריק לברירת המחדל."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "זכירת הבחירה של כל דפדפן (נשמרת מקומית בדפדפן)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "צביעת הכפתור בצבע הראשי של כל עמוד (חוזר לכפתור הכהה כברירת מחדל כשלא נמצא צבע)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "התאמת הכותרות הדביקות של Elementor כך שיתיישרו עם סרגל הכלים."

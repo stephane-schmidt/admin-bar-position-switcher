@@ -1,0 +1,92 @@
+# Arabic translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "ينقل شريط أدوات WordPress إلى أسفل الشاشة في الواجهة الأمامية، مع زر بنقرة واحدة لتبديله بين الأعلى والأسفل. ويُحفظ الاختيار لكل متصفّح."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "الشريط"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "نقل شريط الأدوات إلى الأعلى أو الأسفل"
+
+msgid "Admin Bar Position"
+msgstr "موضع شريط الإدارة"
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "Default position"
+msgstr "الموضع الافتراضي"
+
+msgid "Switch button"
+msgstr "زر التبديل"
+
+msgid "Button label"
+msgstr "نص الزر"
+
+msgid "Remember the choice"
+msgstr "تذكّر الاختيار"
+
+msgid "Match the page color"
+msgstr "مطابقة لون الصفحة"
+
+msgid "Elementor compatibility"
+msgstr "التوافق مع Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "موضع شريط الإدارة"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "اختر مكان ظهور شريط أدوات WordPress في الواجهة الأمامية. لا يراه الزوّار غير المسجّلين دخولهم أبداً."
+
+msgid "Bottom"
+msgstr "الأسفل"
+
+msgid "Top (WordPress default)"
+msgstr "الأعلى (الافتراضي في WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "المكان الذي يظهر فيه شريط الأدوات قبل أن يقوم الزائر بتبديله."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "إظهار الزر العائم لنقل شريط الأدوات إلى الأعلى/الأسفل."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "النص الظاهر بجانب السهم ↕ على الزر. اتركه فارغاً لاستخدام الافتراضي."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "تذكّر اختيار كل متصفّح (يُخزَّن محلياً في المتصفّح)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "تلوين الزر باللون الرئيسي لكل صفحة (يعود إلى الزر الداكن الافتراضي عند عدم العثور على لون)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "ضبط رؤوس Elementor الثابتة لتتماشى مع شريط الأدوات."

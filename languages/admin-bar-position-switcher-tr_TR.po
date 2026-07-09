@@ -1,0 +1,92 @@
+# Turkish translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "WordPress araç çubuğunu ön yüzde ekranın altına taşır ve üst ile alt arasında geçiş yapmak için tek tıklamalık bir düğme sunar. Seçim her tarayıcı için hatırlanır."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "Çubuk"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "Araç çubuğunu üste veya alta taşı"
+
+msgid "Admin Bar Position"
+msgstr "Yönetim Çubuğu Konumu"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Default position"
+msgstr "Varsayılan konum"
+
+msgid "Switch button"
+msgstr "Değiştirme düğmesi"
+
+msgid "Button label"
+msgstr "Düğme etiketi"
+
+msgid "Remember the choice"
+msgstr "Seçimi hatırla"
+
+msgid "Match the page color"
+msgstr "Sayfa rengiyle eşleştir"
+
+msgid "Elementor compatibility"
+msgstr "Elementor uyumluluğu"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "Yönetim Çubuğu Konumu"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "WordPress araç çubuğunun ön yüzde nerede duracağını seçin. Oturum açmamış ziyaretçiler bunu asla görmez."
+
+msgid "Bottom"
+msgstr "Alt"
+
+msgid "Top (WordPress default)"
+msgstr "Üst (WordPress varsayılanı)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "Ziyaretçi konumunu değiştirmeden önce araç çubuğunun göründüğü yer."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "Araç çubuğunu üste/alta taşımak için yüzen düğmeyi göster."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Düğmedeki ↕ okunun yanında görünen metin. Varsayılan için boş bırakın."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "Her tarayıcının seçimini hatırla (tarayıcıda yerel olarak saklanır)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Düğmeyi her sayfanın ana rengiyle renklendir (renk bulunamadığında varsayılan koyu düğmeye döner)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Elementor yapışkan başlıklarını araç çubuğuyla hizalanacak şekilde ayarla."

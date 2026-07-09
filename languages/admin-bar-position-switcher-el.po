@@ -1,0 +1,92 @@
+# Greek translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "Μετακινεί τη γραμμή εργαλείων του WordPress στο κάτω μέρος της οθόνης στο μπροστινό μέρος του ιστότοπου, με ένα κουμπί ενός κλικ για εναλλαγή μεταξύ πάνω και κάτω. Η επιλογή απομνημονεύεται ανά πρόγραμμα περιήγησης."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "Μπάρα"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "Μετακίνηση της γραμμής εργαλείων πάνω ή κάτω"
+
+msgid "Admin Bar Position"
+msgstr "Θέση γραμμής διαχείρισης"
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Default position"
+msgstr "Προεπιλεγμένη θέση"
+
+msgid "Switch button"
+msgstr "Κουμπί εναλλαγής"
+
+msgid "Button label"
+msgstr "Ετικέτα κουμπιού"
+
+msgid "Remember the choice"
+msgstr "Απομνημόνευση της επιλογής"
+
+msgid "Match the page color"
+msgstr "Ταίριασμα με το χρώμα της σελίδας"
+
+msgid "Elementor compatibility"
+msgstr "Συμβατότητα με Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "Θέση γραμμής διαχείρισης"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "Επιλέξτε πού εμφανίζεται η γραμμή εργαλείων του WordPress στο μπροστινό μέρος του ιστότοπου. Οι επισκέπτες που δεν έχουν συνδεθεί δεν τη βλέπουν ποτέ."
+
+msgid "Bottom"
+msgstr "Κάτω"
+
+msgid "Top (WordPress default)"
+msgstr "Πάνω (προεπιλογή WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "Πού εμφανίζεται η γραμμή εργαλείων προτού την αλλάξει ο επισκέπτης."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "Εμφάνιση του πλωτού κουμπιού για μετακίνηση της γραμμής εργαλείων πάνω/κάτω."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Κείμενο που εμφανίζεται δίπλα στο βέλος ↕ στο κουμπί. Αφήστε το κενό για την προεπιλογή."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "Απομνημόνευση της επιλογής κάθε προγράμματος περιήγησης (αποθηκεύεται τοπικά στο πρόγραμμα περιήγησης)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Χρωματισμός του κουμπιού με το κύριο χρώμα κάθε σελίδας (επιστρέφει στο προεπιλεγμένο σκούρο κουμπί όταν δεν βρεθεί χρώμα)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Προσαρμογή των σταθερών κεφαλίδων του Elementor ώστε να ευθυγραμμίζονται με τη γραμμή εργαλείων."

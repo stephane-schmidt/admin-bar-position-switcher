@@ -1,0 +1,92 @@
+# Romanian translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "Mută bara de instrumente WordPress în partea de jos a ecranului pe partea publică a site-ului, cu un buton care o comută dintr-un singur clic între sus și jos. Alegerea este reținută pentru fiecare browser."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "Bară"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "Mută bara de instrumente în partea de sus sau de jos"
+
+msgid "Admin Bar Position"
+msgstr "Poziția barei de administrare"
+
+msgid "Settings"
+msgstr "Setări"
+
+msgid "Default position"
+msgstr "Poziție implicită"
+
+msgid "Switch button"
+msgstr "Buton de comutare"
+
+msgid "Button label"
+msgstr "Eticheta butonului"
+
+msgid "Remember the choice"
+msgstr "Reține alegerea"
+
+msgid "Match the page color"
+msgstr "Potrivește cu culoarea paginii"
+
+msgid "Elementor compatibility"
+msgstr "Compatibilitate Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "Poziția barei de administrare"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "Alege unde apare bara de instrumente WordPress pe partea publică a site-ului. Vizitatorii care nu sunt autentificați nu o văd niciodată."
+
+msgid "Bottom"
+msgstr "Jos"
+
+msgid "Top (WordPress default)"
+msgstr "Sus (implicit în WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "Unde apare bara de instrumente înainte ca vizitatorul să o mute."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "Afișează butonul flotant pentru a muta bara de instrumente sus/jos."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Textul afișat lângă săgeata ↕ de pe buton. Lasă gol pentru valoarea implicită."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "Reține alegerea fiecărui browser (stocată local în browser)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Colorează butonul cu culoarea principală a fiecărei pagini (revine la butonul închis implicit atunci când nu se găsește nicio culoare)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Ajustează anteturile fixe Elementor astfel încât să se alinieze cu bara de instrumente."

@@ -1,0 +1,108 @@
+/**
+ * Admin Bar Position Switcher
+ *
+ * The <html> element gets .abps-bottom or .abps-top very early (see the inline
+ * head script) so the layout never flashes. Rules are scoped to those classes.
+ */
+
+/* ---------------------------------------------------------------------------
+ * Bottom mode (default)
+ * ------------------------------------------------------------------------- */
+html.abps-bottom {
+	margin-top: 0 !important;
+}
+
+html.abps-bottom #wpadminbar {
+	top: auto !important;
+	bottom: 0 !important;
+	position: fixed !important;
+}
+
+/* Sub-menus open upward when the bar is at the bottom. */
+html.abps-bottom #wpadminbar .ab-sub-wrapper {
+	top: auto !important;
+	bottom: 100% !important;
+}
+
+/* Reserve room at the bottom so the bar never covers page content.
+ * !important mirrors the sibling rules (and WordPress core's own bump) so a
+ * theme's body padding cannot let the fixed bar overlap the last line. */
+html.abps-bottom body {
+	padding-bottom: 32px !important;
+}
+
+@media screen and ( max-width: 782px ) {
+	html.abps-bottom body {
+		padding-bottom: 46px !important;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+ * Top mode (restores the standard WordPress behavior)
+ * ------------------------------------------------------------------------- */
+html.abps-top {
+	margin-top: 32px !important;
+}
+
+@media screen and ( max-width: 782px ) {
+	html.abps-top {
+		margin-top: 46px !important;
+	}
+}
+
+html.abps-top #wpadminbar {
+	top: 0 !important;
+	bottom: auto !important;
+	position: fixed !important;
+}
+
+html.abps-top #wpadminbar .ab-sub-wrapper {
+	top: 100% !important;
+	bottom: auto !important;
+}
+
+/* ---------------------------------------------------------------------------
+ * Floating switch button
+ * ------------------------------------------------------------------------- */
+#abps-switch {
+	position: fixed;
+	right: 12px;
+	z-index: 100000;
+	margin: 0;
+	background: #1d2327;
+	color: #fff;
+	border: 0;
+	border-radius: 4px;
+	padding: 7px 11px;
+	font: 600 12px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+	letter-spacing: 0.02em;
+	cursor: pointer;
+	opacity: 0.82;
+	box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.28 );
+}
+
+#abps-switch:hover,
+#abps-switch:focus {
+	opacity: 1;
+}
+
+html.abps-bottom #abps-switch {
+	bottom: 42px;
+	top: auto;
+}
+
+html.abps-top #abps-switch {
+	top: 42px;
+	bottom: auto;
+}
+
+@media screen and ( max-width: 782px ) {
+	html.abps-top #abps-switch {
+		top: 52px;
+	}
+
+	/* The bar is 46px tall on small screens; clear it in bottom mode too. */
+	html.abps-bottom #abps-switch {
+		bottom: 56px;
+	}
+}

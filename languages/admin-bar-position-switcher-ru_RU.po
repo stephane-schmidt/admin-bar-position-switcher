@@ -1,0 +1,92 @@
+# Russian translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "Перемещает панель WordPress вниз экрана на сайте, добавляя кнопку для переключения между верхом и низом одним щелчком. Выбор запоминается для каждого браузера."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "Панель"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "Переместить панель вверх или вниз"
+
+msgid "Admin Bar Position"
+msgstr "Положение панели администратора"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Default position"
+msgstr "Положение по умолчанию"
+
+msgid "Switch button"
+msgstr "Кнопка переключения"
+
+msgid "Button label"
+msgstr "Надпись на кнопке"
+
+msgid "Remember the choice"
+msgstr "Запоминать выбор"
+
+msgid "Match the page color"
+msgstr "Подстраивать под цвет страницы"
+
+msgid "Elementor compatibility"
+msgstr "Совместимость с Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "Положение панели администратора"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "Выберите, где на сайте располагается панель WordPress. Посетители, не вошедшие в систему, её не видят."
+
+msgid "Bottom"
+msgstr "Внизу"
+
+msgid "Top (WordPress default)"
+msgstr "Вверху (по умолчанию в WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "Где отображается панель, пока посетитель её не переключил."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "Показывать плавающую кнопку для перемещения панели вверх или вниз."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Текст рядом со стрелкой ↕ на кнопке. Оставьте пустым для значения по умолчанию."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "Запоминать выбор для каждого браузера (хранится локально в браузере)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Окрашивать кнопку в основной цвет каждой страницы (если цвет не найден, используется тёмная кнопка по умолчанию)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Подстраивать закреплённые шапки Elementor, чтобы они совпадали с панелью."

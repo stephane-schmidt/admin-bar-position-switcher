@@ -1,0 +1,92 @@
+# Chinese (Simplified) translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "在前端将 WordPress 工具栏移到屏幕底部，并提供一键按钮在顶部和底部之间切换。选择会按浏览器分别记住。"
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "工具栏"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "将工具栏移到顶部或底部"
+
+msgid "Admin Bar Position"
+msgstr "管理工具栏位置"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Default position"
+msgstr "默认位置"
+
+msgid "Switch button"
+msgstr "切换按钮"
+
+msgid "Button label"
+msgstr "按钮文字"
+
+msgid "Remember the choice"
+msgstr "记住选择"
+
+msgid "Match the page color"
+msgstr "匹配页面颜色"
+
+msgid "Elementor compatibility"
+msgstr "Elementor 兼容性"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "管理工具栏位置"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "选择 WordPress 工具栏在前端显示的位置。未登录的访客始终看不到它。"
+
+msgid "Bottom"
+msgstr "底部"
+
+msgid "Top (WordPress default)"
+msgstr "顶部（WordPress 默认）"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "访客切换之前工具栏显示的位置。"
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "显示用于将工具栏移到顶部/底部的浮动按钮。"
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "显示在按钮上 ↕ 箭头旁边的文字。留空则使用默认值。"
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "记住每个浏览器的选择（保存在浏览器本地）。"
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "用每个页面的主色调为按钮着色（找不到颜色时回退为默认的深色按钮）。"
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "调整 Elementor 的固定页眉，使其与工具栏对齐。"

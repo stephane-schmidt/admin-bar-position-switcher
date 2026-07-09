@@ -1,0 +1,92 @@
+# Portuguese (Portugal) translation of Admin Bar Position Switcher.
+# Copyright (C) 2026 Stéphane Schmidt
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: Portuguese (Portugal)\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: admin-bar-position-switcher\n"
+
+msgid "Admin Bar Position Switcher"
+msgstr ""
+
+msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
+msgstr ""
+
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "Move a barra de ferramentas do WordPress para a parte inferior do ecrã no front-end, com um botão de um clique para a alternar entre cima e baixo. A escolha é memorizada por navegador."
+
+msgid "Stéphane Schmidt"
+msgstr ""
+
+msgid "https://alveo.design"
+msgstr ""
+
+msgid "Bar"
+msgstr "Barra"
+
+msgid "Move the toolbar to the top or bottom"
+msgstr "Mover a barra de ferramentas para cima ou para baixo"
+
+msgid "Admin Bar Position"
+msgstr "Posição da barra de administração"
+
+msgid "Settings"
+msgstr "Definições"
+
+msgid "Default position"
+msgstr "Posição predefinida"
+
+msgid "Switch button"
+msgstr "Botão de alternância"
+
+msgid "Button label"
+msgstr "Etiqueta do botão"
+
+msgid "Remember the choice"
+msgstr "Memorizar a escolha"
+
+msgid "Match the page color"
+msgstr "Corresponder à cor da página"
+
+msgid "Elementor compatibility"
+msgstr "Compatibilidade com o Elementor"
+
+msgctxt "settings page title"
+msgid "Admin Bar Position"
+msgstr "Posição da barra de administração"
+
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "Escolha onde a barra de ferramentas do WordPress fica no front-end. Os visitantes que não têm sessão iniciada nunca a veem."
+
+msgid "Bottom"
+msgstr "Em baixo"
+
+msgid "Top (WordPress default)"
+msgstr "Em cima (predefinição do WordPress)"
+
+msgid "Where the toolbar appears before the visitor flips it."
+msgstr "Onde a barra de ferramentas aparece antes de o visitante a trocar."
+
+msgid "Show the floating button to move the toolbar top/bottom."
+msgstr "Mostrar o botão flutuante para mover a barra de ferramentas para cima/baixo."
+
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Texto apresentado ao lado da seta ↕ no botão. Deixe vazio para usar a predefinição."
+
+msgid "Remember each browser's choice (stored locally in the browser)."
+msgstr "Memorizar a escolha de cada navegador (guardada localmente no navegador)."
+
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Colorir o botão com a cor principal de cada página (recorre ao botão escuro predefinido quando não encontra nenhuma cor)."
+
+msgid "Adjust Elementor sticky headers so they line up with the toolbar."
+msgstr "Ajustar os cabeçalhos fixos do Elementor para que fiquem alinhados com a barra de ferramentas."
