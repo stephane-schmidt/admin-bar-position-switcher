@@ -1,5 +1,5 @@
 === Admin Bar Position Switcher ===
-Contributors: stephane-schmidt
+Contributors: stephaneschmidt
 Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.0
 Tested up to: 7.0
