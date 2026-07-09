@@ -79,11 +79,30 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 	cursor: pointer;
 	opacity: 0.82;
 	box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.28 );
+	transition: transform 0.42s cubic-bezier( 0.34, 1.4, 0.5, 1 ), opacity 0.3s ease;
+	will-change: transform, opacity;
 }
 
 #abps-switch:hover,
 #abps-switch:focus {
 	opacity: 1;
+}
+
+/* Auto-hidden: slides off the right edge and fades away (JS toggles this). */
+#abps-switch.abps-switch--hidden {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX( calc( 100% + 22px ) );
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	#abps-switch {
+		transition: opacity 0.25s ease;
+	}
+
+	#abps-switch.abps-switch--hidden {
+		transform: none;
+	}
 }
 
 html.abps-bottom #abps-switch {

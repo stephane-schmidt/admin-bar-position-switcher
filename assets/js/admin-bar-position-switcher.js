@@ -13,6 +13,9 @@
 	var DEFAULT = cfg.defaultPosition === 'top' ? 'top' : 'bottom';
 	var REMEMBER = cfg.remember !== false;
 	var AUTO_COLOR = cfg.autoColor === true;
+	var AUTO_HIDE = cfg.autoHide !== false;
+	var HIDE_DELAY = typeof cfg.hideDelay === 'number' ? cfg.hideDelay : 10000;
+	var REVEAL_AT = typeof cfg.revealDistance === 'number' ? cfg.revealDistance : 50;
 	var root = document.documentElement;
 
 	/* ------------------------------------------------------------------ *
@@ -58,6 +61,116 @@
 				} catch ( e ) {}
 			}
 		} );
+	}
+
+	/* ------------------------------------------------------------------ *
+	 * Auto-hide: after a spell with the pointer away from the toolbar the
+	 * button slides off the right edge and fades out; it slips back the
+	 * moment the pointer comes within REVEAL_AT pixels (or it gains focus,
+	 * or the toolbar is hovered). Keyboard- and touch-friendly.
+	 * ------------------------------------------------------------------ */
+	function setupAutoHide( btn ) {
+		var HIDDEN = 'abps-switch--hidden';
+		var bar = document.getElementById( 'wpadminbar' );
+		var timer = null;
+		var home = null;
+
+		// The button's resting rectangle, read from CSS so it is correct even
+		// while the element is translated off-screen (transform ignores offset*).
+		function measure() {
+			var cs = window.getComputedStyle( btn );
+			var w = btn.offsetWidth;
+			var h = btn.offsetHeight;
+			var right = parseFloat( cs.right );
+			if ( isNaN( right ) ) {
+				right = 12;
+			}
+			var left = window.innerWidth - right - w;
+			var top;
+			if ( cs.top !== 'auto' ) {
+				top = parseFloat( cs.top );
+			} else {
+				var bottom = parseFloat( cs.bottom );
+				if ( isNaN( bottom ) ) {
+					bottom = 0;
+				}
+				top = window.innerHeight - bottom - h;
+			}
+			home = { left: left, top: top, right: left + w, bottom: top + h };
+		}
+
+		function stop() {
+			if ( timer ) {
+				window.clearTimeout( timer );
+				timer = null;
+			}
+		}
+		function arm() {
+			stop();
+			timer = window.setTimeout( function () {
+				btn.classList.add( HIDDEN );
+			}, HIDE_DELAY );
+		}
+		function reveal() {   // show, then restart the countdown
+			btn.classList.remove( HIDDEN );
+			arm();
+		}
+		function pin() {      // show and hold (hovering / focused)
+			btn.classList.remove( HIDDEN );
+			stop();
+		}
+
+		function near( x, y ) {
+			if ( ! home ) {
+				measure();
+			}
+			var dx = Math.max( home.left - x, 0, x - home.right );
+			var dy = Math.max( home.top - y, 0, y - home.bottom );
+			return ( dx * dx + dy * dy ) <= ( REVEAL_AT * REVEAL_AT );
+		}
+
+		var queued = false;
+		var mx = 0;
+		var my = 0;
+		function onMove( e ) {
+			mx = e.clientX;
+			my = e.clientY;
+			if ( queued ) {
+				return;
+			}
+			queued = true;
+			window.requestAnimationFrame( function () {
+				queued = false;
+				if ( near( mx, my ) ) {
+					reveal();
+				}
+			} );
+		}
+
+		measure();
+		arm(); // visible on load, fades once the delay elapses
+
+		document.addEventListener( 'mousemove', onMove, { passive: true } );
+		document.addEventListener( 'touchstart', reveal, { passive: true } );
+		window.addEventListener( 'resize', measure );
+
+		btn.addEventListener( 'mouseenter', pin );
+		btn.addEventListener( 'mouseleave', arm );
+		btn.addEventListener( 'focus', pin );
+		btn.addEventListener( 'blur', arm );
+		btn.addEventListener( 'click', function () {
+			pin();
+			window.setTimeout( measure, 0 ); // the toggle may move the anchor
+		} );
+
+		if ( bar ) {
+			bar.addEventListener( 'mouseenter', pin );
+			bar.addEventListener( 'mouseleave', arm );
+		}
+	}
+
+	if ( button && AUTO_HIDE ) {
+		setupAutoHide( button );
 	}
 
 	/* ------------------------------------------------------------------ *

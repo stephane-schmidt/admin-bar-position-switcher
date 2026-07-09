@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 
 * Places the WordPress toolbar at the bottom of the screen on the front end (default position is configurable).
 * Adds a floating "↕" button to switch the toolbar between top and bottom, on the fly.
+* The switch button gently fades and slides out of the way after a few seconds of inactivity, and slips back the moment your pointer comes near (or it receives keyboard focus).
 * Remembers each browser's choice (can be turned off).
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
 * Hide individual toolbar items you don't want (WordPress logo, Comments, + New, Updates, and more).
@@ -86,6 +87,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.0.2 =
+* New: the floating switch button now auto-hides after a short spell of inactivity and slides back in when the pointer comes within reach (or it receives keyboard focus). A tap brings it back on touch devices, and the motion respects the "reduce motion" accessibility preference.
+
 = 1.0.1 =
 * New: hide individual toolbar items from the front-end toolbar.
 * New: colorize the toolbar background, with an automatically readable text color.
@@ -94,6 +98,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+The switch button now tucks itself away when idle and slides back as your pointer approaches.
 
 = 1.0.1 =
 Adds options to hide toolbar items and to colorize the toolbar background.

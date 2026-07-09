@@ -34,6 +34,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 
 - Places the WordPress toolbar at the bottom of the screen on the front end (default position is configurable).
 - Floating "↕" button to switch the toolbar between top and bottom, on the fly.
+- **Auto‑hide** — the button fades and slides out of the way after a few seconds of inactivity, and slips back the moment your pointer comes within ~50px (or it gains keyboard focus). A tap brings it back on touch, and it respects the "reduce motion" preference.
 - Remembers each browser's choice (can be turned off).
 - **Match the page color** — optionally tints the button with the main color of the current page (theme color, palette, or header background), with automatic black/white text for contrast. Falls back to a neutral dark button when no color is found.
 - **Hide toolbar items** — remove individual items you don't want (WordPress logo, Comments, + New, Updates, …).
