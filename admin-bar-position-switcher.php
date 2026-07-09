@@ -28,14 +28,12 @@ require_once ABPS_DIR . 'includes/class-abps-plugin.php';
 
 /**
  * Boot the plugin once all plugins are loaded.
+ *
+ * Translations are loaded automatically by WordPress (since 4.6) from the
+ * plugin's Domain Path and from WordPress.org language packs, so there is no
+ * call to load_plugin_textdomain() here.
  */
 function abps_init() {
-	load_plugin_textdomain(
-		'admin-bar-position-switcher',
-		false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages'
-	);
-
 	new ABPS_Plugin();
 
 	if ( is_admin() ) {
