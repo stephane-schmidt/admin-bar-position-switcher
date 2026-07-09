@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "フロントエンドで WordPress ツールバーを画面の下に移動し、ワンクリックのボタンで上下を切り替えられます。選択はブラウザーごとに記憶されます。"
+msgstr "フロントエンドで WordPress ツールバーを画面下部に移動し、ワンクリックのボタンで上下を切り替えられます。選択はブラウザーごとに記憶されます。"
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,10 +34,34 @@ msgid "Bar"
 msgstr "バー"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "ツールバーを上または下に移動"
+msgstr "ツールバーを上部または下部に移動"
+
+msgid "WordPress logo"
+msgstr "WordPress ロゴ"
+
+msgid "Site name"
+msgstr "サイト名"
+
+msgid "Customize"
+msgstr "カスタマイズ"
+
+msgid "Updates"
+msgstr "更新"
+
+msgid "Comments"
+msgstr "コメント"
+
+msgid "New"
+msgstr "新規"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "User menu (My account)"
+msgstr "ユーザーメニュー (アカウント)"
 
 msgid "Admin Bar Position"
-msgstr "管理バーの位置"
+msgstr "ツールバーの位置"
 
 msgid "Settings"
 msgstr "設定"
@@ -60,33 +84,54 @@ msgstr "ページの色に合わせる"
 msgid "Elementor compatibility"
 msgstr "Elementor との互換性"
 
+msgid "Appearance & items"
+msgstr "外観と項目"
+
+msgid "Toolbar background"
+msgstr "ツールバーの背景"
+
+msgid "Hide toolbar items"
+msgstr "ツールバーの項目を非表示"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "これらのオプションは、フロントエンドでのツールバーの見た目を変更します。"
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "管理バーの位置"
+msgstr "ツールバーの位置"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
 msgstr "フロントエンドで WordPress ツールバーを表示する位置を選択します。ログインしていない訪問者には表示されません。"
 
 msgid "Bottom"
-msgstr "下"
+msgstr "下部"
 
 msgid "Top (WordPress default)"
-msgstr "上（WordPress のデフォルト）"
+msgstr "上部 (WordPress のデフォルト)"
 
 msgid "Where the toolbar appears before the visitor flips it."
 msgstr "訪問者が切り替える前にツールバーが表示される位置です。"
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "ツールバーを上下に移動するフローティングボタンを表示します。"
+msgstr "ツールバーを上下に移動するためのフローティングボタンを表示します。"
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "ボタンの ↕ 矢印の横に表示するテキストです。デフォルトにするには空欄のままにします。"
+msgstr "ボタンの ↕ 矢印の横に表示されるテキストです。デフォルトにするには空欄のままにします。"
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "ブラウザーごとの選択を記憶します（ブラウザー内にローカルで保存されます）。"
+msgstr "各ブラウザーの選択を記憶します (ブラウザー内にローカルで保存されます)。"
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "各ページのメインカラーでボタンに色を付けます（色が見つからない場合はデフォルトの暗いボタンに戻ります）。"
+msgstr "各ページのメインカラーでボタンに色を付けます (色が見つからない場合はデフォルトの暗いボタンに戻ります)。"
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Elementor の固定ヘッダーがツールバーと揃うように調整します。"
+msgstr "Elementor の固定ヘッダーを調整して、ツールバーに揃うようにします。"
+
+msgid "Colorize the toolbar background"
+msgstr "ツールバーの背景に色を付ける"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "読みやすさのため、テキストの色は自動的に調整されます。"
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "フロントエンドのツールバーから非表示にしたい項目にチェックを入れます。"

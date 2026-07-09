@@ -1,15 +1,13 @@
-# Traduction française de Admin Bar Position Switcher.
+# French translation of Admin Bar Position Switcher.
 # Copyright (C) 2026 Stéphane Schmidt
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-"
-"position-switcher\n"
-"POT-Creation-Date: 2026-07-09T10:09:47+00:00\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
-"Last-Translator: Stéphane Schmidt <stephane@alveo.design>\n"
-"Language-Team: Français\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
+"Last-Translator: Admin Bar Position Switcher\n"
+"Language-Team: French\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,132 +15,123 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: admin-bar-position-switcher\n"
 
-#. Plugin Name of the plugin
-#: admin-bar-position-switcher.php
 msgid "Admin Bar Position Switcher"
 msgstr ""
 
-#. Plugin URI of the plugin
-#: admin-bar-position-switcher.php
 msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
-#. Description of the plugin
-#: admin-bar-position-switcher.php
-msgid ""
-"Moves the WordPress toolbar to the bottom of the screen on the front end, "
-"with a one-click button to flip it between top and bottom. The choice is "
-"remembered per browser."
-msgstr ""
-"Déplace la barre d'outils WordPress en bas de l'écran sur le site public, "
-"avec un bouton pour la basculer en un clic entre le haut et le bas. Le choix "
-"est mémorisé par navigateur."
+msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
+msgstr "Déplace la barre d'outils WordPress en bas de l'écran sur le site public, avec un bouton pour la basculer en un clic entre le haut et le bas. Le choix est mémorisé par navigateur."
 
-#. Author of the plugin
-#: admin-bar-position-switcher.php
 msgid "Stéphane Schmidt"
 msgstr ""
 
-#. Author URI of the plugin
-#: admin-bar-position-switcher.php
 msgid "https://alveo.design"
 msgstr ""
 
-#: includes/class-abps-plugin.php:150 includes/class-abps-settings.php:239
 msgid "Bar"
 msgstr "Barre"
 
-#: includes/class-abps-plugin.php:155
 msgid "Move the toolbar to the top or bottom"
 msgstr "Déplacer la barre d'outils en haut ou en bas"
 
-#: includes/class-abps-settings.php:71 includes/class-abps-settings.php:72
+msgid "WordPress logo"
+msgstr "Logo WordPress"
+
+msgid "Site name"
+msgstr "Nom du site"
+
+msgid "Customize"
+msgstr "Personnaliser"
+
+msgid "Updates"
+msgstr "Mises à jour"
+
+msgid "Comments"
+msgstr "Commentaires"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "User menu (My account)"
+msgstr "Menu utilisateur (Mon compte)"
+
 msgid "Admin Bar Position"
 msgstr "Position de la barre d'administration"
 
-#: includes/class-abps-settings.php:87
 msgid "Settings"
 msgstr "Réglages"
 
-#: includes/class-abps-settings.php:115
 msgid "Default position"
 msgstr "Position par défaut"
 
-#: includes/class-abps-settings.php:123
 msgid "Switch button"
 msgstr "Bouton de bascule"
 
-#: includes/class-abps-settings.php:131
 msgid "Button label"
 msgstr "Libellé du bouton"
 
-#: includes/class-abps-settings.php:139
 msgid "Remember the choice"
 msgstr "Mémoriser le choix"
 
-#: includes/class-abps-settings.php:147
 msgid "Match the page color"
 msgstr "S'adapter à la couleur de la page"
 
-#: includes/class-abps-settings.php:155
 msgid "Elementor compatibility"
 msgstr "Compatibilité Elementor"
 
-#: includes/class-abps-settings.php:193
+msgid "Appearance & items"
+msgstr "Apparence et éléments"
+
+msgid "Toolbar background"
+msgstr "Fond de la barre d'outils"
+
+msgid "Hide toolbar items"
+msgstr "Masquer des éléments de la barre"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Ces options modifient l'apparence de la barre d'outils sur le site public."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Position de la barre d'administration"
 
-#: includes/class-abps-settings.php:194
-msgid ""
-"Choose where the WordPress toolbar sits on the front end. Visitors who are "
-"not logged in never see it."
-msgstr ""
-"Choisissez où se place la barre d'outils WordPress sur le site public. Les "
-"visiteurs non connectés ne la voient jamais."
+msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
+msgstr "Choisissez où se place la barre d'outils WordPress sur le site public. Les visiteurs non connectés ne la voient jamais."
 
-#: includes/class-abps-settings.php:213
 msgid "Bottom"
 msgstr "En bas"
 
-#: includes/class-abps-settings.php:214
 msgid "Top (WordPress default)"
 msgstr "En haut (par défaut WordPress)"
 
-#: includes/class-abps-settings.php:216
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr ""
-"L'endroit où apparaît la barre d'outils avant que le visiteur ne la bascule."
+msgstr "L'endroit où apparaît la barre d'outils avant que le visiteur ne la bascule."
 
-#: includes/class-abps-settings.php:228
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr ""
-"Afficher le bouton flottant pour déplacer la barre d'outils en haut ou en "
-"bas."
+msgstr "Afficher le bouton flottant pour déplacer la barre d'outils en haut ou en bas."
 
-#: includes/class-abps-settings.php:240
-msgid ""
-"Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr ""
-"Texte affiché à côté de la flèche ↕ sur le bouton. Laisser vide pour la "
-"valeur par défaut."
+msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
+msgstr "Texte affiché à côté de la flèche ↕ sur le bouton. Laisser vide pour la valeur par défaut."
 
-#: includes/class-abps-settings.php:252
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr ""
-"Mémoriser le choix de chaque navigateur (stocké localement dans le "
-"navigateur)."
+msgstr "Mémoriser le choix de chaque navigateur (stocké localement dans le navigateur)."
 
-#: includes/class-abps-settings.php:265
-msgid ""
-"Tint the button with the main color of each page (falls back to the default "
-"dark button when no color is found)."
-msgstr ""
-"Teinter le bouton avec la couleur principale de chaque page (repli sur le "
-"bouton sombre par défaut si aucune couleur n'est trouvée)."
+msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
+msgstr "Teinter le bouton avec la couleur principale de chaque page (repli sur le bouton sombre par défaut si aucune couleur n'est trouvée)."
 
-#: includes/class-abps-settings.php:278
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr ""
-"Ajuster les en-têtes collants d'Elementor pour qu'ils s'alignent sur la "
-"barre d'outils."
+msgstr "Ajuster les en-têtes collants d'Elementor pour qu'ils s'alignent sur la barre d'outils."
+
+msgid "Colorize the toolbar background"
+msgstr "Coloriser le fond de la barre d'outils"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "La couleur du texte s'ajuste automatiquement pour rester lisible."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Cochez les éléments à masquer de la barre d'outils du site public."

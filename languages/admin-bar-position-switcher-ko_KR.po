@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "프런트엔드에서 WordPress 툴바를 화면 아래쪽으로 이동하며, 원클릭 버튼으로 위쪽과 아래쪽을 전환할 수 있습니다. 선택은 브라우저별로 기억됩니다."
+msgstr "프런트엔드에서 WordPress 툴바를 화면 하단으로 이동하며, 상단과 하단을 한 번의 클릭으로 전환하는 버튼을 제공합니다. 선택 사항은 브라우저별로 기억됩니다."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -31,13 +31,37 @@ msgid "https://alveo.design"
 msgstr ""
 
 msgid "Bar"
-msgstr "툴바"
+msgstr "바"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "툴바를 위쪽 또는 아래쪽으로 이동"
+msgstr "툴바를 상단 또는 하단으로 이동"
+
+msgid "WordPress logo"
+msgstr "WordPress 로고"
+
+msgid "Site name"
+msgstr "사이트 이름"
+
+msgid "Customize"
+msgstr "사용자 정의하기"
+
+msgid "Updates"
+msgstr "업데이트"
+
+msgid "Comments"
+msgstr "댓글"
+
+msgid "New"
+msgstr "신규"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "User menu (My account)"
+msgstr "사용자 메뉴(내 계정)"
 
 msgid "Admin Bar Position"
-msgstr "관리 툴바 위치"
+msgstr "관리자 바 위치"
 
 msgid "Settings"
 msgstr "설정"
@@ -52,7 +76,7 @@ msgid "Button label"
 msgstr "버튼 라벨"
 
 msgid "Remember the choice"
-msgstr "선택 기억"
+msgstr "선택 사항 기억하기"
 
 msgid "Match the page color"
 msgstr "페이지 색상에 맞추기"
@@ -60,33 +84,54 @@ msgstr "페이지 색상에 맞추기"
 msgid "Elementor compatibility"
 msgstr "Elementor 호환성"
 
+msgid "Appearance & items"
+msgstr "모양 및 항목"
+
+msgid "Toolbar background"
+msgstr "툴바 배경"
+
+msgid "Hide toolbar items"
+msgstr "툴바 항목 숨기기"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "이 옵션은 프런트엔드에서 툴바가 표시되는 방식을 변경합니다."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "관리 툴바 위치"
+msgstr "관리자 바 위치"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "WordPress 툴바가 프런트엔드에서 표시될 위치를 선택하세요. 로그인하지 않은 방문자에게는 표시되지 않습니다."
+msgstr "프런트엔드에서 WordPress 툴바가 위치할 곳을 선택하세요. 로그인하지 않은 방문자에게는 표시되지 않습니다."
 
 msgid "Bottom"
-msgstr "아래쪽"
+msgstr "하단"
 
 msgid "Top (WordPress default)"
-msgstr "위쪽 (WordPress 기본값)"
+msgstr "상단(WordPress 기본값)"
 
 msgid "Where the toolbar appears before the visitor flips it."
 msgstr "방문자가 전환하기 전에 툴바가 표시되는 위치입니다."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "툴바를 위/아래로 이동하는 플로팅 버튼을 표시합니다."
+msgstr "툴바를 상단/하단으로 이동하는 플로팅 버튼을 표시합니다."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "버튼의 ↕ 화살표 옆에 표시되는 텍스트입니다. 기본값을 사용하려면 비워 두세요."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "각 브라우저의 선택을 기억합니다 (브라우저에 로컬로 저장됨)."
+msgstr "각 브라우저의 선택 사항을 기억합니다(브라우저에 로컬로 저장됨)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "각 페이지의 주요 색상으로 버튼에 색조를 입힙니다 (색상을 찾을 수 없으면 기본 어두운 버튼으로 대체됩니다)."
+msgstr "각 페이지의 주요 색상으로 버튼을 물들입니다(색상을 찾을 수 없을 경우 기본 어두운 버튼으로 대체됨)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
 msgstr "Elementor 고정 헤더가 툴바와 정렬되도록 조정합니다."
+
+msgid "Colorize the toolbar background"
+msgstr "툴바 배경에 색상 적용하기"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "텍스트 색상은 가독성을 위해 자동으로 조정됩니다."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "프런트엔드 툴바에서 숨기려는 항목을 선택하세요."

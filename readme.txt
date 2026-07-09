@@ -26,6 +26,8 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Adds a floating "↕" button to switch the toolbar between top and bottom, on the fly.
 * Remembers each browser's choice (can be turned off).
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
+* Hide individual toolbar items you don't want (WordPress logo, Comments, + New, Updates, and more).
+* Optionally colorize the toolbar background, with automatically readable text.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
 * Optional Elementor compatibility so sticky headers line up with the toolbar.

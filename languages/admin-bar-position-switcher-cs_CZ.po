@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Přesune lištu WordPressu na veřejné části webu na spodní okraj obrazovky a přidá tlačítko, kterým ji jedním kliknutím přepnete mezi horním a spodním okrajem. Volba se zapamatuje pro každý prohlížeč."
+msgstr "Přesune panel nástrojů WordPressu na spodní část obrazovky na frontendu, s tlačítkem na jedno kliknutí pro přepínání mezi horním a dolním okrajem. Volba se pamatuje pro každý prohlížeč."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -31,13 +31,37 @@ msgid "https://alveo.design"
 msgstr ""
 
 msgid "Bar"
-msgstr "Lišta"
+msgstr "Panel"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Přesunout lištu nahoru nebo dolů"
+msgstr "Přesunout panel nástrojů nahoru nebo dolů"
+
+msgid "WordPress logo"
+msgstr "Logo WordPressu"
+
+msgid "Site name"
+msgstr "Název webu"
+
+msgid "Customize"
+msgstr "Přizpůsobit"
+
+msgid "Updates"
+msgstr "Aktualizace"
+
+msgid "Comments"
+msgstr "Komentáře"
+
+msgid "New"
+msgstr "Nový"
+
+msgid "Search"
+msgstr "Hledat"
+
+msgid "User menu (My account)"
+msgstr "Uživatelská nabídka (Můj účet)"
 
 msgid "Admin Bar Position"
-msgstr "Umístění administrační lišty"
+msgstr "Umístění administračního panelu"
 
 msgid "Settings"
 msgstr "Nastavení"
@@ -60,12 +84,24 @@ msgstr "Přizpůsobit barvě stránky"
 msgid "Elementor compatibility"
 msgstr "Kompatibilita s Elementorem"
 
+msgid "Appearance & items"
+msgstr "Vzhled a položky"
+
+msgid "Toolbar background"
+msgstr "Pozadí panelu nástrojů"
+
+msgid "Hide toolbar items"
+msgstr "Skrýt položky panelu nástrojů"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Tato nastavení mění vzhled panelu nástrojů na frontendu."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Umístění administrační lišty"
+msgstr "Umístění administračního panelu"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Zvolte, kde se na veřejné části webu zobrazí lišta WordPressu. Nepřihlášení návštěvníci ji nikdy nevidí."
+msgstr "Vyberte, kde bude panel nástrojů WordPressu umístěn na frontendu. Nepřihlášení návštěvníci ho nikdy nevidí."
 
 msgid "Bottom"
 msgstr "Dole"
@@ -74,10 +110,10 @@ msgid "Top (WordPress default)"
 msgstr "Nahoře (výchozí ve WordPressu)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Kde se lišta zobrazí, než ji návštěvník přepne."
+msgstr "Kde se panel nástrojů zobrazí, než jej návštěvník přepne."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Zobrazit plovoucí tlačítko pro přesun lišty nahoru/dolů."
+msgstr "Zobrazit plovoucí tlačítko pro přesun panelu nástrojů nahoru/dolů."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Text zobrazený vedle šipky ↕ na tlačítku. Ponechte prázdné pro výchozí hodnotu."
@@ -86,7 +122,16 @@ msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Zapamatovat volbu každého prohlížeče (uloženo lokálně v prohlížeči)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Obarvit tlačítko hlavní barvou každé stránky (pokud se barva nenajde, použije se výchozí tmavé tlačítko)."
+msgstr "Obarvit tlačítko hlavní barvou každé stránky (pokud se žádná barva nenajde, použije se výchozí tmavé tlačítko)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Upravit připnuté hlavičky Elementoru tak, aby lícovaly s lištou."
+msgstr "Upravit přilepené hlavičky Elementoru tak, aby lícovaly s panelem nástrojů."
+
+msgid "Colorize the toolbar background"
+msgstr "Obarvit pozadí panelu nástrojů"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Barva textu se automaticky přizpůsobí pro čitelnost."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Zaškrtněte položky, které chcete skrýt z panelu nástrojů na frontendu."

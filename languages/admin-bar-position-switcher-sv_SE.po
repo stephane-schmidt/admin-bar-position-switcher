@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Flyttar WordPress-verktygsfältet till skärmens nederkant på webbplatsens framsida, med en knapp som med ett klick växlar det mellan toppen och botten. Valet kommer ihåg per webbläsare."
+msgstr "Flyttar WordPress-verktygsfältet till skärmens nederkant i frontend, med en knapp som med ett klick växlar mellan överkant och nederkant. Valet kommer ihåg per webbläsare."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -31,10 +31,34 @@ msgid "https://alveo.design"
 msgstr ""
 
 msgid "Bar"
-msgstr "Rad"
+msgstr "Fält"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Flytta verktygsfältet till toppen eller botten"
+msgstr "Flytta verktygsfältet till överkanten eller nederkanten"
+
+msgid "WordPress logo"
+msgstr "WordPress-logotyp"
+
+msgid "Site name"
+msgstr "Webbplatsens namn"
+
+msgid "Customize"
+msgstr "Anpassa"
+
+msgid "Updates"
+msgstr "Uppdateringar"
+
+msgid "Comments"
+msgstr "Kommentarer"
+
+msgid "New"
+msgstr "Nytt"
+
+msgid "Search"
+msgstr "Sök"
+
+msgid "User menu (My account)"
+msgstr "Användarmeny (Mitt konto)"
 
 msgid "Admin Bar Position"
 msgstr "Verktygsfältets position"
@@ -49,7 +73,7 @@ msgid "Switch button"
 msgstr "Växlingsknapp"
 
 msgid "Button label"
-msgstr "Knapptext"
+msgstr "Knappetikett"
 
 msgid "Remember the choice"
 msgstr "Kom ihåg valet"
@@ -60,24 +84,36 @@ msgstr "Matcha sidans färg"
 msgid "Elementor compatibility"
 msgstr "Elementor-kompatibilitet"
 
+msgid "Appearance & items"
+msgstr "Utseende och objekt"
+
+msgid "Toolbar background"
+msgstr "Verktygsfältets bakgrund"
+
+msgid "Hide toolbar items"
+msgstr "Dölj objekt i verktygsfältet"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Dessa alternativ ändrar hur verktygsfältet ser ut i frontend."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Verktygsfältets position"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Välj var WordPress-verktygsfältet placeras på webbplatsens framsida. Besökare som inte är inloggade ser det aldrig."
+msgstr "Välj var WordPress-verktygsfältet placeras i frontend. Besökare som inte är inloggade ser det aldrig."
 
 msgid "Bottom"
-msgstr "Botten"
+msgstr "Nederkant"
 
 msgid "Top (WordPress default)"
-msgstr "Toppen (WordPress standard)"
+msgstr "Överkant (WordPress standard)"
 
 msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Var verktygsfältet visas innan besökaren växlar det."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Visa den flytande knappen för att flytta verktygsfältet till toppen/botten."
+msgstr "Visa den flytande knappen för att flytta verktygsfältet till överkant/nederkant."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Text som visas bredvid ↕-pilen på knappen. Lämna tomt för standardvärdet."
@@ -86,7 +122,16 @@ msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Kom ihåg varje webbläsares val (lagras lokalt i webbläsaren)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Färga knappen med huvudfärgen på varje sida (återgår till den mörka standardknappen om ingen färg hittas)."
+msgstr "Färga knappen med huvudfärgen på varje sida (återgår till den mörka standardknappen när ingen färg hittas)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Justera Elementors fasta sidhuvuden så att de linjerar med verktygsfältet."
+msgstr "Justera Elementors klistrade sidhuvuden så att de ligger i linje med verktygsfältet."
+
+msgid "Colorize the toolbar background"
+msgstr "Färglägg verktygsfältets bakgrund"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Textfärgen justeras automatiskt för läsbarhet."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Kryssa i de objekt du vill dölja från frontend-verktygsfältet."

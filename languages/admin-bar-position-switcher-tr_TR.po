@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "WordPress araç çubuğunu ön yüzde ekranın altına taşır ve üst ile alt arasında geçiş yapmak için tek tıklamalık bir düğme sunar. Seçim her tarayıcı için hatırlanır."
+msgstr "WordPress araç çubuğunu sitenin ön yüzünde ekranın altına taşır ve tek tıklamayla üst ile alt arasında geçiş yapmanızı sağlayan bir düğme sunar. Seçim her tarayıcı için hatırlanır."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,6 +36,30 @@ msgstr "Çubuk"
 msgid "Move the toolbar to the top or bottom"
 msgstr "Araç çubuğunu üste veya alta taşı"
 
+msgid "WordPress logo"
+msgstr "WordPress logosu"
+
+msgid "Site name"
+msgstr "Site adı"
+
+msgid "Customize"
+msgstr "Özelleştir"
+
+msgid "Updates"
+msgstr "Güncellemeler"
+
+msgid "Comments"
+msgstr "Yorumlar"
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "Search"
+msgstr "Ara"
+
+msgid "User menu (My account)"
+msgstr "Kullanıcı menüsü (Hesabım)"
+
 msgid "Admin Bar Position"
 msgstr "Yönetim Çubuğu Konumu"
 
@@ -46,7 +70,7 @@ msgid "Default position"
 msgstr "Varsayılan konum"
 
 msgid "Switch button"
-msgstr "Değiştirme düğmesi"
+msgstr "Geçiş düğmesi"
 
 msgid "Button label"
 msgstr "Düğme etiketi"
@@ -60,12 +84,24 @@ msgstr "Sayfa rengiyle eşleştir"
 msgid "Elementor compatibility"
 msgstr "Elementor uyumluluğu"
 
+msgid "Appearance & items"
+msgstr "Görünüm ve ögeler"
+
+msgid "Toolbar background"
+msgstr "Araç çubuğu arka planı"
+
+msgid "Hide toolbar items"
+msgstr "Araç çubuğu ögelerini gizle"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Bu seçenekler, araç çubuğunun sitenin ön yüzünde nasıl göründüğünü değiştirir."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Yönetim Çubuğu Konumu"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "WordPress araç çubuğunun ön yüzde nerede duracağını seçin. Oturum açmamış ziyaretçiler bunu asla görmez."
+msgstr "WordPress araç çubuğunun sitenin ön yüzünde nerede duracağını seçin. Oturum açmamış ziyaretçiler onu asla görmez."
 
 msgid "Bottom"
 msgstr "Alt"
@@ -74,19 +110,28 @@ msgid "Top (WordPress default)"
 msgstr "Üst (WordPress varsayılanı)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Ziyaretçi konumunu değiştirmeden önce araç çubuğunun göründüğü yer."
+msgstr "Ziyaretçi konumunu değiştirmeden önce araç çubuğunun görüneceği yer."
 
 msgid "Show the floating button to move the toolbar top/bottom."
 msgstr "Araç çubuğunu üste/alta taşımak için yüzen düğmeyi göster."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Düğmedeki ↕ okunun yanında görünen metin. Varsayılan için boş bırakın."
+msgstr "Düğmedeki ↕ okunun yanında gösterilen metin. Varsayılan için boş bırakın."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Her tarayıcının seçimini hatırla (tarayıcıda yerel olarak saklanır)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Düğmeyi her sayfanın ana rengiyle renklendir (renk bulunamadığında varsayılan koyu düğmeye döner)."
+msgstr "Düğmeyi her sayfanın ana rengiyle renklendir (renk bulunamazsa varsayılan koyu düğmeye döner)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
 msgstr "Elementor yapışkan başlıklarını araç çubuğuyla hizalanacak şekilde ayarla."
+
+msgid "Colorize the toolbar background"
+msgstr "Araç çubuğu arka planını renklendir"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Metin rengi, okunabilirlik için otomatik olarak ayarlanır."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Ön yüz araç çubuğundan gizlemek istediğiniz ögeleri işaretleyin."

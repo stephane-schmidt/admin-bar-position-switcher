@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Verplaatst de WordPress-werkbalk aan de voorkant naar de onderkant van het scherm, met een knop waarmee je hem met één klik tussen boven en onder wisselt. De keuze wordt per browser onthouden."
+msgstr "Verplaatst de WordPress-werkbalk naar de onderkant van het scherm aan de voorkant, met een knop om deze met één klik tussen boven en onder te wisselen. De keuze wordt per browser onthouden."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,8 +36,32 @@ msgstr "Balk"
 msgid "Move the toolbar to the top or bottom"
 msgstr "Verplaats de werkbalk naar boven of onder"
 
+msgid "WordPress logo"
+msgstr "WordPress-logo"
+
+msgid "Site name"
+msgstr "Sitenaam"
+
+msgid "Customize"
+msgstr "Aanpassen"
+
+msgid "Updates"
+msgstr "Updates"
+
+msgid "Comments"
+msgstr "Reacties"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "User menu (My account)"
+msgstr "Gebruikersmenu (Mijn account)"
+
 msgid "Admin Bar Position"
-msgstr "Positie van de adminbalk"
+msgstr "Positie beheerbalk"
 
 msgid "Settings"
 msgstr "Instellingen"
@@ -55,14 +79,26 @@ msgid "Remember the choice"
 msgstr "Onthoud de keuze"
 
 msgid "Match the page color"
-msgstr "Pas de paginakleur aan"
+msgstr "Overeenkomen met de paginakleur"
 
 msgid "Elementor compatibility"
 msgstr "Elementor-compatibiliteit"
 
+msgid "Appearance & items"
+msgstr "Weergave en items"
+
+msgid "Toolbar background"
+msgstr "Werkbalkachtergrond"
+
+msgid "Hide toolbar items"
+msgstr "Werkbalkitems verbergen"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Deze opties veranderen hoe de werkbalk er aan de voorkant uitziet."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Positie van de adminbalk"
+msgstr "Positie beheerbalk"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
 msgstr "Kies waar de WordPress-werkbalk aan de voorkant staat. Bezoekers die niet zijn ingelogd, zien deze nooit."
@@ -80,13 +116,22 @@ msgid "Show the floating button to move the toolbar top/bottom."
 msgstr "Toon de zwevende knop om de werkbalk naar boven/onder te verplaatsen."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Tekst die naast de ↕ pijl op de knop wordt getoond. Laat leeg voor de standaardwaarde."
+msgstr "Tekst weergegeven naast de ↕ pijl op de knop. Laat leeg voor de standaardwaarde."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Onthoud de keuze van elke browser (lokaal opgeslagen in de browser)."
+msgstr "Onthoud de keuze van elke browser (lokaal in de browser opgeslagen)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Kleur de knop met de hoofdkleur van elke pagina (valt terug op de standaard donkere knop als er geen kleur wordt gevonden)."
+msgstr "Kleur de knop met de hoofdkleur van elke pagina (valt terug op de standaard donkere knop wanneer er geen kleur wordt gevonden)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Pas plakkende Elementor-headers aan zodat ze uitlijnen met de werkbalk."
+msgstr "Pas Elementor plakkende headers aan zodat ze uitlijnen met de werkbalk."
+
+msgid "Colorize the toolbar background"
+msgstr "Werkbalkachtergrond kleuren"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "De tekstkleur past zich automatisch aan voor leesbaarheid."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Vink de items aan die je wilt verbergen in de werkbalk aan de voorkant."

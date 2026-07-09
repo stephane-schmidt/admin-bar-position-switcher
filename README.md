@@ -20,6 +20,8 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 - Floating "↕" button to switch the toolbar between top and bottom, on the fly.
 - Remembers each browser's choice (can be turned off).
 - **Match the page color** — optionally tints the button with the main color of the current page (theme color, palette, or header background), with automatic black/white text for contrast. Falls back to a neutral dark button when no color is found.
+- **Hide toolbar items** — remove individual items you don't want (WordPress logo, Comments, + New, Updates, …).
+- **Colorize the toolbar** — set a custom background color for the bar, with automatically readable text.
 - Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 - Opens the toolbar sub‑menus upward when the bar is at the bottom.
 - Optional Elementor compatibility so sticky headers line up with the toolbar.
@@ -37,6 +39,8 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 | Remember the choice | Store each browser's top/bottom preference. |
 | Match the page color | Tint the button with the page's main color. |
 | Elementor compatibility | Align Elementor sticky headers with the toolbar. |
+| Toolbar background | Set a custom background color for the bar (text stays readable). |
+| Hide toolbar items | Hide individual items from the front-end toolbar. |
 
 ## Installation
 

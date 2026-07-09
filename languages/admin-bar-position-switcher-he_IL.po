@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "מעביר את סרגל הכלים של WordPress לתחתית המסך בממשק הקדמי, עם כפתור בלחיצה אחת להעברתו בין למעלה ללמטה. הבחירה נשמרת עבור כל דפדפן."
+msgstr "מזיז את סרגל הכלים של WordPress לתחתית המסך בצד הקדמי, עם כפתור בלחיצה אחת להעברתו בין למעלה ולמטה. הבחירה נשמרת לכל דפדפן."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,6 +36,30 @@ msgstr "סרגל"
 msgid "Move the toolbar to the top or bottom"
 msgstr "העברת סרגל הכלים למעלה או למטה"
 
+msgid "WordPress logo"
+msgstr "סמל WordPress"
+
+msgid "Site name"
+msgstr "שם האתר"
+
+msgid "Customize"
+msgstr "התאמה אישית"
+
+msgid "Updates"
+msgstr "עדכונים"
+
+msgid "Comments"
+msgstr "תגובות"
+
+msgid "New"
+msgstr "חדש"
+
+msgid "Search"
+msgstr "חיפוש"
+
+msgid "User menu (My account)"
+msgstr "תפריט משתמש (החשבון שלי)"
+
 msgid "Admin Bar Position"
 msgstr "מיקום סרגל הניהול"
 
@@ -46,7 +70,7 @@ msgid "Default position"
 msgstr "מיקום ברירת מחדל"
 
 msgid "Switch button"
-msgstr "כפתור מעבר"
+msgstr "כפתור החלפה"
 
 msgid "Button label"
 msgstr "תווית הכפתור"
@@ -60,12 +84,24 @@ msgstr "התאמה לצבע העמוד"
 msgid "Elementor compatibility"
 msgstr "תאימות ל-Elementor"
 
+msgid "Appearance & items"
+msgstr "מראה ופריטים"
+
+msgid "Toolbar background"
+msgstr "רקע סרגל הכלים"
+
+msgid "Hide toolbar items"
+msgstr "הסתרת פריטים בסרגל הכלים"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "אפשרויות אלה משנות את מראה סרגל הכלים בצד הקדמי."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "מיקום סרגל הניהול"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "בחרו היכן ימוקם סרגל הכלים של WordPress בממשק הקדמי. מבקרים שאינם מחוברים לעולם לא יראו אותו."
+msgstr "בחר היכן ימוקם סרגל הכלים של WordPress בצד הקדמי. מבקרים שאינם מחוברים לעולם לא רואים אותו."
 
 msgid "Bottom"
 msgstr "למטה"
@@ -80,13 +116,22 @@ msgid "Show the floating button to move the toolbar top/bottom."
 msgstr "הצגת הכפתור הצף להעברת סרגל הכלים למעלה/למטה."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "הטקסט המוצג לצד החץ ↕ על הכפתור. השאירו ריק לברירת המחדל."
+msgstr "טקסט המוצג ליד החץ ↕ על הכפתור. השאר ריק לברירת המחדל."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "זכירת הבחירה של כל דפדפן (נשמרת מקומית בדפדפן)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "צביעת הכפתור בצבע הראשי של כל עמוד (חוזר לכפתור הכהה כברירת מחדל כשלא נמצא צבע)."
+msgstr "צביעת הכפתור בצבע הראשי של כל עמוד (חוזר לכפתור הכהה של ברירת המחדל כאשר לא נמצא צבע)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "התאמת הכותרות הדביקות של Elementor כך שיתיישרו עם סרגל הכלים."
+msgstr "התאמת כותרות דביקות של Elementor כך שיתיישרו עם סרגל הכלים."
+
+msgid "Colorize the toolbar background"
+msgstr "צביעת רקע סרגל הכלים"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "צבע הטקסט מותאם אוטומטית לקריאות."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "סמן את הפריטים שברצונך להסתיר מסרגל הכלים בצד הקדמי."

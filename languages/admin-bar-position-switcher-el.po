@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Greek\n"
 "Language: el\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Μετακινεί τη γραμμή εργαλείων του WordPress στο κάτω μέρος της οθόνης στο μπροστινό μέρος του ιστότοπου, με ένα κουμπί ενός κλικ για εναλλαγή μεταξύ πάνω και κάτω. Η επιλογή απομνημονεύεται ανά πρόγραμμα περιήγησης."
+msgstr "Μετακινεί την εργαλειοθήκη του WordPress στο κάτω μέρος της οθόνης στο μπροστινό μέρος του ιστότοπου, με ένα κουμπί ενός κλικ για εναλλαγή μεταξύ πάνω και κάτω. Η επιλογή απομνημονεύεται ανά περιηγητή."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,10 +34,34 @@ msgid "Bar"
 msgstr "Μπάρα"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Μετακίνηση της γραμμής εργαλείων πάνω ή κάτω"
+msgstr "Μετακίνηση της εργαλειοθήκης πάνω ή κάτω"
+
+msgid "WordPress logo"
+msgstr "Λογότυπο WordPress"
+
+msgid "Site name"
+msgstr "Όνομα ιστότοπου"
+
+msgid "Customize"
+msgstr "Προσαρμογή"
+
+msgid "Updates"
+msgstr "Ενημερώσεις"
+
+msgid "Comments"
+msgstr "Σχόλια"
+
+msgid "New"
+msgstr "Νέο"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "User menu (My account)"
+msgstr "Μενού χρήστη (Ο λογαριασμός μου)"
 
 msgid "Admin Bar Position"
-msgstr "Θέση γραμμής διαχείρισης"
+msgstr "Θέση μπάρας διαχείρισης"
 
 msgid "Settings"
 msgstr "Ρυθμίσεις"
@@ -60,12 +84,24 @@ msgstr "Ταίριασμα με το χρώμα της σελίδας"
 msgid "Elementor compatibility"
 msgstr "Συμβατότητα με Elementor"
 
+msgid "Appearance & items"
+msgstr "Εμφάνιση & στοιχεία"
+
+msgid "Toolbar background"
+msgstr "Φόντο εργαλειοθήκης"
+
+msgid "Hide toolbar items"
+msgstr "Απόκρυψη στοιχείων εργαλειοθήκης"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Αυτές οι επιλογές αλλάζουν την εμφάνιση της εργαλειοθήκης στο μπροστινό μέρος του ιστότοπου."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Θέση γραμμής διαχείρισης"
+msgstr "Θέση μπάρας διαχείρισης"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Επιλέξτε πού εμφανίζεται η γραμμή εργαλείων του WordPress στο μπροστινό μέρος του ιστότοπου. Οι επισκέπτες που δεν έχουν συνδεθεί δεν τη βλέπουν ποτέ."
+msgstr "Επιλέξτε πού βρίσκεται η εργαλειοθήκη του WordPress στο μπροστινό μέρος του ιστότοπου. Οι επισκέπτες που δεν είναι συνδεδεμένοι δεν τη βλέπουν ποτέ."
 
 msgid "Bottom"
 msgstr "Κάτω"
@@ -74,19 +110,28 @@ msgid "Top (WordPress default)"
 msgstr "Πάνω (προεπιλογή WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Πού εμφανίζεται η γραμμή εργαλείων προτού την αλλάξει ο επισκέπτης."
+msgstr "Πού εμφανίζεται η εργαλειοθήκη πριν ο επισκέπτης την εναλλάξει."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Εμφάνιση του πλωτού κουμπιού για μετακίνηση της γραμμής εργαλείων πάνω/κάτω."
+msgstr "Εμφάνιση του πλωτού κουμπιού για μετακίνηση της εργαλειοθήκης πάνω/κάτω."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Κείμενο που εμφανίζεται δίπλα στο βέλος ↕ στο κουμπί. Αφήστε το κενό για την προεπιλογή."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Απομνημόνευση της επιλογής κάθε προγράμματος περιήγησης (αποθηκεύεται τοπικά στο πρόγραμμα περιήγησης)."
+msgstr "Απομνημόνευση της επιλογής κάθε περιηγητή (αποθηκεύεται τοπικά στον περιηγητή)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
 msgstr "Χρωματισμός του κουμπιού με το κύριο χρώμα κάθε σελίδας (επιστρέφει στο προεπιλεγμένο σκούρο κουμπί όταν δεν βρεθεί χρώμα)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Προσαρμογή των σταθερών κεφαλίδων του Elementor ώστε να ευθυγραμμίζονται με τη γραμμή εργαλείων."
+msgstr "Προσαρμογή των κολλημένων κεφαλίδων του Elementor ώστε να ευθυγραμμίζονται με την εργαλειοθήκη."
+
+msgid "Colorize the toolbar background"
+msgstr "Χρωματισμός του φόντου της εργαλειοθήκης"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Το χρώμα του κειμένου προσαρμόζεται αυτόματα για αναγνωσιμότητα."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Επιλέξτε τα στοιχεία που θέλετε να αποκρύψετε από την εργαλειοθήκη του μπροστινού μέρους."

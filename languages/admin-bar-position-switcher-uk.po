@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Переміщує панель WordPress униз екрана на публічній частині сайту, з кнопкою в один клік для перемикання між верхом і низом. Вибір запам’ятовується для кожного браузера."
+msgstr "Переміщує панель інструментів WordPress донизу екрана у зовнішній частині сайту, з кнопкою для перемикання між верхом і низом одним клацанням. Вибір запам'ятовується для кожного браузера."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "Панель"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Перемістити панель угору або вниз"
+msgstr "Перемістити панель інструментів угору або вниз"
+
+msgid "WordPress logo"
+msgstr "Логотип WordPress"
+
+msgid "Site name"
+msgstr "Назва сайту"
+
+msgid "Customize"
+msgstr "Персоналізувати"
+
+msgid "Updates"
+msgstr "Оновлення"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "New"
+msgstr "Додати"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "User menu (My account)"
+msgstr "Меню користувача (Мій обліковий запис)"
 
 msgid "Admin Bar Position"
 msgstr "Розташування панелі адміністратора"
@@ -43,7 +67,7 @@ msgid "Settings"
 msgstr "Налаштування"
 
 msgid "Default position"
-msgstr "Стандартне розташування"
+msgstr "Типове розташування"
 
 msgid "Switch button"
 msgstr "Кнопка перемикання"
@@ -52,41 +76,62 @@ msgid "Button label"
 msgstr "Напис на кнопці"
 
 msgid "Remember the choice"
-msgstr "Запам’ятовувати вибір"
+msgstr "Запам'ятовувати вибір"
 
 msgid "Match the page color"
-msgstr "Підлаштовувати колір сторінки"
+msgstr "Підлаштовувати під колір сторінки"
 
 msgid "Elementor compatibility"
 msgstr "Сумісність з Elementor"
+
+msgid "Appearance & items"
+msgstr "Вигляд та елементи"
+
+msgid "Toolbar background"
+msgstr "Тло панелі інструментів"
+
+msgid "Hide toolbar items"
+msgstr "Приховати елементи панелі інструментів"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Ці параметри змінюють вигляд панелі інструментів у зовнішній частині сайту."
 
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Розташування панелі адміністратора"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Виберіть, де розташовується панель WordPress на публічній частині сайту. Відвідувачі, які не ввійшли в систему, ніколи її не бачать."
+msgstr "Виберіть, де розташовується панель інструментів WordPress у зовнішній частині сайту. Відвідувачі, які не ввійшли до системи, ніколи її не бачать."
 
 msgid "Bottom"
-msgstr "Внизу"
+msgstr "Знизу"
 
 msgid "Top (WordPress default)"
-msgstr "Угорі (стандартно для WordPress)"
+msgstr "Зверху (типово для WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Де з’являється панель, доки відвідувач її не перемкне."
+msgstr "Де з'являється панель інструментів, перш ніж відвідувач її перемкне."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Показувати плаваючу кнопку для переміщення панелі вгору/вниз."
+msgstr "Показувати плаваючу кнопку для переміщення панелі інструментів угору/вниз."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Текст поруч зі стрілкою ↕ на кнопці. Залиште порожнім для стандартного значення."
+msgstr "Текст, що відображається поруч зі стрілкою ↕ на кнопці. Залиште порожнім для типового значення."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Запам’ятовувати вибір кожного браузера (зберігається локально в браузері)."
+msgstr "Запам'ятовувати вибір кожного браузера (зберігається локально в браузері)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Забарвлювати кнопку основним кольором кожної сторінки (повертається до стандартної темної кнопки, якщо колір не знайдено)."
+msgstr "Забарвлювати кнопку основним кольором кожної сторінки (повертається до типової темної кнопки, якщо колір не знайдено)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Коригувати закріплені заголовки Elementor, щоб вони збігалися з панеллю."
+msgstr "Коригувати липкі заголовки Elementor, щоб вони вирівнювалися з панеллю інструментів."
+
+msgid "Colorize the toolbar background"
+msgstr "Забарвити тло панелі інструментів"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Колір тексту підлаштовується автоматично для зручності читання."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Позначте елементи, які ви хочете приховати з панелі інструментів у зовнішній частині сайту."

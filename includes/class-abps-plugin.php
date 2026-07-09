@@ -44,6 +44,23 @@ class ABPS_Plugin {
 		add_action( 'wp_head', array( $this, 'print_early_script' ), 1 );
 		add_action( 'wp_head', array( $this, 'print_noscript_fallback' ), 2 );
 		add_action( 'wp_footer', array( $this, 'print_switch_button' ) );
+
+		if ( ! empty( $this->options['hidden_items'] ) ) {
+			add_action( 'wp_before_admin_bar_render', array( $this, 'remove_hidden_nodes' ), 1000 );
+		}
+	}
+
+	/**
+	 * Remove the toolbar items the user chose to hide.
+	 */
+	public function remove_hidden_nodes() {
+		$bar = isset( $GLOBALS['wp_admin_bar'] ) ? $GLOBALS['wp_admin_bar'] : null;
+		if ( ! $bar || ! method_exists( $bar, 'remove_node' ) ) {
+			return;
+		}
+		foreach ( (array) $this->options['hidden_items'] as $id ) {
+			$bar->remove_node( $id );
+		}
 	}
 
 	/**
@@ -97,6 +114,17 @@ class ABPS_Plugin {
 			$css .= 'html.abps-bottom .elementor-location-header .elementor-sticky--active{top:0 !important;}';
 			$css .= 'html.abps-top .elementor-location-header .elementor-sticky--active{top:32px !important;}';
 			$css .= '@media screen and (max-width:782px){html.abps-top .elementor-location-header .elementor-sticky--active{top:46px !important;}}';
+		}
+
+		if ( ! empty( $this->options['bar_bg_enabled'] ) ) {
+			$bg = $this->options['bar_bg_color'];
+			$fg = self::readable_text_color( $bg );
+			// Recolor the top bar and its top-level items only; sub-menus keep their own styling.
+			$top = '#wpadminbar #wp-admin-bar-root-default>li>.ab-item,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item';
+			$ico = '#wpadminbar #wp-admin-bar-root-default>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-root-default>li>.ab-item:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item:before';
+			$css .= '#wpadminbar{background:' . $bg . ' !important;}';
+			$css .= $top . '{color:' . $fg . ' !important;}';
+			$css .= $ico . '{color:' . $fg . ' !important;}';
 		}
 
 		/**
@@ -155,5 +183,26 @@ class ABPS_Plugin {
 			esc_attr__( 'Move the toolbar to the top or bottom', 'admin-bar-position-switcher' ),
 			esc_html( $label )
 		);
+	}
+
+	/**
+	 * Pick a readable text color (dark or light) for a given background hex.
+	 *
+	 * @param string $hex Background color, e.g. "#1d2327".
+	 * @return string "#1d2327" or "#ffffff".
+	 */
+	public static function readable_text_color( $hex ) {
+		$hex = ltrim( (string) $hex, '#' );
+		if ( 3 === strlen( $hex ) ) {
+			$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+		}
+		if ( 6 !== strlen( $hex ) || ! ctype_xdigit( $hex ) ) {
+			return '#ffffff';
+		}
+		$r   = hexdec( substr( $hex, 0, 2 ) );
+		$g   = hexdec( substr( $hex, 2, 2 ) );
+		$b   = hexdec( substr( $hex, 4, 2 ) );
+		$lum = ( 0.2126 * $r + 0.7152 * $g + 0.0722 * $b ) / 255;
+		return $lum > 0.6 ? '#1d2327' : '#ffffff';
 	}
 }

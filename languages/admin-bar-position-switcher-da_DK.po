@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Danish\n"
 "Language: da_DK\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Flytter WordPress-værktøjslinjen til bunden af skærmen på frontenden med en knap, der med ét klik vender den mellem top og bund. Valget huskes pr. browser."
+msgstr "Flytter WordPress-værktøjslinjen til bunden af skærmen på frontend med en knap, der med ét klik vender den mellem top og bund. Valget huskes pr. browser."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -31,13 +31,37 @@ msgid "https://alveo.design"
 msgstr ""
 
 msgid "Bar"
-msgstr "Bjælke"
+msgstr "Linje"
 
 msgid "Move the toolbar to the top or bottom"
 msgstr "Flyt værktøjslinjen til toppen eller bunden"
 
+msgid "WordPress logo"
+msgstr "WordPress-logo"
+
+msgid "Site name"
+msgstr "Webstedsnavn"
+
+msgid "Customize"
+msgstr "Tilpas"
+
+msgid "Updates"
+msgstr "Opdateringer"
+
+msgid "Comments"
+msgstr "Kommentarer"
+
+msgid "New"
+msgstr "Nyt"
+
+msgid "Search"
+msgstr "Søg"
+
+msgid "User menu (My account)"
+msgstr "Brugermenu (Min konto)"
+
 msgid "Admin Bar Position"
-msgstr "Placering af adminlinje"
+msgstr "Placering af administrationslinje"
 
 msgid "Settings"
 msgstr "Indstillinger"
@@ -55,17 +79,29 @@ msgid "Remember the choice"
 msgstr "Husk valget"
 
 msgid "Match the page color"
-msgstr "Tilpas til sidens farve"
+msgstr "Match sidens farve"
 
 msgid "Elementor compatibility"
 msgstr "Elementor-kompatibilitet"
 
+msgid "Appearance & items"
+msgstr "Udseende og elementer"
+
+msgid "Toolbar background"
+msgstr "Baggrund for værktøjslinje"
+
+msgid "Hide toolbar items"
+msgstr "Skjul elementer på værktøjslinjen"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Disse indstillinger ændrer, hvordan værktøjslinjen ser ud på frontend."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Placering af adminlinje"
+msgstr "Placering af administrationslinje"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Vælg, hvor WordPress-værktøjslinjen skal placeres på frontenden. Besøgende, der ikke er logget ind, ser den aldrig."
+msgstr "Vælg, hvor WordPress-værktøjslinjen placeres på frontend. Besøgende, der ikke er logget ind, ser den aldrig."
 
 msgid "Bottom"
 msgstr "Bund"
@@ -77,7 +113,7 @@ msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Hvor værktøjslinjen vises, før den besøgende vender den."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Vis den svævende knap til at flytte værktøjslinjen op/ned."
+msgstr "Vis den flydende knap til at flytte værktøjslinjen top/bund."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Tekst, der vises ved siden af ↕-pilen på knappen. Lad stå tom for standarden."
@@ -86,7 +122,16 @@ msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Husk hver browsers valg (gemmes lokalt i browseren)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Farv knappen med hovedfarven fra hver side (skifter til den mørke standardknap, hvis der ikke findes nogen farve)."
+msgstr "Toner knappen med hovedfarven på hver side (falder tilbage til den mørke standardknap, når der ikke findes nogen farve)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Justér Elementors klæbende sidehoveder, så de flugter med værktøjslinjen."
+msgstr "Justér Elementors fastgjorte sidehoveder, så de flugter med værktøjslinjen."
+
+msgid "Colorize the toolbar background"
+msgstr "Farvelæg baggrunden for værktøjslinjen"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Tekstfarven justeres automatisk for læsbarhed."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Markér de elementer, du vil skjule fra frontend-værktøjslinjen."

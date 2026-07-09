@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Memindahkan bilah alat WordPress ke bagian bawah layar di sisi depan, dengan tombol satu klik untuk membaliknya antara atas dan bawah. Pilihan diingat per peramban."
+msgstr "Memindahkan bilah alat WordPress ke bagian bawah layar di sisi depan, dengan tombol satu klik untuk membalikkannya antara atas dan bawah. Pilihan diingat per peramban."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,6 +36,30 @@ msgstr "Bilah"
 msgid "Move the toolbar to the top or bottom"
 msgstr "Pindahkan bilah alat ke atas atau bawah"
 
+msgid "WordPress logo"
+msgstr "Logo WordPress"
+
+msgid "Site name"
+msgstr "Nama situs"
+
+msgid "Customize"
+msgstr "Sesuaikan"
+
+msgid "Updates"
+msgstr "Pembaruan"
+
+msgid "Comments"
+msgstr "Komentar"
+
+msgid "New"
+msgstr "Baru"
+
+msgid "Search"
+msgstr "Cari"
+
+msgid "User menu (My account)"
+msgstr "Menu pengguna (Akun saya)"
+
 msgid "Admin Bar Position"
 msgstr "Posisi Bilah Admin"
 
@@ -43,10 +67,10 @@ msgid "Settings"
 msgstr "Pengaturan"
 
 msgid "Default position"
-msgstr "Posisi baku"
+msgstr "Posisi bawaan"
 
 msgid "Switch button"
-msgstr "Tombol alih"
+msgstr "Tombol beralih"
 
 msgid "Button label"
 msgstr "Label tombol"
@@ -55,38 +79,59 @@ msgid "Remember the choice"
 msgstr "Ingat pilihan"
 
 msgid "Match the page color"
-msgstr "Sesuaikan dengan warna halaman"
+msgstr "Cocokkan dengan warna halaman"
 
 msgid "Elementor compatibility"
 msgstr "Kompatibilitas Elementor"
+
+msgid "Appearance & items"
+msgstr "Tampilan & item"
+
+msgid "Toolbar background"
+msgstr "Latar belakang bilah alat"
+
+msgid "Hide toolbar items"
+msgstr "Sembunyikan item bilah alat"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Opsi ini mengubah tampilan bilah alat di sisi depan."
 
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Posisi Bilah Admin"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Pilih tempat bilah alat WordPress berada di sisi depan. Pengunjung yang tidak masuk tidak akan pernah melihatnya."
+msgstr "Pilih di mana bilah alat WordPress ditempatkan di sisi depan. Pengunjung yang tidak masuk log tidak akan pernah melihatnya."
 
 msgid "Bottom"
 msgstr "Bawah"
 
 msgid "Top (WordPress default)"
-msgstr "Atas (baku WordPress)"
+msgstr "Atas (bawaan WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Tempat bilah alat muncul sebelum pengunjung membaliknya."
+msgstr "Di mana bilah alat muncul sebelum pengunjung membalikkannya."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Tampilkan tombol mengambang untuk memindahkan bilah alat ke atas/bawah."
+msgstr "Tampilkan tombol mengambang untuk memindahkan bilah alat atas/bawah."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Teks yang ditampilkan di samping panah ↕ pada tombol. Kosongkan untuk nilai baku."
+msgstr "Teks yang ditampilkan di samping panah ↕ pada tombol. Biarkan kosong untuk bawaan."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Ingat pilihan setiap peramban (disimpan secara lokal di peramban)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Warnai tombol dengan warna utama setiap halaman (kembali ke tombol gelap baku jika tidak ada warna yang ditemukan)."
+msgstr "Beri warna tombol dengan warna utama setiap halaman (kembali ke tombol gelap bawaan bila tidak ada warna yang ditemukan)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Sesuaikan tajuk lekat Elementor agar sejajar dengan bilah alat."
+msgstr "Sesuaikan header lengket Elementor agar sejajar dengan bilah alat."
+
+msgid "Colorize the toolbar background"
+msgstr "Beri warna latar belakang bilah alat"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Warna teks menyesuaikan secara otomatis agar mudah dibaca."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Centang item yang ingin Anda sembunyikan dari bilah alat sisi depan."

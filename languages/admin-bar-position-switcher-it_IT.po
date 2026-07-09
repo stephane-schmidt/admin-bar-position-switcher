@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Sposta la barra degli strumenti di WordPress in basso nello schermo nel front-end, con un pulsante che la sposta tra alto e basso con un clic. La scelta viene ricordata per ogni browser."
+msgstr "Sposta la barra degli strumenti di WordPress in fondo allo schermo nel front-end, con un pulsante che la fa passare con un clic tra alto e basso. La scelta viene ricordata per ogni browser."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -35,6 +35,30 @@ msgstr "Barra"
 
 msgid "Move the toolbar to the top or bottom"
 msgstr "Sposta la barra degli strumenti in alto o in basso"
+
+msgid "WordPress logo"
+msgstr "Logo di WordPress"
+
+msgid "Site name"
+msgstr "Nome del sito"
+
+msgid "Customize"
+msgstr "Personalizza"
+
+msgid "Updates"
+msgstr "Aggiornamenti"
+
+msgid "Comments"
+msgstr "Commenti"
+
+msgid "New"
+msgstr "Nuovo"
+
+msgid "Search"
+msgstr "Cerca"
+
+msgid "User menu (My account)"
+msgstr "Menu utente (Il mio account)"
 
 msgid "Admin Bar Position"
 msgstr "Posizione della barra di amministrazione"
@@ -60,12 +84,24 @@ msgstr "Abbina il colore della pagina"
 msgid "Elementor compatibility"
 msgstr "Compatibilità con Elementor"
 
+msgid "Appearance & items"
+msgstr "Aspetto ed elementi"
+
+msgid "Toolbar background"
+msgstr "Sfondo della barra degli strumenti"
+
+msgid "Hide toolbar items"
+msgstr "Nascondi elementi della barra degli strumenti"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Queste opzioni modificano l'aspetto della barra degli strumenti nel front-end."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Posizione della barra di amministrazione"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Scegli dove posizionare la barra degli strumenti di WordPress nel front-end. I visitatori non connessi non la vedono mai."
+msgstr "Scegli dove posizionare la barra degli strumenti di WordPress nel front-end. I visitatori che non hanno effettuato l'accesso non la vedono mai."
 
 msgid "Bottom"
 msgstr "In basso"
@@ -77,7 +113,7 @@ msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Dove appare la barra degli strumenti prima che il visitatore la sposti."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Mostra il pulsante flottante per spostare la barra degli strumenti in alto o in basso."
+msgstr "Mostra il pulsante fluttuante per spostare la barra degli strumenti in alto/in basso."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Testo mostrato accanto alla freccia ↕ sul pulsante. Lascia vuoto per il valore predefinito."
@@ -86,7 +122,16 @@ msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Ricorda la scelta di ogni browser (memorizzata localmente nel browser)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Colora il pulsante con il colore principale di ogni pagina (usa il pulsante scuro predefinito quando non viene trovato alcun colore)."
+msgstr "Colora il pulsante con il colore principale di ogni pagina (torna al pulsante scuro predefinito quando non viene trovato alcun colore)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Regola le intestazioni fisse di Elementor in modo che siano allineate con la barra degli strumenti."
+msgstr "Regola le intestazioni fisse di Elementor in modo che si allineino con la barra degli strumenti."
+
+msgid "Colorize the toolbar background"
+msgstr "Colora lo sfondo della barra degli strumenti"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Il colore del testo si regola automaticamente per garantire la leggibilità."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Seleziona gli elementi che vuoi nascondere dalla barra degli strumenti del front-end."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Mueve la barra de herramientas de WordPress a la parte inferior de la pantalla en la parte pública, con un botón de un solo clic para alternarla entre arriba y abajo. La elección se recuerda por navegador."
+msgstr "Mueve la barra de herramientas de WordPress a la parte inferior de la pantalla en la parte pública, con un botón de un clic para alternarla entre la parte superior e inferior. La elección se recuerda en cada navegador."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "Barra"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Mueve la barra de herramientas arriba o abajo"
+msgstr "Mover la barra de herramientas arriba o abajo"
+
+msgid "WordPress logo"
+msgstr "Logo de WordPress"
+
+msgid "Site name"
+msgstr "Nombre del sitio"
+
+msgid "Customize"
+msgstr "Personalizar"
+
+msgid "Updates"
+msgstr "Actualizaciones"
+
+msgid "Comments"
+msgstr "Comentarios"
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "User menu (My account)"
+msgstr "Menú de usuario (Mi cuenta)"
 
 msgid "Admin Bar Position"
 msgstr "Posición de la barra de administración"
@@ -43,7 +67,7 @@ msgid "Settings"
 msgstr "Ajustes"
 
 msgid "Default position"
-msgstr "Posición predeterminada"
+msgstr "Posición por defecto"
 
 msgid "Switch button"
 msgstr "Botón de cambio"
@@ -55,10 +79,22 @@ msgid "Remember the choice"
 msgstr "Recordar la elección"
 
 msgid "Match the page color"
-msgstr "Adaptar al color de la página"
+msgstr "Coincidir con el color de la página"
 
 msgid "Elementor compatibility"
 msgstr "Compatibilidad con Elementor"
+
+msgid "Appearance & items"
+msgstr "Apariencia y elementos"
+
+msgid "Toolbar background"
+msgstr "Fondo de la barra de herramientas"
+
+msgid "Hide toolbar items"
+msgstr "Ocultar elementos de la barra de herramientas"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Estas opciones cambian el aspecto de la barra de herramientas en la parte pública."
 
 msgctxt "settings page title"
 msgid "Admin Bar Position"
@@ -71,22 +107,31 @@ msgid "Bottom"
 msgstr "Abajo"
 
 msgid "Top (WordPress default)"
-msgstr "Arriba (predeterminado de WordPress)"
+msgstr "Arriba (por defecto en WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Dónde aparece la barra de herramientas antes de que el visitante la cambie."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Muestra el botón flotante para mover la barra de herramientas arriba/abajo."
+msgstr "Mostrar el botón flotante para mover la barra de herramientas arriba o abajo."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Texto que se muestra junto a la flecha ↕ en el botón. Déjalo vacío para el valor predeterminado."
+msgstr "Texto que se muestra junto a la flecha ↕ en el botón. Déjalo vacío para el valor por defecto."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Recuerda la elección de cada navegador (almacenada localmente en el navegador)."
+msgstr "Recordar la elección de cada navegador (almacenada localmente en el navegador)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Tiñe el botón con el color principal de cada página (usa el botón oscuro predeterminado cuando no se encuentra ningún color)."
+msgstr "Tiñe el botón con el color principal de cada página (vuelve al botón oscuro por defecto cuando no se encuentra ningún color)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
 msgstr "Ajusta las cabeceras fijas de Elementor para que se alineen con la barra de herramientas."
+
+msgid "Colorize the toolbar background"
+msgstr "Colorear el fondo de la barra de herramientas"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "El color del texto se ajusta automáticamente para facilitar la lectura."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Marca los elementos que quieres ocultar de la barra de herramientas de la parte pública."

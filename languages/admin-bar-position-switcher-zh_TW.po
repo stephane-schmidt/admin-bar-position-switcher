@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Chinese (Traditional)\n"
 "Language: zh_TW\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "在前台將 WordPress 工具列移至螢幕底部，並提供一鍵按鈕在頂部與底部之間切換。系統會依各瀏覽器記住選擇。"
+msgstr "在前台將 WordPress 工具列移至畫面底部，並提供一鍵按鈕在頂部與底部之間切換。此選擇會依瀏覽器記住。"
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -35,6 +35,30 @@ msgstr "工具列"
 
 msgid "Move the toolbar to the top or bottom"
 msgstr "將工具列移至頂部或底部"
+
+msgid "WordPress logo"
+msgstr "WordPress 標誌"
+
+msgid "Site name"
+msgstr "網站名稱"
+
+msgid "Customize"
+msgstr "自訂"
+
+msgid "Updates"
+msgstr "更新"
+
+msgid "Comments"
+msgstr "留言"
+
+msgid "New"
+msgstr "新增"
+
+msgid "Search"
+msgstr "搜尋"
+
+msgid "User menu (My account)"
+msgstr "使用者選單（我的帳號）"
 
 msgid "Admin Bar Position"
 msgstr "管理工具列位置"
@@ -49,23 +73,35 @@ msgid "Switch button"
 msgstr "切換按鈕"
 
 msgid "Button label"
-msgstr "按鈕文字"
+msgstr "按鈕標籤"
 
 msgid "Remember the choice"
 msgstr "記住選擇"
 
 msgid "Match the page color"
-msgstr "配合頁面色彩"
+msgstr "配合頁面顏色"
 
 msgid "Elementor compatibility"
 msgstr "Elementor 相容性"
+
+msgid "Appearance & items"
+msgstr "外觀與項目"
+
+msgid "Toolbar background"
+msgstr "工具列背景"
+
+msgid "Hide toolbar items"
+msgstr "隱藏工具列項目"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "這些選項會變更工具列在前台的外觀。"
 
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "管理工具列位置"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "選擇 WordPress 工具列在前台顯示的位置。未登入的訪客不會看到工具列。"
+msgstr "選擇 WordPress 工具列在前台的位置。未登入的訪客永遠不會看到它。"
 
 msgid "Bottom"
 msgstr "底部"
@@ -74,19 +110,28 @@ msgid "Top (WordPress default)"
 msgstr "頂部（WordPress 預設）"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "訪客切換前工具列顯示的位置。"
+msgstr "在訪客切換之前工具列出現的位置。"
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "顯示可將工具列移至頂部／底部的浮動按鈕。"
+msgstr "顯示浮動按鈕，可將工具列移至頂部／底部。"
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "顯示在按鈕上 ↕ 箭頭旁的文字。留空則使用預設值。"
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "記住每個瀏覽器的選擇（儲存在瀏覽器本機）。"
+msgstr "記住每個瀏覽器的選擇（儲存於瀏覽器本機）。"
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "以每個頁面的主色為按鈕上色（找不到色彩時則使用預設的深色按鈕）。"
+msgstr "以每個頁面的主要顏色為按鈕上色（若找不到顏色，則回復為預設的深色按鈕）。"
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "調整 Elementor 固定頁首，使其與工具列對齊。"
+msgstr "調整 Elementor 的固定頁首，使其與工具列對齊。"
+
+msgid "Colorize the toolbar background"
+msgstr "為工具列背景上色"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "文字顏色會自動調整以確保可讀性。"
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "勾選您想要從前台工具列隱藏的項目。"

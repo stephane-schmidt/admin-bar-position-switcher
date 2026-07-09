@@ -47,7 +47,67 @@ class ABPS_Settings {
 			'auto_color'       => 1,
 			'elementor_compat' => 1,
 			'button_label'     => '',
+			'bar_bg_enabled'   => 0,
+			'bar_bg_color'     => '#1d2327',
+			'hidden_items'     => array(),
 		);
+	}
+
+	/**
+	 * Friendly labels for the standard toolbar items.
+	 *
+	 * @return array id => label
+	 */
+	public static function known_items() {
+		return array(
+			'wp-logo'     => __( 'WordPress logo', 'admin-bar-position-switcher' ),
+			'site-name'   => __( 'Site name', 'admin-bar-position-switcher' ),
+			'customize'   => __( 'Customize', 'admin-bar-position-switcher' ),
+			'updates'     => __( 'Updates', 'admin-bar-position-switcher' ),
+			'comments'    => __( 'Comments', 'admin-bar-position-switcher' ),
+			'new-content' => __( 'New', 'admin-bar-position-switcher' ),
+			'search'      => __( 'Search', 'admin-bar-position-switcher' ),
+			'my-account'  => __( 'User menu (My account)', 'admin-bar-position-switcher' ),
+		);
+	}
+
+	/**
+	 * The toolbar's current top-level items, as id => label.
+	 *
+	 * Enumerated from the live admin bar when available (so plugin-added items
+	 * show up too), with a curated fallback.
+	 *
+	 * @return array
+	 */
+	public static function get_toolbar_items() {
+		$items = array();
+		$known = self::known_items();
+
+		$bar = isset( $GLOBALS['wp_admin_bar'] ) ? $GLOBALS['wp_admin_bar'] : null;
+		if ( $bar && method_exists( $bar, 'get_nodes' ) ) {
+			$nodes = $bar->get_nodes();
+			if ( is_array( $nodes ) ) {
+				foreach ( $nodes as $id => $node ) {
+					$parent = isset( $node->parent ) ? $node->parent : false;
+					// Top-level items sit directly under a root group (whose own parent is false).
+					if ( $parent && isset( $nodes[ $parent ] ) && false === $nodes[ $parent ]->parent ) {
+						if ( isset( $known[ $id ] ) ) {
+							$label = $known[ $id ];
+						} else {
+							$title = isset( $node->title ) && is_string( $node->title ) ? trim( wp_strip_all_tags( $node->title ) ) : '';
+							$label = '' !== $title ? $title : $id;
+						}
+						$items[ $id ] = $label;
+					}
+				}
+			}
+		}
+
+		if ( empty( $items ) ) {
+			$items = $known;
+		}
+
+		return $items;
 	}
 
 	/**
@@ -157,6 +217,36 @@ class ABPS_Settings {
 			self::SLUG,
 			'abps_main'
 		);
+
+		add_settings_section(
+			'abps_appearance',
+			__( 'Appearance & items', 'admin-bar-position-switcher' ),
+			array( $this, 'section_appearance_intro' ),
+			self::SLUG
+		);
+
+		add_settings_field(
+			'bar_bg',
+			__( 'Toolbar background', 'admin-bar-position-switcher' ),
+			array( $this, 'field_bar_bg' ),
+			self::SLUG,
+			'abps_appearance'
+		);
+
+		add_settings_field(
+			'hidden_items',
+			__( 'Hide toolbar items', 'admin-bar-position-switcher' ),
+			array( $this, 'field_hidden_items' ),
+			self::SLUG,
+			'abps_appearance'
+		);
+	}
+
+	/**
+	 * Intro line for the appearance section.
+	 */
+	public function section_appearance_intro() {
+		echo '<p>' . esc_html__( 'These options change how the toolbar looks on the front end.', 'admin-bar-position-switcher' ) . '</p>';
 	}
 
 	/**
@@ -177,6 +267,21 @@ class ABPS_Settings {
 		$out['auto_color']       = empty( $input['auto_color'] ) ? 0 : 1;
 		$out['elementor_compat'] = empty( $input['elementor_compat'] ) ? 0 : 1;
 		$out['button_label']     = isset( $input['button_label'] ) ? sanitize_text_field( $input['button_label'] ) : '';
+		$out['bar_bg_enabled']   = empty( $input['bar_bg_enabled'] ) ? 0 : 1;
+
+		$color               = isset( $input['bar_bg_color'] ) ? sanitize_hex_color( $input['bar_bg_color'] ) : '';
+		$out['bar_bg_color'] = $color ? $color : '#1d2327';
+
+		$hidden = array();
+		if ( isset( $input['hidden_items'] ) && is_array( $input['hidden_items'] ) ) {
+			foreach ( $input['hidden_items'] as $id ) {
+				$id = sanitize_key( $id );
+				if ( '' !== $id ) {
+					$hidden[] = $id;
+				}
+			}
+		}
+		$out['hidden_items'] = array_values( array_unique( $hidden ) );
 
 		return $out;
 	}
@@ -277,6 +382,51 @@ class ABPS_Settings {
 			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[elementor_compat]" value="1" <?php checked( $value, 1 ); ?> />
 			<?php esc_html_e( 'Adjust Elementor sticky headers so they line up with the toolbar.', 'admin-bar-position-switcher' ); ?>
 		</label>
+		<?php
+	}
+
+	/**
+	 * Field: toolbar background color.
+	 */
+	public function field_bar_bg() {
+		$opts    = self::get_options();
+		$enabled = $opts['bar_bg_enabled'];
+		$color   = $opts['bar_bg_color'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[bar_bg_enabled]" value="1" <?php checked( $enabled, 1 ); ?> />
+			<?php esc_html_e( 'Colorize the toolbar background', 'admin-bar-position-switcher' ); ?>
+		</label>
+		&nbsp;
+		<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[bar_bg_color]" value="<?php echo esc_attr( $color ); ?>" />
+		<p class="description"><?php esc_html_e( 'The text color adjusts automatically for readability.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Field: hide individual toolbar items.
+	 */
+	public function field_hidden_items() {
+		$hidden = (array) self::get_options()['hidden_items'];
+		$items  = self::get_toolbar_items();
+
+		// Keep any already-hidden item visible in the list so it can be toggled back.
+		foreach ( $hidden as $id ) {
+			if ( ! isset( $items[ $id ] ) ) {
+				$items[ $id ] = $id;
+			}
+		}
+		?>
+		<fieldset>
+			<p class="description"><?php esc_html_e( 'Tick the items you want to hide from the front-end toolbar.', 'admin-bar-position-switcher' ); ?></p>
+			<?php foreach ( $items as $id => $label ) : ?>
+				<label style="display:inline-block;min-width:230px;margin:3px 0;">
+					<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[hidden_items][]" value="<?php echo esc_attr( $id ); ?>" <?php checked( in_array( $id, $hidden, true ) ); ?> />
+					<?php echo esc_html( $label ); ?>
+					<code style="opacity:.55;"><?php echo esc_html( $id ); ?></code>
+				</label>
+			<?php endforeach; ?>
+		</fieldset>
 		<?php
 	}
 }

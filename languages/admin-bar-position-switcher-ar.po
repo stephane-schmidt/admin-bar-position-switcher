@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "ينقل شريط أدوات WordPress إلى أسفل الشاشة في الواجهة الأمامية، مع زر بنقرة واحدة لتبديله بين الأعلى والأسفل. ويُحفظ الاختيار لكل متصفّح."
+msgstr "ينقل شريط أدوات WordPress إلى أسفل الشاشة في الواجهة الأمامية، مع زر بنقرة واحدة لتبديله بين الأعلى والأسفل. يُحفظ الاختيار لكل متصفح."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "الشريط"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "نقل شريط الأدوات إلى الأعلى أو الأسفل"
+msgstr "انقل شريط الأدوات إلى الأعلى أو الأسفل"
+
+msgid "WordPress logo"
+msgstr "شعار WordPress"
+
+msgid "Site name"
+msgstr "اسم الموقع"
+
+msgid "Customize"
+msgstr "تخصيص"
+
+msgid "Updates"
+msgstr "التحديثات"
+
+msgid "Comments"
+msgstr "التعليقات"
+
+msgid "New"
+msgstr "جديد"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "User menu (My account)"
+msgstr "قائمة المستخدم (حسابي)"
 
 msgid "Admin Bar Position"
 msgstr "موضع شريط الإدارة"
@@ -49,7 +73,7 @@ msgid "Switch button"
 msgstr "زر التبديل"
 
 msgid "Button label"
-msgstr "نص الزر"
+msgstr "تسمية الزر"
 
 msgid "Remember the choice"
 msgstr "تذكّر الاختيار"
@@ -60,12 +84,24 @@ msgstr "مطابقة لون الصفحة"
 msgid "Elementor compatibility"
 msgstr "التوافق مع Elementor"
 
+msgid "Appearance & items"
+msgstr "المظهر والعناصر"
+
+msgid "Toolbar background"
+msgstr "خلفية شريط الأدوات"
+
+msgid "Hide toolbar items"
+msgstr "إخفاء عناصر شريط الأدوات"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "تغيّر هذه الخيارات كيفية ظهور شريط الأدوات في الواجهة الأمامية."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "موضع شريط الإدارة"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "اختر مكان ظهور شريط أدوات WordPress في الواجهة الأمامية. لا يراه الزوّار غير المسجّلين دخولهم أبداً."
+msgstr "اختر موضع شريط أدوات WordPress في الواجهة الأمامية. لا يراه الزوّار غير المسجّلين دخولهم مطلقاً."
 
 msgid "Bottom"
 msgstr "الأسفل"
@@ -74,19 +110,28 @@ msgid "Top (WordPress default)"
 msgstr "الأعلى (الافتراضي في WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "المكان الذي يظهر فيه شريط الأدوات قبل أن يقوم الزائر بتبديله."
+msgstr "المكان الذي يظهر فيه شريط الأدوات قبل أن يبدّله الزائر."
 
 msgid "Show the floating button to move the toolbar top/bottom."
 msgstr "إظهار الزر العائم لنقل شريط الأدوات إلى الأعلى/الأسفل."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "النص الظاهر بجانب السهم ↕ على الزر. اتركه فارغاً لاستخدام الافتراضي."
+msgstr "النص الظاهر بجوار السهم ↕ على الزر. اتركه فارغاً للحصول على الافتراضي."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "تذكّر اختيار كل متصفّح (يُخزَّن محلياً في المتصفّح)."
+msgstr "تذكّر اختيار كل متصفح (يُخزَّن محلياً في المتصفح)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "تلوين الزر باللون الرئيسي لكل صفحة (يعود إلى الزر الداكن الافتراضي عند عدم العثور على لون)."
+msgstr "صبغ الزر باللون الرئيسي لكل صفحة (يعود إلى الزر الداكن الافتراضي عند عدم العثور على لون)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "ضبط رؤوس Elementor الثابتة لتتماشى مع شريط الأدوات."
+msgstr "ضبط رؤوس Elementor الملتصقة لتتماشى مع شريط الأدوات."
+
+msgid "Colorize the toolbar background"
+msgstr "تلوين خلفية شريط الأدوات"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "يُضبط لون النص تلقائياً لتحسين القراءة."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "حدّد العناصر التي تريد إخفاءها من شريط أدوات الواجهة الأمامية."

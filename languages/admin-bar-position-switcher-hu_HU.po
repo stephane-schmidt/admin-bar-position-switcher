@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "A WordPress eszköztárat a képernyő aljára helyezi a webhely látogatói oldalán, egy kattintásos gombbal, amellyel felül és alul között váltogatható. A választást böngészőnként megjegyzi."
+msgstr "A WordPress eszköztárat a képernyő aljára helyezi a webhely látogatói oldalán, egy gombbal átválthatod a tetejéről az aljára és vissza. A választást böngészőnként megjegyzi."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,8 +36,32 @@ msgstr "Sáv"
 msgid "Move the toolbar to the top or bottom"
 msgstr "Az eszköztár mozgatása felülre vagy alulra"
 
+msgid "WordPress logo"
+msgstr "WordPress logó"
+
+msgid "Site name"
+msgstr "Webhely neve"
+
+msgid "Customize"
+msgstr "Testreszabás"
+
+msgid "Updates"
+msgstr "Frissítések"
+
+msgid "Comments"
+msgstr "Hozzászólások"
+
+msgid "New"
+msgstr "Új"
+
+msgid "Search"
+msgstr "Keresés"
+
+msgid "User menu (My account)"
+msgstr "Felhasználói menü (Fiókom)"
+
 msgid "Admin Bar Position"
-msgstr "Az adminsáv helyzete"
+msgstr "Adminisztrációs sáv helyzete"
 
 msgid "Settings"
 msgstr "Beállítások"
@@ -49,44 +73,65 @@ msgid "Switch button"
 msgstr "Váltógomb"
 
 msgid "Button label"
-msgstr "Gombfelirat"
+msgstr "Gomb felirata"
 
 msgid "Remember the choice"
-msgstr "A választás megjegyzése"
+msgstr "Választás megjegyzése"
 
 msgid "Match the page color"
-msgstr "Igazodás az oldal színéhez"
+msgstr "Az oldal színéhez igazítás"
 
 msgid "Elementor compatibility"
-msgstr "Elementor-kompatibilitás"
+msgstr "Elementor kompatibilitás"
+
+msgid "Appearance & items"
+msgstr "Megjelenés és elemek"
+
+msgid "Toolbar background"
+msgstr "Eszköztár háttere"
+
+msgid "Hide toolbar items"
+msgstr "Eszköztár elemeinek elrejtése"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Ezek a beállítások módosítják, hogyan néz ki az eszköztár a látogatói oldalon."
 
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Az adminsáv helyzete"
+msgstr "Adminisztrációs sáv helyzete"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Válaszd ki, hol jelenjen meg a WordPress eszköztár a webhely látogatói oldalán. A be nem jelentkezett látogatók soha nem látják."
+msgstr "Válaszd ki, hol helyezkedjen el a WordPress eszköztár a látogatói oldalon. A be nem jelentkezett látogatók soha nem látják."
 
 msgid "Bottom"
 msgstr "Alul"
 
 msgid "Top (WordPress default)"
-msgstr "Felül (WordPress alapértelmezett)"
+msgstr "Felül (WordPress alapértelmezés)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Itt jelenik meg az eszköztár, mielőtt a látogató átváltaná."
+msgstr "Hol jelenik meg az eszköztár, mielőtt a látogató átváltaná."
 
 msgid "Show the floating button to move the toolbar top/bottom."
 msgstr "A lebegő gomb megjelenítése az eszköztár felülre/alulra mozgatásához."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "A gombon a ↕ nyíl mellett megjelenő szöveg. Hagyd üresen az alapértelmezetthez."
+msgstr "A gombon a ↕ nyíl mellett megjelenő szöveg. Hagyd üresen az alapértelmezéshez."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Az egyes böngészők választásának megjegyzése (a böngészőben helyben tárolva)."
+msgstr "Minden böngésző választásának megjegyzése (helyileg a böngészőben tárolva)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
 msgstr "A gomb színezése az egyes oldalak fő színével (ha nem található szín, az alapértelmezett sötét gombra vált vissza)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Az Elementor ragadós fejlécek igazítása úgy, hogy illeszkedjenek az eszköztárhoz."
+msgstr "Az Elementor tapadó fejlécek igazítása, hogy egy vonalba kerüljenek az eszköztárral."
+
+msgid "Colorize the toolbar background"
+msgstr "Az eszköztár hátterének színezése"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "A szöveg színe automatikusan igazodik az olvashatóság érdekében."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Jelöld be azokat az elemeket, amelyeket el szeretnél rejteni a látogatói oldal eszköztárából."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Verschiebt die WordPress-Werkzeugleiste im Frontend an den unteren Bildschirmrand, mit einer Schaltfläche zum Umschalten zwischen oben und unten per Klick. Die Auswahl wird pro Browser gespeichert."
+msgstr "Verschiebt die WordPress-Werkzeugleiste im Frontend an den unteren Bildschirmrand, mit einer Ein-Klick-Schaltfläche, um sie zwischen oben und unten umzuschalten. Die Auswahl wird pro Browser gespeichert."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -36,8 +36,32 @@ msgstr "Leiste"
 msgid "Move the toolbar to the top or bottom"
 msgstr "Werkzeugleiste nach oben oder unten verschieben"
 
+msgid "WordPress logo"
+msgstr "WordPress-Logo"
+
+msgid "Site name"
+msgstr "Website-Name"
+
+msgid "Customize"
+msgstr "Anpassen"
+
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+msgid "Comments"
+msgstr "Kommentare"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "User menu (My account)"
+msgstr "Benutzermenü (Mein Konto)"
+
 msgid "Admin Bar Position"
-msgstr "Position der Adminleiste"
+msgstr "Position der Admin-Leiste"
 
 msgid "Settings"
 msgstr "Einstellungen"
@@ -46,10 +70,10 @@ msgid "Default position"
 msgstr "Standardposition"
 
 msgid "Switch button"
-msgstr "Umschalter"
+msgstr "Umschalt-Schaltfläche"
 
 msgid "Button label"
-msgstr "Schaltflächenbeschriftung"
+msgstr "Schaltflächen-Beschriftung"
 
 msgid "Remember the choice"
 msgstr "Auswahl merken"
@@ -60,12 +84,24 @@ msgstr "An die Seitenfarbe anpassen"
 msgid "Elementor compatibility"
 msgstr "Elementor-Kompatibilität"
 
+msgid "Appearance & items"
+msgstr "Darstellung & Elemente"
+
+msgid "Toolbar background"
+msgstr "Hintergrund der Werkzeugleiste"
+
+msgid "Hide toolbar items"
+msgstr "Elemente der Werkzeugleiste ausblenden"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Diese Optionen ändern, wie die Werkzeugleiste im Frontend aussieht."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
-msgstr "Position der Adminleiste"
+msgstr "Position der Admin-Leiste"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Legen Sie fest, wo die WordPress-Werkzeugleiste im Frontend erscheint. Nicht angemeldete Besucher sehen sie nie."
+msgstr "Lege fest, wo die WordPress-Werkzeugleiste im Frontend sitzt. Nicht angemeldete Besucher sehen sie niemals."
 
 msgid "Bottom"
 msgstr "Unten"
@@ -77,16 +113,25 @@ msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Wo die Werkzeugleiste erscheint, bevor der Besucher sie umschaltet."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Die schwebende Schaltfläche zum Verschieben der Werkzeugleiste nach oben/unten anzeigen."
+msgstr "Die schwebende Schaltfläche anzeigen, um die Werkzeugleiste nach oben/unten zu verschieben."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Text, der neben dem ↕ Pfeil auf der Schaltfläche angezeigt wird. Für die Standardvorgabe leer lassen."
+msgstr "Text, der neben dem ↕ Pfeil auf der Schaltfläche angezeigt wird. Für den Standardwert leer lassen."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Die Auswahl jedes Browsers merken (lokal im Browser gespeichert)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Die Schaltfläche mit der Hauptfarbe jeder Seite einfärben (fällt auf die standardmäßige dunkle Schaltfläche zurück, wenn keine Farbe gefunden wird)."
+msgstr "Die Schaltfläche mit der Hauptfarbe jeder Seite einfärben (fällt auf die dunkle Standard-Schaltfläche zurück, wenn keine Farbe gefunden wird)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Fixierte Elementor-Kopfzeilen so anpassen, dass sie mit der Werkzeugleiste ausgerichtet sind."
+msgstr "Elementor-Sticky-Header so anpassen, dass sie mit der Werkzeugleiste ausgerichtet sind."
+
+msgid "Colorize the toolbar background"
+msgstr "Hintergrund der Werkzeugleiste einfärben"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Die Textfarbe passt sich für die Lesbarkeit automatisch an."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Markiere die Elemente, die du in der Frontend-Werkzeugleiste ausblenden möchtest."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Finnish\n"
 "Language: fi\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Siirtää WordPressin työkalupalkin näytön alareunaan sivuston etusivulla, ja tarjoaa yhdellä napsautuksella toimivan painikkeen sen vaihtamiseksi ylä- ja alareunan välillä. Valinta muistetaan selainkohtaisesti."
+msgstr "Siirtää WordPress-työkalupalkin näytön alareunaan sivuston julkisella puolella. Yhden napsautuksen painike vaihtaa sen ylä- ja alareunan välillä. Valinta muistetaan selainkohtaisesti."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "Palkki"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Siirrä työkalupalkki ylös tai alas"
+msgstr "Siirrä työkalupalkki ylä- tai alareunaan"
+
+msgid "WordPress logo"
+msgstr "WordPress-logo"
+
+msgid "Site name"
+msgstr "Sivuston nimi"
+
+msgid "Customize"
+msgstr "Mukauta"
+
+msgid "Updates"
+msgstr "Päivitykset"
+
+msgid "Comments"
+msgstr "Kommentit"
+
+msgid "New"
+msgstr "Uusi"
+
+msgid "Search"
+msgstr "Haku"
+
+msgid "User menu (My account)"
+msgstr "Käyttäjävalikko (Oma tili)"
 
 msgid "Admin Bar Position"
 msgstr "Työkalupalkin sijainti"
@@ -60,24 +84,36 @@ msgstr "Sovita sivun väriin"
 msgid "Elementor compatibility"
 msgstr "Elementor-yhteensopivuus"
 
+msgid "Appearance & items"
+msgstr "Ulkoasu ja kohteet"
+
+msgid "Toolbar background"
+msgstr "Työkalupalkin tausta"
+
+msgid "Hide toolbar items"
+msgstr "Piilota työkalupalkin kohteet"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Nämä asetukset muuttavat työkalupalkin ulkoasua sivuston julkisella puolella."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Työkalupalkin sijainti"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Valitse, missä WordPressin työkalupalkki sijaitsee sivuston etusivulla. Kirjautumattomat kävijät eivät koskaan näe sitä."
+msgstr "Valitse, missä WordPress-työkalupalkki sijaitsee sivuston julkisella puolella. Kirjautumattomat kävijät eivät näe sitä koskaan."
 
 msgid "Bottom"
-msgstr "Alhaalla"
+msgstr "Alareuna"
 
 msgid "Top (WordPress default)"
-msgstr "Ylhäällä (WordPressin oletus)"
+msgstr "Yläreuna (WordPressin oletus)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Missä työkalupalkki näkyy ennen kuin kävijä vaihtaa sen paikkaa."
+msgstr "Missä työkalupalkki näkyy, ennen kuin kävijä vaihtaa sen paikkaa."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Näytä kelluva painike, jolla työkalupalkin voi siirtää ylös tai alas."
+msgstr "Näytä kelluva painike, jolla työkalupalkin voi siirtää ylä- tai alareunaan."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Painikkeessa ↕-nuolen vieressä näkyvä teksti. Jätä tyhjäksi käyttääksesi oletusta."
@@ -86,7 +122,16 @@ msgid "Remember each browser's choice (stored locally in the browser)."
 msgstr "Muista kunkin selaimen valinta (tallennetaan paikallisesti selaimeen)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Sävytä painike kunkin sivun päävärillä (käyttää oletusarvoista tummaa painiketta, jos väriä ei löydy)."
+msgstr "Sävytä painike kunkin sivun pääväriin (palautuu oletusarvoiseen tummaan painikkeeseen, jos väriä ei löydy)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Säädä Elementorin kiinnitettyjä otsikoita niin, että ne asettuvat kohdakkain työkalupalkin kanssa."
+msgstr "Säädä Elementorin kiinnittyviä ylätunnisteita niin, että ne asettuvat linjaan työkalupalkin kanssa."
+
+msgid "Colorize the toolbar background"
+msgstr "Väritä työkalupalkin tausta"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Tekstin väri säätyy automaattisesti luettavuuden takaamiseksi."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Valitse kohteet, jotka haluat piilottaa sivuston julkisen puolen työkalupalkista."

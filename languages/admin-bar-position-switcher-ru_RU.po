@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Перемещает панель WordPress вниз экрана на сайте, добавляя кнопку для переключения между верхом и низом одним щелчком. Выбор запоминается для каждого браузера."
+msgstr "Перемещает панель инструментов WordPress вниз экрана на внешней части сайта, добавляя кнопку для переключения её между верхом и низом одним нажатием. Выбор запоминается для каждого браузера."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "Панель"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Переместить панель вверх или вниз"
+msgstr "Переместить панель инструментов вверх или вниз"
+
+msgid "WordPress logo"
+msgstr "Логотип WordPress"
+
+msgid "Site name"
+msgstr "Название сайта"
+
+msgid "Customize"
+msgstr "Настроить"
+
+msgid "Updates"
+msgstr "Обновления"
+
+msgid "Comments"
+msgstr "Комментарии"
+
+msgid "New"
+msgstr "Добавить"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "User menu (My account)"
+msgstr "Меню пользователя (Мой аккаунт)"
 
 msgid "Admin Bar Position"
 msgstr "Положение панели администратора"
@@ -60,12 +84,24 @@ msgstr "Подстраивать под цвет страницы"
 msgid "Elementor compatibility"
 msgstr "Совместимость с Elementor"
 
+msgid "Appearance & items"
+msgstr "Внешний вид и элементы"
+
+msgid "Toolbar background"
+msgstr "Фон панели инструментов"
+
+msgid "Hide toolbar items"
+msgstr "Скрыть элементы панели инструментов"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Эти параметры меняют внешний вид панели инструментов на внешней части сайта."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Положение панели администратора"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Выберите, где на сайте располагается панель WordPress. Посетители, не вошедшие в систему, её не видят."
+msgstr "Выберите, где располагается панель инструментов WordPress на внешней части сайта. Посетители, не вошедшие в систему, её не видят."
 
 msgid "Bottom"
 msgstr "Внизу"
@@ -74,19 +110,28 @@ msgid "Top (WordPress default)"
 msgstr "Вверху (по умолчанию в WordPress)"
 
 msgid "Where the toolbar appears before the visitor flips it."
-msgstr "Где отображается панель, пока посетитель её не переключил."
+msgstr "Где появляется панель инструментов до того, как посетитель её переключит."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Показывать плавающую кнопку для перемещения панели вверх или вниз."
+msgstr "Показывать плавающую кнопку для перемещения панели инструментов вверх/вниз."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
-msgstr "Текст рядом со стрелкой ↕ на кнопке. Оставьте пустым для значения по умолчанию."
+msgstr "Текст, отображаемый рядом со стрелкой ↕ на кнопке. Оставьте пустым для значения по умолчанию."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Запоминать выбор для каждого браузера (хранится локально в браузере)."
+msgstr "Запоминать выбор для каждого браузера (сохраняется локально в браузере)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Окрашивать кнопку в основной цвет каждой страницы (если цвет не найден, используется тёмная кнопка по умолчанию)."
+msgstr "Окрашивать кнопку в основной цвет каждой страницы (возвращается к тёмной кнопке по умолчанию, если цвет не найден)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
-msgstr "Подстраивать закреплённые шапки Elementor, чтобы они совпадали с панелью."
+msgstr "Подстраивать закреплённые шапки Elementor, чтобы они совпадали с панелью инструментов."
+
+msgid "Colorize the toolbar background"
+msgstr "Окрашивать фон панели инструментов"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Цвет текста автоматически подстраивается для читаемости."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Отметьте элементы, которые вы хотите скрыть из панели инструментов на внешней части сайта."

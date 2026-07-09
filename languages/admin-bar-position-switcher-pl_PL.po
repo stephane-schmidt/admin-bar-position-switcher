@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Admin Bar Position Switcher 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-bar-position-switcher\n"
-"PO-Revision-Date: 2026-07-09 12:00+0000\n"
+"PO-Revision-Date: 2026-07-09 14:00+0000\n"
 "Last-Translator: Admin Bar Position Switcher\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -22,7 +22,7 @@ msgid "https://wordpress.org/plugins/admin-bar-position-switcher/"
 msgstr ""
 
 msgid "Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser."
-msgstr "Przenosi pasek narzędzi WordPress na dół ekranu na stronie, z przyciskiem umożliwiającym jednym kliknięciem przełączanie go między górą a dołem. Wybór jest zapamiętywany dla każdej przeglądarki."
+msgstr "Przenosi pasek narzędzi WordPress na dół ekranu w części publicznej witryny, z przyciskiem umożliwiającym jednym kliknięciem przełączanie go między górą a dołem. Wybór jest zapamiętywany dla każdej przeglądarki."
 
 msgid "Stéphane Schmidt"
 msgstr ""
@@ -34,7 +34,31 @@ msgid "Bar"
 msgstr "Pasek"
 
 msgid "Move the toolbar to the top or bottom"
-msgstr "Przenieś pasek na górę lub na dół"
+msgstr "Przenieś pasek narzędzi na górę lub na dół"
+
+msgid "WordPress logo"
+msgstr "Logo WordPressa"
+
+msgid "Site name"
+msgstr "Nazwa witryny"
+
+msgid "Customize"
+msgstr "Dostosuj"
+
+msgid "Updates"
+msgstr "Aktualizacje"
+
+msgid "Comments"
+msgstr "Komentarze"
+
+msgid "New"
+msgstr "Nowy"
+
+msgid "Search"
+msgstr "Szukaj"
+
+msgid "User menu (My account)"
+msgstr "Menu użytkownika (Moje konto)"
 
 msgid "Admin Bar Position"
 msgstr "Położenie paska administracyjnego"
@@ -60,33 +84,54 @@ msgstr "Dopasuj do koloru strony"
 msgid "Elementor compatibility"
 msgstr "Zgodność z Elementor"
 
+msgid "Appearance & items"
+msgstr "Wygląd i elementy"
+
+msgid "Toolbar background"
+msgstr "Tło paska narzędzi"
+
+msgid "Hide toolbar items"
+msgstr "Ukryj elementy paska narzędzi"
+
+msgid "These options change how the toolbar looks on the front end."
+msgstr "Te opcje zmieniają wygląd paska narzędzi w części publicznej witryny."
+
 msgctxt "settings page title"
 msgid "Admin Bar Position"
 msgstr "Położenie paska administracyjnego"
 
 msgid "Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it."
-msgstr "Wybierz, gdzie na stronie ma znajdować się pasek narzędzi WordPress. Niezalogowani odwiedzający nigdy go nie widzą."
+msgstr "Wybierz, gdzie ma znajdować się pasek narzędzi WordPress w części publicznej witryny. Odwiedzający, którzy nie są zalogowani, nigdy go nie widzą."
 
 msgid "Bottom"
-msgstr "Na dole"
+msgstr "Dół"
 
 msgid "Top (WordPress default)"
-msgstr "Na górze (domyślnie w WordPress)"
+msgstr "Góra (domyślne w WordPressie)"
 
 msgid "Where the toolbar appears before the visitor flips it."
 msgstr "Gdzie pojawia się pasek narzędzi, zanim odwiedzający go przełączy."
 
 msgid "Show the floating button to move the toolbar top/bottom."
-msgstr "Pokaż pływający przycisk do przenoszenia paska na górę lub na dół."
+msgstr "Pokaż pływający przycisk do przenoszenia paska narzędzi na górę/dół."
 
 msgid "Text shown next to the ↕ arrow on the button. Leave empty for the default."
 msgstr "Tekst wyświetlany obok strzałki ↕ na przycisku. Pozostaw puste, aby użyć domyślnego."
 
 msgid "Remember each browser's choice (stored locally in the browser)."
-msgstr "Zapamiętaj wybór każdej przeglądarki (przechowywany lokalnie w przeglądarce)."
+msgstr "Zapamiętuj wybór każdej przeglądarki (przechowywany lokalnie w przeglądarce)."
 
 msgid "Tint the button with the main color of each page (falls back to the default dark button when no color is found)."
-msgstr "Zabarw przycisk głównym kolorem każdej strony (w razie braku koloru używany jest domyślny ciemny przycisk)."
+msgstr "Zabarw przycisk głównym kolorem każdej strony (przy braku wykrytego koloru używany jest domyślny ciemny przycisk)."
 
 msgid "Adjust Elementor sticky headers so they line up with the toolbar."
 msgstr "Dostosuj przyklejone nagłówki Elementor, aby były wyrównane z paskiem narzędzi."
+
+msgid "Colorize the toolbar background"
+msgstr "Koloruj tło paska narzędzi"
+
+msgid "The text color adjusts automatically for readability."
+msgstr "Kolor tekstu dostosowuje się automatycznie dla czytelności."
+
+msgid "Tick the items you want to hide from the front-end toolbar."
+msgstr "Zaznacz elementy, które chcesz ukryć na pasku narzędzi w części publicznej witryny."
