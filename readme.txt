@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,9 +83,12 @@ Stéphane crafts clean, human-friendly WordPress sites — often for cultural an
 
 He builds with a lot of curiosity and enthusiasm, and these days he develops hand in hand with **Claude Code**, Anthropic's AI coding agent — something he's genuinely excited about. It's a field that never sits still: the tools evolve almost week to week, and Stéphane loves riding that wave, experimenting, learning, and shipping faster and better than ever.
 
-He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on.
+He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.0.3 =
+* New: a small "Support the author" card on the settings screen — the author's links and a one-tap way to buy him a coffee. Translated into every bundled language.
 
 = 1.0.2 =
 * New: the floating switch button now auto-hides after a short spell of inactivity and slides back in when the pointer comes within reach (or it receives keyboard focus). A tap brings it back on touch devices, and the motion respects the "reduce motion" accessibility preference.
@@ -98,6 +101,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Adds a small "Support the author" card to the settings screen.
 
 = 1.0.2 =
 The switch button now tucks itself away when idle and slides back as your pointer approaches.

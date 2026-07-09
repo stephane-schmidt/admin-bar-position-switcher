@@ -135,3 +135,15 @@ msgstr "A szöveg színe automatikusan igazodik az olvashatóság érdekében."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Jelöld be azokat az elemeket, amelyeket el szeretnél rejteni a látogatói oldal eszköztárából."
+
+msgid "Support the author"
+msgstr "Támogasd a szerzőt"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Ez a kis bővítmény ingyenes és nyílt forráskódú. Ha helyet érdemelt a képernyődön, támogathatod a fejlesztését – vagy egyszerűen csak köszönj be."
+
+msgid "Buy me a coffee"
+msgstr "Hívj meg egy kávéra"
+
+msgid "Available for freelance work"
+msgstr "Szabadúszó munkát vállalok"

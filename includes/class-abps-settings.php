@@ -304,6 +304,43 @@ class ABPS_Settings {
 				submit_button();
 				?>
 			</form>
+			<?php $this->render_support(); ?>
+		</div>
+		<?php
+	}
+
+	/**
+	 * A small "Support the author" card below the settings form.
+	 *
+	 * Informational only: the author's links and a donation button. There are
+	 * no form fields, so it lives outside the settings form.
+	 */
+	public function render_support() {
+		$links = array(
+			'Facebook'     => 'https://www.facebook.com/free.stephane',
+			'Instagram'    => 'https://www.instagram.com/free.stephane/',
+			'TikTok'       => 'https://www.tiktok.com/@freestephane',
+			'GitHub'       => 'https://github.com/stephane-schmidt',
+			'alveo.design' => 'https://alveo.design',
+		);
+		$donate = 'https://revolut.me/stphanjt11';
+		?>
+		<div class="card" style="max-width:520px;margin-top:28px;">
+			<h2 class="title" style="margin-bottom:6px;"><?php esc_html_e( 'Support the author', 'admin-bar-position-switcher' ); ?></h2>
+			<p style="color:#50575e;">
+				<?php esc_html_e( 'This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello.', 'admin-bar-position-switcher' ); ?>
+			</p>
+			<p style="margin:0 0 10px;">
+				<strong>Stéphane Schmidt</strong> &middot; <?php esc_html_e( 'Available for freelance work', 'admin-bar-position-switcher' ); ?>
+			</p>
+			<p style="display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 16px;">
+				<?php foreach ( $links as $label => $url ) : ?>
+					<a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener nofollow"><?php echo esc_html( $label ); ?></a>
+				<?php endforeach; ?>
+			</p>
+			<p style="margin:0;">
+				<a class="button button-primary" href="<?php echo esc_url( $donate ); ?>" target="_blank" rel="noopener nofollow"><?php esc_html_e( 'Buy me a coffee', 'admin-bar-position-switcher' ); ?></a>
+			</p>
 		</div>
 		<?php
 	}

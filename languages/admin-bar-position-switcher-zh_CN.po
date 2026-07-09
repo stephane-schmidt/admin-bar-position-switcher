@@ -135,3 +135,15 @@ msgstr "文字颜色会自动调整以确保可读性。"
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "勾选您想要从前端工具栏隐藏的项目。"
+
+msgid "Support the author"
+msgstr "支持作者"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "这个小插件免费且开源。如果它在你的屏幕上占得一席之地，欢迎支持它的开发，或者只是打个招呼也好。"
+
+msgid "Buy me a coffee"
+msgstr "请我喝杯咖啡"
+
+msgid "Available for freelance work"
+msgstr "可承接自由职业工作"

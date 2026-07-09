@@ -135,3 +135,15 @@ msgstr "Metin rengi, okunabilirlik için otomatik olarak ayarlanır."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Ön yüz araç çubuğundan gizlemek istediğiniz ögeleri işaretleyin."
+
+msgid "Support the author"
+msgstr "Yazara destek olun"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Bu küçük eklenti ücretsiz ve açık kaynaklıdır. Ekranınızda bir yer edindiyse, gelişimine destek olabilir ya da yalnızca merhaba diyebilirsiniz."
+
+msgid "Buy me a coffee"
+msgstr "Bana bir kahve ısmarla"
+
+msgid "Available for freelance work"
+msgstr "Serbest çalışmaya açığım"

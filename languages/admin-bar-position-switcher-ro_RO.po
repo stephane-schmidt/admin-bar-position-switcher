@@ -135,3 +135,15 @@ msgstr "Culoarea textului se ajustează automat pentru lizibilitate."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Bifează elementele pe care vrei să le ascunzi din bara de instrumente de pe partea publică."
+
+msgid "Support the author"
+msgstr "Sprijină autorul"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Acest mic plugin este gratuit și open source. Dacă și-a găsit un loc pe ecranul tău, poți sprijini dezvoltarea lui — sau pur și simplu să-mi dai un semn."
+
+msgid "Buy me a coffee"
+msgstr "Fă-mi cinste cu o cafea"
+
+msgid "Available for freelance work"
+msgstr "Disponibil pentru proiecte freelance"

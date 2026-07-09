@@ -135,3 +135,15 @@ msgstr "Tekstfarven justeres automatisk for læsbarhed."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Markér de elementer, du vil skjule fra frontend-værktøjslinjen."
+
+msgid "Support the author"
+msgstr "Støt udvikleren"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Dette lille plugin er gratis og open source. Hvis det har fortjent en plads på din skærm, kan du støtte udviklingen af det – eller bare sige hej."
+
+msgid "Buy me a coffee"
+msgstr "Giv mig en kop kaffe"
+
+msgid "Available for freelance work"
+msgstr "Ledig for freelanceopgaver"

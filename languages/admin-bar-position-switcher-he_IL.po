@@ -135,3 +135,15 @@ msgstr "צבע הטקסט מותאם אוטומטית לקריאות."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "סמן את הפריטים שברצונך להסתיר מסרגל הכלים בצד הקדמי."
+
+msgid "Support the author"
+msgstr "תמכו במפתח"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "התוסף הקטן הזה חינמי ובקוד פתוח. אם מצא לו מקום על המסך שלכם, אתם מוזמנים לתמוך בפיתוח שלו — או פשוט לומר שלום."
+
+msgid "Buy me a coffee"
+msgstr "קנו לי קפה"
+
+msgid "Available for freelance work"
+msgstr "פנוי לעבודות פרילנס"

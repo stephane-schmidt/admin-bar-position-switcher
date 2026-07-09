@@ -75,6 +75,8 @@ Built and maintained by **Stéphane Schmidt** — a web designer and developer b
 
 Stéphane crafts clean, human‑friendly WordPress sites, often for cultural and non‑profit projects, and develops hand in hand with **Claude Code** with a lot of enthusiasm. **Available for freelance work** — reach him at **stephane@alveo.design**, on [alveo.design](https://alveo.design), on [Facebook](https://www.facebook.com/free.stephane), on [Instagram](https://www.instagram.com/free.stephane/), or on [TikTok](https://www.tiktok.com/@freestephane).
 
+If this plugin is useful to you, you can **[buy him a coffee](https://revolut.me/stphanjt11)** — thank you. (A small "Support the author" card with these links is also built into the plugin's settings screen, translated into every bundled language.)
+
 ## License
 
 This plugin is free software, released under the **GNU General Public License v2.0 or later**. See [LICENSE](LICENSE).

@@ -135,3 +135,15 @@ msgstr "Warna teks menyesuaikan secara otomatis agar mudah dibaca."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Centang item yang ingin Anda sembunyikan dari bilah alat sisi depan."
+
+msgid "Support the author"
+msgstr "Dukung penulisnya"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Plugin kecil ini gratis dan bersifat open source. Jika ia layak mendapat tempat di layar Anda, Anda dapat mendukung pengembangannya — atau sekadar menyapa."
+
+msgid "Buy me a coffee"
+msgstr "Traktir saya kopi"
+
+msgid "Available for freelance work"
+msgstr "Tersedia untuk pekerjaan lepas"

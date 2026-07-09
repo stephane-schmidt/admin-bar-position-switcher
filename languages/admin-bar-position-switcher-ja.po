@@ -135,3 +135,15 @@ msgstr "読みやすさのため、テキストの色は自動的に調整され
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "フロントエンドのツールバーから非表示にしたい項目にチェックを入れます。"
+
+msgid "Support the author"
+msgstr "作者を応援する"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "この小さなプラグインは無料でオープンソースです。あなたの画面で役に立てたなら、開発を応援していただけると嬉しいです。もちろん、ひとこと挨拶するだけでも大歓迎です。"
+
+msgid "Buy me a coffee"
+msgstr "コーヒーを一杯おごる"
+
+msgid "Available for freelance work"
+msgstr "フリーランスのお仕事、承ります"

@@ -135,3 +135,15 @@ msgstr "Tekstin väri säätyy automaattisesti luettavuuden takaamiseksi."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Valitse kohteet, jotka haluat piilottaa sivuston julkisen puolen työkalupalkista."
+
+msgid "Support the author"
+msgstr "Tue tekijää"
+
+msgid "This little plugin is free and open source. If it earned a spot on your screen, you can support its development — or simply say hello."
+msgstr "Tämä pieni lisäosa on ilmainen ja avoimen lähdekoodin. Jos se ansaitsi paikkansa näytölläsi, voit tukea sen kehitystä — tai vain sanoa hei."
+
+msgid "Buy me a coffee"
+msgstr "Tarjoa minulle kahvit"
+
+msgid "Available for freelance work"
+msgstr "Käytettävissä freelance-työhön"
