@@ -103,6 +103,10 @@ class Switchmybar_Admin_Menu {
 		$css .= 'html.abps-menu-right #wpcontent,html.abps-menu-right #wpfooter{margin-left:20px !important;margin-right:160px;}';
 		$css .= 'html.abps-menu-right body.folded #wpcontent,html.abps-menu-right body.folded #wpfooter{margin-right:36px;}';
 		$css .= 'html.abps-menu-right #adminmenu .wp-submenu{left:auto;right:160px;}';
+		// The CURRENT item's submenu renders inline (position:relative) — core
+		// resets left/right to auto there; our mirror must do the same or the
+		// inline submenu gets shoved 160px sideways.
+		$css .= 'html.abps-menu-right body:not(.folded) #adminmenu .wp-has-current-submenu .wp-submenu{left:auto;right:auto;}';
 		$css .= 'html.abps-menu-right body.folded #adminmenu .wp-submenu{left:auto;right:36px;}';
 		$css .= 'html.abps-menu-right #screen-meta-links{margin-right:20px;}';
 
