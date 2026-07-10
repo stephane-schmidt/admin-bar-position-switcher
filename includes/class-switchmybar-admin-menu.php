@@ -2,7 +2,7 @@
 /**
  * Back-office menu behavior: left/right side switcher and macOS-Dock-style
  * auto-hide for the wp-admin sidebar, mirroring what the plugin does for the
- * front-end toolbar. When hidden, the menu keeps a 10px peek at the screen
+ * front-end toolbar. When hidden, the menu keeps a 20px peek at the screen
  * edge so it never has to be guessed. Desktop only (WordPress switches to its
  * own responsive menu below 783px).
  *
@@ -107,13 +107,13 @@ class Switchmybar_Admin_Menu {
 		$css .= 'html.abps-menu-right #screen-meta-links{margin-right:20px;}';
 
 		// Auto-hide (Dock style): the menu overlays the page, the space is
-		// released, and a 10px half-transparent peek stays at the edge.
+		// released, and a clearly visible 20px peek stays at the edge.
 		$css .= 'html.abps-menu-autohide #adminmenuwrap,html.abps-menu-autohide #adminmenuback{transition:transform .32s cubic-bezier(.4,0,.2,1),opacity .25s ease;will-change:transform;}';
 		$css .= 'html.abps-menu-autohide #adminmenuwrap{z-index:9990;}';
 		$css .= 'html.abps-menu-autohide #wpcontent,html.abps-menu-autohide #wpfooter{margin-left:20px !important;}';
 		$css .= 'html.abps-menu-autohide.abps-menu-right #wpcontent,html.abps-menu-autohide.abps-menu-right #wpfooter{margin-left:20px !important;margin-right:20px;}';
-		$css .= 'html.abps-menu-autohide.abps-menu-hidden #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden #adminmenuback{transform:translateX(calc(-100% + 10px));opacity:.5;}';
-		$css .= 'html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuback{transform:translateX(calc(100% - 10px));}';
+		$css .= 'html.abps-menu-autohide.abps-menu-hidden #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden #adminmenuback{transform:translateX(calc(-100% + 20px));opacity:.85;}';
+		$css .= 'html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuback{transform:translateX(calc(100% - 20px));}';
 
 		// The floating side-switch button, twin of the front #abps-switch.
 		$css .= '#abps-menu-switch{position:fixed;left:12px;bottom:12px;z-index:100000;margin:0;background:#1d2327;color:#fff;border:0;border-radius:4px;padding:7px 11px;font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.02em;cursor:pointer;opacity:.82;box-shadow:0 2px 8px rgba(0,0,0,.28);transition:opacity .25s ease,left .32s cubic-bezier(.4,0,.2,1),right .32s cubic-bezier(.4,0,.2,1);}';

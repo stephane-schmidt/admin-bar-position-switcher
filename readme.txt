@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.6.1 =
+* Improved: the auto-hidden back-office menu is far less shy — it waits 5 seconds before tucking away (2 seconds after the pointer leaves) and keeps a clearly visible 20px colored peek at the screen edge instead of a faint 10px sliver.
+
 = 1.6.0 =
 * Changed: every script and style now goes through the WordPress enqueue APIs (src-less handles carry the early inline snippets; the noscript fallback became pure CSS) — requested by the WordPress.org plugin review.
 * Changed: all PHP symbols (functions, classes, constants, options, AJAX actions, filters) now use the unique "switchmybar" prefix; existing settings are migrated automatically from the old names.
@@ -146,6 +149,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.6.1 =
+Slower, friendlier auto-hide for the back-office menu, with a clearly visible 20px peek.
 
 = 1.6.0 =
 Enqueue-API compliance, unique "switchmybar" prefix (settings migrate automatically), and a visible 10px peek when the back-office menu hides.

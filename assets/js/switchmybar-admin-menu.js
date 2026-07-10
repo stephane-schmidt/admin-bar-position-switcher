@@ -69,7 +69,7 @@
 			if ( nearEdge( mx ) ) {
 				show();
 			} else if ( ! pinned ) {
-				armHide( 900 );
+				armHide( 2000 );
 			}
 		} );
 	}, { passive: true } );
@@ -87,7 +87,7 @@
 	} );
 	menu.addEventListener( 'mouseleave', function () {
 		pinned = false;
-		armHide( 900 );
+		armHide( 2000 );
 	} );
 	menu.addEventListener( 'focusin', function () {
 		pinned = true;
@@ -95,10 +95,10 @@
 	} );
 	menu.addEventListener( 'focusout', function () {
 		pinned = false;
-		armHide( 900 );
+		armHide( 2000 );
 	} );
 
 	// Visible for a moment on load so the menu is discoverable, then it
-	// tucks away, leaving a 10px peek at the edge.
-	armHide( 2500 );
+	// tucks away, leaving a clearly visible 20px peek at the edge.
+	armHide( 5000 );
 }() );
