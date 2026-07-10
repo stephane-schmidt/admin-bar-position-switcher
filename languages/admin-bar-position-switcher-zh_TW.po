@@ -252,3 +252,9 @@ msgstr "拖曳手柄可重新排列選單；顏色和其後留空對每個項目
 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "讓左側管理選單隨你所願：拖曳項目排出自己的順序，為每項設定背景色（文字自動保持清晰可讀），並在某項之後留空以形成分組。"
+
+msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "為後台選單上色並重新排序，讓選單或工具列像 macOS Dock 一樣收起，並隱藏從不使用的項目。一次性支付 15 美元，終身使用。"
+
+msgid "Discover SwitchMyBar Pro"
+msgstr "認識 SwitchMyBar Pro"

@@ -252,3 +252,9 @@ msgstr "Sleep de greep om het menu te herschikken; de kleur en de ruimte erna ge
 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Maak het linker beheermenu van jou: sleep de items in je eigen volgorde, geef elk een achtergrondkleur (de tekst blijft automatisch leesbaar) en voeg ruimte toe na een item om groepen te maken."
+
+msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Kleur en herschik het beheermenu, verberg het of de werkbalk zoals de macOS-Dock, en verberg items die je nooit gebruikt. Eén betaling van $15, voor altijd van jou."
+
+msgid "Discover SwitchMyBar Pro"
+msgstr "Ontdek SwitchMyBar Pro"

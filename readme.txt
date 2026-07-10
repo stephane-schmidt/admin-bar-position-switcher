@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,18 +27,17 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optional auto-hide: the switch button drifts away like a falling leaf after a few seconds of inactivity, and floats back the moment your pointer moves anywhere over the toolbar (off by default; enable it in the settings).
 * Remembers each browser's choice (can be turned off).
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
-* Hide individual toolbar items you don't want (WordPress logo, Comments, + New, Updates, and more).
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
-* **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
-* **Move the back-office menu to the right, or auto-hide it**: two floating tabs hide/show the wp-admin menu or flip it between left and right (remembered per browser), and an optional macOS-Dock mode hides it off-screen until the pointer comes within 150 pixels of its edge.
-* **Reorder by drag and drop**: two sortable lists in the settings let you reorder the back-office menu items and the toolbar elements; the saved order applies site-wide and can be switched off at any time.
-* **Colorize the back-office menu**: give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally dim the items without a custom color so the everyday ones stand out.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
 * Optional Elementor compatibility so sticky headers line up with the toolbar.
 * Fully translatable, and ships with translations for many languages.
 * No effect for logged-out visitors; nothing is enqueued for them.
+
+**Go further with SwitchMyBar Pro**
+
+[SwitchMyBar Pro](https://switchmybar.com/) is a small add-on for the back-office side: colorize, reorder (drag and drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, dock the toolbar itself, and hide the toolbar items you never use. One payment of $15, yours for life.
 
 **Privacy**
 
@@ -55,7 +54,7 @@ The plugin stores the top/bottom preference in the browser's `localStorage` only
 
 = Does this change the toolbar inside wp-admin? =
 
-The toolbar inside the dashboard is untouched: the position switch, the floating button and the toolbar colors only affect the front end. The optional "Back-office menu" section is the one exception — if you use it, it colorizes the left admin menu of wp-admin, exactly as you configured.
+The toolbar inside the dashboard is untouched: the position switch, the floating button and the toolbar colors only affect the front end. Everything that touches wp-admin itself (menu colors, order, docking) lives in the SwitchMyBar Pro add-on.
 
 = Do logged-out visitors see anything? =
 
@@ -80,10 +79,6 @@ In **Admin Bar Position** (left admin menu), turn off "Switch button". The toolb
 3. Hide the individual toolbar items you don't need.
 4. All options on one simple settings screen (Admin Bar Position, in the left admin menu).
 5. The "Bar" item in the toolbar: pick one of your site's dominant colors, auto-detected from your logo and theme.
-6. The back-office menu with custom colors, spacers between groups, and dimmed technical items.
-7. The full settings page, including the back-office menu section.
-8. The back-office menu flipped to the right side with the floating tabs (hide/show and ↔ Menu).
-9. The back-office menu hidden off-screen (macOS-Dock mode): the content takes the full width.
 
 == About the author ==
 
@@ -96,6 +91,10 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.8.0 =
+* Changed: the plugin refocuses on the front-end toolbar. The back-office features (menu colors, order, spacing, dimming, side/Dock, hidden toolbar items, toolbar order and toolbar Dock) move to the SwitchMyBar Pro add-on. Existing settings are not lost: installing the add-on picks them up automatically.
+* Note: nothing else changes — position, floating button, color picker, toolbar background and Elementor compatibility are and stay free.
 
 = 1.7.1 =
 * Fixed: on busy sites (page builders, analytics and the like adding toolbar items), the toolbar's right group — user menu and the "Bar" color picker — wrapped onto a hidden second row; with the bar at the bottom that row fell below the screen. The bar now grows to keep every row visible.

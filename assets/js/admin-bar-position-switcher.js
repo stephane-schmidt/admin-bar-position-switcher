@@ -24,9 +24,6 @@
 	var AUTO_HIDE = flag( cfg.autoHide ); // opt-in; the button stays visible by default
 	var HIDE_DELAY = typeof cfg.hideDelay === 'number' ? cfg.hideDelay : 10000;
 	var REVEAL_AT = typeof cfg.revealDistance === 'number' ? cfg.revealDistance : 50;
-	var BAR_AUTO_HIDE = flag( cfg.barAutoHide ); // opt-in; the toolbar stays visible by default
-	var BAR_REVEAL_AT = typeof cfg.barRevealDistance === 'number' ? cfg.barRevealDistance : 150;
-	var BAR_MIN_VISIBLE = typeof cfg.barMinVisible === 'number' ? cfg.barMinVisible : 10000;
 	var root = document.documentElement;
 
 	/* ------------------------------------------------------------------ *
@@ -176,106 +173,6 @@
 
 	if ( button && AUTO_HIDE ) {
 		setupAutoHide( button );
-	}
-
-	/* ------------------------------------------------------------------ *
-	 * Auto-hiding toolbar (macOS Dock style): the bar slides off-screen
-	 * and glides back when the pointer comes within BAR_REVEAL_AT pixels
-	 * of its edge, while it is hovered, or when it has keyboard focus.
-	 * ------------------------------------------------------------------ */
-	function setupBarAutoHide() {
-		var HIDDEN = 'abps-bar-hidden';
-		var bar = document.getElementById( 'wpadminbar' );
-		if ( ! bar ) {
-			return;
-		}
-		var pinned = false;
-		var timer = null;
-		// Once revealed, the bar stays for at least BAR_MIN_VISIBLE ms so a
-		// pointer brushing past the edge never makes it bounce in and out.
-		var shownAt = Date.now();
-
-		function hide() {
-			if ( pinned ) {
-				return;
-			}
-			var left = shownAt + BAR_MIN_VISIBLE - Date.now();
-			if ( left > 0 ) {
-				armHide( left + 20 );
-				return;
-			}
-			root.classList.add( HIDDEN );
-		}
-		function show() {
-			if ( root.classList.contains( HIDDEN ) ) {
-				shownAt = Date.now();
-			}
-			root.classList.remove( HIDDEN );
-		}
-		function armHide( delay ) {
-			if ( timer ) {
-				window.clearTimeout( timer );
-			}
-			timer = window.setTimeout( hide, delay );
-		}
-
-		function nearEdge( y ) {
-			if ( current() === 'top' ) {
-				return y <= BAR_REVEAL_AT;
-			}
-			return ( window.innerHeight - y ) <= BAR_REVEAL_AT;
-		}
-
-		var queued = false;
-		var my = 0;
-		function onMove( e ) {
-			my = e.clientY;
-			if ( queued ) {
-				return;
-			}
-			queued = true;
-			window.requestAnimationFrame( function () {
-				queued = false;
-				if ( nearEdge( my ) ) {
-					show();
-				} else if ( ! pinned ) {
-					armHide( 280 );
-				}
-			} );
-		}
-
-		document.addEventListener( 'mousemove', onMove, { passive: true } );
-		document.addEventListener( 'touchstart', function ( e ) {
-			var t = e.touches && e.touches[ 0 ];
-			if ( t && nearEdge( t.clientY ) ) {
-				show();
-				armHide( 4000 );
-			}
-		}, { passive: true } );
-
-		bar.addEventListener( 'mouseenter', function () {
-			pinned = true;
-			show();
-		} );
-		bar.addEventListener( 'mouseleave', function () {
-			pinned = false;
-			armHide( 280 );
-		} );
-		bar.addEventListener( 'focusin', function () {
-			pinned = true;
-			show();
-		} );
-		bar.addEventListener( 'focusout', function () {
-			pinned = false;
-			armHide( 280 );
-		} );
-
-		// Visible on load so the bar is discoverable, then it glides away.
-		armHide( 1200 );
-	}
-
-	if ( BAR_AUTO_HIDE ) {
-		setupBarAutoHide();
 	}
 
 	/* ------------------------------------------------------------------ *

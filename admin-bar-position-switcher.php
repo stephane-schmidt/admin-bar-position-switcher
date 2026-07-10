@@ -3,7 +3,7 @@
  * Plugin Name:       Admin Bar Position Switcher
  * Plugin URI:        https://wordpress.org/plugins/admin-bar-position-switcher/
  * Description:       Moves the WordPress toolbar to the bottom of the screen on the front end, with a one-click button to flip it between top and bottom. The choice is remembered per browser.
- * Version:           1.7.1
+ * Version:           1.8.0
  * Requires at least: 5.9
  * Requires PHP:      7.2
  * Author:            Stéphane Schmidt
@@ -18,14 +18,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SWITCHMYBAR_VERSION', '1.7.1' );
+define( 'SWITCHMYBAR_VERSION', '1.8.0' );
 define( 'SWITCHMYBAR_FILE', __FILE__ );
 define( 'SWITCHMYBAR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SWITCHMYBAR_URL', plugin_dir_url( __FILE__ ) );
 
 require_once SWITCHMYBAR_DIR . 'includes/class-switchmybar-settings.php';
 require_once SWITCHMYBAR_DIR . 'includes/class-switchmybar-color-detector.php';
-require_once SWITCHMYBAR_DIR . 'includes/class-switchmybar-admin-menu.php';
 require_once SWITCHMYBAR_DIR . 'includes/class-switchmybar-plugin.php';
 
 /**
@@ -42,7 +41,6 @@ function switchmybar_init() {
 
 	if ( is_admin() ) {
 		new Switchmybar_Settings();
-		new Switchmybar_Admin_Menu();
 	}
 }
 add_action( 'plugins_loaded', 'switchmybar_init' );

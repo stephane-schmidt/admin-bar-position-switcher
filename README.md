@@ -23,18 +23,6 @@ A small, focused WordPress plugin. **GPL‑2.0‑or‑later.**
 ![Color picker in the toolbar](docs/img/screenshot-5.png)
 <p align="center"><em>The "Bar" item in the toolbar: pick one of your site's dominant colors, detected from your logo and theme.</em></p>
 
-![Back-office menu colors](docs/img/screenshot-6.png)
-<p align="center"><em>Colorize the back-office menu, add spacers between groups, and dim the technical items.</em></p>
-
-![Full settings page](docs/img/screenshot-7.png)
-<p align="center"><em>The full settings page (shown in French): positions, auto-hide, colors, and the back-office menu section.</em></p>
-
-![Back-office menu on the right](docs/img/screenshot-8.png)
-<p align="center"><em>The back-office menu flipped to the right side, with the floating tabs (hide/show and ↔ Menu).</em></p>
-
-![Back-office menu hidden](docs/img/screenshot-9.png)
-<p align="center"><em>Dock mode: the menu waits off-screen and glides back when the pointer approaches its edge.</em></p>
-
 ---
 
 ## Why
@@ -52,17 +40,16 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 - **Auto‑hide (opt‑in)** — off by default; when enabled, the button drifts away like a falling leaf after a few seconds of inactivity and floats back the moment your pointer moves anywhere over the toolbar (its full width), or it gains keyboard focus. A tap brings it back on touch, and it respects the "reduce motion" preference.
 - Remembers each browser's choice (can be turned off).
 - **Match the page color** — optionally tints the button with the main color of the current page (theme color, palette, or header background), with automatic black/white text for contrast. Falls back to a neutral dark button when no color is found.
-- **Hide toolbar items** — remove individual items you don't want (WordPress logo, Comments, + New, Updates, …).
 - **Colorize the toolbar** — set a custom background color for the bar, with automatically readable text.
 - **Recolor from the toolbar itself** — a small "Bar" item (administrators only) reveals the site's five dominant colors on hover; one click recolors the bar and saves the choice. Colors are auto‑detected fully locally from your logo (PNG/SVG), Elementor kit, theme.json, Customizer settings, and a frequency scan of the home page.
-- **Auto‑hide the toolbar, macOS Dock style (opt‑in)** — the bar glides off‑screen and slides back when the pointer comes within 150px of its edge, or when it receives keyboard focus. The reserved space is released while it is hidden, and once revealed it stays for at least 10 seconds.
-- **Move, hide or auto‑hide the back‑office menu** — two floating vertical tabs sit on the menu's outer edge: one hides or shows the menu on demand (the page takes the full width), the other flips it between left and right. Both choices are remembered per browser, and an optional macOS‑Dock mode also hides the menu off‑screen until the pointer comes within 150px of its edge.
-- **Reorder by drag & drop** — the back‑office menu list combines order, color and spacing in one place (drag the handle), and a second sortable list reorders the toolbar; the saved order is global and reversible per zone.
-- **Colorize the back‑office menu** — give each item of the left admin menu its own background color (text stays readable automatically), add space after an item to build groups, and optionally **dim the technical items** (they light up on hover or when active) so the everyday menus stand out.
 - Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 - Opens the toolbar sub‑menus upward when the bar is at the bottom.
 - Optional Elementor compatibility so sticky headers line up with the toolbar.
 - Clean, no external requests, no tracking, no cookies (the preference lives in `localStorage`).
+
+## SwitchMyBar Pro
+
+The back-office side lives in **[SwitchMyBar Pro](https://switchmybar.com/)** — a small add-on: colorize, reorder (drag & drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, dock the toolbar itself, and hide the toolbar items you never use. **One payment of $15, yours for life.** Your existing settings are picked up automatically when the add-on activates.
 
 ## Settings
 
@@ -74,17 +61,11 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 | Switch button | Show or hide the floating "↕" button. |
 | Button label | Text shown next to the arrow (default: "Bar"). |
 | Auto-hide the button | Let the button drift away when idle and float back near the toolbar (off by default). |
-| Auto-hide the toolbar | Hide the bar off-screen like the macOS Dock; it glides back within 150px (off by default). |
 | Remember the choice | Store each browser's top/bottom preference. |
 | Match the page color | Tint the button with the page's main color. |
 | Elementor compatibility | Align Elementor sticky headers with the toolbar. |
 | Toolbar background | Set a custom background color for the bar (text stays readable). |
 | Color picker in the toolbar | Show the "Bar" item that recolors the toolbar with the site's dominant colors. |
-| Hide toolbar items | Hide individual items from the front-end toolbar. |
-| Menu items | One drag-and-drop list: reorder the left admin menu, color each item and add space after it. |
-| Toolbar order | Drag-and-drop list to reorder the toolbar items. |
-| Menu side | Default side of the wp-admin menu + the floating tabs (hide/show and left/right). |
-| Auto-hide the menu | Hide the wp-admin menu off-screen, Dock style (off by default). |
 
 ## Installation
 

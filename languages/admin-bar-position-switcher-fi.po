@@ -252,3 +252,9 @@ msgstr "Järjestä valikko vetämällä kahvasta; väri ja väli jälkeen koskev
 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Tee vasemmasta hallintavalikosta omasi: vedä kohteet haluamaasi järjestykseen, anna kullekin taustaväri (teksti pysyy automaattisesti luettavana) ja lisää väli kohteen jälkeen ryhmien luomiseksi."
+
+msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Väritä ja järjestä hallintavalikko, telakoi se tai työkalupalkki macOS-Dockin tapaan ja piilota käyttämättömät kohteet. Yksi 15 $ maksu, ikuisesti omasi."
+
+msgid "Discover SwitchMyBar Pro"
+msgstr "Tutustu SwitchMyBar Prohon"
