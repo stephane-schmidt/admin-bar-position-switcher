@@ -81,6 +81,20 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 }
 
 /* ---------------------------------------------------------------------------
+ * Crowded toolbar: when the left group + right group no longer fit on one
+ * line, core keeps the bar 32px tall and the right group (user menu, "Bar"
+ * picker) wraps into an invisible second row — below the screen in bottom
+ * mode. Let the bar grow instead so every row stays visible.
+ * ------------------------------------------------------------------------- */
+@media screen and ( min-width: 783px ) {
+	html.abps-bottom #wpadminbar,
+	html.abps-top #wpadminbar {
+		height: auto;
+		min-height: 32px;
+	}
+}
+
+/* ---------------------------------------------------------------------------
  * Floating switch button
  * ------------------------------------------------------------------------- */
 #abps-switch {

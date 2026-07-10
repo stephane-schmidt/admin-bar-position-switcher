@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,9 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.7.1 =
+* Fixed: on busy sites (page builders, analytics and the like adding toolbar items), the toolbar's right group — user menu and the "Bar" color picker — wrapped onto a hidden second row; with the bar at the bottom that row fell below the screen. The bar now grows to keep every row visible.
 
 = 1.7.0 =
 * Added: a hide/show tab above the side-switch tab — one click tucks the back-office menu away (20px peek at the edge) and the page takes the full width; another click brings it back. Remembered per browser, and it works even when the auto-hide option is off.
