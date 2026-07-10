@@ -20,6 +20,15 @@ A small, focused WordPress plugin. **GPL‑2.0‑or‑later.**
 ![Settings screen](docs/img/screenshot-4.png)
 <p align="center"><em>All options on one simple settings screen.</em></p>
 
+![Color picker in the toolbar](docs/img/screenshot-5.png)
+<p align="center"><em>The "Bar" item in the toolbar: pick one of your site's dominant colors, detected from your logo and theme.</em></p>
+
+![Back-office menu colors](docs/img/screenshot-6.png)
+<p align="center"><em>Colorize the back-office menu, add spacers between groups, and dim the technical items.</em></p>
+
+![Full settings page](docs/img/screenshot-7.png)
+<p align="center"><em>The full settings page (shown in French): positions, auto-hide, colors, and the back-office menu section.</em></p>
+
 ---
 
 ## Why
@@ -41,7 +50,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 - **Colorize the toolbar** — set a custom background color for the bar, with automatically readable text.
 - **Recolor from the toolbar itself** — a small "Bar" item (administrators only) reveals the site's five dominant colors on hover; one click recolors the bar and saves the choice. Colors are auto‑detected fully locally from your logo (PNG/SVG), Elementor kit, theme.json, Customizer settings, and a frequency scan of the home page.
 - **Auto‑hide the toolbar, macOS Dock style (opt‑in)** — the bar glides off‑screen and slides back when the pointer comes within 150px of its edge, or when it receives keyboard focus. The reserved space is released while it is hidden.
-- **Colorize the back‑office menu** — give each item of the left admin menu its own background color (text stays readable automatically) and add spacers between groups.
+- **Colorize the back‑office menu** — give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally **dim the technical items** (they light up on hover or when active) so the everyday menus stand out.
 - Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 - Opens the toolbar sub‑menus upward when the bar is at the bottom.
 - Optional Elementor compatibility so sticky headers line up with the toolbar.

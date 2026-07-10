@@ -192,3 +192,9 @@ msgstr "اللون"
 
 msgid "Spacer before"
 msgstr "فاصل قبل العنصر"
+
+msgid "Dim the other items"
+msgstr "تعتيم العناصر الأخرى"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "تبهيت عناصر القائمة التي ليس لها لون مخصص؛ تعود مضيئة عند التمرير فوقها أو عندما تكون نشطة."

@@ -192,3 +192,9 @@ msgstr "Renk"
 
 msgid "Spacer before"
 msgstr "Öncesinde boşluk"
+
+msgid "Dim the other items"
+msgstr "Diğer öğeleri soluklaştır"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Özel rengi olmayan menü öğelerini soluklaştırır; üzerine gelindiğinde veya etkin olduklarında yeniden aydınlanır."

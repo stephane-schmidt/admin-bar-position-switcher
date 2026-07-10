@@ -192,3 +192,9 @@ msgstr "Farve"
 
 msgid "Spacer before"
 msgstr "Afstand før"
+
+msgid "Dim the other items"
+msgstr "Dæmp de andre punkter"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Nedton menupunkter uden egen farve; de lyser op igen ved hover, eller når de er aktive."

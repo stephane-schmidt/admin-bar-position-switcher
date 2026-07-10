@@ -192,3 +192,9 @@ msgstr "Cor"
 
 msgid "Spacer before"
 msgstr "Espaço antes"
+
+msgid "Dim the other items"
+msgstr "Esmaecer os demais itens"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Esmaece os itens do menu sem cor personalizada; eles voltam a acender ao passar o mouse ou quando estão ativos."

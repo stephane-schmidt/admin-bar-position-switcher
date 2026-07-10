@@ -192,3 +192,9 @@ msgstr "Колір"
 
 msgid "Spacer before"
 msgstr "Відступ перед"
+
+msgid "Dim the other items"
+msgstr "Приглушити решту пунктів"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Приглушує пункти меню без власного кольору; вони знову засвічуються при наведенні або коли активні."

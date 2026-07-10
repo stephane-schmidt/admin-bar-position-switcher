@@ -192,3 +192,9 @@ msgstr "Kleur"
 
 msgid "Spacer before"
 msgstr "Ruimte ervoor"
+
+msgid "Dim the other items"
+msgstr "Overige items dimmen"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Vervaagt menu-items zonder eigen kleur; ze lichten weer op bij hover of wanneer ze actief zijn."

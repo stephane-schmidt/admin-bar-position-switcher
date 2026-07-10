@@ -192,3 +192,9 @@ msgstr "색상"
 
 msgid "Spacer before"
 msgstr "앞에 간격"
+
+msgid "Dim the other items"
+msgstr "다른 항목 흐리게"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "사용자 지정 색이 없는 메뉴 항목을 흐리게 표시합니다. 마우스를 올리거나 활성화되면 다시 밝아집니다."

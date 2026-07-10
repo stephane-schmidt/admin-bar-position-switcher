@@ -44,7 +44,8 @@ class ABPS_Settings {
 		$opts    = self::get_options();
 		$colors  = (array) $opts['menu_colors'];
 		$spacers = (array) $opts['menu_spacers'];
-		if ( empty( $colors ) && empty( $spacers ) ) {
+		$dim     = ! empty( $opts['menu_dim'] );
+		if ( empty( $colors ) && empty( $spacers ) && ! $dim ) {
 			return;
 		}
 
@@ -67,6 +68,22 @@ class ABPS_Settings {
 			if ( $id ) {
 				$css .= '#adminmenu li#' . $id . '{margin-top:16px;}';
 			}
+		}
+
+		// Dim every item without a custom color; hover/current restore it.
+		if ( $dim ) {
+			$not = '';
+			foreach ( array_keys( $colors ) as $id ) {
+				$id = sanitize_key( $id );
+				if ( $id ) {
+					$not .= ':not(#' . $id . ')';
+				}
+			}
+			$base = '#adminmenu li.menu-top' . $not;
+			$css .= $base . ' > a .wp-menu-name,' . $base . ' > a .wp-menu-image{opacity:.5;filter:grayscale(.6);transition:opacity .15s ease,filter .15s ease;}';
+			$css .= '#adminmenu li.menu-top:hover > a .wp-menu-name,#adminmenu li.menu-top:hover > a .wp-menu-image,'
+				. '#adminmenu li.menu-top.wp-has-current-submenu > a .wp-menu-name,#adminmenu li.menu-top.wp-has-current-submenu > a .wp-menu-image,'
+				. '#adminmenu li.menu-top.current > a .wp-menu-name,#adminmenu li.menu-top.current > a .wp-menu-image{opacity:1 !important;filter:none !important;}';
 		}
 
 		if ( '' !== $css ) {
@@ -95,6 +112,7 @@ class ABPS_Settings {
 			'hidden_items'     => array(),
 			'menu_colors'      => array(),
 			'menu_spacers'     => array(),
+			'menu_dim'         => 0,
 		);
 	}
 
@@ -325,6 +343,27 @@ class ABPS_Settings {
 			self::SLUG,
 			'abps_admin_menu'
 		);
+
+		add_settings_field(
+			'menu_dim',
+			__( 'Dim the other items', 'admin-bar-position-switcher' ),
+			array( $this, 'field_menu_dim' ),
+			self::SLUG,
+			'abps_admin_menu'
+		);
+	}
+
+	/**
+	 * Field: dim the menu items that have no custom color.
+	 */
+	public function field_menu_dim() {
+		$value = self::get_options()['menu_dim'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_dim]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Fade the menu items that have no custom color; they light up again on hover or when active.', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<?php
 	}
 
 	/**
@@ -486,6 +525,7 @@ class ABPS_Settings {
 			}
 		}
 		$out['menu_spacers'] = array_values( array_unique( $spacers ) );
+		$out['menu_dim']     = empty( $input['menu_dim'] ) ? 0 : 1;
 
 		return $out;
 	}

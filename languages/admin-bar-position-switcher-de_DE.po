@@ -192,3 +192,9 @@ msgstr "Farbe"
 
 msgid "Spacer before"
 msgstr "Abstand davor"
+
+msgid "Dim the other items"
+msgstr "Übrige Einträge abdunkeln"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Blendet Menüeinträge ohne eigene Farbe ab; beim Überfahren oder wenn sie aktiv sind, leuchten sie wieder auf."

@@ -192,3 +192,9 @@ msgstr "צבע"
 
 msgid "Spacer before"
 msgstr "מרווח לפני"
+
+msgid "Dim the other items"
+msgstr "עמעום שאר הפריטים"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "מעמעם פריטי תפריט ללא צבע מותאם; הם שבים ומוארים במעבר עכבר או כשהם פעילים."

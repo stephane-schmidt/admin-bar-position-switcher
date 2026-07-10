@@ -192,3 +192,9 @@ msgstr "Χρώμα"
 
 msgid "Spacer before"
 msgstr "Κενό πριν"
+
+msgid "Dim the other items"
+msgstr "Αμυδρή εμφάνιση των υπολοίπων"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Ξεθωριάζει τα στοιχεία μενού χωρίς προσαρμοσμένο χρώμα· φωτίζονται ξανά στο πέρασμα του δείκτη ή όταν είναι ενεργά."

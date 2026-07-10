@@ -192,3 +192,9 @@ msgstr "顏色"
 
 msgid "Spacer before"
 msgstr "前置間隔"
+
+msgid "Dim the other items"
+msgstr "淡化其他選單項目"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "淡化沒有自訂顏色的選單項目；游標懸停或項目為使用中時會重新亮起。"

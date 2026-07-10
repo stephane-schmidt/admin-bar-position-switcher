@@ -192,3 +192,9 @@ msgstr "Färg"
 
 msgid "Spacer before"
 msgstr "Mellanrum före"
+
+msgid "Dim the other items"
+msgstr "Tona ned övriga objekt"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Tonar ned menyobjekt utan egen färg; de lyser upp igen vid hovring eller när de är aktiva."

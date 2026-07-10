@@ -192,3 +192,9 @@ msgstr "色"
 
 msgid "Spacer before"
 msgstr "前に間隔"
+
+msgid "Dim the other items"
+msgstr "他の項目を淡色表示"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "独自の色がないメニュー項目を淡く表示します。ホバー時やアクティブ時には再び明るくなります。"

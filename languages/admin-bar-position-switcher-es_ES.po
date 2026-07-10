@@ -192,3 +192,9 @@ msgstr "Color"
 
 msgid "Spacer before"
 msgstr "Separación antes"
+
+msgid "Dim the other items"
+msgstr "Atenuar los demás elementos"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Atenúa los elementos del menú sin color personalizado; vuelven a iluminarse al pasar el cursor o cuando están activos."

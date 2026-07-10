@@ -192,3 +192,9 @@ msgstr "Culoare"
 
 msgid "Spacer before"
 msgstr "Spațiu înainte"
+
+msgid "Dim the other items"
+msgstr "Estompează celelalte elemente"
+
+msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
+msgstr "Estompează elementele de meniu fără culoare personalizată; se reaprind la trecerea cursorului sau când sunt active."
