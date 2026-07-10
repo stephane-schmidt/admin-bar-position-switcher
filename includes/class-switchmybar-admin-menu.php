@@ -107,12 +107,16 @@ class Switchmybar_Admin_Menu {
 		$css .= 'html.abps-menu-right #screen-meta-links{margin-right:20px;}';
 
 		// Auto-hide (Dock style): the menu overlays the page, the space is
-		// released, and a clearly visible 20px peek stays at the edge.
+		// released, and a 20px peek stays at the edge (50% opacity).
 		$css .= 'html.abps-menu-autohide #adminmenuwrap,html.abps-menu-autohide #adminmenuback{transition:transform .32s cubic-bezier(.4,0,.2,1),opacity .25s ease;will-change:transform;}';
 		$css .= 'html.abps-menu-autohide #adminmenuwrap{z-index:9990;}';
-		$css .= 'html.abps-menu-autohide #wpcontent,html.abps-menu-autohide #wpfooter{margin-left:20px !important;}';
-		$css .= 'html.abps-menu-autohide.abps-menu-right #wpcontent,html.abps-menu-autohide.abps-menu-right #wpfooter{margin-left:20px !important;margin-right:20px;}';
-		$css .= 'html.abps-menu-autohide.abps-menu-hidden #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden #adminmenuback{transform:translateX(calc(-100% + 20px));opacity:.85;}';
+		$css .= 'html.abps-menu-autohide #wpcontent,html.abps-menu-autohide #wpfooter{transition:margin .32s cubic-bezier(.4,0,.2,1);}';
+		// The page only reclaims the width once the menu has actually tucked
+		// away (docked class, set at first hide and kept): reappearing on
+		// proximity overlays the wide content instead of squeezing it back.
+		$css .= 'html.abps-menu-docked #wpcontent,html.abps-menu-docked #wpfooter{margin-left:20px !important;}';
+		$css .= 'html.abps-menu-docked.abps-menu-right #wpcontent,html.abps-menu-docked.abps-menu-right #wpfooter{margin-left:20px !important;margin-right:20px;}';
+		$css .= 'html.abps-menu-autohide.abps-menu-hidden #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden #adminmenuback{transform:translateX(calc(-100% + 20px));opacity:.5;}';
 		$css .= 'html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuback{transform:translateX(calc(100% - 20px));}';
 
 		// The floating side-switch button, twin of the front #abps-switch.

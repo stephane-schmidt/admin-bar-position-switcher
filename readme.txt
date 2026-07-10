@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.6.2 =
+* Improved: the page now waits for the menu to actually tuck away before reclaiming its width (with a smooth glide), and later reveals overlay the widened page instead of squeezing it back. The 20px peek settles at 50% opacity.
+
 = 1.6.1 =
 * Improved: the auto-hidden back-office menu is far less shy — it waits 5 seconds before tucking away (2 seconds after the pointer leaves) and keeps a clearly visible 20px colored peek at the screen edge instead of a faint 10px sliver.
 
@@ -149,6 +152,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.6.2 =
+The page waits for the menu to hide before taking the full width; the peek settles at 50%.
 
 = 1.6.1 =
 Slower, friendlier auto-hide for the back-office menu, with a clearly visible 20px peek.

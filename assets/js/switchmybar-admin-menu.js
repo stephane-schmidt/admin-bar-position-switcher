@@ -37,6 +37,9 @@
 
 	function hide() {
 		if ( ! pinned ) {
+			// "docked" sticks for the whole page view: the content expands
+			// once, and later reveals overlay it instead of reflowing it.
+			root.classList.add( 'abps-menu-docked' );
 			root.classList.add( HIDDEN );
 		}
 	}
