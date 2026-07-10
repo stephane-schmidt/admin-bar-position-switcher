@@ -177,3 +177,18 @@ msgstr "Skrývat lištu mimo obrazovku jako macOS Dock: plynule se vrátí, kdy�
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Ve výchozím nastavení vypnuto: lišta zůstává trvale viditelná."
+
+msgid "Back-office menu"
+msgstr "Nabídka administrace"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Dejte levé administrační nabídce vlastní barvy: zvolte pozadí pro každou položku (text zůstane automaticky čitelný) a přidejte mezery mezi skupinami."
+
+msgid "Menu items"
+msgstr "Položky nabídky"
+
+msgid "Color"
+msgstr "Barva"
+
+msgid "Spacer before"
+msgstr "Mezera před položkou"

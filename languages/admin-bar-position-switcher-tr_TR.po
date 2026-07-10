@@ -177,3 +177,18 @@ msgstr "Araç çubuğunu macOS Dock gibi ekran dışına gizle: işaretçi kenar
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Varsayılan olarak kapalıdır: araç çubuğu her zaman görünür kalır."
+
+msgid "Back-office menu"
+msgstr "Yönetim menüsü"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Soldaki yönetim menüsüne kendi renklerinizi verin: her öğe için bir arka plan seçin (metin otomatik olarak okunabilir kalır) ve gruplar arasına boşluk ekleyin."
+
+msgid "Menu items"
+msgstr "Menü öğeleri"
+
+msgid "Color"
+msgstr "Renk"
+
+msgid "Spacer before"
+msgstr "Öncesinde boşluk"

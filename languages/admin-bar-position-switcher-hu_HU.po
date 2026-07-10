@@ -177,3 +177,18 @@ msgstr "Az eszköztár elrejtése a képernyőn kívülre, ahogy a macOS Dock te
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Alapértelmezés szerint kikapcsolva: az eszköztár mindig látható marad."
+
+msgid "Back-office menu"
+msgstr "Admin menü"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Adj saját színeket a bal oldali admin menünek: válassz hátteret elemenként (a szöveg automatikusan olvasható marad), és adj térközöket a csoportok közé."
+
+msgid "Menu items"
+msgstr "Menüelemek"
+
+msgid "Color"
+msgstr "Szín"
+
+msgid "Spacer before"
+msgstr "Térköz előtte"

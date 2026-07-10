@@ -177,3 +177,18 @@ msgstr "Oculta la barra de herramientas fuera de la pantalla como el Dock de mac
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Desactivado por defecto: la barra de herramientas permanece visible en todo momento."
+
+msgid "Back-office menu"
+msgstr "Menú del escritorio"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Dale al menú de administración tus propios colores: elige un fondo por elemento (el texto permanece legible automáticamente) y añade separaciones entre grupos."
+
+msgid "Menu items"
+msgstr "Elementos del menú"
+
+msgid "Color"
+msgstr "Color"
+
+msgid "Spacer before"
+msgstr "Separación antes"

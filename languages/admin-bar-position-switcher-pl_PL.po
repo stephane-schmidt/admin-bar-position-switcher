@@ -177,3 +177,18 @@ msgstr "Ukryj pasek narzędzi poza ekranem na wzór macOS Dock: wysuwa się z po
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Domyślnie wyłączone: pasek narzędzi pozostaje cały czas widoczny."
+
+msgid "Back-office menu"
+msgstr "Menu zaplecza"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Nadaj lewemu menu administracyjnemu własne kolory: wybierz tło dla każdej pozycji (tekst pozostaje automatycznie czytelny) i dodaj odstępy między grupami."
+
+msgid "Menu items"
+msgstr "Pozycje menu"
+
+msgid "Color"
+msgstr "Kolor"
+
+msgid "Spacer before"
+msgstr "Odstęp przed"

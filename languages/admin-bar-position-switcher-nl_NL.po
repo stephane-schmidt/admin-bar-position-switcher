@@ -177,3 +177,18 @@ msgstr "Verberg de toolbar buiten beeld zoals het macOS Dock: deze glijdt terug 
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Standaard uitgeschakeld: de toolbar blijft altijd zichtbaar."
+
+msgid "Back-office menu"
+msgstr "Backoffice-menu"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Geef het linker beheermenu je eigen kleuren: kies per item een achtergrond (de tekst blijft automatisch leesbaar) en voeg ruimte toe tussen groepen."
+
+msgid "Menu items"
+msgstr "Menu-items"
+
+msgid "Color"
+msgstr "Kleur"
+
+msgid "Spacer before"
+msgstr "Ruimte ervoor"

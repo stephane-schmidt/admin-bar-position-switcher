@@ -28,10 +28,50 @@ class ABPS_Settings {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_init', array( $this, 'register' ) );
+		add_action( 'admin_head', array( $this, 'print_menu_styling' ) );
 		add_filter(
 			'plugin_action_links_' . plugin_basename( ABPS_FILE ),
 			array( $this, 'action_links' )
 		);
+	}
+
+	/**
+	 * Colorize the left admin menu and add spacers, per the settings.
+	 *
+	 * Printed in admin_head so it wins over the admin color scheme.
+	 */
+	public function print_menu_styling() {
+		$opts    = self::get_options();
+		$colors  = (array) $opts['menu_colors'];
+		$spacers = (array) $opts['menu_spacers'];
+		if ( empty( $colors ) && empty( $spacers ) ) {
+			return;
+		}
+
+		$css = '';
+		foreach ( $colors as $id => $hex ) {
+			$id  = sanitize_key( $id );
+			$hex = sanitize_hex_color( $hex );
+			if ( ! $id || ! $hex ) {
+				continue;
+			}
+			$fg   = ABPS_Plugin::readable_text_color( $hex );
+			$li   = '#adminmenu li#' . $id;
+			$css .= $li . ' > a.menu-top{background:' . $hex . ' !important;color:' . $fg . ' !important;}';
+			$css .= $li . ' div.wp-menu-image:before{color:' . $fg . ' !important;}';
+			$css .= $li . ' > a.menu-top:hover,' . $li . '.opensub > a.menu-top,' . $li . ' > a.menu-top:focus{filter:brightness(1.12);}';
+			$css .= $li . '.wp-has-current-submenu > a.wp-has-current-submenu,' . $li . '.current > a.current{background:' . $hex . ' !important;color:' . $fg . ' !important;}';
+		}
+		foreach ( $spacers as $id ) {
+			$id = sanitize_key( $id );
+			if ( $id ) {
+				$css .= '#adminmenu li#' . $id . '{margin-top:16px;}';
+			}
+		}
+
+		if ( '' !== $css ) {
+			echo '<style id="abps-admin-menu">' . $css . '</style>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from sanitized keys and hex colors only.
+		}
 	}
 
 	/**
@@ -53,6 +93,8 @@ class ABPS_Settings {
 			'bar_bg_color'     => '#1d2327',
 			'bar_picker'       => 1,
 			'hidden_items'     => array(),
+			'menu_colors'      => array(),
+			'menu_spacers'     => array(),
 		);
 	}
 
@@ -268,6 +310,109 @@ class ABPS_Settings {
 			self::SLUG,
 			'abps_appearance'
 		);
+
+		add_settings_section(
+			'abps_admin_menu',
+			__( 'Back-office menu', 'admin-bar-position-switcher' ),
+			array( $this, 'section_admin_menu_intro' ),
+			self::SLUG
+		);
+
+		add_settings_field(
+			'menu_styling',
+			__( 'Menu items', 'admin-bar-position-switcher' ),
+			array( $this, 'field_menu_styling' ),
+			self::SLUG,
+			'abps_admin_menu'
+		);
+	}
+
+	/**
+	 * Intro line for the back-office menu section.
+	 */
+	public function section_admin_menu_intro() {
+		echo '<p>' . esc_html__( 'Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups.', 'admin-bar-position-switcher' ) . '</p>';
+	}
+
+	/**
+	 * The left admin menu's top-level items, as li-id => label.
+	 *
+	 * Enumerated from the live $menu global when available (so plugin-added
+	 * entries show up too), with a curated core fallback.
+	 *
+	 * @return array
+	 */
+	public static function get_admin_menu_items() {
+		$items = array();
+
+		global $menu;
+		if ( is_array( $menu ) && ! empty( $menu ) ) {
+			foreach ( $menu as $entry ) {
+				$classes = isset( $entry[4] ) ? (string) $entry[4] : '';
+				$id      = isset( $entry[5] ) ? (string) $entry[5] : '';
+				if ( '' === $id || false !== strpos( $classes, 'wp-menu-separator' ) ) {
+					continue;
+				}
+				$label = isset( $entry[0] ) ? trim( wp_strip_all_tags( preg_replace( '/<span[^>]*>.*?<\/span>/s', '', (string) $entry[0] ) ) ) : '';
+				if ( '' === $label ) {
+					$label = $id;
+				}
+				$items[ $id ] = $label;
+			}
+		}
+
+		if ( empty( $items ) ) {
+			$items = array(
+				'menu-dashboard'  => __( 'Dashboard' ),   // phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- core string on purpose.
+				'menu-posts'      => __( 'Posts' ),       // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-media'      => __( 'Media' ),       // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-pages'      => __( 'Pages' ),       // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-comments'   => __( 'Comments' ),    // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-appearance' => __( 'Appearance' ),  // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-plugins'    => __( 'Plugins' ),     // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-users'      => __( 'Users' ),       // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-tools'      => __( 'Tools' ),       // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+				'menu-settings'   => __( 'Settings' ),    // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+			);
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Field: per-item color + spacer for the left admin menu.
+	 */
+	public function field_menu_styling() {
+		$opts    = self::get_options();
+		$colors  = (array) $opts['menu_colors'];
+		$spacers = (array) $opts['menu_spacers'];
+		$items   = self::get_admin_menu_items();
+
+		// Keep already-styled items visible even if their plugin is gone.
+		foreach ( array_merge( array_keys( $colors ), $spacers ) as $id ) {
+			if ( ! isset( $items[ $id ] ) ) {
+				$items[ $id ] = $id;
+			}
+		}
+		?>
+		<fieldset>
+			<?php foreach ( $items as $id => $label ) : ?>
+				<?php $color = isset( $colors[ $id ] ) ? $colors[ $id ] : ''; ?>
+				<div style="display:flex;align-items:center;gap:14px;margin:4px 0;">
+					<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors][<?php echo esc_attr( $id ); ?>]" value="<?php echo esc_attr( $color ? $color : '#1d2327' ); ?>" />
+					<label style="min-width:110px;">
+						<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors_on][<?php echo esc_attr( $id ); ?>]" value="1" <?php checked( '' !== $color ); ?> />
+						<?php esc_html_e( 'Color', 'admin-bar-position-switcher' ); ?>
+					</label>
+					<label style="min-width:130px;">
+						<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_spacers][]" value="<?php echo esc_attr( $id ); ?>" <?php checked( in_array( $id, $spacers, true ) ); ?> />
+						<?php esc_html_e( 'Spacer before', 'admin-bar-position-switcher' ); ?>
+					</label>
+					<span><?php echo esc_html( $label ); ?> <code style="opacity:.55;"><?php echo esc_html( $id ); ?></code></span>
+				</div>
+			<?php endforeach; ?>
+		</fieldset>
+		<?php
 	}
 
 	/**
@@ -313,6 +458,34 @@ class ABPS_Settings {
 			}
 		}
 		$out['hidden_items'] = array_values( array_unique( $hidden ) );
+
+		// Back-office menu: keep a color only for items whose "Color" box is ticked.
+		$colors = array();
+		if ( isset( $input['menu_colors'] ) && is_array( $input['menu_colors'] ) ) {
+			$enabled = ( isset( $input['menu_colors_on'] ) && is_array( $input['menu_colors_on'] ) ) ? $input['menu_colors_on'] : array();
+			foreach ( $input['menu_colors'] as $id => $hex ) {
+				$id = sanitize_key( $id );
+				if ( '' === $id || empty( $enabled[ $id ] ) ) {
+					continue;
+				}
+				$hex = sanitize_hex_color( $hex );
+				if ( $hex ) {
+					$colors[ $id ] = $hex;
+				}
+			}
+		}
+		$out['menu_colors'] = $colors;
+
+		$spacers = array();
+		if ( isset( $input['menu_spacers'] ) && is_array( $input['menu_spacers'] ) ) {
+			foreach ( $input['menu_spacers'] as $id ) {
+				$id = sanitize_key( $id );
+				if ( '' !== $id ) {
+					$spacers[] = $id;
+				}
+			}
+		}
+		$out['menu_spacers'] = array_values( array_unique( $spacers ) );
 
 		return $out;
 	}

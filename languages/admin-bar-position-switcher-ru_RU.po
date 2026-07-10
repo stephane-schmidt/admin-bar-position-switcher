@@ -177,3 +177,18 @@ msgstr "Скрывать панель инструментов за предел
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "По умолчанию отключено: панель инструментов остаётся видимой постоянно."
+
+msgid "Back-office menu"
+msgstr "Меню админ-панели"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Задайте левому меню администратора свои цвета: выберите фон для каждого пункта (текст автоматически остаётся читаемым) и добавьте отступы между группами."
+
+msgid "Menu items"
+msgstr "Пункты меню"
+
+msgid "Color"
+msgstr "Цвет"
+
+msgid "Spacer before"
+msgstr "Отступ перед"

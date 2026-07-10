@@ -177,3 +177,18 @@ msgstr "像 macOS Dock 一样将工具栏隐藏到屏幕之外：当鼠标指针
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "默认关闭：工具栏始终保持可见。"
+
+msgid "Back-office menu"
+msgstr "后台菜单"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "为左侧管理菜单设置您自己的颜色：为每个菜单项选择背景色（文字自动保持可读），并在分组之间添加间隔。"
+
+msgid "Menu items"
+msgstr "菜单项"
+
+msgid "Color"
+msgstr "颜色"
+
+msgid "Spacer before"
+msgstr "前置间隔"

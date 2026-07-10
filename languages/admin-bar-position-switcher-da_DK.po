@@ -177,3 +177,18 @@ msgstr "Skjul værktøjslinjen uden for skærmen ligesom macOS Dock: den glider 
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Slået fra som standard: værktøjslinjen forbliver altid synlig."
+
+msgid "Back-office menu"
+msgstr "Backoffice-menu"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Giv venstre admin-menu dine egne farver: vælg en baggrund pr. punkt (teksten forbliver automatisk læselig), og tilføj afstand mellem grupper."
+
+msgid "Menu items"
+msgstr "Menupunkter"
+
+msgid "Color"
+msgstr "Farve"
+
+msgid "Spacer before"
+msgstr "Afstand før"

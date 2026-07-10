@@ -177,3 +177,18 @@ msgstr "Verbirgt die Werkzeugleiste außerhalb des Bildschirms wie das macOS Doc
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Standardmäßig deaktiviert: Die Werkzeugleiste bleibt dauerhaft sichtbar."
+
+msgid "Back-office menu"
+msgstr "Backoffice-Menü"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Gib dem linken Admin-Menü eigene Farben: wähle je Eintrag einen Hintergrund (der Text bleibt automatisch lesbar) und füge Abstände zwischen Gruppen ein."
+
+msgid "Menu items"
+msgstr "Menüeinträge"
+
+msgid "Color"
+msgstr "Farbe"
+
+msgid "Spacer before"
+msgstr "Abstand davor"

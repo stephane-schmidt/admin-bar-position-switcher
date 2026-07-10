@@ -177,3 +177,18 @@ msgstr "Piilota työkalupalkki näytön ulkopuolelle samaan tapaan kuin macOS Do
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Oletuksena pois käytöstä: työkalupalkki pysyy aina näkyvissä."
+
+msgid "Back-office menu"
+msgstr "Hallintavalikko"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Anna vasemmalle hallintavalikolle omat värisi: valitse tausta kullekin kohteelle (teksti pysyy automaattisesti luettavana) ja lisää välejä ryhmien väliin."
+
+msgid "Menu items"
+msgstr "Valikon kohteet"
+
+msgid "Color"
+msgstr "Väri"
+
+msgid "Spacer before"
+msgstr "Väli ennen"

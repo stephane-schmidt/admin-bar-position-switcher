@@ -177,3 +177,18 @@ msgstr "إخفاء شريط الأدوات خارج الشاشة على غرار
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "معطّل افتراضيًا: يبقى شريط الأدوات ظاهرًا في جميع الأوقات."
+
+msgid "Back-office menu"
+msgstr "قائمة لوحة التحكم"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "امنح قائمة الإدارة اليسرى ألوانك الخاصة: اختر خلفية لكل عنصر (يبقى النص مقروءًا تلقائيًا) وأضف فواصل بين المجموعات."
+
+msgid "Menu items"
+msgstr "عناصر القائمة"
+
+msgid "Color"
+msgstr "اللون"
+
+msgid "Spacer before"
+msgstr "فاصل قبل العنصر"

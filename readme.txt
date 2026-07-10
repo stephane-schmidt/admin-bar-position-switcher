@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
 * **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
+* **Colorize the back-office menu**: give each item of the left admin menu its own background color (text stays readable automatically) and add spacers between groups.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
 * Optional Elementor compatibility so sticky headers line up with the toolbar.
@@ -89,6 +90,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.2.0 =
+* New: colorize the left admin menu of the back office — pick a background color per menu item (the text color adjusts automatically for readability) and add spacers between groups, from the new "Back-office menu" section of the settings.
+
 = 1.1.1 =
 * Changed: the settings page now lives as its own entry in the left admin menu ("Admin Bar Position", with an up/down icon) instead of hiding under Settings.
 
@@ -116,6 +120,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Colorize the back-office menu: per-item colors with readable text, plus spacers between groups.
 
 = 1.1.1 =
 The settings page moved to its own entry in the left admin menu.

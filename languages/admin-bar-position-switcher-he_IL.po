@@ -177,3 +177,18 @@ msgstr "הסתרת סרגל הכלים אל מחוץ למסך, בדומה ל-mac
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "כבוי כברירת מחדל: סרגל הכלים נשאר גלוי בכל עת."
+
+msgid "Back-office menu"
+msgstr "תפריט הניהול"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "תנו לתפריט הניהול השמאלי צבעים משלכם: בחרו רקע לכל פריט (הטקסט נשאר קריא אוטומטית) והוסיפו מרווחים בין קבוצות."
+
+msgid "Menu items"
+msgstr "פריטי תפריט"
+
+msgid "Color"
+msgstr "צבע"
+
+msgid "Spacer before"
+msgstr "מרווח לפני"

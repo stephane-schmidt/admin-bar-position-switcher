@@ -177,3 +177,18 @@ msgstr "Ascunde bara de unelte în afara ecranului, precum macOS Dock: aceasta g
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Dezactivat implicit: bara de unelte rămâne vizibilă în permanență."
+
+msgid "Back-office menu"
+msgstr "Meniul de administrare"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Dă meniului de administrare din stânga propriile culori: alege un fundal pentru fiecare element (textul rămâne lizibil automat) și adaugă spații între grupuri."
+
+msgid "Menu items"
+msgstr "Elemente de meniu"
+
+msgid "Color"
+msgstr "Culoare"
+
+msgid "Spacer before"
+msgstr "Spațiu înainte"

@@ -177,3 +177,18 @@ msgstr "Nascondi la barra degli strumenti fuori dallo schermo, come il macOS Doc
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Disattivato per impostazione predefinita: la barra degli strumenti resta sempre visibile."
+
+msgid "Back-office menu"
+msgstr "Menu di amministrazione"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Dai i tuoi colori al menu di amministrazione a sinistra: scegli uno sfondo per ogni voce (il testo resta leggibile automaticamente) e aggiungi spaziature tra i gruppi."
+
+msgid "Menu items"
+msgstr "Voci di menu"
+
+msgid "Color"
+msgstr "Colore"
+
+msgid "Spacer before"
+msgstr "Spazio prima"

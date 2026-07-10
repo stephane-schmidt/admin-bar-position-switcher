@@ -177,3 +177,18 @@ msgstr "Sembunyikan bilah alat di luar layar seperti macOS Dock: bilah alat akan
 
 msgid "Off by default: the toolbar stays visible at all times."
 msgstr "Nonaktif secara bawaan: bilah alat tetap terlihat sepanjang waktu."
+
+msgid "Back-office menu"
+msgstr "Menu admin"
+
+msgid "Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups."
+msgstr "Beri warna Anda sendiri pada menu admin kiri: pilih latar untuk tiap item (teks tetap terbaca secara otomatis) dan tambahkan jarak antar kelompok."
+
+msgid "Menu items"
+msgstr "Item menu"
+
+msgid "Color"
+msgstr "Warna"
+
+msgid "Spacer before"
+msgstr "Jarak sebelum"
