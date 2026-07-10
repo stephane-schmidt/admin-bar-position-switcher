@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.6.4 =
+* Changed: the back-office menu's side-switch button is now a vertical tab glued to the menu's outer edge (mid-height); when the menu docks away, the tab follows it down to the 20px peek.
+
 = 1.6.3 =
 * Fixed: on some machines, back-office pages only painted after scrolling. The "dim" effect no longer uses GPU filters (plain static opacity instead, with a lightweight hover highlight for colored items), and the will-change hints were removed everywhere.
 
@@ -155,6 +158,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.6.4 =
+The menu's side-switch button becomes a vertical tab on the menu's edge.
 
 = 1.6.3 =
 Fixes back-office pages that only painted after scrolling (no more GPU filters).

@@ -119,11 +119,16 @@ class Switchmybar_Admin_Menu {
 		$css .= 'html.abps-menu-autohide.abps-menu-hidden #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden #adminmenuback{transform:translateX(calc(-100% + 20px));opacity:.5;}';
 		$css .= 'html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuwrap,html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #adminmenuback{transform:translateX(calc(100% - 20px));}';
 
-		// The floating side-switch button, twin of the front #abps-switch.
-		$css .= '#abps-menu-switch{position:fixed;left:12px;bottom:12px;z-index:100000;margin:0;background:#1d2327;color:#fff;border:0;border-radius:4px;padding:7px 11px;font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.02em;cursor:pointer;opacity:.82;box-shadow:0 2px 8px rgba(0,0,0,.28);transition:opacity .25s ease,left .32s cubic-bezier(.4,0,.2,1),right .32s cubic-bezier(.4,0,.2,1);}';
+		// The side-switch button: a vertical tab glued to the menu's outer
+		// edge; it follows the menu when it docks (down to the 20px peek).
+		$css .= '#abps-menu-switch{position:fixed;left:160px;top:50%;transform:translateY(-50%);z-index:100000;margin:0;background:#1d2327;color:#fff;border:0;border-radius:0 4px 4px 0;padding:11px 7px;font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.02em;cursor:pointer;opacity:.82;box-shadow:2px 0 8px rgba(0,0,0,.22);writing-mode:vertical-rl;transition:opacity .25s ease,left .32s cubic-bezier(.4,0,.2,1),right .32s cubic-bezier(.4,0,.2,1);}';
+		$css .= '#abps-menu-switch .abps-menu-switch-arrow{text-orientation:upright;margin-bottom:5px;}';
 		$css .= '#abps-menu-switch:hover,#abps-menu-switch:focus{opacity:1;}';
-		$css .= 'html.abps-menu-right #abps-menu-switch{left:auto;right:12px;}';
-		$css .= 'html.abps-menu-autohide.abps-menu-hidden #abps-menu-switch{opacity:.5;}';
+		$css .= 'body.folded #abps-menu-switch{left:36px;}';
+		$css .= 'html.abps-menu-right #abps-menu-switch{left:auto;right:160px;border-radius:4px 0 0 4px;box-shadow:-2px 0 8px rgba(0,0,0,.22);}';
+		$css .= 'html.abps-menu-right body.folded #abps-menu-switch{left:auto;right:36px;}';
+		$css .= 'html.abps-menu-autohide.abps-menu-hidden #abps-menu-switch{left:20px;opacity:.5;}';
+		$css .= 'html.abps-menu-autohide.abps-menu-hidden.abps-menu-right #abps-menu-switch{left:auto;right:20px;}';
 		$css .= 'html.abps-menu-autohide.abps-menu-hidden #abps-menu-switch:hover,html.abps-menu-autohide.abps-menu-hidden #abps-menu-switch:focus{opacity:1;}';
 
 		$css .= '}';
@@ -142,7 +147,7 @@ class Switchmybar_Admin_Menu {
 			return;
 		}
 		printf(
-			'<button id="abps-menu-switch" type="button" title="%1$s">&#8596; %2$s</button>',
+			'<button id="abps-menu-switch" type="button" title="%1$s"><span class="abps-menu-switch-arrow" aria-hidden="true">&#8596;</span>%2$s</button>',
 			esc_attr__( 'Move the menu to the left or right', 'admin-bar-position-switcher' ),
 			esc_html__( 'Menu', 'admin-bar-position-switcher' )
 		);
