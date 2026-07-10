@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Remembers each browser's choice (can be turned off).
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
 * Optionally colorize the toolbar background, with automatically readable text.
+* **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge, staying at least 10 seconds once revealed.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
@@ -37,7 +38,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 
 **Go further with SwitchMyBar Pro**
 
-[SwitchMyBar Pro](https://switchmybar.com/) is a small add-on for the back-office side: colorize, reorder (drag and drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, dock the toolbar itself, and hide the toolbar items you never use. One payment of $15, yours for life.
+[SwitchMyBar Pro](https://switchmybar.com/) is a small add-on for the back-office side: colorize, reorder (drag and drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, and hide the toolbar items you never use. One payment of $15, yours for life.
 
 **Privacy**
 
@@ -91,6 +92,9 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.8.1 =
+* Changed: the macOS-Dock mode for the toolbar stays in the free plugin (it had briefly moved to the Pro add-on in 1.8.0). The Pro add-on keeps the back-office side: menu colors, order, spacing, dimming, side/Dock tabs, hidden toolbar items and toolbar order.
 
 = 1.8.0 =
 * Changed: the plugin refocuses on the front-end toolbar. The back-office features (menu colors, order, spacing, dimming, side/Dock, hidden toolbar items, toolbar order and toolbar Dock) move to the SwitchMyBar Pro add-on. Existing settings are not lost: installing the add-on picks them up automatically.

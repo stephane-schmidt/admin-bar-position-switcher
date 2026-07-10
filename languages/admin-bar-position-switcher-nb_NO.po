@@ -253,8 +253,8 @@ msgstr "Dra i håndtaket for å endre rekkefølgen på menyen; fargen og avstand
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Gjør venstre admin-meny til din egen: dra elementene i din egen rekkefølge, gi hvert element en bakgrunnsfarge (teksten forblir automatisk lesbar), og legg til avstand etter et element for å lage grupper."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Fargelegg og omorganiser admin-menyen, gjem den eller verktøylinjen som macOS-Docken, og skjul elementene du aldri bruker. Én betaling på 15 $, ditt for alltid."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Fargelegg og omorganiser admin-menyen, gjem den som macOS-Docken, og skjul verktøylinjeelementene du aldri bruker. Én betaling på 15 $, ditt for alltid."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "Oppdag SwitchMyBar Pro"

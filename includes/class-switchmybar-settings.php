@@ -49,6 +49,7 @@ class Switchmybar_Settings {
 			'default_position' => 'bottom',
 			'show_toggle'      => 1,
 			'auto_hide'        => 0,
+			'bar_auto_hide'    => 0,
 			'remember_choice'  => 1,
 			'auto_color'       => 1,
 			'elementor_compat' => 1,
@@ -156,6 +157,14 @@ class Switchmybar_Settings {
 
 
 		add_settings_field(
+			'bar_auto_hide',
+			__( 'Auto-hide the toolbar', 'admin-bar-position-switcher' ),
+			array( $this, 'field_bar_auto_hide' ),
+			self::SLUG,
+			'switchmybar_main'
+		);
+
+		add_settings_field(
 			'remember_choice',
 			__( 'Remember the choice', 'admin-bar-position-switcher' ),
 			array( $this, 'field_remember_choice' ),
@@ -241,6 +250,7 @@ class Switchmybar_Settings {
 		$out['default_position'] = ( isset( $input['default_position'] ) && 'top' === $input['default_position'] ) ? 'top' : 'bottom';
 		$out['show_toggle']      = empty( $input['show_toggle'] ) ? 0 : 1;
 		$out['auto_hide']        = empty( $input['auto_hide'] ) ? 0 : 1;
+		$out['bar_auto_hide']    = empty( $input['bar_auto_hide'] ) ? 0 : 1;
 		$out['remember_choice']  = empty( $input['remember_choice'] ) ? 0 : 1;
 		$out['auto_color']       = empty( $input['auto_color'] ) ? 0 : 1;
 		$out['elementor_compat'] = empty( $input['elementor_compat'] ) ? 0 : 1;
@@ -290,7 +300,7 @@ class Switchmybar_Settings {
 		<div class="card" style="max-width:520px;margin-top:28px;border-left:4px solid #2271b1;">
 			<h2 class="title" style="margin-bottom:6px;">SwitchMyBar Pro</h2>
 			<p style="color:#50575e;">
-				<?php esc_html_e( 'Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life.', 'admin-bar-position-switcher' ); ?>
+				<?php esc_html_e( 'Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life.', 'admin-bar-position-switcher' ); ?>
 			</p>
 			<p style="margin:0;">
 				<a class="button button-primary" href="https://switchmybar.com/" target="_blank" rel="noopener nofollow"><?php esc_html_e( 'Discover SwitchMyBar Pro', 'admin-bar-position-switcher' ); ?></a>
@@ -387,6 +397,20 @@ class Switchmybar_Settings {
 		<?php
 	}
 
+
+	/**
+	 * Field: auto-hide the whole toolbar (macOS Dock style).
+	 */
+	public function field_bar_auto_hide() {
+		$value = self::get_options()['bar_auto_hide'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[bar_auto_hide]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus.', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Off by default: the toolbar stays visible at all times.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
 
 	/**
 	 * Field: remember choice.

@@ -172,6 +172,8 @@ class Switchmybar_Plugin {
 			'remember'        => ! empty( $this->options['remember_choice'] ),
 			'autoColor'       => ! empty( $this->options['auto_color'] ),
 			'autoHide'        => ! empty( $this->options['auto_hide'] ),
+			'barAutoHide'     => ! empty( $this->options['bar_auto_hide'] ),
+			'barMinVisible'   => 10000,
 			'storageKey'      => 'abpsPosition',
 		);
 
@@ -248,6 +250,9 @@ class Switchmybar_Plugin {
 			$script .= "var s=localStorage.getItem('abpsPosition');if(s==='top'||s==='bottom'){p=s;}";
 		}
 		$script .= "document.documentElement.classList.add(p==='top'?'abps-top':'abps-bottom');";
+		if ( ! empty( $this->options['bar_auto_hide'] ) ) {
+			$script .= "document.documentElement.classList.add('abps-bar-autohide');";
+		}
 		$script .= "}catch(e){document.documentElement.classList.add('abps-" . esc_js( $default ) . "');}})();";
 
 		return $script;

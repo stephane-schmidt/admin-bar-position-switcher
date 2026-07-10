@@ -253,8 +253,8 @@ msgstr "Перетягніть ручку, щоб змінити порядок 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Зробіть ліве меню адміністратора своїм: перетягніть пункти у власному порядку, надайте кожному колір тла (текст автоматично залишається читабельним) і додайте відступ після пункту, щоб створити групи."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Розфарбуйте та переупорядкуйте меню адміністратора, ховайте його чи панель як Dock у macOS і приховуйте зайві елементи. Разовий платіж 15 $ — назавжди ваше."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Розфарбуйте та переупорядкуйте меню адміністратора, ховайте його як Dock у macOS і приховуйте зайві елементи панелі. Разовий платіж 15 $ — назавжди ваше."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "Відкрийте для себе SwitchMyBar Pro"

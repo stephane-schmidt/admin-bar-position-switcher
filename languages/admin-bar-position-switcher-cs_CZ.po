@@ -253,8 +253,8 @@ msgstr "Přetažením úchytu změníte pořadí nabídky; barva a mezera za se 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Přizpůsobte si levou nabídku administrace: přetáhněte položky do vlastního pořadí, dejte každé barvu pozadí (text zůstane automaticky čitelný) a přidáním mezery za položku vytvořte skupiny."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Obarvěte a přeuspořádejte nabídku administrace, schovejte ji nebo panel nástrojů jako Dock v macOS a skryjte položky panelu, které nepoužíváte. Jediná platba 15 $, navždy vaše."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Obarvěte a přeuspořádejte nabídku administrace, schovejte ji jako Dock v macOS a skryjte položky panelu, které nepoužíváte. Jediná platba 15 $, navždy vaše."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "Objevte SwitchMyBar Pro"

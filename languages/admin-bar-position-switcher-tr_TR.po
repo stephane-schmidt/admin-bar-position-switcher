@@ -253,8 +253,8 @@ msgstr "Menüyü yeniden sıralamak için tutamacı sürükleyin; renk ve sonras
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Sol yönetim menüsünü kendinize göre düzenleyin: öğeleri istediğiniz sıraya sürükleyin, her birine bir arka plan rengi verin (metin otomatik olarak okunur kalır) ve gruplar oluşturmak için bir öğeden sonra boşluk ekleyin."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Yönetim menüsünü renklendirip yeniden sıralayın, menüyü veya araç çubuğunu macOS Dock gibi gizleyin, kullanmadığınız öğeleri saklayın. Tek seferlik 15 $, ömür boyu sizin."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Yönetim menüsünü renklendirip yeniden sıralayın, macOS Dock gibi gizleyin ve kullanmadığınız araç çubuğu öğelerini saklayın. Tek seferlik 15 $, ömür boyu sizin."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "SwitchMyBar Pro'yu keşfedin"

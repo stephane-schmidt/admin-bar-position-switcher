@@ -253,8 +253,8 @@ msgstr "Ziehen Sie am Griff, um das Menü neu zu ordnen; Farbe und Abstand danac
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Machen Sie das linke Admin-Menü zu Ihrem: Ziehen Sie die Einträge in Ihre eigene Reihenfolge, geben Sie jedem eine Hintergrundfarbe (der Text bleibt automatisch lesbar) und fügen Sie nach einem Eintrag Abstand hinzu, um Gruppen zu bilden."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Färben und ordnen Sie das Backend-Menü, docken Sie es oder die Werkzeugleiste wie das macOS-Dock weg und verbergen Sie nie genutzte Einträge. Einmalig 15 $, für immer Ihres."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Färben und ordnen Sie das Backend-Menü, docken Sie es wie das macOS-Dock weg und verbergen Sie nie genutzte Einträge der Werkzeugleiste. Einmalig 15 $, für immer Ihres."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "SwitchMyBar Pro entdecken"

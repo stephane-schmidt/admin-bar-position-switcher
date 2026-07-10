@@ -253,8 +253,8 @@ msgstr "Przeciągnij uchwyt, aby zmienić kolejność menu; kolor i odstęp po d
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Uczyń lewe menu administracyjne swoim: przeciągnij elementy w wybranej kolejności, nadaj każdemu kolor tła (tekst pozostaje automatycznie czytelny) i dodaj odstęp po elemencie, aby tworzyć grupy."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Pokoloruj i uporządkuj menu administracyjne, chowaj je lub pasek narzędzi jak Dock w macOS i ukryj nieużywane elementy. Jednorazowa płatność 15 $, na zawsze."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Pokoloruj i uporządkuj menu administracyjne, chowaj je jak Dock w macOS i ukryj nieużywane elementy paska. Jednorazowa płatność 15 $, na zawsze."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "Poznaj SwitchMyBar Pro"

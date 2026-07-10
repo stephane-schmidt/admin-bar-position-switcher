@@ -41,6 +41,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 - Remembers each browser's choice (can be turned off).
 - **Match the page color** — optionally tints the button with the main color of the current page (theme color, palette, or header background), with automatic black/white text for contrast. Falls back to a neutral dark button when no color is found.
 - **Colorize the toolbar** — set a custom background color for the bar, with automatically readable text.
+- **Auto‑hide the toolbar, macOS Dock style (opt‑in)** — the bar glides off‑screen and slides back when the pointer comes within 150px of its edge, or when it receives keyboard focus; once revealed it stays for at least 10 seconds.
 - **Recolor from the toolbar itself** — a small "Bar" item (administrators only) reveals the site's five dominant colors on hover; one click recolors the bar and saves the choice. Colors are auto‑detected fully locally from your logo (PNG/SVG), Elementor kit, theme.json, Customizer settings, and a frequency scan of the home page.
 - Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 - Opens the toolbar sub‑menus upward when the bar is at the bottom.
@@ -49,7 +50,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 
 ## SwitchMyBar Pro
 
-The back-office side lives in **[SwitchMyBar Pro](https://switchmybar.com/)** — a small add-on: colorize, reorder (drag & drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, dock the toolbar itself, and hide the toolbar items you never use. **One payment of $15, yours for life.** Your existing settings are picked up automatically when the add-on activates.
+The back-office side lives in **[SwitchMyBar Pro](https://switchmybar.com/)** — a small add-on: colorize, reorder (drag & drop) and space the left admin menu, dim the technical items, flip the menu to the right or dock it away macOS-style with floating tabs, and hide the toolbar items you never use. **One payment of $15, yours for life.** Your existing settings are picked up automatically when the add-on activates.
 
 ## Settings
 
@@ -61,6 +62,7 @@ The back-office side lives in **[SwitchMyBar Pro](https://switchmybar.com/)** �
 | Switch button | Show or hide the floating "↕" button. |
 | Button label | Text shown next to the arrow (default: "Bar"). |
 | Auto-hide the button | Let the button drift away when idle and float back near the toolbar (off by default). |
+| Auto-hide the toolbar | Hide the bar off-screen like the macOS Dock; it glides back within 150px (off by default). |
 | Remember the choice | Store each browser's top/bottom preference. |
 | Match the page color | Tint the button with the page's main color. |
 | Elementor compatibility | Align Elementor sticky headers with the toolbar. |

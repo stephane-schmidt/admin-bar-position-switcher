@@ -253,8 +253,8 @@ msgstr "Seret pegangan untuk mengurutkan ulang menu; warna dan spasi setelahnya 
 msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
 msgstr "Jadikan menu admin kiri milik Anda: seret item ke urutan Anda sendiri, beri masing-masing warna latar (teks tetap terbaca otomatis), dan tambahkan spasi setelah item untuk membentuk grup."
 
-msgid "Color and reorder the back-office menu, dock it or the toolbar away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
-msgstr "Warnai dan urutkan ulang menu admin, sembunyikan menu atau bilah alat seperti Dock macOS, dan sembunyikan item yang tak pernah dipakai. Sekali bayar $15, milik Anda selamanya."
+msgid "Color and reorder the back-office menu, dock it away like the macOS Dock, and hide the toolbar items you never use. One payment of $15, yours for life."
+msgstr "Warnai dan urutkan ulang menu admin, sembunyikan seperti Dock macOS, dan sembunyikan item bilah alat yang tak pernah dipakai. Sekali bayar $15, milik Anda selamanya."
 
 msgid "Discover SwitchMyBar Pro"
 msgstr "Jelajahi SwitchMyBar Pro"
