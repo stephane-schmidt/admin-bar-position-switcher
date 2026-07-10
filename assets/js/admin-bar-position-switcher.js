@@ -10,13 +10,22 @@
 	'use strict';
 
 	var cfg = window.ABPS || {};
+
+	// Tolerate both real booleans (wp_json_encode) and the "1"/"" strings
+	// that wp_localize_script would produce.
+	function flag( v ) {
+		return v === true || v === 1 || v === '1';
+	}
+
 	var KEY = cfg.storageKey || 'abpsPosition';
 	var DEFAULT = cfg.defaultPosition === 'top' ? 'top' : 'bottom';
-	var REMEMBER = cfg.remember !== false;
-	var AUTO_COLOR = cfg.autoColor === true;
-	var AUTO_HIDE = cfg.autoHide === true; // opt-in; the button stays visible by default
+	var REMEMBER = ! ( cfg.remember === false || cfg.remember === 0 || cfg.remember === '' || cfg.remember === '0' );
+	var AUTO_COLOR = flag( cfg.autoColor );
+	var AUTO_HIDE = flag( cfg.autoHide ); // opt-in; the button stays visible by default
 	var HIDE_DELAY = typeof cfg.hideDelay === 'number' ? cfg.hideDelay : 10000;
 	var REVEAL_AT = typeof cfg.revealDistance === 'number' ? cfg.revealDistance : 50;
+	var BAR_AUTO_HIDE = flag( cfg.barAutoHide ); // opt-in; the toolbar stays visible by default
+	var BAR_REVEAL_AT = typeof cfg.barRevealDistance === 'number' ? cfg.barRevealDistance : 150;
 	var root = document.documentElement;
 
 	/* ------------------------------------------------------------------ *
@@ -166,6 +175,187 @@
 
 	if ( button && AUTO_HIDE ) {
 		setupAutoHide( button );
+	}
+
+	/* ------------------------------------------------------------------ *
+	 * Auto-hiding toolbar (macOS Dock style): the bar slides off-screen
+	 * and glides back when the pointer comes within BAR_REVEAL_AT pixels
+	 * of its edge, while it is hovered, or when it has keyboard focus.
+	 * ------------------------------------------------------------------ */
+	function setupBarAutoHide() {
+		var HIDDEN = 'abps-bar-hidden';
+		var bar = document.getElementById( 'wpadminbar' );
+		if ( ! bar ) {
+			return;
+		}
+		var pinned = false;
+		var timer = null;
+
+		function hide() {
+			if ( ! pinned ) {
+				root.classList.add( HIDDEN );
+			}
+		}
+		function show() {
+			root.classList.remove( HIDDEN );
+		}
+		function armHide( delay ) {
+			if ( timer ) {
+				window.clearTimeout( timer );
+			}
+			timer = window.setTimeout( hide, delay );
+		}
+
+		function nearEdge( y ) {
+			if ( current() === 'top' ) {
+				return y <= BAR_REVEAL_AT;
+			}
+			return ( window.innerHeight - y ) <= BAR_REVEAL_AT;
+		}
+
+		var queued = false;
+		var my = 0;
+		function onMove( e ) {
+			my = e.clientY;
+			if ( queued ) {
+				return;
+			}
+			queued = true;
+			window.requestAnimationFrame( function () {
+				queued = false;
+				if ( nearEdge( my ) ) {
+					show();
+				} else if ( ! pinned ) {
+					armHide( 280 );
+				}
+			} );
+		}
+
+		document.addEventListener( 'mousemove', onMove, { passive: true } );
+		document.addEventListener( 'touchstart', function ( e ) {
+			var t = e.touches && e.touches[ 0 ];
+			if ( t && nearEdge( t.clientY ) ) {
+				show();
+				armHide( 4000 );
+			}
+		}, { passive: true } );
+
+		bar.addEventListener( 'mouseenter', function () {
+			pinned = true;
+			show();
+		} );
+		bar.addEventListener( 'mouseleave', function () {
+			pinned = false;
+			armHide( 280 );
+		} );
+		bar.addEventListener( 'focusin', function () {
+			pinned = true;
+			show();
+		} );
+		bar.addEventListener( 'focusout', function () {
+			pinned = false;
+			armHide( 280 );
+		} );
+
+		// Visible on load so the bar is discoverable, then it glides away.
+		armHide( 1200 );
+	}
+
+	if ( BAR_AUTO_HIDE ) {
+		setupBarAutoHide();
+	}
+
+	/* ------------------------------------------------------------------ *
+	 * Toolbar color picker: the "Bar" item in the admin bar shows the
+	 * site's dominant colors; clicking a swatch saves the choice (AJAX)
+	 * and recolors the toolbar immediately.
+	 * ------------------------------------------------------------------ */
+	function setupColorPicker() {
+		var liveCss = null;
+
+		function applyBar( color, text ) {
+			if ( ! liveCss ) {
+				liveCss = document.getElementById( 'abps-live-bar' );
+			}
+			if ( ! liveCss ) {
+				liveCss = document.createElement( 'style' );
+				liveCss.id = 'abps-live-bar';
+				document.head.appendChild( liveCss );
+			}
+			if ( ! color ) {
+				liveCss.textContent = '#wpadminbar{background:#1d2327 !important;}' +
+					'#wpadminbar #wp-admin-bar-root-default>li>.ab-item,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item{color:#fff !important;}' +
+					'#wpadminbar #wp-admin-bar-root-default>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-root-default>li>.ab-item:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item:before{color:#fff !important;}';
+			} else {
+				liveCss.textContent = '#wpadminbar{background:' + color + ' !important;}' +
+					'#wpadminbar #wp-admin-bar-root-default>li>.ab-item,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item{color:' + text + ' !important;}' +
+					'#wpadminbar #wp-admin-bar-root-default>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item .ab-icon:before,#wpadminbar #wp-admin-bar-root-default>li>.ab-item:before,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item:before{color:' + text + ' !important;}';
+			}
+			var dot = document.querySelector( '#wp-admin-bar-abps-colors .abps-dot' );
+			if ( dot ) {
+				dot.style.background = color || '#1d2327';
+			}
+		}
+
+		function post( data ) {
+			var body = new window.FormData();
+			var k;
+			for ( k in data ) {
+				body.append( k, data[ k ] );
+			}
+			body.append( 'nonce', cfg.nonce );
+			return window.fetch( cfg.ajaxUrl, { method: 'POST', credentials: 'same-origin', body: body } )
+				.then( function ( r ) { return r.json(); } );
+		}
+
+		document.addEventListener( 'click', function ( e ) {
+			var swatch = e.target && e.target.closest ? e.target.closest( '.abps-swatch' ) : null;
+			if ( ! swatch ) {
+				return;
+			}
+			e.preventDefault();
+			post( { action: 'abps_bar_color', color: swatch.getAttribute( 'data-abps-color' ) } )
+				.then( function ( res ) {
+					if ( res && res.success ) {
+						applyBar( res.data.color, res.data.text );
+					}
+				} )
+				.catch( function () {} );
+		} );
+
+		// First run for this plugin version: refine the palette in the
+		// background (logo + theme + a frequency scan of the home page).
+		if ( cfg.needDeep && window.fetch ) {
+			post( { action: 'abps_detect_colors' } )
+				.then( function ( res ) {
+					if ( ! ( res && res.success && res.data.colors && res.data.colors.length ) ) {
+						return;
+					}
+					var wrap = document.querySelector( '#wp-admin-bar-abps-colors-swatches .abps-swatches' );
+					if ( ! wrap ) {
+						return;
+					}
+					var defaultBtn = wrap.querySelector( '.abps-swatch--default' );
+					wrap.querySelectorAll( '.abps-swatch:not(.abps-swatch--default)' ).forEach( function ( b ) {
+						b.remove();
+					} );
+					res.data.colors.forEach( function ( hex ) {
+						var b = document.createElement( 'button' );
+						b.type = 'button';
+						b.className = 'abps-swatch';
+						b.setAttribute( 'data-abps-color', hex );
+						b.style.background = hex;
+						b.title = hex;
+						b.setAttribute( 'aria-label', hex );
+						wrap.insertBefore( b, defaultBtn );
+					} );
+				} )
+				.catch( function () {} );
+		}
+	}
+
+	if ( flag( cfg.canPick ) && cfg.ajaxUrl && cfg.nonce ) {
+		setupColorPicker();
 	}
 
 	/* ------------------------------------------------------------------ *

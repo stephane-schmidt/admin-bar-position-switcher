@@ -1,10 +1,10 @@
 === Admin Bar Position Switcher ===
 Contributors: stephaneschmidt
 Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
-Requires at least: 5.0
+Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
 * Hide individual toolbar items you don't want (WordPress logo, Comments, + New, Updates, and more).
 * Optionally colorize the toolbar background, with automatically readable text.
+* **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
+* **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
 * Optional Elementor compatibility so sticky headers line up with the toolbar.
@@ -87,6 +89,12 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.1.0 =
+* New: optional auto-hiding toolbar, macOS Dock style — the bar glides off-screen and slides back when the pointer comes within 150 pixels of its edge (or when it receives keyboard focus). Off by default: the toolbar stays visible unless you enable it.
+* New: recolor the toolbar directly from the toolbar. A small "Bar" item (administrators only) reveals the site's five dominant colors on hover; one click recolors the bar, keeps the text readable, and saves the choice.
+* New: automatic color detection, fully local — it samples your logo (PNG/JPEG/WebP via GD, SVG parsed as text), reads the Elementor kit (skipping factory defaults), theme.json, Customizer settings and popular theme options, then refines with a frequency scan of your home page. No external service.
+* New: "Color picker in the toolbar" setting to turn the item off.
+
 = 1.0.4 =
 * Changed: auto-hiding the switch button is now an opt-in setting, off by default — the button stays visible unless you enable it under Settings → Admin Bar Position.
 * New: when enabled, the button drifts away like a falling leaf and floats back as soon as the pointer moves anywhere over the toolbar (its full width), not just near the button. The new option is translated into every bundled language.
@@ -105,6 +113,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Recolor the toolbar right from the toolbar with your site's dominant colors, and optionally auto-hide the whole bar, macOS Dock style.
 
 = 1.0.4 =
 Auto-hide is now opt-in (off by default). When enabled, the button drifts away like a falling leaf and returns when you move over the toolbar.

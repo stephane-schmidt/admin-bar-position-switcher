@@ -124,6 +124,90 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 	}
 }
 
+/* ---------------------------------------------------------------------------
+ * Auto-hiding toolbar (macOS Dock style)
+ *
+ * html.abps-bar-autohide is set by the early inline script; the JS toggles
+ * .abps-bar-hidden. The bar overlays the page in this mode, so the space
+ * WordPress normally reserves is released.
+ * ------------------------------------------------------------------------- */
+html.abps-bar-autohide.abps-bottom body {
+	padding-bottom: 0 !important;
+}
+
+html.abps-bar-autohide.abps-top {
+	margin-top: 0 !important;
+}
+
+html.abps-bar-autohide #wpadminbar {
+	transition: transform 0.32s cubic-bezier( 0.4, 0, 0.2, 1 );
+	will-change: transform;
+}
+
+html.abps-bar-autohide.abps-bar-hidden.abps-bottom #wpadminbar {
+	transform: translateY( 100% );
+}
+
+html.abps-bar-autohide.abps-bar-hidden.abps-top #wpadminbar {
+	transform: translateY( -100% );
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	html.abps-bar-autohide #wpadminbar {
+		transition: none;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+ * Toolbar color picker (the "Bar" item and its swatches)
+ * ------------------------------------------------------------------------- */
+#wpadminbar #wp-admin-bar-abps-colors .abps-dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: 6px;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+	border: 1px solid rgba( 255, 255, 255, 0.55 );
+	box-sizing: border-box;
+}
+
+#wpadminbar #wp-admin-bar-abps-colors-swatches .ab-item {
+	height: auto !important;
+}
+
+#wpadminbar .abps-swatches {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	padding: 7px 2px;
+}
+
+#wpadminbar .abps-swatch {
+	width: 22px;
+	height: 22px;
+	border-radius: 4px;
+	border: 1px solid rgba( 255, 255, 255, 0.4 );
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	transition: transform 0.15s ease;
+	box-sizing: border-box;
+}
+
+#wpadminbar .abps-swatch:hover,
+#wpadminbar .abps-swatch:focus {
+	transform: scale( 1.15 );
+	border-color: #fff;
+}
+
+/* The "back to default" swatch: dark with a diagonal strike. */
+#wpadminbar .abps-swatch--default {
+	background: #1d2327 linear-gradient( 135deg, transparent 45%, #fff 45%, #fff 55%, transparent 55% );
+}
+
 html.abps-bottom #abps-switch {
 	bottom: 42px;
 	top: auto;

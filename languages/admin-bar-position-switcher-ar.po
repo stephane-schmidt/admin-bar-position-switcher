@@ -156,3 +156,24 @@ msgstr "دع الزر يختفي تدريجياً بعد بضع ثوانٍ من 
 
 msgid "Off by default: the button stays visible."
 msgstr "معطّل افتراضياً: يبقى الزر ظاهراً."
+
+msgid "Toolbar color"
+msgstr "لون شريط الأدوات"
+
+msgid "Default"
+msgstr "الافتراضي"
+
+msgid "Color picker in the toolbar"
+msgstr "منتقي الألوان في شريط الأدوات"
+
+msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
+msgstr "إضافة عنصر \"Bar\" إلى شريط الأدوات ليتمكّن المديرون من تغيير لونه باستخدام أحد الألوان السائدة في الموقع، والتي يتم اكتشافها من الشعار والقالب."
+
+msgid "Auto-hide the toolbar"
+msgstr "إخفاء شريط الأدوات تلقائيًا"
+
+msgid "Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus."
+msgstr "إخفاء شريط الأدوات خارج الشاشة على غرار macOS Dock: ينزلق عائدًا عندما يقترب المؤشر إلى أقل من 150 بكسلاً من حافته، أو عند حصوله على تركيز لوحة المفاتيح."
+
+msgid "Off by default: the toolbar stays visible at all times."
+msgstr "معطّل افتراضيًا: يبقى شريط الأدوات ظاهرًا في جميع الأوقات."

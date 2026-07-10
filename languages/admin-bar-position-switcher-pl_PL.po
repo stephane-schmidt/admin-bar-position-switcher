@@ -156,3 +156,24 @@ msgstr "Pozwól, aby przycisk zniknął po kilku sekundach bezczynności, i przy
 
 msgid "Off by default: the button stays visible."
 msgstr "Domyślnie wyłączone: przycisk pozostaje widoczny."
+
+msgid "Toolbar color"
+msgstr "Kolor paska narzędzi"
+
+msgid "Default"
+msgstr "Domyślny"
+
+msgid "Color picker in the toolbar"
+msgstr "Wybór koloru w pasku narzędzi"
+
+msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
+msgstr "Dodaje do paska narzędzi element „Bar”, który pozwala administratorom zmienić jego kolor na jeden z dominujących kolorów witryny, wykrytych na podstawie logo i motywu."
+
+msgid "Auto-hide the toolbar"
+msgstr "Automatyczne ukrywanie paska narzędzi"
+
+msgid "Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus."
+msgstr "Ukryj pasek narzędzi poza ekranem na wzór macOS Dock: wysuwa się z powrotem, gdy wskaźnik zbliży się na 150 pikseli od jego krawędzi lub gdy pasek otrzyma fokus klawiatury."
+
+msgid "Off by default: the toolbar stays visible at all times."
+msgstr "Domyślnie wyłączone: pasek narzędzi pozostaje cały czas widoczny."

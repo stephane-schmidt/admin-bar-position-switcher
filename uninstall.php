@@ -8,8 +8,9 @@
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
 delete_option( 'abps_options' );
+delete_option( 'abps_colors_detected' );
 
-// Multisite: remove the option from every site.
+// Multisite: remove the options from every site.
 if ( is_multisite() ) {
 	$abps_site_ids = get_sites(
 		array(
@@ -20,6 +21,7 @@ if ( is_multisite() ) {
 	foreach ( $abps_site_ids as $abps_site_id ) {
 		switch_to_blog( $abps_site_id );
 		delete_option( 'abps_options' );
+		delete_option( 'abps_colors_detected' );
 		restore_current_blog();
 	}
 }

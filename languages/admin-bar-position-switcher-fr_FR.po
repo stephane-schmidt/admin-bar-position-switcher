@@ -156,3 +156,24 @@ msgstr "Le bouton s'efface après quelques secondes d'inactivité et réapparaî
 
 msgid "Off by default: the button stays visible."
 msgstr "Désactivé par défaut : le bouton reste visible."
+
+msgid "Toolbar color"
+msgstr "Couleur de la barre d’outils"
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Color picker in the toolbar"
+msgstr "Sélecteur de couleurs dans la barre d’outils"
+
+msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
+msgstr "Ajoute un élément « Bar » à la barre d’outils afin que les administrateurs puissent la recolorer avec l’une des couleurs dominantes du site, détectées à partir de votre logo et de votre thème."
+
+msgid "Auto-hide the toolbar"
+msgstr "Masquer automatiquement la barre d’outils"
+
+msgid "Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus."
+msgstr "Masque la barre d’outils hors de l’écran, comme le Dock de macOS : elle revient en glissant lorsque le pointeur s’approche à moins de 150 pixels de son bord, ou lorsqu’elle reçoit le focus clavier."
+
+msgid "Off by default: the toolbar stays visible at all times."
+msgstr "Désactivé par défaut : la barre d’outils reste visible en permanence."

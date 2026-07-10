@@ -156,3 +156,24 @@ msgstr "Deixe o botão desaparecer ao fim de alguns segundos sem utilização e 
 
 msgid "Off by default: the button stays visible."
 msgstr "Desativado por predefinição: o botão permanece visível."
+
+msgid "Toolbar color"
+msgstr "Cor da barra de ferramentas"
+
+msgid "Default"
+msgstr "Por omissão"
+
+msgid "Color picker in the toolbar"
+msgstr "Seletor de cores na barra de ferramentas"
+
+msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
+msgstr "Adiciona um item \"Bar\" à barra de ferramentas para que os administradores possam alterar a sua cor com uma das cores dominantes do site, detetadas a partir do logótipo e do tema."
+
+msgid "Auto-hide the toolbar"
+msgstr "Ocultar automaticamente a barra de ferramentas"
+
+msgid "Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus."
+msgstr "Oculta a barra de ferramentas fora do ecrã, tal como a macOS Dock: ela desliza de volta quando o ponteiro se aproxima a menos de 150 píxeis da sua margem ou quando recebe o foco do teclado."
+
+msgid "Off by default: the toolbar stays visible at all times."
+msgstr "Desativado por predefinição: a barra de ferramentas permanece sempre visível."

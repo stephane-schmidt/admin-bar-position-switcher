@@ -44,12 +44,14 @@ class ABPS_Settings {
 			'default_position' => 'bottom',
 			'show_toggle'      => 1,
 			'auto_hide'        => 0,
+			'bar_auto_hide'    => 0,
 			'remember_choice'  => 1,
 			'auto_color'       => 1,
 			'elementor_compat' => 1,
 			'button_label'     => '',
 			'bar_bg_enabled'   => 0,
 			'bar_bg_color'     => '#1d2327',
+			'bar_picker'       => 1,
 			'hidden_items'     => array(),
 		);
 	}
@@ -204,6 +206,14 @@ class ABPS_Settings {
 		);
 
 		add_settings_field(
+			'bar_auto_hide',
+			__( 'Auto-hide the toolbar', 'admin-bar-position-switcher' ),
+			array( $this, 'field_bar_auto_hide' ),
+			self::SLUG,
+			'abps_main'
+		);
+
+		add_settings_field(
 			'remember_choice',
 			__( 'Remember the choice', 'admin-bar-position-switcher' ),
 			array( $this, 'field_remember_choice' ),
@@ -243,6 +253,14 @@ class ABPS_Settings {
 		);
 
 		add_settings_field(
+			'bar_picker',
+			__( 'Color picker in the toolbar', 'admin-bar-position-switcher' ),
+			array( $this, 'field_bar_picker' ),
+			self::SLUG,
+			'abps_appearance'
+		);
+
+		add_settings_field(
 			'hidden_items',
 			__( 'Hide toolbar items', 'admin-bar-position-switcher' ),
 			array( $this, 'field_hidden_items' ),
@@ -273,11 +291,13 @@ class ABPS_Settings {
 		$out['default_position'] = ( isset( $input['default_position'] ) && 'top' === $input['default_position'] ) ? 'top' : 'bottom';
 		$out['show_toggle']      = empty( $input['show_toggle'] ) ? 0 : 1;
 		$out['auto_hide']        = empty( $input['auto_hide'] ) ? 0 : 1;
+		$out['bar_auto_hide']    = empty( $input['bar_auto_hide'] ) ? 0 : 1;
 		$out['remember_choice']  = empty( $input['remember_choice'] ) ? 0 : 1;
 		$out['auto_color']       = empty( $input['auto_color'] ) ? 0 : 1;
 		$out['elementor_compat'] = empty( $input['elementor_compat'] ) ? 0 : 1;
 		$out['button_label']     = isset( $input['button_label'] ) ? sanitize_text_field( $input['button_label'] ) : '';
 		$out['bar_bg_enabled']   = empty( $input['bar_bg_enabled'] ) ? 0 : 1;
+		$out['bar_picker']       = empty( $input['bar_picker'] ) ? 0 : 1;
 
 		$color               = isset( $input['bar_bg_color'] ) ? sanitize_hex_color( $input['bar_bg_color'] ) : '';
 		$out['bar_bg_color'] = $color ? $color : '#1d2327';
@@ -408,6 +428,20 @@ class ABPS_Settings {
 	}
 
 	/**
+	 * Field: auto-hide the whole toolbar (macOS Dock style).
+	 */
+	public function field_bar_auto_hide() {
+		$value = self::get_options()['bar_auto_hide'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[bar_auto_hide]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus.', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Off by default: the toolbar stays visible at all times.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
+
+	/**
 	 * Field: remember choice.
 	 */
 	public function field_remember_choice() {
@@ -461,6 +495,19 @@ class ABPS_Settings {
 		&nbsp;
 		<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[bar_bg_color]" value="<?php echo esc_attr( $color ); ?>" />
 		<p class="description"><?php esc_html_e( 'The text color adjusts automatically for readability.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Field: color picker in the toolbar.
+	 */
+	public function field_bar_picker() {
+		$value = self::get_options()['bar_picker'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[bar_picker]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Add a "Bar" item to the toolbar so administrators can recolor it with one of the site\'s dominant colors, detected from your logo and theme.', 'admin-bar-position-switcher' ); ?>
+		</label>
 		<?php
 	}
 

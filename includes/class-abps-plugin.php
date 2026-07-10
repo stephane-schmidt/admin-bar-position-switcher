@@ -21,9 +21,14 @@ class ABPS_Plugin {
 
 	/**
 	 * Hook front-end setup after the main query is available.
+	 *
+	 * The AJAX handlers are registered here (not in maybe_boot) because
+	 * admin-ajax.php requests never reach template_redirect.
 	 */
 	public function __construct() {
 		add_action( 'template_redirect', array( $this, 'maybe_boot' ) );
+		add_action( 'wp_ajax_abps_bar_color', array( $this, 'ajax_bar_color' ) );
+		add_action( 'wp_ajax_abps_detect_colors', array( $this, 'ajax_detect_colors' ) );
 	}
 
 	/**
@@ -48,6 +53,91 @@ class ABPS_Plugin {
 		if ( ! empty( $this->options['hidden_items'] ) ) {
 			add_action( 'wp_before_admin_bar_render', array( $this, 'remove_hidden_nodes' ), 1000 );
 		}
+
+		if ( ! empty( $this->options['bar_picker'] ) && current_user_can( 'manage_options' ) ) {
+			add_action( 'admin_bar_menu', array( $this, 'add_color_picker_node' ), 500 );
+		}
+	}
+
+	/**
+	 * Add the "Bar" color picker to the toolbar: hovering it reveals the
+	 * site's dominant colors (detected from the logo and theme); clicking a
+	 * swatch recolors the toolbar and saves the choice.
+	 *
+	 * @param WP_Admin_Bar $bar The admin bar.
+	 */
+	public function add_color_picker_node( $bar ) {
+		$label = isset( $this->options['button_label'] ) ? trim( (string) $this->options['button_label'] ) : '';
+		if ( '' === $label ) {
+			$label = __( 'Bar', 'admin-bar-position-switcher' );
+		}
+		$current = ! empty( $this->options['bar_bg_enabled'] ) ? $this->options['bar_bg_color'] : '#1d2327';
+
+		$bar->add_node(
+			array(
+				'id'     => 'abps-colors',
+				'parent' => 'top-secondary',
+				'title'  => '<span class="abps-dot" style="background:' . esc_attr( $current ) . '"></span>' . esc_html( $label ),
+				'href'   => false,
+				'meta'   => array( 'title' => __( 'Toolbar color', 'admin-bar-position-switcher' ) ),
+			)
+		);
+
+		$swatches = '';
+		foreach ( ABPS_Color_Detector::palette() as $hex ) {
+			$swatches .= '<button type="button" class="abps-swatch" data-abps-color="' . esc_attr( $hex ) . '" style="background:' . esc_attr( $hex ) . '" title="' . esc_attr( $hex ) . '" aria-label="' . esc_attr( $hex ) . '"></button>';
+		}
+		$swatches .= '<button type="button" class="abps-swatch abps-swatch--default" data-abps-color="default" title="' . esc_attr__( 'Default', 'admin-bar-position-switcher' ) . '" aria-label="' . esc_attr__( 'Default', 'admin-bar-position-switcher' ) . '"></button>';
+
+		$bar->add_node(
+			array(
+				'id'     => 'abps-colors-swatches',
+				'parent' => 'abps-colors',
+				'title'  => '<span class="abps-swatches">' . $swatches . '</span>',
+				'href'   => false,
+			)
+		);
+	}
+
+	/**
+	 * AJAX: save a toolbar color picked from the swatches.
+	 */
+	public function ajax_bar_color() {
+		check_ajax_referer( 'abps_bar_color', 'nonce' );
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( array( 'message' => 'forbidden' ), 403 );
+		}
+		$raw  = isset( $_POST['color'] ) ? sanitize_text_field( wp_unslash( $_POST['color'] ) ) : '';
+		$opts = ABPS_Settings::get_options();
+		if ( 'default' === $raw ) {
+			$opts['bar_bg_enabled'] = 0;
+			update_option( ABPS_Settings::OPTION, $opts );
+			wp_send_json_success( array( 'color' => '', 'text' => '' ) );
+		}
+		$hex = sanitize_hex_color( $raw );
+		if ( ! $hex ) {
+			wp_send_json_error( array( 'message' => 'invalid color' ), 400 );
+		}
+		$opts['bar_bg_enabled'] = 1;
+		$opts['bar_bg_color']   = $hex;
+		update_option( ABPS_Settings::OPTION, $opts );
+		wp_send_json_success(
+			array(
+				'color' => $hex,
+				'text'  => self::readable_text_color( $hex ),
+			)
+		);
+	}
+
+	/**
+	 * AJAX: run the deep color detection once (logo + theme + frequency scan).
+	 */
+	public function ajax_detect_colors() {
+		check_ajax_referer( 'abps_bar_color', 'nonce' );
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( array( 'message' => 'forbidden' ), 403 );
+		}
+		wp_send_json_success( array( 'colors' => ABPS_Color_Detector::detect( true ) ) );
 	}
 
 	/**
@@ -87,16 +177,28 @@ class ABPS_Plugin {
 			true
 		);
 
-		wp_localize_script(
+		$config = array(
+			'defaultPosition' => ( 'top' === $this->options['default_position'] ) ? 'top' : 'bottom',
+			'remember'        => ! empty( $this->options['remember_choice'] ),
+			'autoColor'       => ! empty( $this->options['auto_color'] ),
+			'autoHide'        => ! empty( $this->options['auto_hide'] ),
+			'barAutoHide'     => ! empty( $this->options['bar_auto_hide'] ),
+			'storageKey'      => 'abpsPosition',
+		);
+
+		if ( ! empty( $this->options['bar_picker'] ) && current_user_can( 'manage_options' ) ) {
+			$config['canPick']  = true;
+			$config['ajaxUrl']  = admin_url( 'admin-ajax.php' );
+			$config['nonce']    = wp_create_nonce( 'abps_bar_color' );
+			$config['needDeep'] = ! ABPS_Color_Detector::has_deep();
+		}
+
+		// wp_json_encode preserves booleans; wp_localize_script would cast
+		// every scalar to a string ("1"/"") and silently break the JS flags.
+		wp_add_inline_script(
 			'admin-bar-position-switcher',
-			'ABPS',
-			array(
-				'defaultPosition' => ( 'top' === $this->options['default_position'] ) ? 'top' : 'bottom',
-				'remember'        => ! empty( $this->options['remember_choice'] ),
-				'autoColor'       => ! empty( $this->options['auto_color'] ),
-				'autoHide'        => ! empty( $this->options['auto_hide'] ),
-				'storageKey'      => 'abpsPosition',
-			)
+			'window.ABPS = ' . wp_json_encode( $config ) . ';',
+			'before'
 		);
 	}
 
@@ -115,6 +217,8 @@ class ABPS_Plugin {
 			$css .= 'html.abps-bottom .elementor-location-header .elementor-sticky--active{top:0 !important;}';
 			$css .= 'html.abps-top .elementor-location-header .elementor-sticky--active{top:32px !important;}';
 			$css .= '@media screen and (max-width:782px){html.abps-top .elementor-location-header .elementor-sticky--active{top:46px !important;}}';
+			// When the toolbar auto-hides it overlays the page, so nothing is offset.
+			$css .= 'html.abps-bar-autohide .elementor-location-header .elementor-sticky--active{top:0 !important;}';
 		}
 
 		if ( ! empty( $this->options['bar_bg_enabled'] ) ) {
@@ -150,6 +254,9 @@ class ABPS_Plugin {
 			$script .= "var s=localStorage.getItem('abpsPosition');if(s==='top'||s==='bottom'){p=s;}";
 		}
 		$script .= "document.documentElement.classList.add(p==='top'?'abps-top':'abps-bottom');";
+		if ( ! empty( $this->options['bar_auto_hide'] ) ) {
+			$script .= "document.documentElement.classList.add('abps-bar-autohide');";
+		}
 		$script .= "}catch(e){document.documentElement.classList.add('abps-" . esc_js( $default ) . "');}})();";
 
 		echo '<script>' . $script . '</script>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- values escaped with esc_js above.

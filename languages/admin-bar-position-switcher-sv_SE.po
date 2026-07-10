@@ -156,3 +156,24 @@ msgstr "Låt knappen glida undan efter några sekunder utan användning och ta t
 
 msgid "Off by default: the button stays visible."
 msgstr "Av som standard: knappen förblir synlig."
+
+msgid "Toolbar color"
+msgstr "Verktygsfältets färg"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Color picker in the toolbar"
+msgstr "Färgväljare i verktygsfältet"
+
+msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
+msgstr "Lägg till ett \"Bar\"-objekt i verktygsfältet så att administratörer kan färga om det med en av webbplatsens dominerande färger, som identifieras från din logotyp och ditt tema."
+
+msgid "Auto-hide the toolbar"
+msgstr "Dölj verktygsfältet automatiskt"
+
+msgid "Hide the toolbar off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge, or when it receives keyboard focus."
+msgstr "Dölj verktygsfältet utanför skärmen som macOS Dock: det glider tillbaka när pekaren kommer inom 150 pixlar från dess kant eller när det får tangentbordsfokus."
+
+msgid "Off by default: the toolbar stays visible at all times."
+msgstr "Av som standard: verktygsfältet förblir alltid synligt."
