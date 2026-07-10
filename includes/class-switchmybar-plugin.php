@@ -8,9 +8,9 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Class ABPS_Plugin.
+ * Class Switchmybar_Plugin.
  */
-class ABPS_Plugin {
+class Switchmybar_Plugin {
 
 	/**
 	 * Resolved plugin options.
@@ -27,8 +27,8 @@ class ABPS_Plugin {
 	 */
 	public function __construct() {
 		add_action( 'template_redirect', array( $this, 'maybe_boot' ) );
-		add_action( 'wp_ajax_abps_bar_color', array( $this, 'ajax_bar_color' ) );
-		add_action( 'wp_ajax_abps_detect_colors', array( $this, 'ajax_detect_colors' ) );
+		add_action( 'wp_ajax_switchmybar_bar_color', array( $this, 'ajax_bar_color' ) );
+		add_action( 'wp_ajax_switchmybar_detect_colors', array( $this, 'ajax_detect_colors' ) );
 	}
 
 	/**
@@ -39,15 +39,13 @@ class ABPS_Plugin {
 			return;
 		}
 
-		$this->options = ABPS_Settings::get_options();
+		$this->options = Switchmybar_Settings::get_options();
 
 		// Disable WordPress's built-in top "bump"; we manage the offset ourselves.
 		remove_action( 'wp_enqueue_scripts', 'wp_enqueue_admin_bar_bump_styles' );
 		remove_action( 'wp_head', '_admin_bar_bump_cb' );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
-		add_action( 'wp_head', array( $this, 'print_early_script' ), 1 );
-		add_action( 'wp_head', array( $this, 'print_noscript_fallback' ), 2 );
 		add_action( 'wp_footer', array( $this, 'print_switch_button' ) );
 
 		if ( ! empty( $this->options['hidden_items'] ) ) {
@@ -130,7 +128,7 @@ class ABPS_Plugin {
 		);
 
 		$swatches = '';
-		foreach ( ABPS_Color_Detector::palette() as $hex ) {
+		foreach ( Switchmybar_Color_Detector::palette() as $hex ) {
 			$swatches .= '<button type="button" class="abps-swatch" data-abps-color="' . esc_attr( $hex ) . '" style="background:' . esc_attr( $hex ) . '" title="' . esc_attr( $hex ) . '" aria-label="' . esc_attr( $hex ) . '"></button>';
 		}
 		$swatches .= '<button type="button" class="abps-swatch abps-swatch--default" data-abps-color="default" title="' . esc_attr__( 'Default', 'admin-bar-position-switcher' ) . '" aria-label="' . esc_attr__( 'Default', 'admin-bar-position-switcher' ) . '"></button>';
@@ -149,15 +147,15 @@ class ABPS_Plugin {
 	 * AJAX: save a toolbar color picked from the swatches.
 	 */
 	public function ajax_bar_color() {
-		check_ajax_referer( 'abps_bar_color', 'nonce' );
+		check_ajax_referer( 'switchmybar_bar_color', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => 'forbidden' ), 403 );
 		}
 		$raw  = isset( $_POST['color'] ) ? sanitize_text_field( wp_unslash( $_POST['color'] ) ) : '';
-		$opts = ABPS_Settings::get_options();
+		$opts = Switchmybar_Settings::get_options();
 		if ( 'default' === $raw ) {
 			$opts['bar_bg_enabled'] = 0;
-			update_option( ABPS_Settings::OPTION, $opts );
+			update_option( Switchmybar_Settings::OPTION, $opts );
 			wp_send_json_success( array( 'color' => '', 'text' => '' ) );
 		}
 		$hex = sanitize_hex_color( $raw );
@@ -166,7 +164,7 @@ class ABPS_Plugin {
 		}
 		$opts['bar_bg_enabled'] = 1;
 		$opts['bar_bg_color']   = $hex;
-		update_option( ABPS_Settings::OPTION, $opts );
+		update_option( Switchmybar_Settings::OPTION, $opts );
 		wp_send_json_success(
 			array(
 				'color' => $hex,
@@ -179,11 +177,11 @@ class ABPS_Plugin {
 	 * AJAX: run the deep color detection once (logo + theme + frequency scan).
 	 */
 	public function ajax_detect_colors() {
-		check_ajax_referer( 'abps_bar_color', 'nonce' );
+		check_ajax_referer( 'switchmybar_bar_color', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => 'forbidden' ), 403 );
 		}
-		wp_send_json_success( array( 'colors' => ABPS_Color_Detector::detect( true ) ) );
+		wp_send_json_success( array( 'colors' => Switchmybar_Color_Detector::detect( true ) ) );
 	}
 
 	/**
@@ -203,11 +201,18 @@ class ABPS_Plugin {
 	 * Enqueue the stylesheet and the toggle script.
 	 */
 	public function enqueue_assets() {
+		// Position class before first paint (head, before the stylesheet
+		// applies) so the layout never flashes: a src-less registered handle
+		// carries the inline snippet through the enqueue API.
+		wp_register_script( 'switchmybar-head', false, array(), SWITCHMYBAR_VERSION, false );
+		wp_enqueue_script( 'switchmybar-head' );
+		wp_add_inline_script( 'switchmybar-head', $this->early_position_script() );
+
 		wp_enqueue_style(
 			'admin-bar-position-switcher',
-			ABPS_URL . 'assets/css/admin-bar-position-switcher.css',
+			SWITCHMYBAR_URL . 'assets/css/admin-bar-position-switcher.css',
 			array(),
-			ABPS_VERSION
+			SWITCHMYBAR_VERSION
 		);
 
 		$dynamic = $this->dynamic_css();
@@ -217,9 +222,9 @@ class ABPS_Plugin {
 
 		wp_enqueue_script(
 			'admin-bar-position-switcher',
-			ABPS_URL . 'assets/js/admin-bar-position-switcher.js',
+			SWITCHMYBAR_URL . 'assets/js/admin-bar-position-switcher.js',
 			array(),
-			ABPS_VERSION,
+			SWITCHMYBAR_VERSION,
 			true
 		);
 
@@ -235,8 +240,8 @@ class ABPS_Plugin {
 		if ( ! empty( $this->options['bar_picker'] ) && current_user_can( 'manage_options' ) ) {
 			$config['canPick']  = true;
 			$config['ajaxUrl']  = admin_url( 'admin-ajax.php' );
-			$config['nonce']    = wp_create_nonce( 'abps_bar_color' );
-			$config['needDeep'] = ! ABPS_Color_Detector::has_deep();
+			$config['nonce']    = wp_create_nonce( 'switchmybar_bar_color' );
+			$config['needDeep'] = ! Switchmybar_Color_Detector::has_deep();
 		}
 
 		// wp_json_encode preserves booleans; wp_localize_script would cast
@@ -284,13 +289,18 @@ class ABPS_Plugin {
 		 * @param string $css     Extra CSS appended to the stylesheet.
 		 * @param array  $options Resolved plugin options.
 		 */
-		return (string) apply_filters( 'abps_dynamic_css', $css, $this->options );
+		return (string) apply_filters( 'switchmybar_dynamic_css', $css, $this->options );
 	}
 
 	/**
-	 * Apply the saved/default position before first paint to avoid a flash.
+	 * The inline snippet applying the saved/default position before first
+	 * paint (attached to the src-less "switchmybar-head" handle). When
+	 * JavaScript never runs, the stylesheet's html:not(.abps-top):not(.abps-bottom)
+	 * fallback rules keep the native top toolbar usable.
+	 *
+	 * @return string
 	 */
-	public function print_early_script() {
+	private function early_position_script() {
 		$default  = ( 'top' === $this->options['default_position'] ) ? 'top' : 'bottom';
 		$remember = ! empty( $this->options['remember_choice'] );
 
@@ -305,18 +315,7 @@ class ABPS_Plugin {
 		}
 		$script .= "}catch(e){document.documentElement.classList.add('abps-" . esc_js( $default ) . "');}})();";
 
-		echo '<script>' . $script . '</script>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- values escaped with esc_js above.
-	}
-
-	/**
-	 * Keep the native top toolbar usable when JavaScript is disabled.
-	 */
-	public function print_noscript_fallback() {
-		echo '<noscript><style>'
-			. 'html{margin-top:32px !important;}'
-			. '@media screen and (max-width:782px){html{margin-top:46px !important;}}'
-			. '#abps-switch{display:none !important;}'
-			. '</style></noscript>' . "\n";
+		return $script;
 	}
 
 	/**

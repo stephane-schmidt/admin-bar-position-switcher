@@ -16,14 +16,14 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Class ABPS_Color_Detector.
+ * Class Switchmybar_Color_Detector.
  */
-class ABPS_Color_Detector {
+class Switchmybar_Color_Detector {
 
 	/**
 	 * Option caching the detected palette.
 	 */
-	const OPTION = 'abps_colors_detected';
+	const OPTION = 'switchmybar_colors_detected';
 
 	/**
 	 * Factory colors (Elementor / themes) that sites rarely change — never brand colors.
@@ -40,11 +40,11 @@ class ABPS_Color_Detector {
 		$cached = get_option( self::OPTION, null );
 		// An empty palette is a valid (cached) answer — requiring non-empty
 		// colors here would re-run detection on every page for such sites.
-		if ( is_array( $cached ) && isset( $cached['colors'] ) && is_array( $cached['colors'] ) && ( $cached['ver'] ?? '' ) === ABPS_VERSION ) {
+		if ( is_array( $cached ) && isset( $cached['colors'] ) && is_array( $cached['colors'] ) && ( $cached['ver'] ?? '' ) === SWITCHMYBAR_VERSION ) {
 			return $cached['colors'];
 		}
 		$colors = self::rank( self::structured(), array() );
-		update_option( self::OPTION, array( 'time' => time(), 'deep' => false, 'ver' => ABPS_VERSION, 'colors' => $colors ), false );
+		update_option( self::OPTION, array( 'time' => time(), 'deep' => false, 'ver' => SWITCHMYBAR_VERSION, 'colors' => $colors ), false );
 		return $colors;
 	}
 
@@ -55,7 +55,7 @@ class ABPS_Color_Detector {
 	 */
 	public static function has_deep() {
 		$cached = get_option( self::OPTION, null );
-		return is_array( $cached ) && ! empty( $cached['deep'] ) && ( $cached['ver'] ?? '' ) === ABPS_VERSION;
+		return is_array( $cached ) && ! empty( $cached['deep'] ) && ( $cached['ver'] ?? '' ) === SWITCHMYBAR_VERSION;
 	}
 
 	/**
@@ -71,7 +71,7 @@ class ABPS_Color_Detector {
 			array(
 				'time'   => time(),
 				'deep'   => (bool) $deep,
-				'ver'    => ABPS_VERSION,
+				'ver'    => SWITCHMYBAR_VERSION,
 				'colors' => $colors,
 			),
 			false
@@ -344,7 +344,7 @@ class ABPS_Color_Detector {
 				'redirection'         => 2,
 				'sslverify'           => apply_filters( 'https_local_ssl_verify', false ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter for loopback requests.
 				'limit_response_size' => 500000,
-				'user-agent'          => 'ABPS-Colors/' . ABPS_VERSION,
+				'user-agent'          => 'ABPS-Colors/' . SWITCHMYBAR_VERSION,
 			)
 		);
 		if ( is_wp_error( $home ) ) {

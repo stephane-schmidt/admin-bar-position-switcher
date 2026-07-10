@@ -8,14 +8,14 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Class ABPS_Settings.
+ * Class Switchmybar_Settings.
  */
-class ABPS_Settings {
+class Switchmybar_Settings {
 
 	/**
 	 * Option key holding the settings array.
 	 */
-	const OPTION = 'abps_options';
+	const OPTION = 'switchmybar_options';
 
 	/**
 	 * Settings group / page slug.
@@ -28,12 +28,12 @@ class ABPS_Settings {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_init', array( $this, 'register' ) );
-		add_action( 'admin_head', array( $this, 'print_menu_styling' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_menu_styling' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_sortable' ) );
 		add_filter( 'custom_menu_order', array( $this, 'maybe_custom_order' ) );
 		add_filter( 'menu_order', array( $this, 'apply_menu_order' ), 99 );
 		add_filter(
-			'plugin_action_links_' . plugin_basename( ABPS_FILE ),
+			'plugin_action_links_' . plugin_basename( SWITCHMYBAR_FILE ),
 			array( $this, 'action_links' )
 		);
 	}
@@ -88,9 +88,9 @@ class ABPS_Settings {
 	/**
 	 * Colorize the left admin menu and add spacers, per the settings.
 	 *
-	 * Printed in admin_head so it wins over the admin color scheme.
+	 * Delivered through the enqueue API on a src-less style handle.
 	 */
-	public function print_menu_styling() {
+	public function enqueue_menu_styling() {
 		$opts    = self::get_options();
 		$colors  = (array) $opts['menu_colors'];
 		$spacers = (array) $opts['menu_spacers'];
@@ -106,7 +106,7 @@ class ABPS_Settings {
 			if ( ! $id || ! $hex ) {
 				continue;
 			}
-			$fg   = ABPS_Plugin::readable_text_color( $hex );
+			$fg   = Switchmybar_Plugin::readable_text_color( $hex );
 			$li   = '#adminmenu li#' . $id;
 			$css .= $li . ' > a.menu-top{background:' . $hex . ' !important;color:' . $fg . ' !important;}';
 			$css .= $li . ' div.wp-menu-image:before{color:' . $fg . ' !important;}';
@@ -137,7 +137,9 @@ class ABPS_Settings {
 		}
 
 		if ( '' !== $css ) {
-			echo '<style id="abps-admin-menu">' . $css . '</style>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from sanitized keys and hex colors only.
+			wp_register_style( 'switchmybar-menu-colors', false, array(), SWITCHMYBAR_VERSION );
+			wp_enqueue_style( 'switchmybar-menu-colors' );
+			wp_add_inline_style( 'switchmybar-menu-colors', $css );
 		}
 	}
 
@@ -275,7 +277,7 @@ class ABPS_Settings {
 	 */
 	public function register() {
 		register_setting(
-			'abps_group',
+			'switchmybar_group',
 			self::OPTION,
 			array(
 				'type'              => 'array',
@@ -285,7 +287,7 @@ class ABPS_Settings {
 		);
 
 		add_settings_section(
-			'abps_main',
+			'switchmybar_main',
 			'',
 			'__return_false',
 			self::SLUG
@@ -296,7 +298,7 @@ class ABPS_Settings {
 			__( 'Default position', 'admin-bar-position-switcher' ),
 			array( $this, 'field_default_position' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -304,7 +306,7 @@ class ABPS_Settings {
 			__( 'Switch button', 'admin-bar-position-switcher' ),
 			array( $this, 'field_show_toggle' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -312,7 +314,7 @@ class ABPS_Settings {
 			__( 'Button label', 'admin-bar-position-switcher' ),
 			array( $this, 'field_button_label' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -320,7 +322,7 @@ class ABPS_Settings {
 			__( 'Auto-hide the button', 'admin-bar-position-switcher' ),
 			array( $this, 'field_auto_hide' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -328,7 +330,7 @@ class ABPS_Settings {
 			__( 'Auto-hide the toolbar', 'admin-bar-position-switcher' ),
 			array( $this, 'field_bar_auto_hide' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -336,7 +338,7 @@ class ABPS_Settings {
 			__( 'Remember the choice', 'admin-bar-position-switcher' ),
 			array( $this, 'field_remember_choice' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -344,7 +346,7 @@ class ABPS_Settings {
 			__( 'Match the page color', 'admin-bar-position-switcher' ),
 			array( $this, 'field_auto_color' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_field(
@@ -352,11 +354,11 @@ class ABPS_Settings {
 			__( 'Elementor compatibility', 'admin-bar-position-switcher' ),
 			array( $this, 'field_elementor_compat' ),
 			self::SLUG,
-			'abps_main'
+			'switchmybar_main'
 		);
 
 		add_settings_section(
-			'abps_appearance',
+			'switchmybar_appearance',
 			__( 'Appearance & items', 'admin-bar-position-switcher' ),
 			array( $this, 'section_appearance_intro' ),
 			self::SLUG
@@ -367,7 +369,7 @@ class ABPS_Settings {
 			__( 'Toolbar background', 'admin-bar-position-switcher' ),
 			array( $this, 'field_bar_bg' ),
 			self::SLUG,
-			'abps_appearance'
+			'switchmybar_appearance'
 		);
 
 		add_settings_field(
@@ -375,7 +377,7 @@ class ABPS_Settings {
 			__( 'Color picker in the toolbar', 'admin-bar-position-switcher' ),
 			array( $this, 'field_bar_picker' ),
 			self::SLUG,
-			'abps_appearance'
+			'switchmybar_appearance'
 		);
 
 		add_settings_field(
@@ -383,11 +385,11 @@ class ABPS_Settings {
 			__( 'Hide toolbar items', 'admin-bar-position-switcher' ),
 			array( $this, 'field_hidden_items' ),
 			self::SLUG,
-			'abps_appearance'
+			'switchmybar_appearance'
 		);
 
 		add_settings_section(
-			'abps_admin_menu',
+			'switchmybar_admin_menu',
 			__( 'Back-office menu', 'admin-bar-position-switcher' ),
 			array( $this, 'section_admin_menu_intro' ),
 			self::SLUG
@@ -398,7 +400,7 @@ class ABPS_Settings {
 			__( 'Menu items', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_styling' ),
 			self::SLUG,
-			'abps_admin_menu'
+			'switchmybar_admin_menu'
 		);
 
 		add_settings_field(
@@ -406,7 +408,7 @@ class ABPS_Settings {
 			__( 'Dim the other items', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_dim' ),
 			self::SLUG,
-			'abps_admin_menu'
+			'switchmybar_admin_menu'
 		);
 
 		add_settings_field(
@@ -414,7 +416,7 @@ class ABPS_Settings {
 			__( 'Menu side', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_side' ),
 			self::SLUG,
-			'abps_admin_menu'
+			'switchmybar_admin_menu'
 		);
 
 		add_settings_field(
@@ -422,7 +424,7 @@ class ABPS_Settings {
 			__( 'Auto-hide the menu', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_auto_hide' ),
 			self::SLUG,
-			'abps_admin_menu'
+			'switchmybar_admin_menu'
 		);
 
 		add_settings_field(
@@ -430,7 +432,7 @@ class ABPS_Settings {
 			__( 'Menu order', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_order' ),
 			self::SLUG,
-			'abps_admin_menu'
+			'switchmybar_admin_menu'
 		);
 
 		add_settings_field(
@@ -438,7 +440,7 @@ class ABPS_Settings {
 			__( 'Toolbar order', 'admin-bar-position-switcher' ),
 			array( $this, 'field_bar_order' ),
 			self::SLUG,
-			'abps_appearance'
+			'switchmybar_appearance'
 		);
 	}
 
@@ -797,7 +799,7 @@ class ABPS_Settings {
 			<p><?php esc_html_e( 'Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it.', 'admin-bar-position-switcher' ); ?></p>
 			<form action="options.php" method="post">
 				<?php
-				settings_fields( 'abps_group' );
+				settings_fields( 'switchmybar_group' );
 				do_settings_sections( self::SLUG );
 				submit_button();
 				?>

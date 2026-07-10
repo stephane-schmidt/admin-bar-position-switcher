@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,11 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.6.0 =
+* Changed: every script and style now goes through the WordPress enqueue APIs (src-less handles carry the early inline snippets; the noscript fallback became pure CSS) — requested by the WordPress.org plugin review.
+* Changed: all PHP symbols (functions, classes, constants, options, AJAX actions, filters) now use the unique "switchmybar" prefix; existing settings are migrated automatically from the old names.
+* Improved: when the back-office menu auto-hides, a 10px half-transparent peek now stays at the screen edge (no more guessing where it went) and the menu waits a little longer before tucking away.
+
 = 1.5.0 =
 * New: the back-office menu gets the toolbar treatment — a floating "↔ Menu" button flips it between left and right (remembered per browser, with a default side setting), and an optional macOS-Dock auto-hide slides it off-screen until the pointer comes within 150 pixels of its edge (or it receives keyboard focus).
 * Improved: when the toolbar auto-hides, the floating switch button now settles near the screen edge and fades to 50%, returning to full strength on hover or focus.
@@ -141,6 +146,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.6.0 =
+Enqueue-API compliance, unique "switchmybar" prefix (settings migrate automatically), and a visible 10px peek when the back-office menu hides.
 
 = 1.5.0 =
 Left/right switcher and Dock-style auto-hide for the back-office menu.

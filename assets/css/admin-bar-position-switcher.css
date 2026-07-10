@@ -6,6 +6,25 @@
  */
 
 /* ---------------------------------------------------------------------------
+ * No-JS fallback: without the position classes (script blocked or disabled),
+ * restore the space WordPress reserves for its native top toolbar and keep
+ * the switch button out of the way.
+ * ------------------------------------------------------------------------- */
+html:not(.abps-top):not(.abps-bottom) {
+	margin-top: 32px !important;
+}
+
+@media screen and ( max-width: 782px ) {
+	html:not(.abps-top):not(.abps-bottom) {
+		margin-top: 46px !important;
+	}
+}
+
+html:not(.abps-top):not(.abps-bottom) #abps-switch {
+	display: none;
+}
+
+/* ---------------------------------------------------------------------------
  * Bottom mode (default)
  * ------------------------------------------------------------------------- */
 html.abps-bottom {

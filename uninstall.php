@@ -7,19 +7,24 @@
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
+delete_option( 'switchmybar_options' );
+delete_option( 'switchmybar_colors_detected' );
+// Legacy names used before the switchmybar prefix (pre-1.6.0).
 delete_option( 'abps_options' );
 delete_option( 'abps_colors_detected' );
 
 // Multisite: remove the options from every site.
 if ( is_multisite() ) {
-	$abps_site_ids = get_sites(
+	$switchmybar_site_ids = get_sites(
 		array(
 			'fields' => 'ids',
 			'number' => 0,
 		)
 	);
-	foreach ( $abps_site_ids as $abps_site_id ) {
-		switch_to_blog( $abps_site_id );
+	foreach ( $switchmybar_site_ids as $switchmybar_site_id ) {
+		switch_to_blog( $switchmybar_site_id );
+		delete_option( 'switchmybar_options' );
+		delete_option( 'switchmybar_colors_detected' );
 		delete_option( 'abps_options' );
 		delete_option( 'abps_colors_detected' );
 		restore_current_blog();
