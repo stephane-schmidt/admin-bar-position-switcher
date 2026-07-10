@@ -201,3 +201,15 @@ msgstr "Ztlumí položky nabídky bez vlastní barvy; při najetí myší nebo k
 
 msgid "Admin Bar"
 msgstr "Admin lišta"
+
+msgid "Menu order"
+msgstr "Pořadí nabídky"
+
+msgid "Toolbar order"
+msgstr "Pořadí nástrojové lišty"
+
+msgid "Apply this custom order"
+msgstr "Použít toto vlastní pořadí"
+
+msgid "Drag the items into the order you want."
+msgstr "Přetáhněte položky do požadovaného pořadí."

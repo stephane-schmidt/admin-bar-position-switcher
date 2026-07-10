@@ -201,3 +201,15 @@ msgstr "Attenua le voci di menu senza colore personalizzato; tornano luminose al
 
 msgid "Admin Bar"
 msgstr "Barra admin"
+
+msgid "Menu order"
+msgstr "Ordine del menu"
+
+msgid "Toolbar order"
+msgstr "Ordine della toolbar"
+
+msgid "Apply this custom order"
+msgstr "Applica questo ordine personalizzato"
+
+msgid "Drag the items into the order you want."
+msgstr "Trascina le voci nell'ordine che preferisci."

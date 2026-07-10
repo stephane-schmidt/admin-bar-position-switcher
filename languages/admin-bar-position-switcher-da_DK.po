@@ -201,3 +201,15 @@ msgstr "Nedton menupunkter uden egen farve; de lyser op igen ved hover, eller n�
 
 msgid "Admin Bar"
 msgstr "Admin-bjælke"
+
+msgid "Menu order"
+msgstr "Menurækkefølge"
+
+msgid "Toolbar order"
+msgstr "Værktøjslinjens rækkefølge"
+
+msgid "Apply this custom order"
+msgstr "Anvend denne tilpassede rækkefølge"
+
+msgid "Drag the items into the order you want."
+msgstr "Træk punkterne i den rækkefølge, du ønsker."

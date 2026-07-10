@@ -50,6 +50,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 - **Colorize the toolbar** — set a custom background color for the bar, with automatically readable text.
 - **Recolor from the toolbar itself** — a small "Bar" item (administrators only) reveals the site's five dominant colors on hover; one click recolors the bar and saves the choice. Colors are auto‑detected fully locally from your logo (PNG/SVG), Elementor kit, theme.json, Customizer settings, and a frequency scan of the home page.
 - **Auto‑hide the toolbar, macOS Dock style (opt‑in)** — the bar glides off‑screen and slides back when the pointer comes within 150px of its edge, or when it receives keyboard focus. The reserved space is released while it is hidden.
+- **Reorder by drag & drop** — two sortable lists in the settings reorder the back‑office menu items and the toolbar elements; the saved order is global and reversible per zone.
 - **Colorize the back‑office menu** — give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally **dim the technical items** (they light up on hover or when active) so the everyday menus stand out.
 - Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 - Opens the toolbar sub‑menus upward when the bar is at the bottom.
@@ -74,6 +75,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 | Color picker in the toolbar | Show the "Bar" item that recolors the toolbar with the site's dominant colors. |
 | Hide toolbar items | Hide individual items from the front-end toolbar. |
 | Back-office menu | Color each left admin menu item and add spacers between groups. |
+| Menu / toolbar order | Drag-and-drop lists to reorder the admin menu and the toolbar. |
 
 ## Installation
 

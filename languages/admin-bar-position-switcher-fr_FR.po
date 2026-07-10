@@ -201,3 +201,15 @@ msgstr "Estompe les éléments de menu sans couleur personnalisée ; ils se rall
 
 msgid "Admin Bar"
 msgstr "Admin Barre"
+
+msgid "Menu order"
+msgstr "Ordre du menu"
+
+msgid "Toolbar order"
+msgstr "Ordre de la barre d’outils"
+
+msgid "Apply this custom order"
+msgstr "Appliquer cet ordre personnalisé"
+
+msgid "Drag the items into the order you want."
+msgstr "Glissez les éléments dans l’ordre que vous voulez."

@@ -201,3 +201,15 @@ msgstr "מעמעם פריטי תפריט ללא צבע מותאם; הם שבים
 
 msgid "Admin Bar"
 msgstr "סרגל ניהול"
+
+msgid "Menu order"
+msgstr "סדר התפריט"
+
+msgid "Toolbar order"
+msgstr "סדר סרגל הכלים"
+
+msgid "Apply this custom order"
+msgstr "החלת סדר מותאם זה"
+
+msgid "Drag the items into the order you want."
+msgstr "גררו את הפריטים לסדר הרצוי."

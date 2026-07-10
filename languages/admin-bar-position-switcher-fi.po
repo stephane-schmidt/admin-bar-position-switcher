@@ -201,3 +201,15 @@ msgstr "Himmentää valikon kohteet, joilla ei ole omaa väriä; ne kirkastuvat 
 
 msgid "Admin Bar"
 msgstr "Admin-palkki"
+
+msgid "Menu order"
+msgstr "Valikon järjestys"
+
+msgid "Toolbar order"
+msgstr "Työkalupalkin järjestys"
+
+msgid "Apply this custom order"
+msgstr "Käytä tätä mukautettua järjestystä"
+
+msgid "Drag the items into the order you want."
+msgstr "Vedä kohteet haluamaasi järjestykseen."

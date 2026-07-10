@@ -201,3 +201,15 @@ msgstr "Wygasza pozycje menu bez własnego koloru; rozjaśniają się ponownie p
 
 msgid "Admin Bar"
 msgstr "Pasek admina"
+
+msgid "Menu order"
+msgstr "Kolejność menu"
+
+msgid "Toolbar order"
+msgstr "Kolejność paska narzędzi"
+
+msgid "Apply this custom order"
+msgstr "Zastosuj tę własną kolejność"
+
+msgid "Drag the items into the order you want."
+msgstr "Przeciągnij pozycje w wybranej kolejności."

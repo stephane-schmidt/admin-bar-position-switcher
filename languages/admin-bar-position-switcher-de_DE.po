@@ -201,3 +201,15 @@ msgstr "Blendet Menüeinträge ohne eigene Farbe ab; beim Überfahren oder wenn 
 
 msgid "Admin Bar"
 msgstr "Admin-Leiste"
+
+msgid "Menu order"
+msgstr "Menü-Reihenfolge"
+
+msgid "Toolbar order"
+msgstr "Reihenfolge der Werkzeugleiste"
+
+msgid "Apply this custom order"
+msgstr "Diese eigene Reihenfolge anwenden"
+
+msgid "Drag the items into the order you want."
+msgstr "Ziehe die Einträge in die gewünschte Reihenfolge."

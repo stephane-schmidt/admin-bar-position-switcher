@@ -201,3 +201,15 @@ msgstr "淡化沒有自訂顏色的選單項目；游標懸停或項目為使用
 
 msgid "Admin Bar"
 msgstr "管理列"
+
+msgid "Menu order"
+msgstr "選單順序"
+
+msgid "Toolbar order"
+msgstr "工具列順序"
+
+msgid "Apply this custom order"
+msgstr "套用此自訂順序"
+
+msgid "Drag the items into the order you want."
+msgstr "將項目拖曳到您想要的順序。"

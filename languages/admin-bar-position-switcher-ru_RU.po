@@ -201,3 +201,15 @@ msgstr "Приглушает пункты меню без собственног
 
 msgid "Admin Bar"
 msgstr "Админ-панель"
+
+msgid "Menu order"
+msgstr "Порядок меню"
+
+msgid "Toolbar order"
+msgstr "Порядок панели инструментов"
+
+msgid "Apply this custom order"
+msgstr "Применить этот порядок"
+
+msgid "Drag the items into the order you want."
+msgstr "Перетащите пункты в нужном порядке."

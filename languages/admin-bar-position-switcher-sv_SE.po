@@ -201,3 +201,15 @@ msgstr "Tonar ned menyobjekt utan egen färg; de lyser upp igen vid hovring elle
 
 msgid "Admin Bar"
 msgstr "Admin-rad"
+
+msgid "Menu order"
+msgstr "Menyordning"
+
+msgid "Toolbar order"
+msgstr "Verktygsfältets ordning"
+
+msgid "Apply this custom order"
+msgstr "Använd denna anpassade ordning"
+
+msgid "Drag the items into the order you want."
+msgstr "Dra objekten i den ordning du vill ha."

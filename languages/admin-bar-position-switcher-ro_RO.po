@@ -201,3 +201,15 @@ msgstr "Estompează elementele de meniu fără culoare personalizată; se reapri
 
 msgid "Admin Bar"
 msgstr "Bară admin"
+
+msgid "Menu order"
+msgstr "Ordinea meniului"
+
+msgid "Toolbar order"
+msgstr "Ordinea barei de instrumente"
+
+msgid "Apply this custom order"
+msgstr "Aplică această ordine personalizată"
+
+msgid "Drag the items into the order you want."
+msgstr "Trage elementele în ordinea dorită."

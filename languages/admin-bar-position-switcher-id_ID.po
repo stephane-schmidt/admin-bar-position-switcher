@@ -201,3 +201,15 @@ msgstr "Memudarkan item menu tanpa warna khusus; item akan kembali terang saat d
 
 msgid "Admin Bar"
 msgstr "Bilah admin"
+
+msgid "Menu order"
+msgstr "Urutan menu"
+
+msgid "Toolbar order"
+msgstr "Urutan bilah alat"
+
+msgid "Apply this custom order"
+msgstr "Terapkan urutan khusus ini"
+
+msgid "Drag the items into the order you want."
+msgstr "Seret item ke urutan yang Anda inginkan."

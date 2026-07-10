@@ -201,3 +201,15 @@ msgstr "Özel rengi olmayan menü öğelerini soluklaştırır; üzerine gelindi
 
 msgid "Admin Bar"
 msgstr "Yönetici çubuğu"
+
+msgid "Menu order"
+msgstr "Menü sırası"
+
+msgid "Toolbar order"
+msgstr "Araç çubuğu sırası"
+
+msgid "Apply this custom order"
+msgstr "Bu özel sıralamayı uygula"
+
+msgid "Drag the items into the order you want."
+msgstr "Öğeleri istediğiniz sıraya sürükleyin."

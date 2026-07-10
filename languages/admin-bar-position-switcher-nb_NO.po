@@ -201,3 +201,15 @@ msgstr "Toner ned menyelementer uten egen farge; de lyser opp igjen ved hover el
 
 msgid "Admin Bar"
 msgstr "Admin-linje"
+
+msgid "Menu order"
+msgstr "Menyrekkefølge"
+
+msgid "Toolbar order"
+msgstr "Verktøylinjens rekkefølge"
+
+msgid "Apply this custom order"
+msgstr "Bruk denne egendefinerte rekkefølgen"
+
+msgid "Drag the items into the order you want."
+msgstr "Dra elementene i den rekkefølgen du ønsker."

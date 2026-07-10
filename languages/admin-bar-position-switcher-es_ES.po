@@ -201,3 +201,15 @@ msgstr "Atenúa los elementos del menú sin color personalizado; vuelven a ilumi
 
 msgid "Admin Bar"
 msgstr "Barra admin"
+
+msgid "Menu order"
+msgstr "Orden del menú"
+
+msgid "Toolbar order"
+msgstr "Orden de la barra de herramientas"
+
+msgid "Apply this custom order"
+msgstr "Aplicar este orden personalizado"
+
+msgid "Drag the items into the order you want."
+msgstr "Arrastra los elementos al orden que quieras."

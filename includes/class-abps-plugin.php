@@ -54,8 +54,54 @@ class ABPS_Plugin {
 			add_action( 'wp_before_admin_bar_render', array( $this, 'remove_hidden_nodes' ), 1000 );
 		}
 
+		if ( ! empty( $this->options['bar_order_on'] ) && ! empty( $this->options['bar_order_custom'] ) ) {
+			add_action( 'wp_before_admin_bar_render', array( $this, 'reorder_bar_nodes' ), 1001 );
+		}
+
 		if ( ! empty( $this->options['bar_picker'] ) && current_user_can( 'manage_options' ) ) {
 			add_action( 'admin_bar_menu', array( $this, 'add_color_picker_node' ), 500 );
+		}
+	}
+
+	/**
+	 * Apply the saved toolbar order: within each root group, the dragged
+	 * items come first (in their saved order), the rest keep their current
+	 * relative order. Nodes are re-added in sequence, which is how the admin
+	 * bar decides rendering order.
+	 */
+	public function reorder_bar_nodes() {
+		$bar = isset( $GLOBALS['wp_admin_bar'] ) ? $GLOBALS['wp_admin_bar'] : null;
+		if ( ! $bar || ! method_exists( $bar, 'get_nodes' ) ) {
+			return;
+		}
+		$saved = (array) $this->options['bar_order_custom'];
+		$nodes = $bar->get_nodes();
+		if ( ! is_array( $nodes ) || empty( $saved ) ) {
+			return;
+		}
+
+		// Current children of each root group, in their current order.
+		$groups = array();
+		foreach ( $nodes as $id => $node ) {
+			$parent = isset( $node->parent ) ? $node->parent : false;
+			if ( $parent && isset( $nodes[ $parent ] ) && false === $nodes[ $parent ]->parent ) {
+				$groups[ $parent ][] = $id;
+			}
+		}
+
+		foreach ( $groups as $children ) {
+			$first  = array_values( array_intersect( $saved, $children ) );
+			if ( empty( $first ) ) {
+				continue; // nothing dragged in this group.
+			}
+			$target = array_merge( $first, array_values( array_diff( $children, $first ) ) );
+			foreach ( $target as $id ) {
+				$node = $bar->get_node( $id );
+				if ( $node ) {
+					$bar->remove_node( $id );
+					$bar->add_node( (array) $node );
+				}
+			}
 		}
 	}
 

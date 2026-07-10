@@ -201,3 +201,15 @@ msgstr "淡化没有自定义颜色的菜单项；悬停或处于活动状态时
 
 msgid "Admin Bar"
 msgstr "管理栏"
+
+msgid "Menu order"
+msgstr "菜单顺序"
+
+msgid "Toolbar order"
+msgstr "工具栏顺序"
+
+msgid "Apply this custom order"
+msgstr "应用此自定义顺序"
+
+msgid "Drag the items into the order you want."
+msgstr "将项目拖动到您想要的顺序。"

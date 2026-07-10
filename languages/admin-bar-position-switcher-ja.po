@@ -201,3 +201,15 @@ msgstr "独自の色がないメニュー項目を淡く表示します。ホバ
 
 msgid "Admin Bar"
 msgstr "管理バー"
+
+msgid "Menu order"
+msgstr "メニューの並び順"
+
+msgid "Toolbar order"
+msgstr "ツールバーの並び順"
+
+msgid "Apply this custom order"
+msgstr "このカスタム順を適用"
+
+msgid "Drag the items into the order you want."
+msgstr "項目をドラッグして好きな順序に並べ替えます。"

@@ -201,3 +201,15 @@ msgstr "Halványítja a saját szín nélküli menüelemeket; rámutatáskor vag
 
 msgid "Admin Bar"
 msgstr "Admin sáv"
+
+msgid "Menu order"
+msgstr "Menüsorrend"
+
+msgid "Toolbar order"
+msgstr "Eszköztár sorrendje"
+
+msgid "Apply this custom order"
+msgstr "Az egyéni sorrend alkalmazása"
+
+msgid "Drag the items into the order you want."
+msgstr "Húzd az elemeket a kívánt sorrendbe."

@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.3.1
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
 * **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
+* **Reorder by drag and drop**: two sortable lists in the settings let you reorder the back-office menu items and the toolbar elements; the saved order applies site-wide and can be switched off at any time.
 * **Colorize the back-office menu**: give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally dim the items without a custom color so the everyday ones stand out.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
@@ -93,6 +94,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.4.0 =
+* New: reorder the back-office menu and the toolbar by drag and drop — two sortable lists in the settings, with an "Apply this custom order" switch per zone. The order is global and reversible.
+
 = 1.3.1 =
 * Changed: the left admin menu entry is now simply called "Admin Bar" ("Admin Barre" in French) so it fits on one line; the settings page keeps its full title.
 
@@ -130,6 +134,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.4.0 =
+Reorder the back-office menu and the toolbar by drag and drop.
 
 = 1.3.1 =
 Shorter left-menu label: "Admin Bar".

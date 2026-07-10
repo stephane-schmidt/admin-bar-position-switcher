@@ -29,10 +29,60 @@ class ABPS_Settings {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_init', array( $this, 'register' ) );
 		add_action( 'admin_head', array( $this, 'print_menu_styling' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_sortable' ) );
+		add_filter( 'custom_menu_order', array( $this, 'maybe_custom_order' ) );
+		add_filter( 'menu_order', array( $this, 'apply_menu_order' ), 99 );
 		add_filter(
 			'plugin_action_links_' . plugin_basename( ABPS_FILE ),
 			array( $this, 'action_links' )
 		);
+	}
+
+	/**
+	 * Load the sortable helper on the plugin's settings page only.
+	 *
+	 * @param string $hook Current admin page hook.
+	 */
+	public function enqueue_sortable( $hook ) {
+		if ( 'toplevel_page_' . self::SLUG !== $hook ) {
+			return;
+		}
+		wp_enqueue_script( 'jquery-ui-sortable' );
+		wp_add_inline_script(
+			'jquery-ui-sortable',
+			'jQuery(function($){$(".abps-sortable").sortable({axis:"y",cursor:"grabbing",containment:"parent"});});'
+		);
+	}
+
+	/**
+	 * Enable WordPress's custom menu ordering when our order is active.
+	 *
+	 * @param bool $enabled Current value.
+	 * @return bool
+	 */
+	public function maybe_custom_order( $enabled ) {
+		$opts = self::get_options();
+		return $enabled || ( ! empty( $opts['menu_order_on'] ) && ! empty( $opts['menu_order_custom'] ) );
+	}
+
+	/**
+	 * Apply the saved back-office menu order: dragged items first (in their
+	 * saved order), everything else keeps its current relative order.
+	 *
+	 * @param array $order Menu slugs in their current order.
+	 * @return array
+	 */
+	public function apply_menu_order( $order ) {
+		if ( ! is_array( $order ) ) {
+			return $order;
+		}
+		$opts = self::get_options();
+		if ( empty( $opts['menu_order_on'] ) || empty( $opts['menu_order_custom'] ) ) {
+			return $order;
+		}
+		$saved = array_values( array_intersect( (array) $opts['menu_order_custom'], $order ) );
+		$rest  = array_values( array_diff( $order, $saved ) );
+		return array_merge( $saved, $rest );
 	}
 
 	/**
@@ -113,6 +163,10 @@ class ABPS_Settings {
 			'menu_colors'      => array(),
 			'menu_spacers'     => array(),
 			'menu_dim'         => 0,
+			'menu_order_on'    => 0,
+			'menu_order_custom' => array(),
+			'bar_order_on'     => 0,
+			'bar_order_custom' => array(),
 		);
 	}
 
@@ -351,6 +405,125 @@ class ABPS_Settings {
 			self::SLUG,
 			'abps_admin_menu'
 		);
+
+		add_settings_field(
+			'menu_order',
+			__( 'Menu order', 'admin-bar-position-switcher' ),
+			array( $this, 'field_menu_order' ),
+			self::SLUG,
+			'abps_admin_menu'
+		);
+
+		add_settings_field(
+			'bar_order',
+			__( 'Toolbar order', 'admin-bar-position-switcher' ),
+			array( $this, 'field_bar_order' ),
+			self::SLUG,
+			'abps_appearance'
+		);
+	}
+
+	/**
+	 * The left admin menu's top-level entries with their order slugs.
+	 *
+	 * @return array[] Each entry: array( 'id' => li id, 'slug' => order slug, 'label' => label ).
+	 */
+	public static function get_admin_menu_entries() {
+		$entries = array();
+
+		global $menu;
+		if ( is_array( $menu ) && ! empty( $menu ) ) {
+			foreach ( $menu as $entry ) {
+				$classes = isset( $entry[4] ) ? (string) $entry[4] : '';
+				$slug    = isset( $entry[2] ) ? (string) $entry[2] : '';
+				$id      = isset( $entry[5] ) ? (string) $entry[5] : '';
+				if ( '' === $slug || false !== strpos( $classes, 'wp-menu-separator' ) ) {
+					continue;
+				}
+				$label = isset( $entry[0] ) ? trim( wp_strip_all_tags( preg_replace( '/<span[^>]*>.*?<\/span>/s', '', (string) $entry[0] ) ) ) : '';
+				$entries[] = array(
+					'id'    => $id,
+					'slug'  => $slug,
+					'label' => '' !== $label ? $label : $slug,
+				);
+			}
+		}
+
+		if ( empty( $entries ) ) {
+			foreach ( array(
+				'index.php'           => 'menu-dashboard',
+				'edit.php'            => 'menu-posts',
+				'upload.php'          => 'menu-media',
+				'edit.php?post_type=page' => 'menu-pages',
+				'edit-comments.php'   => 'menu-comments',
+				'themes.php'          => 'menu-appearance',
+				'plugins.php'         => 'menu-plugins',
+				'users.php'           => 'menu-users',
+				'tools.php'           => 'menu-tools',
+				'options-general.php' => 'menu-settings',
+			) as $slug => $id ) {
+				$entries[] = array( 'id' => $id, 'slug' => $slug, 'label' => $slug );
+			}
+		}
+
+		return $entries;
+	}
+
+	/**
+	 * Render a sortable list (shared by the two order fields).
+	 *
+	 * @param string $field   Option key holding the order.
+	 * @param string $on_key  Option key of the enable checkbox.
+	 * @param array  $items   value => label, in default order.
+	 * @param array  $saved   Saved order (values).
+	 * @param int    $enabled Whether the order is applied.
+	 */
+	protected function render_sortable( $field, $on_key, array $items, array $saved, $enabled ) {
+		// Saved order first, then any new items after.
+		$ordered = array();
+		foreach ( $saved as $value ) {
+			if ( isset( $items[ $value ] ) ) {
+				$ordered[ $value ] = $items[ $value ];
+				unset( $items[ $value ] );
+			}
+		}
+		$ordered += $items;
+		?>
+		<label style="display:block;margin-bottom:8px;">
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[<?php echo esc_attr( $on_key ); ?>]" value="1" <?php checked( $enabled, 1 ); ?> />
+			<?php esc_html_e( 'Apply this custom order', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<ul class="abps-sortable" style="max-width:380px;margin:0;">
+			<?php foreach ( $ordered as $value => $label ) : ?>
+				<li style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #c3c4c7;border-radius:4px;padding:6px 10px;margin:0 0 4px;cursor:grab;">
+					<span class="dashicons dashicons-menu" aria-hidden="true" style="color:#8c8f94;"></span>
+					<?php echo esc_html( $label ); ?>
+					<input type="hidden" name="<?php echo esc_attr( self::OPTION ); ?>[<?php echo esc_attr( $field ); ?>][]" value="<?php echo esc_attr( $value ); ?>" />
+				</li>
+			<?php endforeach; ?>
+		</ul>
+		<p class="description"><?php esc_html_e( 'Drag the items into the order you want.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
+	}
+
+	/**
+	 * Field: drag-and-drop order of the back-office menu.
+	 */
+	public function field_menu_order() {
+		$opts  = self::get_options();
+		$items = array();
+		foreach ( self::get_admin_menu_entries() as $entry ) {
+			$items[ $entry['slug'] ] = $entry['label'];
+		}
+		$this->render_sortable( 'menu_order_custom', 'menu_order_on', $items, (array) $opts['menu_order_custom'], (int) $opts['menu_order_on'] );
+	}
+
+	/**
+	 * Field: drag-and-drop order of the front-end toolbar.
+	 */
+	public function field_bar_order() {
+		$opts = self::get_options();
+		$this->render_sortable( 'bar_order_custom', 'bar_order_on', self::get_toolbar_items(), (array) $opts['bar_order_custom'], (int) $opts['bar_order_on'] );
 	}
 
 	/**
@@ -526,6 +699,31 @@ class ABPS_Settings {
 		}
 		$out['menu_spacers'] = array_values( array_unique( $spacers ) );
 		$out['menu_dim']     = empty( $input['menu_dim'] ) ? 0 : 1;
+
+		// Custom orders (menu slugs may contain "?" and "=", so no sanitize_key).
+		$out['menu_order_on'] = empty( $input['menu_order_on'] ) ? 0 : 1;
+		$morder = array();
+		if ( isset( $input['menu_order_custom'] ) && is_array( $input['menu_order_custom'] ) ) {
+			foreach ( $input['menu_order_custom'] as $slug ) {
+				$slug = sanitize_text_field( (string) $slug );
+				if ( '' !== $slug ) {
+					$morder[] = $slug;
+				}
+			}
+		}
+		$out['menu_order_custom'] = array_values( array_unique( $morder ) );
+
+		$out['bar_order_on'] = empty( $input['bar_order_on'] ) ? 0 : 1;
+		$border = array();
+		if ( isset( $input['bar_order_custom'] ) && is_array( $input['bar_order_custom'] ) ) {
+			foreach ( $input['bar_order_custom'] as $id ) {
+				$id = sanitize_key( $id );
+				if ( '' !== $id ) {
+					$border[] = $id;
+				}
+			}
+		}
+		$out['bar_order_custom'] = array_values( array_unique( $border ) );
 
 		return $out;
 	}
