@@ -130,8 +130,8 @@ msgstr "Regola le intestazioni fisse di Elementor in modo che si allineino con l
 msgid "Colorize the toolbar background"
 msgstr "Colora lo sfondo della barra degli strumenti"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Il colore del testo si regola automaticamente per garantire la leggibilità."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Il colore del testo si adatta automaticamente per la leggibilità. Questo è il valore predefinito del sito; gli amministratori possono sostituirlo per sé con la voce \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Seleziona gli elementi che vuoi nascondere dalla barra degli strumenti del front-end."
@@ -166,8 +166,8 @@ msgstr "Predefinito"
 msgid "Color picker in the toolbar"
 msgstr "Selettore di colore nella toolbar"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Aggiunge una voce \"Bar\" alla toolbar per consentire agli amministratori di ricolorarla con uno dei colori dominanti del sito, rilevati dal logo e dal tema."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Aggiunge una voce \"Bar\" alla barra così ogni amministratore può ricolorarla con uno dei colori dominanti del sito, rilevati da logo e tema. La scelta è personale: vale solo per il proprio account."
 
 msgid "Auto-hide the toolbar"
 msgstr "Nascondi automaticamente la barra degli strumenti"

@@ -130,8 +130,8 @@ msgstr "Ajustează antetele fixe Elementor astfel încât să se alinieze cu bar
 msgid "Colorize the toolbar background"
 msgstr "Colorează fundalul barei de instrumente"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Culoarea textului se ajustează automat pentru lizibilitate."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Culoarea textului se ajustează automat pentru lizibilitate. Aceasta este implicita site-ului; administratorii o pot înlocui pentru ei înșiși cu elementul \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Bifează elementele pe care vrei să le ascunzi din bara de instrumente de pe partea publică."
@@ -166,8 +166,8 @@ msgstr "Implicit"
 msgid "Color picker in the toolbar"
 msgstr "Selector de culori în bara de instrumente"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Adaugă un element „Bar\" în bara de instrumente, astfel încât administratorii să o poată recolora cu una dintre culorile dominante ale site-ului, detectate din logo și temă."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Adaugă un element \"Bar\" în bară pentru ca fiecare administrator să o poată recolora cu una dintre culorile dominante ale site-ului, detectate din logo și temă. Alegerea este personală: se aplică doar propriului cont."
 
 msgid "Auto-hide the toolbar"
 msgstr "Ascunde automat bara de unelte"

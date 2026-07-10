@@ -130,8 +130,8 @@ msgstr "Juster faste topptekster i Elementor slik at de er på linje med verktø
 msgid "Colorize the toolbar background"
 msgstr "Fargelegg bakgrunnen på verktøylinjen"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Tekstfargen justeres automatisk for lesbarhet."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Tekstfargen justeres automatisk for lesbarhet. Dette er standarden for hele nettstedet; administratorer kan overstyre den for seg selv med \"Bar\"-elementet."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Kryss av elementene du vil skjule fra verktøylinjen på nettstedet."
@@ -166,8 +166,8 @@ msgstr "Standard"
 msgid "Color picker in the toolbar"
 msgstr "Fargevelger i verktøylinjen"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Legg til et \"Bar\"-element i verktøylinjen, slik at administratorer kan endre fargen på den med en av nettstedets dominerende farger, hentet fra logoen og temaet ditt."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Legg til et \"Bar\"-element i verktøylinjen slik at hver administrator kan farge den med en av nettstedets dominerende farger, hentet fra logo og tema. Valget er personlig: det gjelder bare egen konto."
 
 msgid "Auto-hide the toolbar"
 msgstr "Skjul verktøylinjen automatisk"

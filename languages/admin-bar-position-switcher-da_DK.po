@@ -130,8 +130,8 @@ msgstr "Justér Elementors fastgjorte sidehoveder, så de flugter med værktøjs
 msgid "Colorize the toolbar background"
 msgstr "Farvelæg baggrunden for værktøjslinjen"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Tekstfarven justeres automatisk for læsbarhed."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Tekstfarven justeres automatisk for læsbarhed. Dette er standard for hele webstedet; administratorer kan tilsidesætte den for sig selv med \"Bar\"-elementet."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Markér de elementer, du vil skjule fra frontend-værktøjslinjen."
@@ -166,8 +166,8 @@ msgstr "Standard"
 msgid "Color picker in the toolbar"
 msgstr "Farvevælger i værktøjslinjen"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Tilføj et \"Bar\"-punkt til værktøjslinjen, så administratorer kan ændre dens farve til en af webstedets dominerende farver, som registreres ud fra dit logo og tema."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Tilføj et \"Bar\"-element til værktøjslinjen, så hver administrator kan farve den med en af webstedets dominerende farver, fundet fra logo og tema. Valget er personligt: det gælder kun deres egen konto."
 
 msgid "Auto-hide the toolbar"
 msgstr "Skjul værktøjslinjen automatisk"

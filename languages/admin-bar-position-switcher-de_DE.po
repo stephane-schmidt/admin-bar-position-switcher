@@ -130,8 +130,8 @@ msgstr "Elementor-Sticky-Header so anpassen, dass sie mit der Werkzeugleiste aus
 msgid "Colorize the toolbar background"
 msgstr "Hintergrund der Werkzeugleiste einfärben"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Die Textfarbe passt sich für die Lesbarkeit automatisch an."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Die Textfarbe passt sich automatisch für gute Lesbarkeit an. Dies ist der Standard für die ganze Website; Administratoren können ihn für sich selbst über das \"Bar\"-Element überschreiben."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Markiere die Elemente, die du in der Frontend-Werkzeugleiste ausblenden möchtest."
@@ -166,8 +166,8 @@ msgstr "Standard"
 msgid "Color picker in the toolbar"
 msgstr "Farbauswahl in der Werkzeugleiste"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Fügt der Werkzeugleiste einen Eintrag „Bar“ hinzu, mit dem Administratoren sie in einer der dominanten Farben der Website einfärben können, ermittelt aus deinem Logo und Theme."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Fügt der Werkzeugleiste ein \"Bar\"-Element hinzu, mit dem jeder Administrator sie in einer der dominanten Farben der Website einfärben kann (erkannt aus Logo und Theme). Die Wahl ist persönlich: sie gilt nur für das eigene Konto."
 
 msgid "Auto-hide the toolbar"
 msgstr "Werkzeugleiste automatisch ausblenden"

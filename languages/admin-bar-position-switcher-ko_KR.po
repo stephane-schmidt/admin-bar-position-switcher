@@ -130,8 +130,8 @@ msgstr "Elementor 고정 헤더가 툴바와 정렬되도록 조정합니다."
 msgid "Colorize the toolbar background"
 msgstr "툴바 배경에 색상 적용하기"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "텍스트 색상은 가독성을 위해 자동으로 조정됩니다."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "텍스트 색상은 가독성을 위해 자동 조정됩니다. 이는 사이트 전체 기본값이며, 관리자는 \"Bar\" 항목으로 자신에게만 다르게 지정할 수 있습니다."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "프런트엔드 툴바에서 숨기려는 항목을 선택하세요."
@@ -166,8 +166,8 @@ msgstr "기본값"
 msgid "Color picker in the toolbar"
 msgstr "툴바에 색상 선택기 표시"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "툴바에 \"Bar\" 항목을 추가하여 관리자가 로고와 테마에서 자동으로 감지된 사이트의 주요 색상 중 하나로 툴바 색상을 변경할 수 있게 합니다."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "도구 모음에 \"Bar\" 항목을 추가해 각 관리자가 로고와 테마에서 감지된 사이트 주요 색상으로 바를 다시 칠할 수 있습니다. 선택은 개인용: 본인 계정에만 적용됩니다."
 
 msgid "Auto-hide the toolbar"
 msgstr "툴바 자동 숨기기"

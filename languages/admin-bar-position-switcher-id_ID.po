@@ -130,8 +130,8 @@ msgstr "Sesuaikan header lengket Elementor agar sejajar dengan bilah alat."
 msgid "Colorize the toolbar background"
 msgstr "Beri warna latar belakang bilah alat"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Warna teks menyesuaikan secara otomatis agar mudah dibaca."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Warna teks menyesuaikan otomatis agar terbaca. Ini bawaan seluruh situs; administrator dapat menggantinya untuk diri sendiri lewat item \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Centang item yang ingin Anda sembunyikan dari bilah alat sisi depan."
@@ -166,8 +166,8 @@ msgstr "Bawaan"
 msgid "Color picker in the toolbar"
 msgstr "Pemilih warna di bilah alat"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Tambahkan item \"Bar\" ke bilah alat agar administrator dapat mengubah warnanya dengan salah satu warna dominan situs, yang terdeteksi dari logo dan tema Anda."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Tambahkan item \"Bar\" ke bilah alat agar setiap administrator dapat mewarnainya dengan salah satu warna dominan situs, terdeteksi dari logo dan tema. Pilihannya bersifat pribadi: hanya berlaku untuk akunnya sendiri."
 
 msgid "Auto-hide the toolbar"
 msgstr "Sembunyikan bilah alat secara otomatis"

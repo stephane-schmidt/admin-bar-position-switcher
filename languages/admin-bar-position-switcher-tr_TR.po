@@ -130,8 +130,8 @@ msgstr "Elementor yapışkan başlıklarını araç çubuğuyla hizalanacak şek
 msgid "Colorize the toolbar background"
 msgstr "Araç çubuğu arka planını renklendir"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Metin rengi, okunabilirlik için otomatik olarak ayarlanır."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Metin rengi okunabilirlik için otomatik ayarlanır. Bu, site genelinin varsayılanıdır; yöneticiler \"Bar\" öğesiyle kendileri için geçersiz kılabilir."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Ön yüz araç çubuğundan gizlemek istediğiniz ögeleri işaretleyin."
@@ -166,8 +166,8 @@ msgstr "Varsayılan"
 msgid "Color picker in the toolbar"
 msgstr "Araç çubuğunda renk seçici"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Araç çubuğuna bir \"Bar\" öğesi ekler; böylece yöneticiler, logonuzdan ve temanızdan algılanan sitenin baskın renklerinden biriyle araç çubuğunu yeniden renklendirebilir."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Araç çubuğuna bir \"Bar\" öğesi ekler; böylece her yönetici, logo ve temadan algılanan baskın site renklerinden biriyle çubuğu yeniden renklendirebilir. Seçim kişiseldir: yalnızca kendi hesabına uygulanır."
 
 msgid "Auto-hide the toolbar"
 msgstr "Araç çubuğunu otomatik gizle"

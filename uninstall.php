@@ -7,6 +7,8 @@
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
+delete_metadata( 'user', 0, 'switchmybar_bar_color', '', true );
+
 delete_option( 'switchmybar_options' );
 delete_option( 'switchmybar_colors_detected' );
 // Legacy names used before the switchmybar prefix (pre-1.6.0).

@@ -130,8 +130,8 @@ msgstr "Pas Elementor plakkende headers aan zodat ze uitlijnen met de werkbalk."
 msgid "Colorize the toolbar background"
 msgstr "Werkbalkachtergrond kleuren"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "De tekstkleur past zich automatisch aan voor leesbaarheid."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "De tekstkleur past zich automatisch aan voor leesbaarheid. Dit is de standaard voor de hele site; beheerders kunnen die voor zichzelf overschrijven met het \"Bar\"-item."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Vink de items aan die je wilt verbergen in de werkbalk aan de voorkant."
@@ -166,8 +166,8 @@ msgstr "Standaard"
 msgid "Color picker in the toolbar"
 msgstr "Kleurkiezer in de toolbar"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Voeg een \"Bar\"-item toe aan de toolbar zodat beheerders deze kunnen inkleuren met een van de dominante kleuren van de site, gedetecteerd op basis van je logo en thema."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Voegt een \"Bar\"-item toe aan de werkbalk zodat elke beheerder die kan kleuren met een van de dominante kleuren van de site, gedetecteerd uit je logo en thema. De keuze is persoonlijk: geldt alleen voor het eigen account."
 
 msgid "Auto-hide the toolbar"
 msgstr "Toolbar automatisch verbergen"

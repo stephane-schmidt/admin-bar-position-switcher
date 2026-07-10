@@ -130,8 +130,8 @@ msgstr "Dostosuj przyklejone nagłówki Elementor, aby były wyrównane z paskie
 msgid "Colorize the toolbar background"
 msgstr "Koloruj tło paska narzędzi"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Kolor tekstu dostosowuje się automatycznie dla czytelności."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Kolor tekstu dostosowuje się automatycznie dla czytelności. To domyślne ustawienie całej witryny; administratorzy mogą je nadpisać dla siebie elementem \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Zaznacz elementy, które chcesz ukryć na pasku narzędzi w części publicznej witryny."
@@ -166,8 +166,8 @@ msgstr "Domyślny"
 msgid "Color picker in the toolbar"
 msgstr "Wybór koloru w pasku narzędzi"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Dodaje do paska narzędzi element „Bar”, który pozwala administratorom zmienić jego kolor na jeden z dominujących kolorów witryny, wykrytych na podstawie logo i motywu."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Dodaje element \"Bar\" do paska, aby każdy administrator mógł go przebarwić jednym z dominujących kolorów witryny, wykrytych z logo i motywu. Wybór jest osobisty: dotyczy tylko jego konta."
 
 msgid "Auto-hide the toolbar"
 msgstr "Automatyczne ukrywanie paska narzędzi"

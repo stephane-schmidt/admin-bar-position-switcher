@@ -130,8 +130,8 @@ msgstr "调整 Elementor 粘性页眉，使其与工具栏对齐。"
 msgid "Colorize the toolbar background"
 msgstr "为工具栏背景着色"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "文字颜色会自动调整以确保可读性。"
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "文字颜色会自动调整以保证可读性。这是全站默认值；管理员可通过“Bar”项目为自己单独覆盖。"
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "勾选您想要从前端工具栏隐藏的项目。"
@@ -166,8 +166,8 @@ msgstr "默认"
 msgid "Color picker in the toolbar"
 msgstr "在工具栏中显示颜色选择器"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "在工具栏中添加\"Bar\"项目，管理员可点击其中一种网站主色（自动从您的徽标和主题中检测）来为工具栏重新着色。"
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "在工具栏添加“Bar”项目，让每位管理员都能用从站点徽标和主题中检测到的主色之一为工具栏上色。该选择是个人的：仅对本人账户生效。"
 
 msgid "Auto-hide the toolbar"
 msgstr "自动隐藏工具栏"

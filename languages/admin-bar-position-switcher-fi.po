@@ -130,8 +130,8 @@ msgstr "Säädä Elementorin kiinnittyviä ylätunnisteita niin, että ne asettu
 msgid "Colorize the toolbar background"
 msgstr "Väritä työkalupalkin tausta"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Tekstin väri säätyy automaattisesti luettavuuden takaamiseksi."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Tekstin väri säätyy automaattisesti luettavuuden vuoksi. Tämä on koko sivuston oletus; ylläpitäjät voivat ohittaa sen itselleen \"Bar\"-kohteella."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Valitse kohteet, jotka haluat piilottaa sivuston julkisen puolen työkalupalkista."
@@ -166,8 +166,8 @@ msgstr "Oletus"
 msgid "Color picker in the toolbar"
 msgstr "Värivalitsin työkalupalkissa"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Lisää työkalupalkkiin \"Bar\"-kohteen, jonka avulla ylläpitäjät voivat vaihtaa palkin värin johonkin sivuston hallitsevista väreistä, jotka tunnistetaan logostasi ja teemastasi."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Lisää työkalupalkkiin \"Bar\"-kohteen, jolla kukin ylläpitäjä voi värittää palkin sivuston hallitsevilla väreillä (tunnistettu logosta ja teemasta). Valinta on henkilökohtainen: se koskee vain omaa tiliä."
 
 msgid "Auto-hide the toolbar"
 msgstr "Piilota työkalupalkki automaattisesti"

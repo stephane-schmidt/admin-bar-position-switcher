@@ -130,8 +130,8 @@ msgstr "Подстраивать закреплённые шапки Elementor, 
 msgid "Colorize the toolbar background"
 msgstr "Окрашивать фон панели инструментов"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Цвет текста автоматически подстраивается для читаемости."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Цвет текста подстраивается автоматически для читаемости. Это значение по умолчанию для всего сайта; администраторы могут переопределить его для себя элементом \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Отметьте элементы, которые вы хотите скрыть из панели инструментов на внешней части сайта."
@@ -166,8 +166,8 @@ msgstr "По умолчанию"
 msgid "Color picker in the toolbar"
 msgstr "Выбор цвета на панели инструментов"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Добавляет на панель инструментов элемент «Bar», с помощью которого администраторы могут перекрашивать её в один из доминирующих цветов сайта, определённых по логотипу и теме."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Добавляет в панель элемент \"Bar\", чтобы каждый администратор мог перекрасить её в один из доминирующих цветов сайта, определённых по логотипу и теме. Выбор личный: действует только для его учётной записи."
 
 msgid "Auto-hide the toolbar"
 msgstr "Автоматически скрывать панель инструментов"

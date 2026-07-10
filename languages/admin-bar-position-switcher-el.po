@@ -130,8 +130,8 @@ msgstr "Προσαρμογή των κολλημένων κεφαλίδων το
 msgid "Colorize the toolbar background"
 msgstr "Χρωματισμός του φόντου της εργαλειοθήκης"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "Το χρώμα του κειμένου προσαρμόζεται αυτόματα για αναγνωσιμότητα."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "Το χρώμα του κειμένου προσαρμόζεται αυτόματα για αναγνωσιμότητα. Αυτή είναι η προεπιλογή του ιστότοπου· οι διαχειριστές μπορούν να την παρακάμψουν για τον εαυτό τους με το στοιχείο \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Επιλέξτε τα στοιχεία που θέλετε να αποκρύψετε από την εργαλειοθήκη του μπροστινού μέρους."
@@ -166,8 +166,8 @@ msgstr "Προεπιλογή"
 msgid "Color picker in the toolbar"
 msgstr "Επιλογέας χρώματος στη γραμμή εργαλείων"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Προσθέτει ένα στοιχείο «Bar» στη γραμμή εργαλείων, ώστε οι διαχειριστές να μπορούν να αλλάζουν το χρώμα της με ένα από τα κυρίαρχα χρώματα του ιστότοπου, τα οποία εντοπίζονται από το λογότυπο και το θέμα σας."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Προσθέστε ένα στοιχείο \"Bar\" στη γραμμή εργαλείων ώστε κάθε διαχειριστής να τη χρωματίζει με ένα από τα κυρίαρχα χρώματα του ιστότοπου, εντοπισμένα από το λογότυπο και το θέμα. Η επιλογή είναι προσωπική: ισχύει μόνο για τον δικό του λογαριασμό."
 
 msgid "Auto-hide the toolbar"
 msgstr "Αυτόματη απόκρυψη της γραμμής εργαλείων"

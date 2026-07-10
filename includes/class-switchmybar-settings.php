@@ -465,7 +465,7 @@ class Switchmybar_Settings {
 		</label>
 		&nbsp;
 		<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[bar_bg_color]" value="<?php echo esc_attr( $color ); ?>" />
-		<p class="description"><?php esc_html_e( 'The text color adjusts automatically for readability.', 'admin-bar-position-switcher' ); ?></p>
+		<p class="description"><?php esc_html_e( 'The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the "Bar" item.', 'admin-bar-position-switcher' ); ?></p>
 		<?php
 	}
 
@@ -477,7 +477,7 @@ class Switchmybar_Settings {
 		?>
 		<label>
 			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[bar_picker]" value="1" <?php checked( $value, 1 ); ?> />
-			<?php esc_html_e( 'Add a "Bar" item to the toolbar so administrators can recolor it with one of the site\'s dominant colors, detected from your logo and theme.', 'admin-bar-position-switcher' ); ?>
+			<?php esc_html_e( 'Add a "Bar" item to the toolbar so each administrator can recolor it with one of the site\'s dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account.', 'admin-bar-position-switcher' ); ?>
 		</label>
 		<?php
 	}

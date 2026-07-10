@@ -130,8 +130,8 @@ msgstr "ضبط رؤوس Elementor الملتصقة لتتماشى مع شريط 
 msgid "Colorize the toolbar background"
 msgstr "تلوين خلفية شريط الأدوات"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "يُضبط لون النص تلقائياً لتحسين القراءة."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "يتكيف لون النص تلقائيًا لسهولة القراءة. هذا هو الافتراضي على مستوى الموقع؛ يمكن لكل مدير تجاوزه لنفسه عبر عنصر \"Bar\"."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "حدّد العناصر التي تريد إخفاءها من شريط أدوات الواجهة الأمامية."
@@ -166,8 +166,8 @@ msgstr "الافتراضي"
 msgid "Color picker in the toolbar"
 msgstr "منتقي الألوان في شريط الأدوات"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "إضافة عنصر \"Bar\" إلى شريط الأدوات ليتمكّن المديرون من تغيير لونه باستخدام أحد الألوان السائدة في الموقع، والتي يتم اكتشافها من الشعار والقالب."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "أضِف عنصر \"Bar\" إلى شريط الأدوات ليتمكن كل مدير من إعادة تلوينه بأحد الألوان السائدة في الموقع، المكتشفة من الشعار والقالب. الاختيار شخصي: يسري على حسابه فقط."
 
 msgid "Auto-hide the toolbar"
 msgstr "إخفاء شريط الأدوات تلقائيًا"

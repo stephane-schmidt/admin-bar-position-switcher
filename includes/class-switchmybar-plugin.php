@@ -66,7 +66,10 @@ class Switchmybar_Plugin {
 		if ( '' === $label ) {
 			$label = __( 'Bar', 'admin-bar-position-switcher' );
 		}
-		$current = ! empty( $this->options['bar_bg_enabled'] ) ? $this->options['bar_bg_color'] : '#1d2327';
+		$current = self::effective_bar_color( $this->options );
+		if ( ! $current ) {
+			$current = '#1d2327';
+		}
 
 		$bar->add_node(
 			array(
@@ -102,20 +105,27 @@ class Switchmybar_Plugin {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => 'forbidden' ), 403 );
 		}
-		$raw  = isset( $_POST['color'] ) ? sanitize_text_field( wp_unslash( $_POST['color'] ) ) : '';
-		$opts = Switchmybar_Settings::get_options();
+		$raw = isset( $_POST['color'] ) ? sanitize_text_field( wp_unslash( $_POST['color'] ) ) : '';
+
+		// The swatches are personal: each administrator's pick lives in their
+		// own user meta. The site-wide color (settings screen) stays the
+		// default for everyone who never picked one.
 		if ( 'default' === $raw ) {
-			$opts['bar_bg_enabled'] = 0;
-			update_option( Switchmybar_Settings::OPTION, $opts );
-			wp_send_json_success( array( 'color' => '', 'text' => '' ) );
+			delete_user_meta( get_current_user_id(), 'switchmybar_bar_color' );
+			$opts = Switchmybar_Settings::get_options();
+			$site = ! empty( $opts['bar_bg_enabled'] ) ? $opts['bar_bg_color'] : '';
+			wp_send_json_success(
+				array(
+					'color' => $site,
+					'text'  => $site ? self::readable_text_color( $site ) : '',
+				)
+			);
 		}
 		$hex = sanitize_hex_color( $raw );
 		if ( ! $hex ) {
 			wp_send_json_error( array( 'message' => 'invalid color' ), 400 );
 		}
-		$opts['bar_bg_enabled'] = 1;
-		$opts['bar_bg_color']   = $hex;
-		update_option( Switchmybar_Settings::OPTION, $opts );
+		update_user_meta( get_current_user_id(), 'switchmybar_bar_color', $hex );
 		wp_send_json_success(
 			array(
 				'color' => $hex,
@@ -212,8 +222,8 @@ class Switchmybar_Plugin {
 			$css .= 'html.abps-bar-autohide .elementor-location-header .elementor-sticky--active{top:0 !important;}';
 		}
 
-		if ( ! empty( $this->options['bar_bg_enabled'] ) ) {
-			$bg = $this->options['bar_bg_color'];
+		$bg = self::effective_bar_color( $this->options );
+		if ( $bg ) {
 			$fg = self::readable_text_color( $bg );
 			// Recolor the top bar and its top-level items only; sub-menus keep their own styling.
 			$top = '#wpadminbar #wp-admin-bar-root-default>li>.ab-item,#wpadminbar #wp-admin-bar-top-secondary>li>.ab-item';
@@ -276,6 +286,28 @@ class Switchmybar_Plugin {
 			esc_attr__( 'Move the toolbar to the top or bottom', 'admin-bar-position-switcher' ),
 			esc_html( $label )
 		);
+	}
+
+	/**
+	 * The toolbar color that applies to the CURRENT user: their personal
+	 * pick (user meta, set from the swatches) wins over the site-wide color
+	 * from the settings screen; empty string when neither is set.
+	 *
+	 * @param array $options Resolved plugin options.
+	 * @return string Hex color or ''.
+	 */
+	public static function effective_bar_color( $options ) {
+		$meta = sanitize_hex_color( (string) get_user_meta( get_current_user_id(), 'switchmybar_bar_color', true ) );
+		if ( $meta ) {
+			return $meta;
+		}
+		if ( ! empty( $options['bar_bg_enabled'] ) ) {
+			$site = sanitize_hex_color( (string) $options['bar_bg_color'] );
+			if ( $site ) {
+				return $site;
+			}
+		}
+		return '';
 	}
 
 	/**

@@ -130,8 +130,8 @@ msgstr "Az Elementor tapadó fejlécek igazítása, hogy egy vonalba kerüljenek
 msgid "Colorize the toolbar background"
 msgstr "Az eszköztár hátterének színezése"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "A szöveg színe automatikusan igazodik az olvashatóság érdekében."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "A szöveg színe automatikusan igazodik az olvashatósághoz. Ez a webhely alapértelmezése; az adminisztrátorok a \"Bar\" elemmel saját maguknak felülbírálhatják."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Jelöld be azokat az elemeket, amelyeket el szeretnél rejteni a látogatói oldal eszköztárából."
@@ -166,8 +166,8 @@ msgstr "Alapértelmezett"
 msgid "Color picker in the toolbar"
 msgstr "Színválasztó az eszköztárban"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "\"Bar\" elem hozzáadása az eszköztárhoz, amellyel az adminisztrátorok átszínezhetik azt a webhely domináns színeinek egyikére, amelyeket a bővítmény a logó és a sablon alapján ismer fel."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "\"Bar\" elem hozzáadása az eszköztárhoz, hogy minden adminisztrátor átszínezhesse a webhely domináns színeinek egyikével (a logóból és a sablonból felismerve). A választás személyes: csak a saját fiókjára érvényes."
 
 msgid "Auto-hide the toolbar"
 msgstr "Az eszköztár automatikus elrejtése"

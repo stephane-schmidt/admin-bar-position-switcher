@@ -130,8 +130,8 @@ msgstr "Ajuster les en-têtes collants d'Elementor pour qu'ils s'alignent sur la
 msgid "Colorize the toolbar background"
 msgstr "Coloriser le fond de la barre d'outils"
 
-msgid "The text color adjusts automatically for readability."
-msgstr "La couleur du texte s'ajuste automatiquement pour rester lisible."
+msgid "The text color adjusts automatically for readability. This is the site-wide default; administrators can override it for themselves with the \"Bar\" item."
+msgstr "La couleur du texte s'ajuste automatiquement pour rester lisible. C'est la couleur par défaut du site ; chaque administrateur peut la remplacer pour lui-même via l'élément « Barre »."
 
 msgid "Tick the items you want to hide from the front-end toolbar."
 msgstr "Cochez les éléments à masquer de la barre d'outils du site public."
@@ -166,8 +166,8 @@ msgstr "Par défaut"
 msgid "Color picker in the toolbar"
 msgstr "Sélecteur de couleurs dans la barre d’outils"
 
-msgid "Add a \"Bar\" item to the toolbar so administrators can recolor it with one of the site's dominant colors, detected from your logo and theme."
-msgstr "Ajoute un élément « Bar » à la barre d’outils afin que les administrateurs puissent la recolorer avec l’une des couleurs dominantes du site, détectées à partir de votre logo et de votre thème."
+msgid "Add a \"Bar\" item to the toolbar so each administrator can recolor it with one of the site's dominant colors, detected from your logo and theme. The pick is personal: it only applies to their own account."
+msgstr "Ajoute un élément « Barre » à la barre d'outils pour que chaque administrateur puisse la recolorer avec l'une des couleurs dominantes du site, détectées depuis votre logo et votre thème. Le choix est personnel : il ne s'applique qu'à son propre compte."
 
 msgid "Auto-hide the toolbar"
 msgstr "Masquer automatiquement la barre d’outils"
