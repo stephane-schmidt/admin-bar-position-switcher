@@ -120,6 +120,12 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 	opacity: 1;
 }
 
+/* Left alone for ten seconds, the button fades to half strength; any
+ * pointer or keyboard attention brings it back (JS toggles the class). */
+#abps-switch.abps-idle:not(:hover):not(:focus) {
+	opacity: 0.5;
+}
+
 /* Auto-hidden: the button drifts away like a falling leaf (JS toggles this). */
 #abps-switch.abps-switch--hidden {
 	pointer-events: none;

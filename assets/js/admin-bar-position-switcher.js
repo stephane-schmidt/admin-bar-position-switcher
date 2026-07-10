@@ -72,6 +72,23 @@
 				} catch ( e ) {}
 			}
 		} );
+
+		// Discretion timer: after ten quiet seconds the button fades to 50%
+		// (CSS class); any attention wakes it and restarts the countdown.
+		var idleTimer = null;
+		var armIdle = function () {
+			if ( idleTimer ) {
+				window.clearTimeout( idleTimer );
+			}
+			button.classList.remove( 'abps-idle' );
+			idleTimer = window.setTimeout( function () {
+				button.classList.add( 'abps-idle' );
+			}, 10000 );
+		};
+		button.addEventListener( 'mouseenter', armIdle );
+		button.addEventListener( 'focus', armIdle );
+		button.addEventListener( 'click', armIdle );
+		armIdle();
 	}
 
 	/* ------------------------------------------------------------------ *
