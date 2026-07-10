@@ -81,10 +81,53 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 }
 
 /* ---------------------------------------------------------------------------
- * Crowded toolbar: when the left group + right group no longer fit on one
- * line, core keeps the bar 32px tall and the right group (user menu, "Bar"
- * picker) wraps into an invisible second row — below the screen in bottom
- * mode. Let the bar grow instead so every row stays visible.
+ * Crowded toolbar, step 1 — squeeze before stacking. The script measures the
+ * two groups and walks these levels until everything fits on one line:
+ * "wide" caps the widest items (site name & friends) with an ellipsis, then
+ * squeeze-1/2/3 shrink the whole bar's font and paddings. Only when even
+ * that is not enough does the bar stack (rules below).
+ * ------------------------------------------------------------------------- */
+@media screen and ( min-width: 783px ) {
+	html.abps-squeeze-wide #wpadminbar #wp-admin-bar-root-default > li > .ab-item {
+		max-width: 160px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	html.abps-squeeze-1 #wpadminbar,
+	html.abps-squeeze-1 #wpadminbar .ab-item,
+	html.abps-squeeze-1 #wpadminbar .ab-empty-item {
+		font-size: 12px;
+	}
+
+	html.abps-squeeze-2 #wpadminbar,
+	html.abps-squeeze-2 #wpadminbar .ab-item,
+	html.abps-squeeze-2 #wpadminbar .ab-empty-item {
+		font-size: 11px;
+	}
+
+	html.abps-squeeze-2 #wpadminbar #wp-admin-bar-root-default > li > .ab-item {
+		max-width: 130px;
+	}
+
+	html.abps-squeeze-3 #wpadminbar .ab-item,
+	html.abps-squeeze-3 #wpadminbar .ab-empty-item {
+		font-size: 11px;
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+
+	html.abps-squeeze-3 #wpadminbar #wp-admin-bar-root-default > li > .ab-item {
+		max-width: 110px;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+ * Crowded toolbar, last resort — when the left group + right group no longer
+ * fit on one line even squeezed, core keeps the bar 32px tall and the right
+ * group (user menu, "Bar" picker) wraps into an invisible second row — below
+ * the screen in bottom mode. Let the bar grow instead so every row stays
+ * visible.
  * ------------------------------------------------------------------------- */
 @media screen and ( min-width: 783px ) {
 	html.abps-bottom #wpadminbar,

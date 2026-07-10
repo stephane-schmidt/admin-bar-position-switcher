@@ -296,6 +296,64 @@
 	}
 
 	/* ------------------------------------------------------------------ *
+	 * Crowded toolbar: measure both groups and, if they no longer fit on
+	 * one line, walk the squeeze levels (cap the widest items, then shrink
+	 * the whole bar's font) until everything fits. The stacking CSS stays
+	 * as the last resort when even squeezing is not enough.
+	 * ------------------------------------------------------------------ */
+	function setupBarSqueeze() {
+		var bar = document.getElementById( 'wpadminbar' );
+		if ( ! bar ) {
+			return;
+		}
+		var LEVELS = [ 'abps-squeeze-wide', 'abps-squeeze-1', 'abps-squeeze-2', 'abps-squeeze-3' ];
+
+		function overflows() {
+			var left = document.getElementById( 'wp-admin-bar-root-default' );
+			var right = document.getElementById( 'wp-admin-bar-top-secondary' );
+			if ( ! left || ! right ) {
+				return false;
+			}
+			var w = 0;
+			var walk = function ( ul ) {
+				for ( var i = 0; i < ul.children.length; i++ ) {
+					w += ul.children[ i ].offsetWidth;
+				}
+			};
+			walk( left );
+			walk( right );
+			return w > bar.clientWidth - 8;
+		}
+
+		function apply() {
+			for ( var i = 0; i < LEVELS.length; i++ ) {
+				root.classList.remove( LEVELS[ i ] );
+			}
+			if ( window.innerWidth < 783 ) {
+				return; // core's mobile toolbar has its own layout.
+			}
+			for ( var j = 0; j < LEVELS.length && overflows(); j++ ) {
+				root.classList.add( LEVELS[ j ] );
+			}
+		}
+
+		var timer = null;
+		function schedule() {
+			if ( timer ) {
+				window.clearTimeout( timer );
+			}
+			timer = window.setTimeout( apply, 120 );
+		}
+
+		window.addEventListener( 'resize', schedule );
+		if ( window.MutationObserver ) {
+			new window.MutationObserver( schedule ).observe( bar, { childList: true, subtree: true } );
+		}
+		apply();
+	}
+	setupBarSqueeze();
+
+	/* ------------------------------------------------------------------ *
 	 * Toolbar color picker: the "Bar" item in the admin bar shows the
 	 * site's dominant colors; clicking a swatch saves the choice (AJAX)
 	 * and recolors the toolbar immediately.

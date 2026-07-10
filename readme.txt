@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.8.3
+Stable tag: 1.8.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally tints the button to match the main color of the current page, with automatic black/white text for contrast.
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge, staying at least 10 seconds once revealed.
+* **Smart squeeze on busy bars**: when plugins crowd the toolbar, the widest items are trimmed with an ellipsis and the font steps down until everything fits on one line.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color for YOUR account only (administrators; the settings screen holds the site-wide default).
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
 * Opens the toolbar sub-menus upward when the bar is at the bottom, so they stay on screen.
@@ -92,6 +93,9 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.8.4 =
+* Added: on busy sites the toolbar now squeezes itself before stacking — the widest items (a long site title, builder entries) get capped with an ellipsis, then the whole bar's font shrinks step by step until everything fits on one line. Stacking remains the last resort.
 
 = 1.8.3 =
 * Changed: after ten quiet seconds the floating switch button fades to 50% opacity; pointer or keyboard attention brings it back and restarts the countdown.
