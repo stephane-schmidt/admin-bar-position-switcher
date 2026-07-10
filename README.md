@@ -48,7 +48,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 
 ## Settings
 
-**Settings → Admin Bar Position**
+**Admin Bar Position** (top-level entry in the left admin menu)
 
 | Setting | What it does |
 | --- | --- |
@@ -68,7 +68,7 @@ Everything happens on the front end and **only for logged‑in users**. Visitors
 
 1. Install from the WordPress Plugin Directory (once published), or upload the `admin-bar-position-switcher` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** screen.
-3. (Optional) Visit **Settings → Admin Bar Position** to tune the defaults.
+3. (Optional) Open **Admin Bar Position** in the left admin menu to tune the defaults.
 
 ## Translations
 

@@ -127,15 +127,16 @@ class ABPS_Settings {
 	}
 
 	/**
-	 * Add the options page under Settings.
+	 * Add the settings page as a top-level entry in the left admin menu.
 	 */
 	public function add_menu() {
-		add_options_page(
+		add_menu_page(
 			__( 'Admin Bar Position', 'admin-bar-position-switcher' ),
 			__( 'Admin Bar Position', 'admin-bar-position-switcher' ),
 			'manage_options',
 			self::SLUG,
-			array( $this, 'render_page' )
+			array( $this, 'render_page' ),
+			'dashicons-sort'
 		);
 	}
 
@@ -146,7 +147,7 @@ class ABPS_Settings {
 	 * @return array
 	 */
 	public function action_links( $links ) {
-		$url  = admin_url( 'options-general.php?page=' . self::SLUG );
+		$url  = admin_url( 'admin.php?page=' . self::SLUG );
 		$link = '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Settings', 'admin-bar-position-switcher' ) . '</a>';
 		array_unshift( $links, $link );
 		return $links;
@@ -326,6 +327,7 @@ class ABPS_Settings {
 		?>
 		<div class="wrap">
 			<h1><?php echo esc_html_x( 'Admin Bar Position', 'settings page title', 'admin-bar-position-switcher' ); ?></h1>
+			<?php settings_errors(); ?>
 			<p><?php esc_html_e( 'Choose where the WordPress toolbar sits on the front end. Visitors who are not logged in never see it.', 'admin-bar-position-switcher' ); ?></p>
 			<form action="options.php" method="post">
 				<?php

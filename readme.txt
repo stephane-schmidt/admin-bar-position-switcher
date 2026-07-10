@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,7 @@ The plugin stores the top/bottom preference in the browser's `localStorage` only
 
 1. Upload the `admin-bar-position-switcher` folder to `/wp-content/plugins/`, or install the plugin through the **Plugins → Add New** screen.
 2. Activate the plugin through the **Plugins** screen in WordPress.
-3. (Optional) Visit **Settings → Admin Bar Position** to choose the default position and button options.
+3. (Optional) Open **Admin Bar Position** in the left admin menu to choose the default position and button options.
 4. Browse the front end while logged in: the toolbar now sits at the bottom, with a "↕ Bar" button to flip it.
 
 == Frequently Asked Questions ==
@@ -68,14 +68,14 @@ Keep the "Elementor compatibility" option enabled (it is on by default). It nudg
 
 = How do I hide the floating button but keep the bar at the bottom? =
 
-In **Settings → Admin Bar Position**, turn off "Switch button". The toolbar stays at the bottom; the button is removed.
+In **Admin Bar Position** (left admin menu), turn off "Switch button". The toolbar stays at the bottom; the button is removed.
 
 == Screenshots ==
 
 1. The WordPress toolbar moved to the bottom of the front end, with the "↕ Bar" switch button.
 2. Colorize the toolbar background — the text color stays readable automatically.
 3. Hide the individual toolbar items you don't need.
-4. All options on one simple settings screen (Settings → Admin Bar Position).
+4. All options on one simple settings screen (Admin Bar Position, in the left admin menu).
 
 == About the author ==
 
@@ -88,6 +88,9 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.1.1 =
+* Changed: the settings page now lives as its own entry in the left admin menu ("Admin Bar Position", with an up/down icon) instead of hiding under Settings.
 
 = 1.1.0 =
 * New: optional auto-hiding toolbar, macOS Dock style — the bar glides off-screen and slides back when the pointer comes within 150 pixels of its edge (or when it receives keyboard focus). Off by default: the toolbar stays visible unless you enable it.
@@ -113,6 +116,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+The settings page moved to its own entry in the left admin menu.
 
 = 1.1.0 =
 Recolor the toolbar right from the toolbar with your site's dominant colors, and optionally auto-hide the whole bar, macOS Dock style.
