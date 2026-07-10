@@ -223,8 +223,8 @@ msgstr "左侧（WordPress 默认）"
 msgid "Right"
 msgstr "右侧"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "显示一个浮动按钮，在左右两侧之间切换后台菜单（按浏览器记忆）。"
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "在后台菜单旁显示浮动标签，可隐藏菜单或在左右两侧之间切换（按浏览器记住）。"
 
 msgid "Auto-hide the menu"
 msgstr "自动隐藏菜单"
@@ -240,3 +240,15 @@ msgstr "将菜单移到左侧或右侧"
 
 msgid "Menu"
 msgstr "菜单"
+
+msgid "Hide or show the menu"
+msgstr "隐藏或显示菜单"
+
+msgid "Space after"
+msgstr "其后留空"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "拖动手柄可重新排列菜单；颜色和其后留空对每个项目生效。"
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "让左侧管理菜单随你所愿：拖动项目排出自己的顺序，为每项设置背景色（文字自动保持清晰可读），并在某项之后留空以形成分组。"

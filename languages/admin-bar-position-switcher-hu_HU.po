@@ -223,8 +223,8 @@ msgstr "Bal (WordPress alapértelmezés)"
 msgid "Right"
 msgstr "Jobb"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Lebegő gomb megjelenítése, amellyel az admin menü balra vagy jobbra helyezhető (böngészőnként megjegyezve)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Lebegő fülek megjelenítése az admin menü mellett az elrejtéséhez vagy a bal és jobb oldal közötti váltáshoz (böngészőnként megjegyezve)."
 
 msgid "Auto-hide the menu"
 msgstr "A menü automatikus elrejtése"
@@ -240,3 +240,15 @@ msgstr "A menü mozgatása balra vagy jobbra"
 
 msgid "Menu"
 msgstr "Menü"
+
+msgid "Hide or show the menu"
+msgstr "A menü elrejtése vagy megjelenítése"
+
+msgid "Space after"
+msgstr "Térköz utána"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "A fogantyú húzásával rendezze át a menüt; a szín és az utána lévő térköz elemenként érvényes."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Tegye a sajátjává a bal oldali admin menüt: húzza az elemeket a kívánt sorrendbe, adjon mindegyiknek háttérszínt (a szöveg automatikusan olvasható marad), és tegyen térközt egy elem után csoportok kialakításához."

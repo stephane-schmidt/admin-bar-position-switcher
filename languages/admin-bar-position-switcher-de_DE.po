@@ -223,8 +223,8 @@ msgstr "Links (WordPress-Standard)"
 msgid "Right"
 msgstr "Rechts"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Schwebende Schaltfläche anzeigen, um das Backoffice-Menü zwischen links und rechts zu verschieben (pro Browser gemerkt)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Schwebende Reiter neben dem Backend-Menü anzeigen, um es auszublenden oder zwischen links und rechts zu wechseln (pro Browser gespeichert)."
 
 msgid "Auto-hide the menu"
 msgstr "Menü automatisch ausblenden"
@@ -240,3 +240,15 @@ msgstr "Menü nach links oder rechts verschieben"
 
 msgid "Menu"
 msgstr "Menü"
+
+msgid "Hide or show the menu"
+msgstr "Menü aus- oder einblenden"
+
+msgid "Space after"
+msgstr "Abstand danach"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Ziehen Sie am Griff, um das Menü neu zu ordnen; Farbe und Abstand danach gelten je Eintrag."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Machen Sie das linke Admin-Menü zu Ihrem: Ziehen Sie die Einträge in Ihre eigene Reihenfolge, geben Sie jedem eine Hintergrundfarbe (der Text bleibt automatisch lesbar) und fügen Sie nach einem Eintrag Abstand hinzu, um Gruppen zu bilden."

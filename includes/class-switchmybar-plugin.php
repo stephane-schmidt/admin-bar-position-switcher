@@ -234,6 +234,7 @@ class Switchmybar_Plugin {
 			'autoColor'       => ! empty( $this->options['auto_color'] ),
 			'autoHide'        => ! empty( $this->options['auto_hide'] ),
 			'barAutoHide'     => ! empty( $this->options['bar_auto_hide'] ),
+			'barMinVisible'   => 10000,
 			'storageKey'      => 'abpsPosition',
 		);
 

@@ -223,8 +223,8 @@ msgstr "Αριστερά (προεπιλογή WordPress)"
 msgid "Right"
 msgstr "Δεξιά"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Εμφάνιση αιωρούμενου κουμπιού για μετακίνηση του μενού διαχείρισης αριστερά ή δεξιά (απομνημονεύεται ανά πρόγραμμα περιήγησης)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Εμφάνιση αιωρούμενων καρτελών δίπλα στο μενού διαχείρισης για απόκρυψη ή εναλλαγή μεταξύ αριστερά και δεξιά (αποθηκεύεται ανά πρόγραμμα περιήγησης)."
 
 msgid "Auto-hide the menu"
 msgstr "Αυτόματη απόκρυψη του μενού"
@@ -240,3 +240,15 @@ msgstr "Μετακίνηση του μενού αριστερά ή δεξιά"
 
 msgid "Menu"
 msgstr "Μενού"
+
+msgid "Hide or show the menu"
+msgstr "Απόκρυψη ή εμφάνιση του μενού"
+
+msgid "Space after"
+msgstr "Κενό μετά"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Σύρετε τη λαβή για να αναδιατάξετε το μενού· το χρώμα και το κενό μετά ισχύουν για κάθε στοιχείο."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Κάντε το αριστερό μενού διαχείρισης δικό σας: σύρετε τα στοιχεία στη δική σας σειρά, δώστε σε καθένα χρώμα φόντου (το κείμενο παραμένει αυτόματα ευανάγνωστο) και προσθέστε κενό μετά από ένα στοιχείο για να φτιάξετε ομάδες."

@@ -223,8 +223,8 @@ msgstr "Stânga (implicit WordPress)"
 msgid "Right"
 msgstr "Dreapta"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Afișează un buton plutitor pentru a muta meniul de administrare între stânga și dreapta (memorat per browser)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Afișează file plutitoare lângă meniul de administrare pentru a-l ascunde sau a-l comuta între stânga și dreapta (reținut per browser)."
 
 msgid "Auto-hide the menu"
 msgstr "Ascunde automat meniul"
@@ -240,3 +240,15 @@ msgstr "Mută meniul la stânga sau la dreapta"
 
 msgid "Menu"
 msgstr "Meniu"
+
+msgid "Hide or show the menu"
+msgstr "Ascunde sau afișează meniul"
+
+msgid "Space after"
+msgstr "Spațiu după"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Trageți mânerul pentru a reordona meniul; culoarea și spațiul de după se aplică fiecărui element."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Faceți meniul de administrare al dvs.: trageți elementele în ordinea dorită, dați fiecăruia o culoare de fundal (textul rămâne lizibil automat) și adăugați spațiu după un element pentru a crea grupuri."

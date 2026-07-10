@@ -223,8 +223,8 @@ msgstr "Vasen (WordPressin oletus)"
 msgid "Right"
 msgstr "Oikea"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Näytä kelluva painike, jolla hallintavalikon voi siirtää vasemmalle tai oikealle (muistetaan selaimittain)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Näytä kelluvat välilehdet hallintavalikon vieressä sen piilottamiseksi tai siirtämiseksi vasemmalta oikealle (muistetaan selainkohtaisesti)."
 
 msgid "Auto-hide the menu"
 msgstr "Piilota valikko automaattisesti"
@@ -240,3 +240,15 @@ msgstr "Siirrä valikko vasemmalle tai oikealle"
 
 msgid "Menu"
 msgstr "Valikko"
+
+msgid "Hide or show the menu"
+msgstr "Piilota tai näytä valikko"
+
+msgid "Space after"
+msgstr "Väli jälkeen"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Järjestä valikko vetämällä kahvasta; väri ja väli jälkeen koskevat kutakin kohdetta."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Tee vasemmasta hallintavalikosta omasi: vedä kohteet haluamaasi järjestykseen, anna kullekin taustaväri (teksti pysyy automaattisesti luettavana) ja lisää väli kohteen jälkeen ryhmien luomiseksi."

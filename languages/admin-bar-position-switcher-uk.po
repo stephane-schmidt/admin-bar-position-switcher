@@ -223,8 +223,8 @@ msgstr "Ліворуч (типово для WordPress)"
 msgid "Right"
 msgstr "Праворуч"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Показувати плавучу кнопку для перенесення меню адмінпанелі ліворуч або праворуч (запам'ятовується для кожного браузера)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Показувати плаваючі вкладки поруч із меню адміністрування, щоб приховати його або перемкнути між лівим і правим боком (запам'ятовується для кожного браузера)."
 
 msgid "Auto-hide the menu"
 msgstr "Автоматично приховувати меню"
@@ -240,3 +240,15 @@ msgstr "Перемістити меню ліворуч або праворуч"
 
 msgid "Menu"
 msgstr "Меню"
+
+msgid "Hide or show the menu"
+msgstr "Приховати або показати меню"
+
+msgid "Space after"
+msgstr "Відступ після"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Перетягніть ручку, щоб змінити порядок меню; колір і відступ після застосовуються до кожного пункту."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Зробіть ліве меню адміністратора своїм: перетягніть пункти у власному порядку, надайте кожному колір тла (текст автоматично залишається читабельним) і додайте відступ після пункту, щоб створити групи."

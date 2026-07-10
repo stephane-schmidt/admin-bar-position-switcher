@@ -223,8 +223,8 @@ msgstr "Izquierda (predeterminado de WordPress)"
 msgid "Right"
 msgstr "Derecha"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Mostrar un botón flotante para pasar el menú de administración de izquierda a derecha (recordado por navegador)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Mostrar pestañas flotantes junto al menú de administración para ocultarlo o cambiarlo entre izquierda y derecha (se recuerda por navegador)."
 
 msgid "Auto-hide the menu"
 msgstr "Ocultar el menú automáticamente"
@@ -240,3 +240,15 @@ msgstr "Mover el menú a la izquierda o a la derecha"
 
 msgid "Menu"
 msgstr "Menú"
+
+msgid "Hide or show the menu"
+msgstr "Ocultar o mostrar el menú"
+
+msgid "Space after"
+msgstr "Espacio después"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Arrastra el asa para reordenar el menú; el color y el espacio después se aplican a cada elemento."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Haz tuyo el menú de administración: arrastra los elementos en tu propio orden, da a cada uno un color de fondo (el texto sigue siendo legible automáticamente) y añade espacio después de un elemento para formar grupos."

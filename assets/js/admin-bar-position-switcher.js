@@ -26,6 +26,7 @@
 	var REVEAL_AT = typeof cfg.revealDistance === 'number' ? cfg.revealDistance : 50;
 	var BAR_AUTO_HIDE = flag( cfg.barAutoHide ); // opt-in; the toolbar stays visible by default
 	var BAR_REVEAL_AT = typeof cfg.barRevealDistance === 'number' ? cfg.barRevealDistance : 150;
+	var BAR_MIN_VISIBLE = typeof cfg.barMinVisible === 'number' ? cfg.barMinVisible : 10000;
 	var root = document.documentElement;
 
 	/* ------------------------------------------------------------------ *
@@ -190,13 +191,25 @@
 		}
 		var pinned = false;
 		var timer = null;
+		// Once revealed, the bar stays for at least BAR_MIN_VISIBLE ms so a
+		// pointer brushing past the edge never makes it bounce in and out.
+		var shownAt = Date.now();
 
 		function hide() {
-			if ( ! pinned ) {
-				root.classList.add( HIDDEN );
+			if ( pinned ) {
+				return;
 			}
+			var left = shownAt + BAR_MIN_VISIBLE - Date.now();
+			if ( left > 0 ) {
+				armHide( left + 20 );
+				return;
+			}
+			root.classList.add( HIDDEN );
 		}
 		function show() {
+			if ( root.classList.contains( HIDDEN ) ) {
+				shownAt = Date.now();
+			}
 			root.classList.remove( HIDDEN );
 		}
 		function armHide( delay ) {
@@ -314,7 +327,7 @@
 				return;
 			}
 			e.preventDefault();
-			post( { action: 'abps_bar_color', color: swatch.getAttribute( 'data-abps-color' ) } )
+			post( { action: 'switchmybar_bar_color', color: swatch.getAttribute( 'data-abps-color' ) } )
 				.then( function ( res ) {
 					if ( res && res.success ) {
 						applyBar( res.data.color, res.data.text );
@@ -326,7 +339,7 @@
 		// First run for this plugin version: refine the palette in the
 		// background (logo + theme + a frequency scan of the home page).
 		if ( cfg.needDeep && window.fetch ) {
-			post( { action: 'abps_detect_colors' } )
+			post( { action: 'switchmybar_detect_colors' } )
 				.then( function ( res ) {
 					if ( ! ( res && res.success && res.data.colors && res.data.colors.length ) ) {
 						return;

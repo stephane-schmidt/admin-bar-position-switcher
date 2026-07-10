@@ -50,7 +50,7 @@ class Switchmybar_Settings {
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_add_inline_script(
 			'jquery-ui-sortable',
-			'jQuery(function($){$(".abps-sortable").sortable({axis:"y",cursor:"grabbing",containment:"parent"});});'
+			'jQuery(function($){$(".abps-sortable").sortable({axis:"y",cursor:"grabbing",containment:"parent",handle:".abps-drag"});});'
 		);
 	}
 
@@ -86,14 +86,49 @@ class Switchmybar_Settings {
 	}
 
 	/**
+	 * One-time conversion of the pre-1.7.0 "spacer before this item" flags to
+	 * the "space after this item" model: each flag moves to the item that
+	 * precedes it in the live menu (the visual gap does not move).
+	 */
+	private function maybe_convert_spacers() {
+		$opts = get_option( self::OPTION, array() );
+		if ( ! is_array( $opts ) || empty( $opts['menu_spacers'] ) || ! empty( $opts['menu_spacers_after'] ) ) {
+			return;
+		}
+		global $menu;
+		if ( ! is_array( $menu ) || empty( $menu ) ) {
+			return;
+		}
+		$ids = array();
+		foreach ( $menu as $entry ) {
+			$classes = isset( $entry[4] ) ? (string) $entry[4] : '';
+			$id      = isset( $entry[5] ) ? (string) $entry[5] : '';
+			if ( '' !== $id && false === strpos( $classes, 'wp-menu-separator' ) ) {
+				$ids[] = $id;
+			}
+		}
+		$after = array();
+		foreach ( (array) $opts['menu_spacers'] as $id ) {
+			$pos = array_search( $id, $ids, true );
+			if ( false !== $pos && $pos > 0 ) {
+				$after[] = $ids[ $pos - 1 ];
+			}
+		}
+		$opts['menu_spacers_after'] = array_values( array_unique( $after ) );
+		$opts['menu_spacers']       = array();
+		update_option( self::OPTION, $opts );
+	}
+
+	/**
 	 * Colorize the left admin menu and add spacers, per the settings.
 	 *
 	 * Delivered through the enqueue API on a src-less style handle.
 	 */
 	public function enqueue_menu_styling() {
+		$this->maybe_convert_spacers();
 		$opts    = self::get_options();
 		$colors  = (array) $opts['menu_colors'];
-		$spacers = (array) $opts['menu_spacers'];
+		$spacers = (array) $opts['menu_spacers_after'];
 		$dim     = ! empty( $opts['menu_dim'] );
 		if ( empty( $colors ) && empty( $spacers ) && ! $dim ) {
 			return;
@@ -116,7 +151,7 @@ class Switchmybar_Settings {
 		foreach ( $spacers as $id ) {
 			$id = sanitize_key( $id );
 			if ( $id ) {
-				$css .= '#adminmenu li#' . $id . '{margin-top:16px;}';
+				$css .= '#adminmenu li#' . $id . '{margin-bottom:16px;}';
 			}
 		}
 
@@ -164,6 +199,7 @@ class Switchmybar_Settings {
 			'hidden_items'     => array(),
 			'menu_colors'      => array(),
 			'menu_spacers'     => array(),
+			'menu_spacers_after' => array(),
 			'menu_dim'         => 0,
 			'menu_side_default' => 'left',
 			'menu_side_toggle' => 1,
@@ -428,14 +464,6 @@ class Switchmybar_Settings {
 		);
 
 		add_settings_field(
-			'menu_order',
-			__( 'Menu order', 'admin-bar-position-switcher' ),
-			array( $this, 'field_menu_order' ),
-			self::SLUG,
-			'switchmybar_admin_menu'
-		);
-
-		add_settings_field(
 			'bar_order',
 			__( 'Toolbar order', 'admin-bar-position-switcher' ),
 			array( $this, 'field_bar_order' ),
@@ -517,7 +545,7 @@ class Switchmybar_Settings {
 		<ul class="abps-sortable" style="max-width:380px;margin:0;">
 			<?php foreach ( $ordered as $value => $label ) : ?>
 				<li style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #c3c4c7;border-radius:4px;padding:6px 10px;margin:0 0 4px;cursor:grab;">
-					<span class="dashicons dashicons-menu" aria-hidden="true" style="color:#8c8f94;"></span>
+					<span class="dashicons dashicons-menu abps-drag" aria-hidden="true" style="color:#8c8f94;cursor:grab;"></span>
 					<?php echo esc_html( $label ); ?>
 					<input type="hidden" name="<?php echo esc_attr( self::OPTION ); ?>[<?php echo esc_attr( $field ); ?>][]" value="<?php echo esc_attr( $value ); ?>" />
 				</li>
@@ -525,18 +553,6 @@ class Switchmybar_Settings {
 		</ul>
 		<p class="description"><?php esc_html_e( 'Drag the items into the order you want.', 'admin-bar-position-switcher' ); ?></p>
 		<?php
-	}
-
-	/**
-	 * Field: drag-and-drop order of the back-office menu.
-	 */
-	public function field_menu_order() {
-		$opts  = self::get_options();
-		$items = array();
-		foreach ( self::get_admin_menu_entries() as $entry ) {
-			$items[ $entry['slug'] ] = $entry['label'];
-		}
-		$this->render_sortable( 'menu_order_custom', 'menu_order_on', $items, (array) $opts['menu_order_custom'], (int) $opts['menu_order_on'] );
 	}
 
 	/**
@@ -560,7 +576,7 @@ class Switchmybar_Settings {
 		<br />
 		<label style="display:inline-block;margin-top:8px;">
 			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_side_toggle]" value="1" <?php checked( $opts['menu_side_toggle'], 1 ); ?> />
-			<?php esc_html_e( 'Show a floating button to flip the back-office menu between left and right (remembered per browser).', 'admin-bar-position-switcher' ); ?>
+			<?php esc_html_e( 'Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser).', 'admin-bar-position-switcher' ); ?>
 		</label>
 		<?php
 	}
@@ -596,7 +612,7 @@ class Switchmybar_Settings {
 	 * Intro line for the back-office menu section.
 	 */
 	public function section_admin_menu_intro() {
-		echo '<p>' . esc_html__( 'Give the left admin menu your own colors: pick a background per item (the text stays readable automatically) and add spacers between groups.', 'admin-bar-position-switcher' ) . '</p>';
+		echo '<p>' . esc_html__( 'Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups.', 'admin-bar-position-switcher' ) . '</p>';
 	}
 
 	/**
@@ -645,38 +661,77 @@ class Switchmybar_Settings {
 	}
 
 	/**
-	 * Field: per-item color + spacer for the left admin menu.
+	 * Field: the back-office menu items — drag to reorder, plus per-item
+	 * color and "space after" in the same list.
 	 */
 	public function field_menu_styling() {
 		$opts    = self::get_options();
 		$colors  = (array) $opts['menu_colors'];
-		$spacers = (array) $opts['menu_spacers'];
-		$items   = self::get_admin_menu_items();
+		$spacers = (array) $opts['menu_spacers_after'];
+		$entries = self::get_admin_menu_entries();
+
+		// Saved order first, then everything else in its current order.
+		$by_slug = array();
+		foreach ( $entries as $entry ) {
+			$by_slug[ $entry['slug'] ] = $entry;
+		}
+		$ordered = array();
+		foreach ( (array) $opts['menu_order_custom'] as $slug ) {
+			if ( isset( $by_slug[ $slug ] ) ) {
+				$ordered[] = $by_slug[ $slug ];
+				unset( $by_slug[ $slug ] );
+			}
+		}
+		$ordered = array_merge( $ordered, array_values( $by_slug ) );
 
 		// Keep already-styled items visible even if their plugin is gone.
+		$seen = array();
+		foreach ( $ordered as $entry ) {
+			$seen[ $entry['id'] ] = true;
+		}
 		foreach ( array_merge( array_keys( $colors ), $spacers ) as $id ) {
-			if ( ! isset( $items[ $id ] ) ) {
-				$items[ $id ] = $id;
+			if ( '' !== $id && ! isset( $seen[ $id ] ) ) {
+				$ordered[] = array(
+					'id'    => $id,
+					'slug'  => '',
+					'label' => $id,
+				);
+				$seen[ $id ] = true;
 			}
 		}
 		?>
-		<fieldset>
-			<?php foreach ( $items as $id => $label ) : ?>
-				<?php $color = isset( $colors[ $id ] ) ? $colors[ $id ] : ''; ?>
-				<div style="display:flex;align-items:center;gap:14px;margin:4px 0;">
-					<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors][<?php echo esc_attr( $id ); ?>]" value="<?php echo esc_attr( $color ? $color : '#1d2327' ); ?>" />
-					<label style="min-width:110px;">
-						<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors_on][<?php echo esc_attr( $id ); ?>]" value="1" <?php checked( '' !== $color ); ?> />
-						<?php esc_html_e( 'Color', 'admin-bar-position-switcher' ); ?>
-					</label>
-					<label style="min-width:130px;">
-						<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_spacers][]" value="<?php echo esc_attr( $id ); ?>" <?php checked( in_array( $id, $spacers, true ) ); ?> />
-						<?php esc_html_e( 'Spacer before', 'admin-bar-position-switcher' ); ?>
-					</label>
-					<span><?php echo esc_html( $label ); ?> <code style="opacity:.55;"><?php echo esc_html( $id ); ?></code></span>
-				</div>
+		<input type="hidden" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors_on][_present]" value="1" />
+		<label style="display:block;margin-bottom:8px;">
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_order_on]" value="1" <?php checked( $opts['menu_order_on'], 1 ); ?> />
+			<?php esc_html_e( 'Apply this custom order', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<ul class="abps-sortable" style="max-width:720px;margin:0;list-style:none;">
+			<?php foreach ( $ordered as $entry ) : ?>
+				<?php
+				$id    = $entry['id'];
+				$color = ( '' !== $id && isset( $colors[ $id ] ) ) ? $colors[ $id ] : '';
+				?>
+				<li style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #c3c4c7;border-radius:4px;padding:6px 10px;margin:0 0 4px;">
+					<span class="dashicons dashicons-menu abps-drag" aria-hidden="true" style="color:#8c8f94;cursor:grab;"></span>
+					<?php if ( '' !== $entry['slug'] ) : ?>
+						<input type="hidden" name="<?php echo esc_attr( self::OPTION ); ?>[menu_order_custom][]" value="<?php echo esc_attr( $entry['slug'] ); ?>" />
+					<?php endif; ?>
+					<?php if ( '' !== $id ) : ?>
+						<input type="color" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors][<?php echo esc_attr( $id ); ?>]" value="<?php echo esc_attr( $color ? $color : '#1d2327' ); ?>" />
+						<label style="min-width:100px;">
+							<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_colors_on][<?php echo esc_attr( $id ); ?>]" value="1" <?php checked( '' !== $color ); ?> />
+							<?php esc_html_e( 'Color', 'admin-bar-position-switcher' ); ?>
+						</label>
+						<label style="min-width:120px;">
+							<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_spacers_after][]" value="<?php echo esc_attr( $id ); ?>" <?php checked( in_array( $id, $spacers, true ) ); ?> />
+							<?php esc_html_e( 'Space after', 'admin-bar-position-switcher' ); ?>
+						</label>
+					<?php endif; ?>
+					<span><?php echo esc_html( $entry['label'] ); ?> <code style="opacity:.55;"><?php echo esc_html( $id ); ?></code></span>
+				</li>
 			<?php endforeach; ?>
-		</fieldset>
+		</ul>
+		<p class="description"><?php esc_html_e( 'Drag the handle to reorder the menu; the color and the space after apply to each item.', 'admin-bar-position-switcher' ); ?></p>
 		<?php
 	}
 
@@ -724,13 +779,17 @@ class Switchmybar_Settings {
 		}
 		$out['hidden_items'] = array_values( array_unique( $hidden ) );
 
-		// Back-office menu: keep a color only for items whose "Color" box is ticked.
+		// Back-office menu: on a form submit (the hidden _present marker rides
+		// along) keep a color only when its "Color" box is ticked. A stored
+		// array saved programmatically (activation, migration, AJAX) has no
+		// menu_colors_on at all — keep every valid color, do not wipe them.
 		$colors = array();
 		if ( isset( $input['menu_colors'] ) && is_array( $input['menu_colors'] ) ) {
-			$enabled = ( isset( $input['menu_colors_on'] ) && is_array( $input['menu_colors_on'] ) ) ? $input['menu_colors_on'] : array();
+			$is_form = isset( $input['menu_colors_on'] ) && is_array( $input['menu_colors_on'] );
+			$enabled = $is_form ? $input['menu_colors_on'] : array();
 			foreach ( $input['menu_colors'] as $id => $hex ) {
 				$id = sanitize_key( $id );
-				if ( '' === $id || empty( $enabled[ $id ] ) ) {
+				if ( '' === $id || ( $is_form && empty( $enabled[ $id ] ) ) ) {
 					continue;
 				}
 				$hex = sanitize_hex_color( $hex );
@@ -751,7 +810,18 @@ class Switchmybar_Settings {
 			}
 		}
 		$out['menu_spacers'] = array_values( array_unique( $spacers ) );
-		$out['menu_dim']     = empty( $input['menu_dim'] ) ? 0 : 1;
+
+		$after = array();
+		if ( isset( $input['menu_spacers_after'] ) && is_array( $input['menu_spacers_after'] ) ) {
+			foreach ( $input['menu_spacers_after'] as $id ) {
+				$id = sanitize_key( $id );
+				if ( '' !== $id ) {
+					$after[] = $id;
+				}
+			}
+		}
+		$out['menu_spacers_after'] = array_values( array_unique( $after ) );
+		$out['menu_dim']           = empty( $input['menu_dim'] ) ? 0 : 1;
 
 		$out['menu_side_default'] = ( isset( $input['menu_side_default'] ) && 'right' === $input['menu_side_default'] ) ? 'right' : 'left';
 		$out['menu_side_toggle']  = empty( $input['menu_side_toggle'] ) ? 0 : 1;

@@ -223,8 +223,8 @@ msgstr "שמאל (ברירת המחדל של וורדפרס)"
 msgid "Right"
 msgstr "ימין"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "הצגת כפתור צף להעברת תפריט הניהול בין שמאל לימין (נשמר לכל דפדפן)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "הצגת לשוניות צפות לצד תפריט הניהול כדי להסתיר אותו או להעבירו בין שמאל לימין (נשמר לכל דפדפן)."
 
 msgid "Auto-hide the menu"
 msgstr "הסתרה אוטומטית של התפריט"
@@ -240,3 +240,15 @@ msgstr "העברת התפריט שמאלה או ימינה"
 
 msgid "Menu"
 msgstr "תפריט"
+
+msgid "Hide or show the menu"
+msgstr "הסתרה או הצגה של התפריט"
+
+msgid "Space after"
+msgstr "רווח אחרי"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "גררו את הידית כדי לסדר מחדש את התפריט; הצבע והרווח שאחרי חלים על כל פריט."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "הפכו את תפריט הניהול השמאלי לשלכם: גררו את הפריטים לסדר משלכם, תנו לכל פריט צבע רקע (הטקסט נשאר קריא אוטומטית) והוסיפו רווח אחרי פריט כדי ליצור קבוצות."

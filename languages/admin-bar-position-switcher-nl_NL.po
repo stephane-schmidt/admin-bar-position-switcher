@@ -223,8 +223,8 @@ msgstr "Links (WordPress-standaard)"
 msgid "Right"
 msgstr "Rechts"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Toon een zwevende knop om het beheermenu tussen links en rechts te wisselen (per browser onthouden)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Toon zwevende tabs naast het beheermenu om het te verbergen of te wisselen tussen links en rechts (onthouden per browser)."
 
 msgid "Auto-hide the menu"
 msgstr "Menu automatisch verbergen"
@@ -240,3 +240,15 @@ msgstr "Menu naar links of rechts verplaatsen"
 
 msgid "Menu"
 msgstr "Menu"
+
+msgid "Hide or show the menu"
+msgstr "Menu verbergen of tonen"
+
+msgid "Space after"
+msgstr "Ruimte erna"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Sleep de greep om het menu te herschikken; de kleur en de ruimte erna gelden per item."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Maak het linker beheermenu van jou: sleep de items in je eigen volgorde, geef elk een achtergrondkleur (de tekst blijft automatisch leesbaar) en voeg ruimte toe na een item om groepen te maken."

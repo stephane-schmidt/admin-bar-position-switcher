@@ -223,8 +223,8 @@ msgstr "Sol (WordPress varsayılanı)"
 msgid "Right"
 msgstr "Sağ"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Yönetim menüsünü sol ile sağ arasında taşımak için yüzen bir düğme göster (tarayıcı başına hatırlanır)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Yönetim menüsünün yanında, menüyü gizlemek veya sola/sağa taşımak için yüzen sekmeler göster (tarayıcı başına hatırlanır)."
 
 msgid "Auto-hide the menu"
 msgstr "Menüyü otomatik gizle"
@@ -240,3 +240,15 @@ msgstr "Menüyü sola veya sağa taşı"
 
 msgid "Menu"
 msgstr "Menü"
+
+msgid "Hide or show the menu"
+msgstr "Menüyü gizle veya göster"
+
+msgid "Space after"
+msgstr "Sonrasında boşluk"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Menüyü yeniden sıralamak için tutamacı sürükleyin; renk ve sonrasındaki boşluk her öğe için geçerlidir."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Sol yönetim menüsünü kendinize göre düzenleyin: öğeleri istediğiniz sıraya sürükleyin, her birine bir arka plan rengi verin (metin otomatik olarak okunur kalır) ve gruplar oluşturmak için bir öğeden sonra boşluk ekleyin."

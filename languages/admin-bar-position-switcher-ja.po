@@ -223,8 +223,8 @@ msgstr "左（WordPress標準）"
 msgid "Right"
 msgstr "右"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "管理メニューを左右に切り替えるフローティングボタンを表示します（ブラウザーごとに記憶）。"
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "管理メニューの横にフローティングタブを表示し、メニューを隠したり左右を切り替えたりできます（ブラウザーごとに記憶）。"
 
 msgid "Auto-hide the menu"
 msgstr "メニューを自動的に隠す"
@@ -240,3 +240,15 @@ msgstr "メニューを左右に移動"
 
 msgid "Menu"
 msgstr "メニュー"
+
+msgid "Hide or show the menu"
+msgstr "メニューを隠す/表示する"
+
+msgid "Space after"
+msgstr "後にスペース"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "ハンドルをドラッグしてメニューを並べ替えます。色と「後にスペース」は各項目に適用されます。"
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "左側の管理メニューを自分仕様に：項目をドラッグして好きな順序に並べ、各項目に背景色を設定し（文字は自動的に読みやすい色になります）、項目の後にスペースを加えてグループを作れます。"

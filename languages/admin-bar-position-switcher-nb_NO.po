@@ -223,8 +223,8 @@ msgstr "Venstre (WordPress-standard)"
 msgid "Right"
 msgstr "Høyre"
 
-msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
-msgstr "Vis en flytende knapp for å flytte adminmenyen mellom venstre og høyre (huskes per nettleser)."
+msgid "Show floating tabs beside the back-office menu to hide it or flip it between left and right (remembered per browser)."
+msgstr "Vis flytende faner ved siden av admin-menyen for å skjule den eller flytte den mellom venstre og høyre (huskes per nettleser)."
 
 msgid "Auto-hide the menu"
 msgstr "Skjul menyen automatisk"
@@ -240,3 +240,15 @@ msgstr "Flytt menyen til venstre eller høyre"
 
 msgid "Menu"
 msgstr "Meny"
+
+msgid "Hide or show the menu"
+msgstr "Skjul eller vis menyen"
+
+msgid "Space after"
+msgstr "Avstand etter"
+
+msgid "Drag the handle to reorder the menu; the color and the space after apply to each item."
+msgstr "Dra i håndtaket for å endre rekkefølgen på menyen; fargen og avstanden etter gjelder hvert element."
+
+msgid "Make the left admin menu yours: drag the items into your own order, give each one a background color (the text stays readable automatically) and add space after an item to build groups."
+msgstr "Gjør venstre admin-meny til din egen: dra elementene i din egen rekkefølge, gi hvert element en bakgrunnsfarge (teksten forblir automatisk lesbar), og legg til avstand etter et element for å lage grupper."

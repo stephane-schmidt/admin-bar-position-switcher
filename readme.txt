@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.6.5
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
 * **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
-* **Move the back-office menu to the right, or auto-hide it**: a floating "↔ Menu" button flips the wp-admin menu between left and right (remembered per browser), and an optional macOS-Dock mode hides it off-screen until the pointer comes within 150 pixels of its edge.
+* **Move the back-office menu to the right, or auto-hide it**: two floating tabs hide/show the wp-admin menu or flip it between left and right (remembered per browser), and an optional macOS-Dock mode hides it off-screen until the pointer comes within 150 pixels of its edge.
 * **Reorder by drag and drop**: two sortable lists in the settings let you reorder the back-office menu items and the toolbar elements; the saved order applies site-wide and can be switched off at any time.
 * **Colorize the back-office menu**: give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally dim the items without a custom color so the everyday ones stand out.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
@@ -82,7 +82,7 @@ In **Admin Bar Position** (left admin menu), turn off "Switch button". The toolb
 5. The "Bar" item in the toolbar: pick one of your site's dominant colors, auto-detected from your logo and theme.
 6. The back-office menu with custom colors, spacers between groups, and dimmed technical items.
 7. The full settings page, including the back-office menu section.
-8. The back-office menu flipped to the right side with the "↔ Menu" floating button.
+8. The back-office menu flipped to the right side with the floating tabs (hide/show and ↔ Menu).
 9. The back-office menu hidden off-screen (macOS-Dock mode): the content takes the full width.
 
 == About the author ==
@@ -96,6 +96,18 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.7.0 =
+* Added: a hide/show tab above the side-switch tab — one click tucks the back-office menu away (20px peek at the edge) and the page takes the full width; another click brings it back. Remembered per browser, and it works even when the auto-hide option is off.
+* Changed: the floating control beside the menu is now a group of two vertical tabs (hide/show on top, left/right below); its arrow flips to show where the next click sends the menu.
+* Changed: once revealed, the auto-hidden toolbar and back-office menu now stay visible for at least 10 seconds — no more instant bounce when the pointer brushes past the edge.
+* Fixed: with the menu on the left in Dock mode, the page content could drop below the whole menu once it docked (the menu now leaves the layout flow on both sides).
+* Fixed: the toolbar color picker had stopped working in 1.6.0 (the JavaScript still called the old AJAX action names after the prefix rename). Clicking a swatch works again.
+* Fixed: programmatic saves (activation, migration, the color picker) went through the settings-form sanitizer and silently wiped the saved back-office menu colors. The sanitizer now recognizes both shapes.
+* Changed: the back-office menu settings now merge order, color and spacing into a single drag-and-drop list — drag the handle to reorder, and "spacer before" becomes "space after" (existing setups are converted automatically; the visual gaps stay exactly where they were).
+* Fixed: flyout submenus were clipped by the fixed menu container in Dock and right-side modes; the container now stays visible and only grows a scrollbar when the menu is taller than the window.
+* Fixed: narrow screens that auto-fold the menu (783-960px) now get the same tab and submenu offsets as the manually collapsed menu.
+* Changed: the side/Dock features step aside on RTL admin locales instead of mirroring incorrectly.
 
 = 1.6.5 =
 * Fixed: with the menu on the right, the current item's inline submenu was shoved sideways (a stray block between the menu groups). The mirror now resets left/right for inline submenus, exactly like core does.
