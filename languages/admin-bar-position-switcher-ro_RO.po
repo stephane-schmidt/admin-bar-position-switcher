@@ -213,3 +213,30 @@ msgstr "Aplică această ordine personalizată"
 
 msgid "Drag the items into the order you want."
 msgstr "Trage elementele în ordinea dorită."
+
+msgid "Menu side"
+msgstr "Partea meniului"
+
+msgid "Left (WordPress default)"
+msgstr "Stânga (implicit WordPress)"
+
+msgid "Right"
+msgstr "Dreapta"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Afișează un buton plutitor pentru a muta meniul de administrare între stânga și dreapta (memorat per browser)."
+
+msgid "Auto-hide the menu"
+msgstr "Ascunde automat meniul"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Ascunde meniul de administrare în afara ecranului, precum macOS Dock: glisează înapoi când cursorul se apropie la 150 de pixeli de marginea lui."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Dezactivat implicit: meniul rămâne mereu vizibil."
+
+msgid "Move the menu to the left or right"
+msgstr "Mută meniul la stânga sau la dreapta"
+
+msgid "Menu"
+msgstr "Meniu"

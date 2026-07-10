@@ -213,3 +213,30 @@ msgstr "Aplicar este orden personalizado"
 
 msgid "Drag the items into the order you want."
 msgstr "Arrastra los elementos al orden que quieras."
+
+msgid "Menu side"
+msgstr "Lado del menú"
+
+msgid "Left (WordPress default)"
+msgstr "Izquierda (predeterminado de WordPress)"
+
+msgid "Right"
+msgstr "Derecha"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Mostrar un botón flotante para pasar el menú de administración de izquierda a derecha (recordado por navegador)."
+
+msgid "Auto-hide the menu"
+msgstr "Ocultar el menú automáticamente"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Oculta el menú de administración fuera de la pantalla como el Dock de macOS: vuelve deslizándose cuando el puntero se acerca a 150 píxeles de su borde."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Desactivado por defecto: el menú permanece siempre visible."
+
+msgid "Move the menu to the left or right"
+msgstr "Mover el menú a la izquierda o a la derecha"
+
+msgid "Menu"
+msgstr "Menú"

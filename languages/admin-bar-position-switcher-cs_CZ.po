@@ -213,3 +213,30 @@ msgstr "Použít toto vlastní pořadí"
 
 msgid "Drag the items into the order you want."
 msgstr "Přetáhněte položky do požadovaného pořadí."
+
+msgid "Menu side"
+msgstr "Strana nabídky"
+
+msgid "Left (WordPress default)"
+msgstr "Vlevo (výchozí WordPress)"
+
+msgid "Right"
+msgstr "Vpravo"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Zobrazit plovoucí tlačítko pro přesun nabídky administrace vlevo či vpravo (uloženo pro každý prohlížeč)."
+
+msgid "Auto-hide the menu"
+msgstr "Automaticky skrývat nabídku"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Skrývat nabídku administrace mimo obrazovku jako macOS Dock: plynule se vrátí, když se ukazatel přiblíží na 150 pixelů od jejího okraje."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Ve výchozím nastavení vypnuto: nabídka zůstává stále viditelná."
+
+msgid "Move the menu to the left or right"
+msgstr "Přesunout nabídku vlevo nebo vpravo"
+
+msgid "Menu"
+msgstr "Nabídka"

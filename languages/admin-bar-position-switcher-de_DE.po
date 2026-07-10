@@ -213,3 +213,30 @@ msgstr "Diese eigene Reihenfolge anwenden"
 
 msgid "Drag the items into the order you want."
 msgstr "Ziehe die Einträge in die gewünschte Reihenfolge."
+
+msgid "Menu side"
+msgstr "Menüseite"
+
+msgid "Left (WordPress default)"
+msgstr "Links (WordPress-Standard)"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Schwebende Schaltfläche anzeigen, um das Backoffice-Menü zwischen links und rechts zu verschieben (pro Browser gemerkt)."
+
+msgid "Auto-hide the menu"
+msgstr "Menü automatisch ausblenden"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Blendet das Backoffice-Menü außerhalb des Bildschirms aus wie das macOS Dock: Es gleitet zurück, sobald sich der Zeiger seinem Rand auf 150 Pixel nähert."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Standardmäßig deaktiviert: Das Menü bleibt dauerhaft sichtbar."
+
+msgid "Move the menu to the left or right"
+msgstr "Menü nach links oder rechts verschieben"
+
+msgid "Menu"
+msgstr "Menü"

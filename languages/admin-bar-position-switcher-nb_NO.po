@@ -213,3 +213,30 @@ msgstr "Bruk denne egendefinerte rekkefølgen"
 
 msgid "Drag the items into the order you want."
 msgstr "Dra elementene i den rekkefølgen du ønsker."
+
+msgid "Menu side"
+msgstr "Menyside"
+
+msgid "Left (WordPress default)"
+msgstr "Venstre (WordPress-standard)"
+
+msgid "Right"
+msgstr "Høyre"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Vis en flytende knapp for å flytte adminmenyen mellom venstre og høyre (huskes per nettleser)."
+
+msgid "Auto-hide the menu"
+msgstr "Skjul menyen automatisk"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Skjul adminmenyen utenfor skjermen slik som macOS Dock: den glir tilbake når pekeren kommer 150 piksler fra kanten."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Av som standard: menyen forblir alltid synlig."
+
+msgid "Move the menu to the left or right"
+msgstr "Flytt menyen til venstre eller høyre"
+
+msgid "Menu"
+msgstr "Meny"

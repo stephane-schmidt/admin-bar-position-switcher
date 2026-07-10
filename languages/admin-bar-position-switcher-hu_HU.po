@@ -213,3 +213,30 @@ msgstr "Az egyéni sorrend alkalmazása"
 
 msgid "Drag the items into the order you want."
 msgstr "Húzd az elemeket a kívánt sorrendbe."
+
+msgid "Menu side"
+msgstr "Menü oldala"
+
+msgid "Left (WordPress default)"
+msgstr "Bal (WordPress alapértelmezés)"
+
+msgid "Right"
+msgstr "Jobb"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Lebegő gomb megjelenítése, amellyel az admin menü balra vagy jobbra helyezhető (böngészőnként megjegyezve)."
+
+msgid "Auto-hide the menu"
+msgstr "A menü automatikus elrejtése"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Az admin menü elrejtése a képernyőn kívülre, ahogy a macOS Dock: visszasiklik, amikor a mutató 150 képpontnál közelebb ér a széléhez."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Alapértelmezés szerint kikapcsolva: a menü mindig látható marad."
+
+msgid "Move the menu to the left or right"
+msgstr "A menü mozgatása balra vagy jobbra"
+
+msgid "Menu"
+msgstr "Menü"

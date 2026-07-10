@@ -152,9 +152,44 @@ html.abps-bar-autohide.abps-bar-hidden.abps-top #wpadminbar {
 	transform: translateY( -100% );
 }
 
+/* While the bar is tucked away, the switch button settles near the edge. */
+html.abps-bar-autohide #abps-switch {
+	transition: opacity 0.25s ease, top 0.32s cubic-bezier( 0.4, 0, 0.2, 1 ), bottom 0.32s cubic-bezier( 0.4, 0, 0.2, 1 );
+}
+
+html.abps-bar-autohide.abps-bar-hidden.abps-bottom #abps-switch {
+	bottom: 12px;
+	opacity: 0.5;
+}
+
+html.abps-bar-autohide.abps-bar-hidden.abps-top #abps-switch {
+	top: 12px;
+	opacity: 0.5;
+}
+
+/* Hovering or focusing the discreet button brings it back to full strength. */
+html.abps-bar-autohide.abps-bar-hidden #abps-switch:hover,
+html.abps-bar-autohide.abps-bar-hidden #abps-switch:focus {
+	opacity: 1;
+}
+
+@media screen and ( max-width: 782px ) {
+	html.abps-bar-autohide.abps-bar-hidden.abps-bottom #abps-switch {
+		bottom: 12px;
+	}
+
+	html.abps-bar-autohide.abps-bar-hidden.abps-top #abps-switch {
+		top: 12px;
+	}
+}
+
 @media ( prefers-reduced-motion: reduce ) {
 	html.abps-bar-autohide #wpadminbar {
 		transition: none;
+	}
+
+	html.abps-bar-autohide #abps-switch {
+		transition: opacity 0.25s ease;
 	}
 }
 

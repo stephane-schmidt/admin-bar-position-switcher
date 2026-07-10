@@ -213,3 +213,30 @@ msgstr "تطبيق هذا الترتيب المخصص"
 
 msgid "Drag the items into the order you want."
 msgstr "اسحب العناصر بالترتيب الذي تريده."
+
+msgid "Menu side"
+msgstr "جانب القائمة"
+
+msgid "Left (WordPress default)"
+msgstr "يسار (افتراضي ووردبريس)"
+
+msgid "Right"
+msgstr "يمين"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "إظهار زر عائم لنقل قائمة الإدارة بين اليسار واليمين (يُحفظ لكل متصفح)."
+
+msgid "Auto-hide the menu"
+msgstr "إخفاء القائمة تلقائيًا"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "إخفاء قائمة الإدارة خارج الشاشة على غرار macOS Dock: تنزلق عائدة عندما يقترب المؤشر إلى أقل من 150 بكسلاً من حافتها."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "معطّل افتراضيًا: تبقى القائمة ظاهرة دائمًا."
+
+msgid "Move the menu to the left or right"
+msgstr "نقل القائمة إلى اليسار أو اليمين"
+
+msgid "Menu"
+msgstr "القائمة"

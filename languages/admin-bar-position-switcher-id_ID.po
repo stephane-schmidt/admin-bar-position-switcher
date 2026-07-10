@@ -213,3 +213,30 @@ msgstr "Terapkan urutan khusus ini"
 
 msgid "Drag the items into the order you want."
 msgstr "Seret item ke urutan yang Anda inginkan."
+
+msgid "Menu side"
+msgstr "Sisi menu"
+
+msgid "Left (WordPress default)"
+msgstr "Kiri (bawaan WordPress)"
+
+msgid "Right"
+msgstr "Kanan"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Tampilkan tombol mengambang untuk memindahkan menu admin antara kiri dan kanan (diingat per peramban)."
+
+msgid "Auto-hide the menu"
+msgstr "Sembunyikan menu secara otomatis"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Sembunyikan menu admin di luar layar seperti macOS Dock: menu akan meluncur kembali saat penunjuk berada 150 piksel dari tepinya."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Nonaktif secara bawaan: menu selalu terlihat."
+
+msgid "Move the menu to the left or right"
+msgstr "Pindahkan menu ke kiri atau kanan"
+
+msgid "Menu"
+msgstr "Menu"

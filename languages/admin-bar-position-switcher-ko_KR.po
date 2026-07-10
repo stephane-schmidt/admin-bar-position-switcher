@@ -213,3 +213,30 @@ msgstr "이 사용자 지정 순서 적용"
 
 msgid "Drag the items into the order you want."
 msgstr "원하는 순서로 항목을 드래그하세요."
+
+msgid "Menu side"
+msgstr "메뉴 위치"
+
+msgid "Left (WordPress default)"
+msgstr "왼쪽 (워드프레스 기본값)"
+
+msgid "Right"
+msgstr "오른쪽"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "관리자 메뉴를 좌우로 전환하는 플로팅 버튼을 표시합니다(브라우저별로 기억됨)."
+
+msgid "Auto-hide the menu"
+msgstr "메뉴 자동 숨기기"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "macOS Dock처럼 관리자 메뉴를 화면 밖에 숨깁니다. 포인터가 가장자리에서 150픽셀 이내로 다가오면 다시 나타납니다."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "기본적으로 꺼져 있으며, 메뉴는 항상 표시됩니다."
+
+msgid "Move the menu to the left or right"
+msgstr "메뉴를 왼쪽 또는 오른쪽으로 이동"
+
+msgid "Menu"
+msgstr "메뉴"

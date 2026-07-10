@@ -213,3 +213,30 @@ msgstr "Käytä tätä mukautettua järjestystä"
 
 msgid "Drag the items into the order you want."
 msgstr "Vedä kohteet haluamaasi järjestykseen."
+
+msgid "Menu side"
+msgstr "Valikon puoli"
+
+msgid "Left (WordPress default)"
+msgstr "Vasen (WordPressin oletus)"
+
+msgid "Right"
+msgstr "Oikea"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Näytä kelluva painike, jolla hallintavalikon voi siirtää vasemmalle tai oikealle (muistetaan selaimittain)."
+
+msgid "Auto-hide the menu"
+msgstr "Piilota valikko automaattisesti"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Piilota hallintavalikko näytön ulkopuolelle kuten macOS Dock: se liukuu takaisin, kun osoitin tulee 150 pikselin päähän sen reunasta."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Oletuksena pois päältä: valikko pysyy aina näkyvissä."
+
+msgid "Move the menu to the left or right"
+msgstr "Siirrä valikko vasemmalle tai oikealle"
+
+msgid "Menu"
+msgstr "Valikko"

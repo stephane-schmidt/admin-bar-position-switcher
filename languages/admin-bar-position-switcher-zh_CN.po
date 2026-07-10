@@ -213,3 +213,30 @@ msgstr "应用此自定义顺序"
 
 msgid "Drag the items into the order you want."
 msgstr "将项目拖动到您想要的顺序。"
+
+msgid "Menu side"
+msgstr "菜单位置"
+
+msgid "Left (WordPress default)"
+msgstr "左侧（WordPress 默认）"
+
+msgid "Right"
+msgstr "右侧"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "显示一个浮动按钮，在左右两侧之间切换后台菜单（按浏览器记忆）。"
+
+msgid "Auto-hide the menu"
+msgstr "自动隐藏菜单"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "像 macOS Dock 一样将后台菜单隐藏到屏幕之外：当指针靠近其边缘 150 像素内时，它会滑动回来。"
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "默认关闭：菜单始终保持可见。"
+
+msgid "Move the menu to the left or right"
+msgstr "将菜单移到左侧或右侧"
+
+msgid "Menu"
+msgstr "菜单"

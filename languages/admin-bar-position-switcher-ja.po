@@ -213,3 +213,30 @@ msgstr "このカスタム順を適用"
 
 msgid "Drag the items into the order you want."
 msgstr "項目をドラッグして好きな順序に並べ替えます。"
+
+msgid "Menu side"
+msgstr "メニューの位置"
+
+msgid "Left (WordPress default)"
+msgstr "左（WordPress標準）"
+
+msgid "Right"
+msgstr "右"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "管理メニューを左右に切り替えるフローティングボタンを表示します（ブラウザーごとに記憶）。"
+
+msgid "Auto-hide the menu"
+msgstr "メニューを自動的に隠す"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "macOS Dock のように管理メニューを画面外に隠します。ポインターが端から150ピクセル以内に近づくとスライドして戻ります。"
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "デフォルトでは無効です。メニューは常に表示されます。"
+
+msgid "Move the menu to the left or right"
+msgstr "メニューを左右に移動"
+
+msgid "Menu"
+msgstr "メニュー"

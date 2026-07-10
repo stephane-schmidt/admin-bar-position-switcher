@@ -213,3 +213,30 @@ msgstr "Bu özel sıralamayı uygula"
 
 msgid "Drag the items into the order you want."
 msgstr "Öğeleri istediğiniz sıraya sürükleyin."
+
+msgid "Menu side"
+msgstr "Menü tarafı"
+
+msgid "Left (WordPress default)"
+msgstr "Sol (WordPress varsayılanı)"
+
+msgid "Right"
+msgstr "Sağ"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Yönetim menüsünü sol ile sağ arasında taşımak için yüzen bir düğme göster (tarayıcı başına hatırlanır)."
+
+msgid "Auto-hide the menu"
+msgstr "Menüyü otomatik gizle"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Yönetim menüsünü macOS Dock gibi ekran dışına gizler: işaretçi kenarına 150 piksel yaklaştığında kayarak geri döner."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Varsayılan olarak kapalı: menü her zaman görünür kalır."
+
+msgid "Move the menu to the left or right"
+msgstr "Menüyü sola veya sağa taşı"
+
+msgid "Menu"
+msgstr "Menü"

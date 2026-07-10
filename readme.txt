@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ The switch button can also **blend into your site**: turn on "Match the page col
 * Optionally colorize the toolbar background, with automatically readable text.
 * **Recolor the toolbar right from the toolbar**: a small "Bar" item shows the site's five dominant colors — auto-detected from your logo and theme — and one click applies and saves the color (administrators only).
 * **Auto-hide the toolbar, macOS Dock style** (optional): the bar glides off-screen and slides back when your pointer comes within 150 pixels of its edge.
+* **Move the back-office menu to the right, or auto-hide it**: a floating "↔ Menu" button flips the wp-admin menu between left and right (remembered per browser), and an optional macOS-Dock mode hides it off-screen until the pointer comes within 150 pixels of its edge.
 * **Reorder by drag and drop**: two sortable lists in the settings let you reorder the back-office menu items and the toolbar elements; the saved order applies site-wide and can be switched off at any time.
 * **Colorize the back-office menu**: give each item of the left admin menu its own background color (text stays readable automatically), add spacers between groups, and optionally dim the items without a custom color so the everyday ones stand out.
 * Removes WordPress's reserved top spacer when the bar is at the bottom, so there is no empty gap.
@@ -81,6 +82,8 @@ In **Admin Bar Position** (left admin menu), turn off "Switch button". The toolb
 5. The "Bar" item in the toolbar: pick one of your site's dominant colors, auto-detected from your logo and theme.
 6. The back-office menu with custom colors, spacers between groups, and dimmed technical items.
 7. The full settings page, including the back-office menu section.
+8. The back-office menu flipped to the right side with the "↔ Menu" floating button.
+9. The back-office menu hidden off-screen (macOS-Dock mode): the content takes the full width.
 
 == About the author ==
 
@@ -93,6 +96,10 @@ He builds with a lot of curiosity and enthusiasm, and these days he develops han
 He works as a freelancer and is also part of the studio **[alveo.design](https://alveo.design)**. **He's open for freelance work** — if you have a project in mind, say hello at stephane@alveo.design or find him on [Facebook](https://www.facebook.com/free.stephane), [Instagram](https://www.instagram.com/free.stephane/) and [TikTok](https://www.tiktok.com/@freestephane). You're also welcome to write to report a bug or simply to tell him which side of the screen you like your toolbar on. And if the plugin is useful to you, you can buy him a coffee at https://revolut.me/stphanjt11 — thank you!
 
 == Changelog ==
+
+= 1.5.0 =
+* New: the back-office menu gets the toolbar treatment — a floating "↔ Menu" button flips it between left and right (remembered per browser, with a default side setting), and an optional macOS-Dock auto-hide slides it off-screen until the pointer comes within 150 pixels of its edge (or it receives keyboard focus).
+* Improved: when the toolbar auto-hides, the floating switch button now settles near the screen edge and fades to 50%, returning to full strength on hover or focus.
 
 = 1.4.0 =
 * New: reorder the back-office menu and the toolbar by drag and drop — two sortable lists in the settings, with an "Apply this custom order" switch per zone. The order is global and reversible.
@@ -134,6 +141,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.5.0 =
+Left/right switcher and Dock-style auto-hide for the back-office menu.
 
 = 1.4.0 =
 Reorder the back-office menu and the toolbar by drag and drop.

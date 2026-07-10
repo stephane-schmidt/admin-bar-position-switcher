@@ -163,6 +163,9 @@ class ABPS_Settings {
 			'menu_colors'      => array(),
 			'menu_spacers'     => array(),
 			'menu_dim'         => 0,
+			'menu_side_default' => 'left',
+			'menu_side_toggle' => 1,
+			'menu_auto_hide'   => 0,
 			'menu_order_on'    => 0,
 			'menu_order_custom' => array(),
 			'bar_order_on'     => 0,
@@ -407,6 +410,22 @@ class ABPS_Settings {
 		);
 
 		add_settings_field(
+			'menu_side',
+			__( 'Menu side', 'admin-bar-position-switcher' ),
+			array( $this, 'field_menu_side' ),
+			self::SLUG,
+			'abps_admin_menu'
+		);
+
+		add_settings_field(
+			'menu_auto_hide',
+			__( 'Auto-hide the menu', 'admin-bar-position-switcher' ),
+			array( $this, 'field_menu_auto_hide' ),
+			self::SLUG,
+			'abps_admin_menu'
+		);
+
+		add_settings_field(
 			'menu_order',
 			__( 'Menu order', 'admin-bar-position-switcher' ),
 			array( $this, 'field_menu_order' ),
@@ -524,6 +543,38 @@ class ABPS_Settings {
 	public function field_bar_order() {
 		$opts = self::get_options();
 		$this->render_sortable( 'bar_order_custom', 'bar_order_on', self::get_toolbar_items(), (array) $opts['bar_order_custom'], (int) $opts['bar_order_on'] );
+	}
+
+	/**
+	 * Field: default side of the back-office menu + side switch button.
+	 */
+	public function field_menu_side() {
+		$opts = self::get_options();
+		?>
+		<select name="<?php echo esc_attr( self::OPTION ); ?>[menu_side_default]">
+			<option value="left" <?php selected( $opts['menu_side_default'], 'left' ); ?>><?php esc_html_e( 'Left (WordPress default)', 'admin-bar-position-switcher' ); ?></option>
+			<option value="right" <?php selected( $opts['menu_side_default'], 'right' ); ?>><?php esc_html_e( 'Right', 'admin-bar-position-switcher' ); ?></option>
+		</select>
+		<br />
+		<label style="display:inline-block;margin-top:8px;">
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_side_toggle]" value="1" <?php checked( $opts['menu_side_toggle'], 1 ); ?> />
+			<?php esc_html_e( 'Show a floating button to flip the back-office menu between left and right (remembered per browser).', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<?php
+	}
+
+	/**
+	 * Field: auto-hide the back-office menu (macOS Dock style).
+	 */
+	public function field_menu_auto_hide() {
+		$value = self::get_options()['menu_auto_hide'];
+		?>
+		<label>
+			<input type="checkbox" name="<?php echo esc_attr( self::OPTION ); ?>[menu_auto_hide]" value="1" <?php checked( $value, 1 ); ?> />
+			<?php esc_html_e( 'Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge.', 'admin-bar-position-switcher' ); ?>
+		</label>
+		<p class="description"><?php esc_html_e( 'Off by default: the menu stays visible at all times.', 'admin-bar-position-switcher' ); ?></p>
+		<?php
 	}
 
 	/**
@@ -699,6 +750,10 @@ class ABPS_Settings {
 		}
 		$out['menu_spacers'] = array_values( array_unique( $spacers ) );
 		$out['menu_dim']     = empty( $input['menu_dim'] ) ? 0 : 1;
+
+		$out['menu_side_default'] = ( isset( $input['menu_side_default'] ) && 'right' === $input['menu_side_default'] ) ? 'right' : 'left';
+		$out['menu_side_toggle']  = empty( $input['menu_side_toggle'] ) ? 0 : 1;
+		$out['menu_auto_hide']    = empty( $input['menu_auto_hide'] ) ? 0 : 1;
 
 		// Custom orders (menu slugs may contain "?" and "=", so no sanitize_key).
 		$out['menu_order_on'] = empty( $input['menu_order_on'] ) ? 0 : 1;

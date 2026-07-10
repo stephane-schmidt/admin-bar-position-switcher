@@ -213,3 +213,30 @@ msgstr "החלת סדר מותאם זה"
 
 msgid "Drag the items into the order you want."
 msgstr "גררו את הפריטים לסדר הרצוי."
+
+msgid "Menu side"
+msgstr "צד התפריט"
+
+msgid "Left (WordPress default)"
+msgstr "שמאל (ברירת המחדל של וורדפרס)"
+
+msgid "Right"
+msgstr "ימין"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "הצגת כפתור צף להעברת תפריט הניהול בין שמאל לימין (נשמר לכל דפדפן)."
+
+msgid "Auto-hide the menu"
+msgstr "הסתרה אוטומטית של התפריט"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "הסתרת תפריט הניהול אל מחוץ למסך, בדומה ל-macOS Dock: הוא מחליק חזרה כשהסמן מתקרב ל-150 פיקסלים מקצהו."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "כבוי כברירת מחדל: התפריט נשאר גלוי תמיד."
+
+msgid "Move the menu to the left or right"
+msgstr "העברת התפריט שמאלה או ימינה"
+
+msgid "Menu"
+msgstr "תפריט"

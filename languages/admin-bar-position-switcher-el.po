@@ -213,3 +213,30 @@ msgstr "Εφαρμογή αυτής της προσαρμοσμένης σειρ
 
 msgid "Drag the items into the order you want."
 msgstr "Σύρετε τα στοιχεία στη σειρά που θέλετε."
+
+msgid "Menu side"
+msgstr "Πλευρά μενού"
+
+msgid "Left (WordPress default)"
+msgstr "Αριστερά (προεπιλογή WordPress)"
+
+msgid "Right"
+msgstr "Δεξιά"
+
+msgid "Show a floating button to flip the back-office menu between left and right (remembered per browser)."
+msgstr "Εμφάνιση αιωρούμενου κουμπιού για μετακίνηση του μενού διαχείρισης αριστερά ή δεξιά (απομνημονεύεται ανά πρόγραμμα περιήγησης)."
+
+msgid "Auto-hide the menu"
+msgstr "Αυτόματη απόκρυψη του μενού"
+
+msgid "Hide the back-office menu off-screen like the macOS Dock: it glides back when the pointer comes within 150 pixels of its edge."
+msgstr "Απόκρυψη του μενού διαχείρισης εκτός οθόνης όπως το macOS Dock: επανέρχεται όταν ο δείκτης πλησιάσει σε 150 pixel από την άκρη του."
+
+msgid "Off by default: the menu stays visible at all times."
+msgstr "Ανενεργό από προεπιλογή: το μενού παραμένει πάντα ορατό."
+
+msgid "Move the menu to the left or right"
+msgstr "Μετακίνηση του μενού αριστερά ή δεξιά"
+
+msgid "Menu"
+msgstr "Μενού"
