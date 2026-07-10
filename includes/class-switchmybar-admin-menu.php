@@ -108,7 +108,7 @@ class Switchmybar_Admin_Menu {
 
 		// Auto-hide (Dock style): the menu overlays the page, the space is
 		// released, and a 20px peek stays at the edge (50% opacity).
-		$css .= 'html.abps-menu-autohide #adminmenuwrap,html.abps-menu-autohide #adminmenuback{transition:transform .32s cubic-bezier(.4,0,.2,1),opacity .25s ease;will-change:transform;}';
+		$css .= 'html.abps-menu-autohide #adminmenuwrap,html.abps-menu-autohide #adminmenuback{transition:transform .32s cubic-bezier(.4,0,.2,1),opacity .25s ease;}';
 		$css .= 'html.abps-menu-autohide #adminmenuwrap{z-index:9990;}';
 		$css .= 'html.abps-menu-autohide #wpcontent,html.abps-menu-autohide #wpfooter{transition:margin .32s cubic-bezier(.4,0,.2,1);}';
 		// The page only reclaims the width once the menu has actually tucked

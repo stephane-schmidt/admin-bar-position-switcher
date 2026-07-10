@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.6.3 =
+* Fixed: on some machines, back-office pages only painted after scrolling. The "dim" effect no longer uses GPU filters (plain static opacity instead, with a lightweight hover highlight for colored items), and the will-change hints were removed everywhere.
+
 = 1.6.2 =
 * Improved: the page now waits for the menu to actually tuck away before reclaiming its width (with a smooth glide), and later reveals overlay the widened page instead of squeezing it back. The 20px peek settles at 50% opacity.
 
@@ -152,6 +155,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.6.3 =
+Fixes back-office pages that only painted after scrolling (no more GPU filters).
 
 = 1.6.2 =
 The page waits for the menu to hide before taking the full width; the peek settles at 50%.

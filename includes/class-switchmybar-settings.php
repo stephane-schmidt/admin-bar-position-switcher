@@ -110,7 +110,7 @@ class Switchmybar_Settings {
 			$li   = '#adminmenu li#' . $id;
 			$css .= $li . ' > a.menu-top{background:' . $hex . ' !important;color:' . $fg . ' !important;}';
 			$css .= $li . ' div.wp-menu-image:before{color:' . $fg . ' !important;}';
-			$css .= $li . ' > a.menu-top:hover,' . $li . '.opensub > a.menu-top,' . $li . ' > a.menu-top:focus{filter:brightness(1.12);}';
+			$css .= $li . ' > a.menu-top:hover,' . $li . '.opensub > a.menu-top,' . $li . ' > a.menu-top:focus{box-shadow:inset 0 0 0 100px rgba(255,255,255,.10);}';
 			$css .= $li . '.wp-has-current-submenu > a.wp-has-current-submenu,' . $li . '.current > a.current{background:' . $hex . ' !important;color:' . $fg . ' !important;}';
 		}
 		foreach ( $spacers as $id ) {
@@ -130,10 +130,10 @@ class Switchmybar_Settings {
 				}
 			}
 			$base = '#adminmenu li.menu-top' . $not;
-			$css .= $base . ' > a .wp-menu-name,' . $base . ' > a .wp-menu-image{opacity:.5;filter:grayscale(.6);transition:opacity .15s ease,filter .15s ease;}';
+			$css .= $base . ' > a .wp-menu-name,' . $base . ' > a .wp-menu-image{opacity:.5;}';
 			$css .= '#adminmenu li.menu-top:hover > a .wp-menu-name,#adminmenu li.menu-top:hover > a .wp-menu-image,'
 				. '#adminmenu li.menu-top.wp-has-current-submenu > a .wp-menu-name,#adminmenu li.menu-top.wp-has-current-submenu > a .wp-menu-image,'
-				. '#adminmenu li.menu-top.current > a .wp-menu-name,#adminmenu li.menu-top.current > a .wp-menu-image{opacity:1 !important;filter:none !important;}';
+				. '#adminmenu li.menu-top.current > a .wp-menu-name,#adminmenu li.menu-top.current > a .wp-menu-image{opacity:1 !important;}';
 		}
 
 		if ( '' !== $css ) {

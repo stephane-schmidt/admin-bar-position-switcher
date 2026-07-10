@@ -99,7 +99,6 @@ html.abps-top #wpadminbar .ab-sub-wrapper {
 	opacity: 0.82;
 	box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.28 );
 	transition: opacity 0.25s ease;
-	will-change: transform, opacity;
 }
 
 #abps-switch:hover,
@@ -160,7 +159,6 @@ html.abps-bar-autohide.abps-top {
 
 html.abps-bar-autohide #wpadminbar {
 	transition: transform 0.32s cubic-bezier( 0.4, 0, 0.2, 1 );
-	will-change: transform;
 }
 
 html.abps-bar-autohide.abps-bar-hidden.abps-bottom #wpadminbar {
