@@ -198,3 +198,6 @@ msgstr "他の項目を淡色表示"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "独自の色がないメニュー項目を淡く表示します。ホバー時やアクティブ時には再び明るくなります。"
+
+msgid "Admin Bar"
+msgstr "管理バー"

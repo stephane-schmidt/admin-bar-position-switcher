@@ -198,3 +198,6 @@ msgstr "Demp de andre elementene"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Toner ned menyelementer uten egen farge; de lyser opp igjen ved hover eller når de er aktive."
+
+msgid "Admin Bar"
+msgstr "Admin-linje"

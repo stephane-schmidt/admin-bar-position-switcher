@@ -198,3 +198,6 @@ msgstr "Redupkan item lainnya"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Memudarkan item menu tanpa warna khusus; item akan kembali terang saat disorot atau saat aktif."
+
+msgid "Admin Bar"
+msgstr "Bilah admin"

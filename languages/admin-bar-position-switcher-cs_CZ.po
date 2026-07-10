@@ -198,3 +198,6 @@ msgstr "Ztlumit ostatní položky"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Ztlumí položky nabídky bez vlastní barvy; při najetí myší nebo když jsou aktivní, se opět rozsvítí."
+
+msgid "Admin Bar"
+msgstr "Admin lišta"

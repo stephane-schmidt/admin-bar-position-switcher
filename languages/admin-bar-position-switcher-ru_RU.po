@@ -198,3 +198,6 @@ msgstr "Приглушить остальные пункты"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Приглушает пункты меню без собственного цвета; они снова подсвечиваются при наведении или когда активны."
+
+msgid "Admin Bar"
+msgstr "Админ-панель"

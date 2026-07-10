@@ -198,3 +198,6 @@ msgstr "Griser les autres éléments"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Estompe les éléments de menu sans couleur personnalisée ; ils se rallument au survol ou lorsqu’ils sont actifs."
+
+msgid "Admin Bar"
+msgstr "Admin Barre"

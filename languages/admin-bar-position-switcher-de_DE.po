@@ -198,3 +198,6 @@ msgstr "Übrige Einträge abdunkeln"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Blendet Menüeinträge ohne eigene Farbe ab; beim Überfahren oder wenn sie aktiv sind, leuchten sie wieder auf."
+
+msgid "Admin Bar"
+msgstr "Admin-Leiste"

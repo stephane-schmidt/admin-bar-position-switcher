@@ -198,3 +198,6 @@ msgstr "Attenua le altre voci"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Attenua le voci di menu senza colore personalizzato; tornano luminose al passaggio del mouse o quando sono attive."
+
+msgid "Admin Bar"
+msgstr "Barra admin"

@@ -198,3 +198,6 @@ msgstr "Esbater os restantes itens"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Esbate os itens do menu sem cor personalizada; voltam a acender ao passar o ponteiro ou quando estão ativos."
+
+msgid "Admin Bar"
+msgstr "Barra admin"

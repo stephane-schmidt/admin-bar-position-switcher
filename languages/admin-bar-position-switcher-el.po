@@ -198,3 +198,6 @@ msgstr "Αμυδρή εμφάνιση των υπολοίπων"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Ξεθωριάζει τα στοιχεία μενού χωρίς προσαρμοσμένο χρώμα· φωτίζονται ξανά στο πέρασμα του δείκτη ή όταν είναι ενεργά."
+
+msgid "Admin Bar"
+msgstr "Admin μπάρα"

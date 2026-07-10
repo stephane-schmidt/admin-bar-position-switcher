@@ -192,7 +192,7 @@ class ABPS_Settings {
 	public function add_menu() {
 		add_menu_page(
 			__( 'Admin Bar Position', 'admin-bar-position-switcher' ),
-			__( 'Admin Bar Position', 'admin-bar-position-switcher' ),
+			__( 'Admin Bar', 'admin-bar-position-switcher' ),
 			'manage_options',
 			self::SLUG,
 			array( $this, 'render_page' ),

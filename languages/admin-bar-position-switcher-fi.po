@@ -198,3 +198,6 @@ msgstr "Himmennä muut kohteet"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Himmentää valikon kohteet, joilla ei ole omaa väriä; ne kirkastuvat jälleen osoittimen alla tai ollessaan aktiivisia."
+
+msgid "Admin Bar"
+msgstr "Admin-palkki"

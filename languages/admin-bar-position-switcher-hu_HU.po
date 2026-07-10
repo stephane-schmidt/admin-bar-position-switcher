@@ -198,3 +198,6 @@ msgstr "A többi elem halványítása"
 
 msgid "Fade the menu items that have no custom color; they light up again on hover or when active."
 msgstr "Halványítja a saját szín nélküli menüelemeket; rámutatáskor vagy aktív állapotban újra felfénylenek."
+
+msgid "Admin Bar"
+msgstr "Admin sáv"

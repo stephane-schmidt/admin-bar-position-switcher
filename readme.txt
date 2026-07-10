@@ -4,7 +4,7 @@ Tags: admin bar, toolbar, admin bar position, bottom toolbar, front end
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 
 == Changelog ==
 
+= 1.3.1 =
+* Changed: the left admin menu entry is now simply called "Admin Bar" ("Admin Barre" in French) so it fits on one line; the settings page keeps its full title.
+
 = 1.3.0 =
 * New: "Dim the other items" option for the back-office menu — items without a custom color fade out and light up again on hover or when active, so the everyday menus stand out.
 * New tutorial screenshots: the toolbar color picker, the colorized back-office menu, and the full settings page.
@@ -127,6 +130,9 @@ He works as a freelancer and is also part of the studio **[alveo.design](https:/
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Shorter left-menu label: "Admin Bar".
 
 = 1.3.0 =
 Adds the "Dim the other items" option for the back-office menu.
